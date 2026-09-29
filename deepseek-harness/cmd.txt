@@ -1,3 +1,12 @@
+//robocopy "C:\path\to\source" "C:\path\to\destination" /E /XD node_modules
+
+//robocopy "D:\deepseek\deepseek-harness\plugin" "D:\pluginbackup" /E /XD node_modules
+
+//D:\deepseek\deepseek-harness\plugin
+
+
+D:\pluginbackup
+
 for plugin package install
     npm i @deepseek-ai/dsh-tools
 
@@ -27,8 +36,11 @@ ollama server
 
 new approach
 
+
+    pnpm dsh web --patch ./plugin/uf_skeleton_new/src/cordis.yml --patch ./plugin/uf_body_new/src/cordis.yml --patch ./plugin/uf_preview_new/src/cordis.yml --patch ./plugin/uf_props_edit/src/cordis.yml
+   
     Use uf_skeleton_new_generate to create a customer registration page with Name, Email, and a Save button. Then pass its nodeTree result into uf_body_new_generate to get the full artifact bundle. 
    
-
-   Use uf_skeleton_new_generate to create a customer registration page with Name, Email, and a Save button. Then pass its nodeTree result into uf_body_new_generate to get the full artifact bundle. then pass the uf_body_new_generate result to uf_preview_new_generate.
+    Use uf_skeleton_new_generate to create a customer registration page with Name, Email, and a Save button. Then pass its nodeTree result into uf_body_new_generate to get the full artifact bundle. then pass the uf_body_new_generate result to uf_preview_new_generate.
    
+    Use uf_skeleton_new_generate to build a product group with a Name field and a Delete button. Pass the result into uf_body_new_generate. Then pass its filePath and the instruction "make the delete button red and disable it" into uf_props_edit_generate. Then pass that result's filePath into uf_preview_new_generate to get a live preview.

@@ -1,0 +1,143 @@
+{
+  "nodeKey": "text",
+  "nodeType": "text",
+  "nodeGroupType": "group",
+  "component": "Text",
+  "frameWork": "Nextjs",
+  "frameWorkVersion": "14.2.3",
+  "nodeVersion": "v1",
+  "sourceNodeId": "57192a52c86e4d85bc9e93f967d77737",
+  "instanceCount": 3,
+  "kind": "props",
+  "count": 5,
+  "props": [
+    {
+      "name": "static",
+      "_type": "conditionalBoolean",
+      "value": true,
+      "enabled": true,
+      "subSelection": {
+        "_true": {
+          "content": {
+            "name": "content",
+            "_type": "text",
+            "value": "text",
+            "enabled": true,
+            "_description": "The authored text shown when `static` is true."
+          }
+        }
+      },
+      "_description": "`true` means the text is the authored `content`. `false` means it is supplied at runtime."
+    },
+    {
+      "name": "variant",
+      "_type": "select",
+      "selectionList": [
+        "display-4",
+        "display-3",
+        "display-2",
+        "display-1",
+        "header-2",
+        "header-1",
+        "subheader-3",
+        "subheader-2",
+        "subheader-1",
+        "body-3",
+        "body-2",
+        "body-1",
+        "body-short",
+        "caption-2",
+        "caption-1",
+        "code-3",
+        "code-inline-3",
+        "code-2",
+        "code-inline-2",
+        "code-1",
+        "code-inline-1"
+      ],
+      "value": "subheader-3",
+      "enabled": true,
+      "_description": "Typography token setting size and weight — `display-*` largest, then `header-*`, `subheader-*`, `body-*`, `caption-*`, and `code-*` for monospace."
+    },
+    {
+      "name": "wordBreak",
+      "_type": "select",
+      "selectionList": [
+        "break-all",
+        "break-word"
+      ],
+      "value": "",
+      "enabled": true,
+      "_description": "How long strings wrap: `break-all` breaks mid-word anywhere, `break-word` breaks only when a word cannot fit. Empty leaves the default."
+    },
+    {
+      "name": "color",
+      "_type": "select",
+      "selectionList": [
+        "primary",
+        "complementary",
+        "secondary",
+        "hint",
+        "info",
+        "info-heavy",
+        "positive",
+        "positive-heavy",
+        "warning",
+        "warning-heavy",
+        "danger",
+        "danger-heavy",
+        "utility",
+        "utility-heavy",
+        "misc",
+        "misc-heavy",
+        "brand",
+        "link",
+        "link-hover",
+        "link-visited",
+        "link-visited-hover",
+        "dark-primary",
+        "dark-complementary",
+        "dark-secondary",
+        "light-primary",
+        "light-complementary",
+        "light-secondary",
+        "light-hint",
+        "inverted-primary",
+        "inverted-complementary",
+        "inverted-secondary",
+        "inverted-hint"
+      ],
+      "value": "primary",
+      "enabled": true,
+      "_description": "Semantic text colour. `primary`/`secondary`/`hint` set emphasis; `info`, `positive`, `warning`, `danger`, `utility`, `misc` carry meaning (each with a `-heavy` variant); `link*` are anchor states; `dark-*`, `light-*` and `inverted-*` are for placement on contrasting backgrounds."
+    },
+    {
+      "name": "icon",
+      "_type": "conditionalIconSearch",
+      "value": "",
+      "enabled": true,
+      "subSelection": {
+        "iconDisplay": {
+          "name": "iconDisplay",
+          "_type": "select",
+          "selectionList": [
+            "Icon only",
+            "Start with Icon",
+            "End with Icon"
+          ],
+          "value": "End with Icon",
+          "enabled": true,
+          "_description": "Where the icon is drawn relative to the control's text."
+        },
+        "iconSize": {
+          "name": "Icon Size",
+          "_type": "number",
+          "value": 22,
+          "enabled": true,
+          "_description": "Icon size in pixels."
+        }
+      },
+      "_description": "Icon drawn with the text; sub-props set which side it sits on and its size."
+    }
+  ]
+}

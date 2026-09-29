@@ -1,0 +1,27 @@
+{
+  "nodeKey": "hierarchymapperselection",
+  "nodeType": "hierarchymapperselection",
+  "nodeGroupType": "group",
+  "component": "HierarchyMapperSelection",
+  "frameWork": "Nextjs",
+  "frameWorkVersion": "14.2.3",
+  "nodeVersion": "v1",
+  "sourceNodeId": "d04b6296b52345fda848d5365879e88b",
+  "instanceCount": 1,
+  "kind": "props",
+  "count": 1,
+  "props": [
+    {
+      "name": "switchType",
+      "_label": "Switch Type",
+      "_type": "select",
+      "selectionList": [
+        "toggle",
+        "checkbox"
+      ],
+      "value": "",
+      "enabled": true,
+      "_description": "How each selectable node is toggled: `toggle` for a switch, `checkbox` for a tick box."
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "nodeKey": "tab_group",
+  "nodeType": "tab_group",
+  "nodeGroupType": "group",
+  "component": "TabGroup",
+  "frameWork": "Nextjs",
+  "frameWorkVersion": "14.2.3",
+  "nodeVersion": "v1",
+  "sourceNodeId": "c3ecf3455e65454cb78b75bde6636e43",
+  "instanceCount": 1,
+  "kind": "props",
+  "count": 1,
+  "props": [
+    {
+      "name": "headerAlignment",
+      "_type": "select",
+      "selectionList": [
+        "left",
+        "center",
+        "right",
+        "full"
+      ],
+      "value": "left",
+      "enabled": true,
+      "_description": "How the tab strip is laid out across its width: `left`, `center`, `right`, or `full` to stretch tabs evenly."
+    }
+  ]
+}

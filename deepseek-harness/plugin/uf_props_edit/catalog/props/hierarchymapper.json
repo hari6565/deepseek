@@ -1,0 +1,23 @@
+{
+  "nodeKey": "hierarchymapper",
+  "nodeType": "group",
+  "nodeGroupType": "hierarchymapper",
+  "component": "HierarchyMapper",
+  "frameWork": "Nextjs",
+  "frameWorkVersion": "14.2.3",
+  "nodeVersion": "v1",
+  "sourceNodeId": "671a41c423384651a29655d84af9c45a",
+  "instanceCount": 1,
+  "kind": "props",
+  "count": 1,
+  "props": [
+    {
+      "name": "category",
+      "_label": "Category",
+      "_type": "text",
+      "value": "",
+      "enabled": true,
+      "_description": "The category name the mapper loads its hierarchy for."
+    }
+  ]
+}

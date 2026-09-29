@@ -1,0 +1,124 @@
+{
+  "nodeKey": "table",
+  "nodeType": "group",
+  "nodeGroupType": "table",
+  "component": "Table",
+  "frameWork": "Nextjs",
+  "frameWorkVersion": "14.2.3",
+  "nodeVersion": "v1",
+  "sourceNodeId": "72ebeac5b23e4682bfef0f12fa6cc635",
+  "instanceCount": 1,
+  "kind": "props",
+  "count": 12,
+  "props": [
+    {
+      "name": "tableName",
+      "_type": "text",
+      "value": "mytable",
+      "enabled": true,
+      "_description": "Name of the data table this grid reads and writes."
+    },
+    {
+      "name": "primaryKey",
+      "_type": "text",
+      "value": "id",
+      "enabled": true,
+      "_description": "Column that uniquely identifies a row. Used for selection, update and delete."
+    },
+    {
+      "name": "parentTableName",
+      "_type": "text",
+      "value": "",
+      "enabled": true,
+      "_description": "Parent table this grid is a detail of, for master-detail screens. Empty for a standalone table."
+    },
+    {
+      "name": "parentTablePrimaryKey",
+      "_label": "Parent Table Column Name",
+      "_type": "text",
+      "value": "",
+      "enabled": true,
+      "_description": "Column in this table holding the parent row's key — the foreign key side of the master-detail link."
+    },
+    {
+      "name": "tableSettings",
+      "_type": "boolean",
+      "value": false,
+      "enabled": true,
+      "_description": "Shows the settings control that lets the user show, hide and reorder columns."
+    },
+    {
+      "name": "tableSorting",
+      "_type": "boolean",
+      "value": false,
+      "enabled": true,
+      "_description": "Lets the user sort by clicking column headers."
+    },
+    {
+      "name": "tableSelection",
+      "_type": "boolean",
+      "value": true,
+      "enabled": true,
+      "_description": "Shows the row selection checkboxes. On by default."
+    },
+    {
+      "name": "search",
+      "_type": "boolean",
+      "value": false,
+      "enabled": true,
+      "_description": "Shows the table-wide search box."
+    },
+    {
+      "name": "tableActions",
+      "_type": "boolean",
+      "value": false,
+      "enabled": true,
+      "_description": "Shows the per-row action controls (add, edit, delete)."
+    },
+    {
+      "name": "needLocking",
+      "_type": "boolean",
+      "value": false,
+      "enabled": true,
+      "_description": "Locks a row while it is being edited so two users cannot change it at once. (?)"
+    },
+    {
+      "name": "isPivotTable",
+      "_type": "boolean",
+      "value": false,
+      "enabled": true,
+      "_description": "Renders the same data as a pivot grid instead of a flat table."
+    },
+    {
+      "name": "enableHeaderText",
+      "_type": "conditionalBoolean",
+      "value": false,
+      "enabled": true,
+      "subSelection": {
+        "_true": {
+          "content": {
+            "name": "Header Text",
+            "_type": "text",
+            "value": "",
+            "enabled": true,
+            "_description": "The caption text shown beside the control."
+          },
+          "position": {
+            "name": "Header Position",
+            "_type": "select",
+            "selectionList": [
+              "left",
+              "top",
+              "right",
+              "bottom"
+            ],
+            "value": "top",
+            "enabled": true,
+            "_description": "Which side of the control the caption sits on: `left`, `top`, `right` or `bottom`."
+          }
+        }
+      },
+      "_description": "Turns on a caption attached to the control. When true, the `_true` sub-props supply the caption text and which side it sits on."
+    }
+  ]
+}

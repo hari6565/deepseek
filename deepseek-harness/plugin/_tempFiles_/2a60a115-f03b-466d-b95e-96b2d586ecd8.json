@@ -7,9 +7,9 @@
       "nodeVersion": "v1",
       "elementInfo": {}
     },
-    "a1b2c3d4e5f678901234567890abcdef": {
-      "nodeId": "a1b2c3d4e5f678901234567890abcdef",
-      "nodeName": "Customer Registration",
+    "a1b2c3d4e5f6789012345678901234ab": {
+      "nodeId": "a1b2c3d4e5f6789012345678901234ab",
+      "nodeName": "productgroup",
       "nodeType": "group",
       "nodeVersion": "v1",
       "elementInfo": {
@@ -24,9 +24,9 @@
         "events": "#group_events"
       }
     },
-    "11111111111111111111111111111111": {
-      "nodeId": "11111111111111111111111111111111",
-      "nodeName": "Customer Registration",
+    "b2c3d4e5f6789012345678901234abcd": {
+      "nodeId": "b2c3d4e5f6789012345678901234abcd",
+      "nodeName": "Product",
       "nodeType": "text",
       "nodeVersion": "v1",
       "elementInfo": {
@@ -44,7 +44,7 @@
                 "content": {
                   "name": "content",
                   "_type": "text",
-                  "value": "Customer Registration",
+                  "value": "Product",
                   "enabled": true
                 }
               }
@@ -158,8 +158,8 @@
         "events": []
       }
     },
-    "22222222222222222222222222222222": {
-      "nodeId": "22222222222222222222222222222222",
+    "c3d4e5f6789012345678901234abcde1": {
+      "nodeId": "c3d4e5f6789012345678901234abcde1",
       "nodeName": "Name",
       "nodeType": "label",
       "nodeVersion": "v1",
@@ -260,9 +260,9 @@
         "events": "#label_events"
       }
     },
-    "33333333333333333333333333333333": {
-      "nodeId": "33333333333333333333333333333333",
-      "nodeName": "Name",
+    "d4e5f6789012345678901234abcdef12": {
+      "nodeId": "d4e5f6789012345678901234abcdef12",
+      "nodeName": "name",
       "nodeType": "textinput",
       "nodeVersion": "v1",
       "elementInfo": {
@@ -389,240 +389,9 @@
         "validation": "#textinput_validation"
       }
     },
-    "44444444444444444444444444444444": {
-      "nodeId": "44444444444444444444444444444444",
-      "nodeName": "Email",
-      "nodeType": "label",
-      "nodeVersion": "v1",
-      "elementInfo": {
-        "frameWork": "Nextjs",
-        "version": "14.2.3",
-        "component": "Label",
-        "label": "",
-        "props": [
-          {
-            "name": "theme",
-            "_type": "select",
-            "selectionList": [
-              "normal",
-              "info",
-              "danger",
-              "warning",
-              "success",
-              "utility",
-              "unknown",
-              "clear"
-            ],
-            "value": "normal",
-            "enabled": true
-          },
-          {
-            "name": "icon",
-            "_type": "conditionalIconSearch",
-            "value": "",
-            "enabled": true,
-            "subSelection": {
-              "iconDisplay": {
-                "name": "iconDisplay",
-                "_type": "select",
-                "selectionList": [
-                  "Icon only",
-                  "Start with Icon",
-                  "End with Icon"
-                ],
-                "value": "End with Icon",
-                "enabled": true
-              }
-            }
-          },
-          {
-            "name": "interactive",
-            "_type": "boolean",
-            "value": false,
-            "enabled": true
-          },
-          {
-            "name": "copy",
-            "_type": "string",
-            "value": "",
-            "enabled": true
-          },
-          {
-            "name": "disabled",
-            "_type": "boolean",
-            "value": false,
-            "enabled": true
-          },
-          {
-            "name": "content",
-            "_type": "string",
-            "value": "Email",
-            "enabled": true
-          },
-          {
-            "name": "enableHeaderText",
-            "_type": "conditionalBoolean",
-            "value": false,
-            "enabled": true,
-            "subSelection": {
-              "_true": {
-                "content": {
-                  "name": "Header Text",
-                  "_type": "string",
-                  "value": "",
-                  "enabled": true
-                },
-                "position": {
-                  "name": "Header Position",
-                  "_type": "select",
-                  "selectionList": [
-                    "left",
-                    "top",
-                    "right",
-                    "bottom"
-                  ],
-                  "value": "",
-                  "enabled": true
-                }
-              }
-            }
-          }
-        ],
-        "events": "#label_events"
-      }
-    },
-    "55555555555555555555555555555555": {
-      "nodeId": "55555555555555555555555555555555",
-      "nodeName": "Email",
-      "nodeType": "textinput",
-      "nodeVersion": "v1",
-      "elementInfo": {
-        "frameWork": "Nextjs",
-        "version": "14.2.3",
-        "component": "TextInput",
-        "props": [
-          {
-            "name": "disabled",
-            "_label": "Disabled",
-            "_type": "boolean",
-            "value": false,
-            "enabled": true
-          },
-          {
-            "name": "readOnly",
-            "_label": "Read Only",
-            "_type": "boolean",
-            "value": false,
-            "enabled": true
-          },
-          {
-            "name": "pin",
-            "_label": "Pin",
-            "_type": "select",
-            "selectionList": [
-              "round-round",
-              "brick-brick",
-              "clear-clear"
-            ],
-            "value": "brick-brick",
-            "enabled": true
-          },
-          {
-            "name": "view",
-            "_label": "View",
-            "_type": "select",
-            "selectionList": [
-              "normal",
-              "clear"
-            ],
-            "value": "normal",
-            "enabled": true
-          },
-          {
-            "name": "placeholder",
-            "_label": "Placeholder",
-            "_type": "text",
-            "value": "type here....",
-            "enabled": true
-          },
-          {
-            "name": "leftContent",
-            "_label": "Left Content",
-            "_type": "text",
-            "value": "",
-            "enabled": true
-          },
-          {
-            "name": "rightContent",
-            "_label": "Right Content",
-            "_type": "text",
-            "value": "",
-            "enabled": true
-          },
-          {
-            "name": "enableHeaderText",
-            "_label": "Enable Header Text",
-            "_type": "conditionalBoolean",
-            "value": false,
-            "enabled": true,
-            "subSelection": {
-              "_true": {
-                "content": {
-                  "name": "Header Text",
-                  "_type": "text",
-                  "value": "",
-                  "enabled": true
-                },
-                "position": {
-                  "name": "Header Position",
-                  "_type": "select",
-                  "selectionList": [
-                    "left",
-                    "top",
-                    "right",
-                    "bottom"
-                  ],
-                  "value": "top",
-                  "enabled": true
-                }
-              }
-            }
-          },
-          {
-            "name": "numberFormat",
-            "_label": "Number Format Style",
-            "_type": "select",
-            "selectionList": [
-              "none",
-              "Indian",
-              "International",
-              "European"
-            ],
-            "value": "",
-            "enabled": false
-          },
-          {
-            "name": "isCurrency",
-            "_label": "Is Currency",
-            "_type": "boolean",
-            "value": false,
-            "enabled": true
-          },
-          {
-            "name": "bindInitialData",
-            "_label": "Bind Initial Data",
-            "_type": "boolean",
-            "value": false,
-            "enabled": true
-          }
-        ],
-        "events": "#textinput_events",
-        "validation": "#textinput_validation"
-      }
-    },
-    "66666666666666666666666666666666": {
-      "nodeId": "66666666666666666666666666666666",
-      "nodeName": "Save",
+    "e5f6789012345678901234abcdef1234": {
+      "nodeId": "e5f6789012345678901234abcdef1234",
+      "nodeName": "delete",
       "nodeType": "button",
       "nodeVersion": "v1",
       "elementInfo": {
@@ -758,10 +527,10 @@
       "T_parentId": "root",
       "type": "Canvas",
       "children": [
-        "a1b2c3d4e5f678901234567890abcdef"
+        "a1b2c3d4e5f6789012345678901234ab"
       ],
       "data": {
-        "label": "Customer Registration Page",
+        "label": "",
         "nodeProperty": {
           "nodeId": "root",
           "nodeName": "Root",
@@ -786,20 +555,18 @@
       "groupType": "group"
     },
     {
-      "id": "a1b2c3d4e5f678901234567890abcdef",
+      "id": "a1b2c3d4e5f6789012345678901234ab",
       "parent": "root",
       "T_parentId": "root",
       "type": "group",
       "children": [
-        "11111111111111111111111111111111",
-        "22222222222222222222222222222222",
-        "33333333333333333333333333333333",
-        "44444444444444444444444444444444",
-        "55555555555555555555555555555555",
-        "66666666666666666666666666666666"
+        "b2c3d4e5f6789012345678901234abcd",
+        "c3d4e5f6789012345678901234abcde1",
+        "d4e5f6789012345678901234abcdef12",
+        "e5f6789012345678901234abcdef1234"
       ],
       "data": {
-        "label": "Customer Registration",
+        "label": "productgroup",
         "nodeAppearance": {
           "type": "group",
           "label": "group",
@@ -823,8 +590,8 @@
           ]
         },
         "nodeProperty": {
-          "nodeId": "a1b2c3d4e5f678901234567890abcdef",
-          "nodeName": "Customer Registration",
+          "nodeId": "a1b2c3d4e5f6789012345678901234ab",
+          "nodeName": "productgroup",
           "nodeType": "group",
           "nodeVersion": "v1",
           "elementInfo": {
@@ -841,7 +608,7 @@
         }
       },
       "property": {
-        "name": "customerregistrationgroup",
+        "name": "productgroup",
         "nodeType": "group",
         "description": ""
       },
@@ -854,7 +621,7 @@
         },
         "row": {
           "start": 1,
-          "end": 70
+          "end": 59
         },
         "column": {
           "start": 1,
@@ -865,21 +632,21 @@
       "version": "TRL:AFR:UF-UFW:Next:Defaults:group:v1"
     },
     {
-      "id": "11111111111111111111111111111111",
-      "parent": "a1b2c3d4e5f678901234567890abcdef",
-      "T_parentId": "a1b2c3d4e5f678901234567890abcdef",
+      "id": "b2c3d4e5f6789012345678901234abcd",
+      "parent": "a1b2c3d4e5f6789012345678901234ab",
+      "T_parentId": "a1b2c3d4e5f6789012345678901234ab",
       "type": "text",
       "children": [],
       "data": {
-        "label": "Customer Registration",
+        "label": "Product",
         "nodeAppearance": {
           "label": "text",
           "color": "#0736C4",
           "icon": "/torus/9.1/resources/nodeicons/UF-UFW/text.svg"
         },
         "nodeProperty": {
-          "nodeId": "11111111111111111111111111111111",
-          "nodeName": "Customer Registration",
+          "nodeId": "b2c3d4e5f6789012345678901234abcd",
+          "nodeName": "Product",
           "nodeType": "text",
           "nodeVersion": "v1",
           "elementInfo": {
@@ -897,7 +664,7 @@
                     "content": {
                       "name": "content",
                       "_type": "text",
-                      "value": "Customer Registration",
+                      "value": "Product",
                       "enabled": true
                     }
                   }
@@ -1022,19 +789,19 @@
         "style": {},
         "row": {
           "start": 1,
-          "end": 13
+          "end": 9
         },
         "column": {
-          "start": 2,
-          "end": 24
+          "start": 1,
+          "end": 25
         }
       },
       "version": "TRL:AFR:UF-UFW:Next:DataDisplay:text:v1"
     },
     {
-      "id": "22222222222222222222222222222222",
-      "parent": "a1b2c3d4e5f678901234567890abcdef",
-      "T_parentId": "a1b2c3d4e5f678901234567890abcdef",
+      "id": "c3d4e5f6789012345678901234abcde1",
+      "parent": "a1b2c3d4e5f6789012345678901234ab",
+      "T_parentId": "a1b2c3d4e5f6789012345678901234ab",
       "type": "label",
       "children": [],
       "data": {
@@ -1046,7 +813,7 @@
           "size": 45
         },
         "nodeProperty": {
-          "nodeId": "22222222222222222222222222222222",
+          "nodeId": "c3d4e5f6789012345678901234abcde1",
           "nodeName": "Name",
           "nodeType": "label",
           "nodeVersion": "v1",
@@ -1160,24 +927,24 @@
           "contentAlign": "left"
         },
         "row": {
-          "start": 14,
-          "end": 22
+          "start": 15,
+          "end": 23
         },
         "column": {
-          "start": 2,
-          "end": 7
+          "start": 1,
+          "end": 25
         }
       },
       "version": "TRL:AFR:UF-UFW:Next:DataDisplay:label:v1"
     },
     {
-      "id": "33333333333333333333333333333333",
-      "parent": "a1b2c3d4e5f678901234567890abcdef",
-      "T_parentId": "a1b2c3d4e5f678901234567890abcdef",
+      "id": "d4e5f6789012345678901234abcdef12",
+      "parent": "a1b2c3d4e5f6789012345678901234ab",
+      "T_parentId": "a1b2c3d4e5f6789012345678901234ab",
       "type": "textinput",
       "children": [],
       "data": {
-        "label": "Name",
+        "label": "name",
         "nodeAppearance": {
           "type": "textinput",
           "label": "textinput",
@@ -1201,8 +968,8 @@
           ]
         },
         "nodeProperty": {
-          "nodeId": "33333333333333333333333333333333",
-          "nodeName": "Name",
+          "nodeId": "d4e5f6789012345678901234abcdef12",
+          "nodeName": "name",
           "nodeType": "textinput",
           "nodeVersion": "v1",
           "elementInfo": {
@@ -1339,342 +1106,24 @@
         "classNames": "",
         "style": {},
         "row": {
-          "start": 24,
-          "end": 35
+          "start": 29,
+          "end": 40
         },
         "column": {
-          "start": 8,
-          "end": 24
+          "start": 1,
+          "end": 25
         }
       },
       "version": "TRL:AFR:UF-UFW:Next:Inputs:textinput:v1"
     },
     {
-      "id": "44444444444444444444444444444444",
-      "parent": "a1b2c3d4e5f678901234567890abcdef",
-      "T_parentId": "a1b2c3d4e5f678901234567890abcdef",
-      "type": "label",
-      "children": [],
-      "data": {
-        "label": "Email",
-        "nodeAppearance": {
-          "label": "label",
-          "color": "#0736C4",
-          "icon": "/torus/9.1/resources/nodeicons/UF-UFW/label.svg",
-          "size": 45
-        },
-        "nodeProperty": {
-          "nodeId": "44444444444444444444444444444444",
-          "nodeName": "Email",
-          "nodeType": "label",
-          "nodeVersion": "v1",
-          "elementInfo": {
-            "frameWork": "Nextjs",
-            "version": "14.2.3",
-            "component": "Label",
-            "label": "",
-            "props": [
-              {
-                "name": "theme",
-                "_type": "select",
-                "selectionList": [
-                  "normal",
-                  "info",
-                  "danger",
-                  "warning",
-                  "success",
-                  "utility",
-                  "unknown",
-                  "clear"
-                ],
-                "value": "normal",
-                "enabled": true
-              },
-              {
-                "name": "icon",
-                "_type": "conditionalIconSearch",
-                "value": "",
-                "enabled": true,
-                "subSelection": {
-                  "iconDisplay": {
-                    "name": "iconDisplay",
-                    "_type": "select",
-                    "selectionList": [
-                      "Icon only",
-                      "Start with Icon",
-                      "End with Icon"
-                    ],
-                    "value": "End with Icon",
-                    "enabled": true
-                  }
-                }
-              },
-              {
-                "name": "interactive",
-                "_type": "boolean",
-                "value": false,
-                "enabled": true
-              },
-              {
-                "name": "copy",
-                "_type": "string",
-                "value": "",
-                "enabled": true
-              },
-              {
-                "name": "disabled",
-                "_type": "boolean",
-                "value": false,
-                "enabled": true
-              },
-              {
-                "name": "content",
-                "_type": "string",
-                "value": "Email",
-                "enabled": true
-              },
-              {
-                "name": "enableHeaderText",
-                "_type": "conditionalBoolean",
-                "value": false,
-                "enabled": true,
-                "subSelection": {
-                  "_true": {
-                    "content": {
-                      "name": "Header Text",
-                      "_type": "string",
-                      "value": "",
-                      "enabled": true
-                    },
-                    "position": {
-                      "name": "Header Position",
-                      "_type": "select",
-                      "selectionList": [
-                        "left",
-                        "top",
-                        "right",
-                        "bottom"
-                      ],
-                      "value": "",
-                      "enabled": true
-                    }
-                  }
-                }
-              }
-            ],
-            "events": "#label_events"
-          }
-        }
-      },
-      "property": {
-        "name": "emaillabel",
-        "nodeType": "label",
-        "description": ""
-      },
-      "grid": {
-        "classNames": "",
-        "style": {},
-        "commonprops": {
-          "contentAlign": "left"
-        },
-        "row": {
-          "start": 36,
-          "end": 44
-        },
-        "column": {
-          "start": 2,
-          "end": 7
-        }
-      },
-      "version": "TRL:AFR:UF-UFW:Next:DataDisplay:label:v1"
-    },
-    {
-      "id": "55555555555555555555555555555555",
-      "parent": "a1b2c3d4e5f678901234567890abcdef",
-      "T_parentId": "a1b2c3d4e5f678901234567890abcdef",
-      "type": "textinput",
-      "children": [],
-      "data": {
-        "label": "Email",
-        "nodeAppearance": {
-          "type": "textinput",
-          "label": "textinput",
-          "color": "#0736C4",
-          "shape": "square",
-          "icon": "/torus/9.1/resources/nodeicons/UF-UFW/text_input.svg",
-          "size": 45,
-          "handles": [
-            {
-              "type": "source",
-              "position": "right",
-              "isConnectable": true,
-              "shown": true
-            },
-            {
-              "type": "target",
-              "position": "left",
-              "isConnectable": true,
-              "shown": true
-            }
-          ]
-        },
-        "nodeProperty": {
-          "nodeId": "55555555555555555555555555555555",
-          "nodeName": "Email",
-          "nodeType": "textinput",
-          "nodeVersion": "v1",
-          "elementInfo": {
-            "frameWork": "Nextjs",
-            "version": "14.2.3",
-            "component": "TextInput",
-            "props": [
-              {
-                "name": "disabled",
-                "_label": "Disabled",
-                "_type": "boolean",
-                "value": false,
-                "enabled": true
-              },
-              {
-                "name": "readOnly",
-                "_label": "Read Only",
-                "_type": "boolean",
-                "value": false,
-                "enabled": true
-              },
-              {
-                "name": "pin",
-                "_label": "Pin",
-                "_type": "select",
-                "selectionList": [
-                  "round-round",
-                  "brick-brick",
-                  "clear-clear"
-                ],
-                "value": "brick-brick",
-                "enabled": true
-              },
-              {
-                "name": "view",
-                "_label": "View",
-                "_type": "select",
-                "selectionList": [
-                  "normal",
-                  "clear"
-                ],
-                "value": "normal",
-                "enabled": true
-              },
-              {
-                "name": "placeholder",
-                "_label": "Placeholder",
-                "_type": "text",
-                "value": "type here....",
-                "enabled": true
-              },
-              {
-                "name": "leftContent",
-                "_label": "Left Content",
-                "_type": "text",
-                "value": "",
-                "enabled": true
-              },
-              {
-                "name": "rightContent",
-                "_label": "Right Content",
-                "_type": "text",
-                "value": "",
-                "enabled": true
-              },
-              {
-                "name": "enableHeaderText",
-                "_label": "Enable Header Text",
-                "_type": "conditionalBoolean",
-                "value": false,
-                "enabled": true,
-                "subSelection": {
-                  "_true": {
-                    "content": {
-                      "name": "Header Text",
-                      "_type": "text",
-                      "value": "",
-                      "enabled": true
-                    },
-                    "position": {
-                      "name": "Header Position",
-                      "_type": "select",
-                      "selectionList": [
-                        "left",
-                        "top",
-                        "right",
-                        "bottom"
-                      ],
-                      "value": "top",
-                      "enabled": true
-                    }
-                  }
-                }
-              },
-              {
-                "name": "numberFormat",
-                "_label": "Number Format Style",
-                "_type": "select",
-                "selectionList": [
-                  "none",
-                  "Indian",
-                  "International",
-                  "European"
-                ],
-                "value": "",
-                "enabled": false
-              },
-              {
-                "name": "isCurrency",
-                "_label": "Is Currency",
-                "_type": "boolean",
-                "value": false,
-                "enabled": true
-              },
-              {
-                "name": "bindInitialData",
-                "_label": "Bind Initial Data",
-                "_type": "boolean",
-                "value": false,
-                "enabled": true
-              }
-            ],
-            "events": "#textinput_events",
-            "validation": "#textinput_validation"
-          }
-        }
-      },
-      "property": {
-        "name": "email",
-        "nodeType": "textinput",
-        "description": ""
-      },
-      "grid": {
-        "classNames": "",
-        "style": {},
-        "row": {
-          "start": 45,
-          "end": 56
-        },
-        "column": {
-          "start": 8,
-          "end": 24
-        }
-      },
-      "version": "TRL:AFR:UF-UFW:Next:Inputs:textinput:v1"
-    },
-    {
-      "id": "66666666666666666666666666666666",
-      "parent": "a1b2c3d4e5f678901234567890abcdef",
-      "T_parentId": "a1b2c3d4e5f678901234567890abcdef",
+      "id": "e5f6789012345678901234abcdef1234",
+      "parent": "a1b2c3d4e5f6789012345678901234ab",
+      "T_parentId": "a1b2c3d4e5f6789012345678901234ab",
       "type": "button",
       "children": [],
       "data": {
-        "label": "Save",
+        "label": "delete",
         "nodeAppearance": {
           "icon": "/torus/9.1/resources/nodeicons/UF-UFW/button.svg",
           "color": "#0736C4",
@@ -1682,8 +1131,8 @@
           "size": 45
         },
         "nodeProperty": {
-          "nodeId": "66666666666666666666666666666666",
-          "nodeName": "Save",
+          "nodeId": "e5f6789012345678901234abcdef1234",
+          "nodeName": "delete",
           "nodeType": "button",
           "nodeVersion": "v1",
           "elementInfo": {
@@ -1813,7 +1262,7 @@
         }
       },
       "property": {
-        "name": "save",
+        "name": "delete",
         "nodeType": "button",
         "description": ""
       },
@@ -1821,12 +1270,12 @@
         "classNames": "",
         "style": {},
         "row": {
-          "start": 57,
-          "end": 69
+          "start": 46,
+          "end": 56
         },
         "column": {
-          "start": 8,
-          "end": 24
+          "start": 1,
+          "end": 25
         }
       },
       "version": "TRL:AFR:UF-UFW:Next:Inputs:button:v1"
@@ -1839,10 +1288,10 @@
       "type": "Canvas",
       "T_parentId": "root",
       "children": [
-        "a1b2c3d4e5f678901234567890abcdef"
+        "a1b2c3d4e5f6789012345678901234ab"
       ],
       "data": {
-        "label": "Customer Registration Page",
+        "label": "",
         "nodeProperty": {
           "nodeId": "root",
           "nodeName": "Root",
@@ -1879,28 +1328,26 @@
       },
       "groupType": "group"
     },
-    "a1b2c3d4e5f678901234567890abcdef": {
-      "id": "a1b2c3d4e5f678901234567890abcdef",
+    "a1b2c3d4e5f6789012345678901234ab": {
+      "id": "a1b2c3d4e5f6789012345678901234ab",
       "parent": "root",
       "type": "group",
       "T_parentId": "root",
       "children": [
-        "11111111111111111111111111111111",
-        "22222222222222222222222222222222",
-        "33333333333333333333333333333333",
-        "44444444444444444444444444444444",
-        "55555555555555555555555555555555",
-        "66666666666666666666666666666666"
+        "b2c3d4e5f6789012345678901234abcd",
+        "c3d4e5f6789012345678901234abcde1",
+        "d4e5f6789012345678901234abcdef12",
+        "e5f6789012345678901234abcdef1234"
       ],
       "property": {
-        "name": "customerregistrationgroup",
+        "name": "productgroup",
         "nodeType": "group",
         "description": "",
         "props": {
           "meta": {
             "row": 1,
             "col": 1,
-            "rowSpan": 69,
+            "rowSpan": 58,
             "colSpan": 24
           }
         }
@@ -1915,7 +1362,7 @@
       },
       "groupType": "group",
       "data": {
-        "label": "Customer Registration",
+        "label": "productgroup",
         "nodeAppearance": {
           "type": "group",
           "label": "group",
@@ -1939,8 +1386,8 @@
           ]
         },
         "nodeProperty": {
-          "nodeId": "a1b2c3d4e5f678901234567890abcdef",
-          "nodeName": "Customer Registration",
+          "nodeId": "a1b2c3d4e5f6789012345678901234ab",
+          "nodeName": "productgroup",
           "nodeType": "group",
           "nodeVersion": "v1",
           "elementInfo": {
@@ -1959,11 +1406,11 @@
       "version": "TRL:AFR:UF-UFW:Next:Defaults:group:v1",
       "t_parentId": "root"
     },
-    "11111111111111111111111111111111": {
-      "id": "11111111111111111111111111111111",
-      "parent": "a1b2c3d4e5f678901234567890abcdef",
+    "b2c3d4e5f6789012345678901234abcd": {
+      "id": "b2c3d4e5f6789012345678901234abcd",
+      "parent": "a1b2c3d4e5f6789012345678901234ab",
       "type": "text",
-      "T_parentId": "a1b2c3d4e5f678901234567890abcdef",
+      "T_parentId": "a1b2c3d4e5f6789012345678901234ab",
       "children": [],
       "property": {
         "name": "headline",
@@ -1972,9 +1419,9 @@
         "props": {
           "meta": {
             "row": 1,
-            "col": 2,
-            "rowSpan": 12,
-            "colSpan": 22
+            "col": 1,
+            "rowSpan": 8,
+            "colSpan": 24
           }
         }
       },
@@ -1984,15 +1431,15 @@
       },
       "groupType": "group",
       "data": {
-        "label": "Customer Registration",
+        "label": "Product",
         "nodeAppearance": {
           "label": "text",
           "color": "#0736C4",
           "icon": "/torus/9.1/resources/nodeicons/UF-UFW/text.svg"
         },
         "nodeProperty": {
-          "nodeId": "11111111111111111111111111111111",
-          "nodeName": "Customer Registration",
+          "nodeId": "b2c3d4e5f6789012345678901234abcd",
+          "nodeName": "Product",
           "nodeType": "text",
           "nodeVersion": "v1",
           "elementInfo": {
@@ -2010,7 +1457,7 @@
                     "content": {
                       "name": "content",
                       "_type": "text",
-                      "value": "Customer Registration",
+                      "value": "Product",
                       "enabled": true
                     }
                   }
@@ -2126,13 +1573,13 @@
         }
       },
       "version": "TRL:AFR:UF-UFW:Next:DataDisplay:text:v1",
-      "t_parentId": "a1b2c3d4e5f678901234567890abcdef"
+      "t_parentId": "a1b2c3d4e5f6789012345678901234ab"
     },
-    "22222222222222222222222222222222": {
-      "id": "22222222222222222222222222222222",
-      "parent": "a1b2c3d4e5f678901234567890abcdef",
+    "c3d4e5f6789012345678901234abcde1": {
+      "id": "c3d4e5f6789012345678901234abcde1",
+      "parent": "a1b2c3d4e5f6789012345678901234ab",
       "type": "label",
-      "T_parentId": "a1b2c3d4e5f678901234567890abcdef",
+      "T_parentId": "a1b2c3d4e5f6789012345678901234ab",
       "children": [],
       "property": {
         "name": "namelabel",
@@ -2140,10 +1587,10 @@
         "description": "",
         "props": {
           "meta": {
-            "row": 14,
-            "col": 2,
+            "row": 15,
+            "col": 1,
             "rowSpan": 8,
-            "colSpan": 5
+            "colSpan": 24
           }
         }
       },
@@ -2164,7 +1611,7 @@
           "size": 45
         },
         "nodeProperty": {
-          "nodeId": "22222222222222222222222222222222",
+          "nodeId": "c3d4e5f6789012345678901234abcde1",
           "nodeName": "Name",
           "nodeType": "label",
           "nodeVersion": "v1",
@@ -2267,13 +1714,13 @@
         }
       },
       "version": "TRL:AFR:UF-UFW:Next:DataDisplay:label:v1",
-      "t_parentId": "a1b2c3d4e5f678901234567890abcdef"
+      "t_parentId": "a1b2c3d4e5f6789012345678901234ab"
     },
-    "33333333333333333333333333333333": {
-      "id": "33333333333333333333333333333333",
-      "parent": "a1b2c3d4e5f678901234567890abcdef",
+    "d4e5f6789012345678901234abcdef12": {
+      "id": "d4e5f6789012345678901234abcdef12",
+      "parent": "a1b2c3d4e5f6789012345678901234ab",
       "type": "textinput",
-      "T_parentId": "a1b2c3d4e5f678901234567890abcdef",
+      "T_parentId": "a1b2c3d4e5f6789012345678901234ab",
       "children": [],
       "property": {
         "name": "name",
@@ -2281,10 +1728,10 @@
         "description": "",
         "props": {
           "meta": {
-            "row": 24,
-            "col": 8,
+            "row": 29,
+            "col": 1,
             "rowSpan": 11,
-            "colSpan": 16
+            "colSpan": 24
           }
         }
       },
@@ -2294,7 +1741,7 @@
       },
       "groupType": "group",
       "data": {
-        "label": "Name",
+        "label": "name",
         "nodeAppearance": {
           "type": "textinput",
           "label": "textinput",
@@ -2318,8 +1765,8 @@
           ]
         },
         "nodeProperty": {
-          "nodeId": "33333333333333333333333333333333",
-          "nodeName": "Name",
+          "nodeId": "d4e5f6789012345678901234abcdef12",
+          "nodeName": "name",
           "nodeType": "textinput",
           "nodeVersion": "v1",
           "elementInfo": {
@@ -2448,346 +1895,24 @@
         }
       },
       "version": "TRL:AFR:UF-UFW:Next:Inputs:textinput:v1",
-      "t_parentId": "a1b2c3d4e5f678901234567890abcdef"
+      "t_parentId": "a1b2c3d4e5f6789012345678901234ab"
     },
-    "44444444444444444444444444444444": {
-      "id": "44444444444444444444444444444444",
-      "parent": "a1b2c3d4e5f678901234567890abcdef",
-      "type": "label",
-      "T_parentId": "a1b2c3d4e5f678901234567890abcdef",
-      "children": [],
-      "property": {
-        "name": "emaillabel",
-        "nodeType": "label",
-        "description": "",
-        "props": {
-          "meta": {
-            "row": 36,
-            "col": 2,
-            "rowSpan": 8,
-            "colSpan": 5
-          }
-        }
-      },
-      "grid": {
-        "style": {},
-        "classNames": "",
-        "commonprops": {
-          "contentAlign": "left"
-        }
-      },
-      "groupType": "group",
-      "data": {
-        "label": "Email",
-        "nodeAppearance": {
-          "label": "label",
-          "color": "#0736C4",
-          "icon": "/torus/9.1/resources/nodeicons/UF-UFW/label.svg",
-          "size": 45
-        },
-        "nodeProperty": {
-          "nodeId": "44444444444444444444444444444444",
-          "nodeName": "Email",
-          "nodeType": "label",
-          "nodeVersion": "v1",
-          "elementInfo": {
-            "frameWork": "Nextjs",
-            "version": "14.2.3",
-            "component": "Label",
-            "label": "",
-            "props": [
-              {
-                "name": "theme",
-                "_type": "select",
-                "selectionList": [
-                  "normal",
-                  "info",
-                  "danger",
-                  "warning",
-                  "success",
-                  "utility",
-                  "unknown",
-                  "clear"
-                ],
-                "value": "normal",
-                "enabled": true
-              },
-              {
-                "name": "icon",
-                "_type": "conditionalIconSearch",
-                "value": "",
-                "enabled": true,
-                "subSelection": {
-                  "iconDisplay": {
-                    "name": "iconDisplay",
-                    "_type": "select",
-                    "selectionList": [
-                      "Icon only",
-                      "Start with Icon",
-                      "End with Icon"
-                    ],
-                    "value": "End with Icon",
-                    "enabled": true
-                  }
-                }
-              },
-              {
-                "name": "interactive",
-                "_type": "boolean",
-                "value": false,
-                "enabled": true
-              },
-              {
-                "name": "copy",
-                "_type": "string",
-                "value": "",
-                "enabled": true
-              },
-              {
-                "name": "disabled",
-                "_type": "boolean",
-                "value": false,
-                "enabled": true
-              },
-              {
-                "name": "content",
-                "_type": "string",
-                "value": "Email",
-                "enabled": true
-              },
-              {
-                "name": "enableHeaderText",
-                "_type": "conditionalBoolean",
-                "value": false,
-                "enabled": true,
-                "subSelection": {
-                  "_true": {
-                    "content": {
-                      "name": "Header Text",
-                      "_type": "string",
-                      "value": "",
-                      "enabled": true
-                    },
-                    "position": {
-                      "name": "Header Position",
-                      "_type": "select",
-                      "selectionList": [
-                        "left",
-                        "top",
-                        "right",
-                        "bottom"
-                      ],
-                      "value": "",
-                      "enabled": true
-                    }
-                  }
-                }
-              }
-            ],
-            "events": "#label_events"
-          }
-        }
-      },
-      "version": "TRL:AFR:UF-UFW:Next:DataDisplay:label:v1",
-      "t_parentId": "a1b2c3d4e5f678901234567890abcdef"
-    },
-    "55555555555555555555555555555555": {
-      "id": "55555555555555555555555555555555",
-      "parent": "a1b2c3d4e5f678901234567890abcdef",
-      "type": "textinput",
-      "T_parentId": "a1b2c3d4e5f678901234567890abcdef",
-      "children": [],
-      "property": {
-        "name": "email",
-        "nodeType": "textinput",
-        "description": "",
-        "props": {
-          "meta": {
-            "row": 45,
-            "col": 8,
-            "rowSpan": 11,
-            "colSpan": 16
-          }
-        }
-      },
-      "grid": {
-        "style": {},
-        "classNames": ""
-      },
-      "groupType": "group",
-      "data": {
-        "label": "Email",
-        "nodeAppearance": {
-          "type": "textinput",
-          "label": "textinput",
-          "color": "#0736C4",
-          "shape": "square",
-          "icon": "/torus/9.1/resources/nodeicons/UF-UFW/text_input.svg",
-          "size": 45,
-          "handles": [
-            {
-              "type": "source",
-              "position": "right",
-              "isConnectable": true,
-              "shown": true
-            },
-            {
-              "type": "target",
-              "position": "left",
-              "isConnectable": true,
-              "shown": true
-            }
-          ]
-        },
-        "nodeProperty": {
-          "nodeId": "55555555555555555555555555555555",
-          "nodeName": "Email",
-          "nodeType": "textinput",
-          "nodeVersion": "v1",
-          "elementInfo": {
-            "frameWork": "Nextjs",
-            "version": "14.2.3",
-            "component": "TextInput",
-            "props": [
-              {
-                "name": "disabled",
-                "_label": "Disabled",
-                "_type": "boolean",
-                "value": false,
-                "enabled": true
-              },
-              {
-                "name": "readOnly",
-                "_label": "Read Only",
-                "_type": "boolean",
-                "value": false,
-                "enabled": true
-              },
-              {
-                "name": "pin",
-                "_label": "Pin",
-                "_type": "select",
-                "selectionList": [
-                  "round-round",
-                  "brick-brick",
-                  "clear-clear"
-                ],
-                "value": "brick-brick",
-                "enabled": true
-              },
-              {
-                "name": "view",
-                "_label": "View",
-                "_type": "select",
-                "selectionList": [
-                  "normal",
-                  "clear"
-                ],
-                "value": "normal",
-                "enabled": true
-              },
-              {
-                "name": "placeholder",
-                "_label": "Placeholder",
-                "_type": "text",
-                "value": "type here....",
-                "enabled": true
-              },
-              {
-                "name": "leftContent",
-                "_label": "Left Content",
-                "_type": "text",
-                "value": "",
-                "enabled": true
-              },
-              {
-                "name": "rightContent",
-                "_label": "Right Content",
-                "_type": "text",
-                "value": "",
-                "enabled": true
-              },
-              {
-                "name": "enableHeaderText",
-                "_label": "Enable Header Text",
-                "_type": "conditionalBoolean",
-                "value": false,
-                "enabled": true,
-                "subSelection": {
-                  "_true": {
-                    "content": {
-                      "name": "Header Text",
-                      "_type": "text",
-                      "value": "",
-                      "enabled": true
-                    },
-                    "position": {
-                      "name": "Header Position",
-                      "_type": "select",
-                      "selectionList": [
-                        "left",
-                        "top",
-                        "right",
-                        "bottom"
-                      ],
-                      "value": "top",
-                      "enabled": true
-                    }
-                  }
-                }
-              },
-              {
-                "name": "numberFormat",
-                "_label": "Number Format Style",
-                "_type": "select",
-                "selectionList": [
-                  "none",
-                  "Indian",
-                  "International",
-                  "European"
-                ],
-                "value": "",
-                "enabled": false
-              },
-              {
-                "name": "isCurrency",
-                "_label": "Is Currency",
-                "_type": "boolean",
-                "value": false,
-                "enabled": true
-              },
-              {
-                "name": "bindInitialData",
-                "_label": "Bind Initial Data",
-                "_type": "boolean",
-                "value": false,
-                "enabled": true
-              }
-            ],
-            "events": "#textinput_events",
-            "validation": "#textinput_validation"
-          }
-        }
-      },
-      "version": "TRL:AFR:UF-UFW:Next:Inputs:textinput:v1",
-      "t_parentId": "a1b2c3d4e5f678901234567890abcdef"
-    },
-    "66666666666666666666666666666666": {
-      "id": "66666666666666666666666666666666",
-      "parent": "a1b2c3d4e5f678901234567890abcdef",
+    "e5f6789012345678901234abcdef1234": {
+      "id": "e5f6789012345678901234abcdef1234",
+      "parent": "a1b2c3d4e5f6789012345678901234ab",
       "type": "button",
-      "T_parentId": "a1b2c3d4e5f678901234567890abcdef",
+      "T_parentId": "a1b2c3d4e5f6789012345678901234ab",
       "children": [],
       "property": {
-        "name": "save",
+        "name": "delete",
         "nodeType": "button",
         "description": "",
         "props": {
           "meta": {
-            "row": 57,
-            "col": 8,
-            "rowSpan": 12,
-            "colSpan": 16
+            "row": 46,
+            "col": 1,
+            "rowSpan": 10,
+            "colSpan": 24
           }
         }
       },
@@ -2797,7 +1922,7 @@
       },
       "groupType": "group",
       "data": {
-        "label": "Save",
+        "label": "delete",
         "nodeAppearance": {
           "icon": "/torus/9.1/resources/nodeicons/UF-UFW/button.svg",
           "color": "#0736C4",
@@ -2805,8 +1930,8 @@
           "size": 45
         },
         "nodeProperty": {
-          "nodeId": "66666666666666666666666666666666",
-          "nodeName": "Save",
+          "nodeId": "e5f6789012345678901234abcdef1234",
+          "nodeName": "delete",
           "nodeType": "button",
           "nodeVersion": "v1",
           "elementInfo": {
@@ -2936,7 +2061,7 @@
         }
       },
       "version": "TRL:AFR:UF-UFW:Next:Inputs:button:v1",
-      "t_parentId": "a1b2c3d4e5f678901234567890abcdef"
+      "t_parentId": "a1b2c3d4e5f6789012345678901234ab"
     }
   },
   "UFS": [
@@ -2952,17 +2077,17 @@
         }
       },
       "children": [
-        "a1b2c3d4e5f678901234567890abcdef"
+        "a1b2c3d4e5f6789012345678901234ab"
       ],
       "groupType": "group",
       "T_parentId": "root",
       "path": "root",
-      "label": "Customer Registration Page",
-      "name": "customerregistrationpage",
+      "label": "",
+      "name": "",
       "elementInfo": {}
     },
     {
-      "id": "a1b2c3d4e5f678901234567890abcdef",
+      "id": "a1b2c3d4e5f6789012345678901234ab",
       "type": "group",
       "grid": {
         "classNames": "",
@@ -2973,7 +2098,7 @@
         },
         "row": {
           "start": 1,
-          "end": 70
+          "end": 59
         },
         "column": {
           "start": 1,
@@ -2981,18 +2106,16 @@
         }
       },
       "children": [
-        "11111111111111111111111111111111",
-        "22222222222222222222222222222222",
-        "33333333333333333333333333333333",
-        "44444444444444444444444444444444",
-        "55555555555555555555555555555555",
-        "66666666666666666666666666666666"
+        "b2c3d4e5f6789012345678901234abcd",
+        "c3d4e5f6789012345678901234abcde1",
+        "d4e5f6789012345678901234abcdef12",
+        "e5f6789012345678901234abcdef1234"
       ],
       "groupType": "group",
       "T_parentId": "root",
       "path": "root",
-      "label": "Customer Registration",
-      "name": "customerregistrationgroup",
+      "label": "productgroup",
+      "name": "productgroup",
       "nodeVersion": "v1",
       "elementInfo": {
         "props": [
@@ -3007,24 +2130,24 @@
       }
     },
     {
-      "id": "11111111111111111111111111111111",
+      "id": "b2c3d4e5f6789012345678901234abcd",
       "type": "text",
       "grid": {
         "classNames": "",
         "style": {},
         "row": {
           "start": 1,
-          "end": 13
+          "end": 9
         },
         "column": {
-          "start": 2,
-          "end": 24
+          "start": 1,
+          "end": 25
         }
       },
       "children": [],
-      "T_parentId": "a1b2c3d4e5f678901234567890abcdef",
-      "path": "root|a1b2c3d4e5f678901234567890abcdef",
-      "label": "Customer Registration",
+      "T_parentId": "a1b2c3d4e5f6789012345678901234ab",
+      "path": "root|a1b2c3d4e5f6789012345678901234ab",
+      "label": "Product",
       "name": "headline",
       "nodeVersion": "v1",
       "elementInfo": {
@@ -3042,7 +2165,7 @@
                 "content": {
                   "name": "content",
                   "_type": "text",
-                  "value": "Customer Registration",
+                  "value": "Product",
                   "enabled": true
                 }
               }
@@ -3157,7 +2280,7 @@
       }
     },
     {
-      "id": "22222222222222222222222222222222",
+      "id": "c3d4e5f6789012345678901234abcde1",
       "type": "label",
       "grid": {
         "classNames": "",
@@ -3166,17 +2289,17 @@
           "contentAlign": "left"
         },
         "row": {
-          "start": 14,
-          "end": 22
+          "start": 15,
+          "end": 23
         },
         "column": {
-          "start": 2,
-          "end": 7
+          "start": 1,
+          "end": 25
         }
       },
       "children": [],
-      "T_parentId": "a1b2c3d4e5f678901234567890abcdef",
-      "path": "root|a1b2c3d4e5f678901234567890abcdef",
+      "T_parentId": "a1b2c3d4e5f6789012345678901234ab",
+      "path": "root|a1b2c3d4e5f6789012345678901234ab",
       "label": "Name",
       "name": "namelabel",
       "nodeVersion": "v1",
@@ -3278,24 +2401,24 @@
       }
     },
     {
-      "id": "33333333333333333333333333333333",
+      "id": "d4e5f6789012345678901234abcdef12",
       "type": "textinput",
       "grid": {
         "classNames": "",
         "style": {},
         "row": {
-          "start": 24,
-          "end": 35
+          "start": 29,
+          "end": 40
         },
         "column": {
-          "start": 8,
-          "end": 24
+          "start": 1,
+          "end": 25
         }
       },
       "children": [],
-      "T_parentId": "a1b2c3d4e5f678901234567890abcdef",
-      "path": "root|a1b2c3d4e5f678901234567890abcdef",
-      "label": "Name",
+      "T_parentId": "a1b2c3d4e5f6789012345678901234ab",
+      "path": "root|a1b2c3d4e5f6789012345678901234ab",
+      "label": "name",
       "name": "name",
       "nodeVersion": "v1",
       "elementInfo": {
@@ -3423,291 +2546,25 @@
       }
     },
     {
-      "id": "44444444444444444444444444444444",
-      "type": "label",
-      "grid": {
-        "classNames": "",
-        "style": {},
-        "commonprops": {
-          "contentAlign": "left"
-        },
-        "row": {
-          "start": 36,
-          "end": 44
-        },
-        "column": {
-          "start": 2,
-          "end": 7
-        }
-      },
-      "children": [],
-      "T_parentId": "a1b2c3d4e5f678901234567890abcdef",
-      "path": "root|a1b2c3d4e5f678901234567890abcdef",
-      "label": "Email",
-      "name": "emaillabel",
-      "nodeVersion": "v1",
-      "elementInfo": {
-        "frameWork": "Nextjs",
-        "version": "14.2.3",
-        "component": "Label",
-        "label": "",
-        "props": [
-          {
-            "name": "theme",
-            "_type": "select",
-            "selectionList": [
-              "normal",
-              "info",
-              "danger",
-              "warning",
-              "success",
-              "utility",
-              "unknown",
-              "clear"
-            ],
-            "value": "normal",
-            "enabled": true
-          },
-          {
-            "name": "icon",
-            "_type": "conditionalIconSearch",
-            "value": "",
-            "enabled": true,
-            "subSelection": {
-              "iconDisplay": {
-                "name": "iconDisplay",
-                "_type": "select",
-                "selectionList": [
-                  "Icon only",
-                  "Start with Icon",
-                  "End with Icon"
-                ],
-                "value": "End with Icon",
-                "enabled": true
-              }
-            }
-          },
-          {
-            "name": "interactive",
-            "_type": "boolean",
-            "value": false,
-            "enabled": true
-          },
-          {
-            "name": "copy",
-            "_type": "string",
-            "value": "",
-            "enabled": true
-          },
-          {
-            "name": "disabled",
-            "_type": "boolean",
-            "value": false,
-            "enabled": true
-          },
-          {
-            "name": "content",
-            "_type": "string",
-            "value": "Email",
-            "enabled": true
-          },
-          {
-            "name": "enableHeaderText",
-            "_type": "conditionalBoolean",
-            "value": false,
-            "enabled": true,
-            "subSelection": {
-              "_true": {
-                "content": {
-                  "name": "Header Text",
-                  "_type": "string",
-                  "value": "",
-                  "enabled": true
-                },
-                "position": {
-                  "name": "Header Position",
-                  "_type": "select",
-                  "selectionList": [
-                    "left",
-                    "top",
-                    "right",
-                    "bottom"
-                  ],
-                  "value": "",
-                  "enabled": true
-                }
-              }
-            }
-          }
-        ],
-        "events": "#label_events"
-      }
-    },
-    {
-      "id": "55555555555555555555555555555555",
-      "type": "textinput",
-      "grid": {
-        "classNames": "",
-        "style": {},
-        "row": {
-          "start": 45,
-          "end": 56
-        },
-        "column": {
-          "start": 8,
-          "end": 24
-        }
-      },
-      "children": [],
-      "T_parentId": "a1b2c3d4e5f678901234567890abcdef",
-      "path": "root|a1b2c3d4e5f678901234567890abcdef",
-      "label": "Email",
-      "name": "email",
-      "nodeVersion": "v1",
-      "elementInfo": {
-        "frameWork": "Nextjs",
-        "version": "14.2.3",
-        "component": "TextInput",
-        "props": [
-          {
-            "name": "disabled",
-            "_label": "Disabled",
-            "_type": "boolean",
-            "value": false,
-            "enabled": true
-          },
-          {
-            "name": "readOnly",
-            "_label": "Read Only",
-            "_type": "boolean",
-            "value": false,
-            "enabled": true
-          },
-          {
-            "name": "pin",
-            "_label": "Pin",
-            "_type": "select",
-            "selectionList": [
-              "round-round",
-              "brick-brick",
-              "clear-clear"
-            ],
-            "value": "brick-brick",
-            "enabled": true
-          },
-          {
-            "name": "view",
-            "_label": "View",
-            "_type": "select",
-            "selectionList": [
-              "normal",
-              "clear"
-            ],
-            "value": "normal",
-            "enabled": true
-          },
-          {
-            "name": "placeholder",
-            "_label": "Placeholder",
-            "_type": "text",
-            "value": "type here....",
-            "enabled": true
-          },
-          {
-            "name": "leftContent",
-            "_label": "Left Content",
-            "_type": "text",
-            "value": "",
-            "enabled": true
-          },
-          {
-            "name": "rightContent",
-            "_label": "Right Content",
-            "_type": "text",
-            "value": "",
-            "enabled": true
-          },
-          {
-            "name": "enableHeaderText",
-            "_label": "Enable Header Text",
-            "_type": "conditionalBoolean",
-            "value": false,
-            "enabled": true,
-            "subSelection": {
-              "_true": {
-                "content": {
-                  "name": "Header Text",
-                  "_type": "text",
-                  "value": "",
-                  "enabled": true
-                },
-                "position": {
-                  "name": "Header Position",
-                  "_type": "select",
-                  "selectionList": [
-                    "left",
-                    "top",
-                    "right",
-                    "bottom"
-                  ],
-                  "value": "top",
-                  "enabled": true
-                }
-              }
-            }
-          },
-          {
-            "name": "numberFormat",
-            "_label": "Number Format Style",
-            "_type": "select",
-            "selectionList": [
-              "none",
-              "Indian",
-              "International",
-              "European"
-            ],
-            "value": "",
-            "enabled": false
-          },
-          {
-            "name": "isCurrency",
-            "_label": "Is Currency",
-            "_type": "boolean",
-            "value": false,
-            "enabled": true
-          },
-          {
-            "name": "bindInitialData",
-            "_label": "Bind Initial Data",
-            "_type": "boolean",
-            "value": false,
-            "enabled": true
-          }
-        ],
-        "events": "#textinput_events",
-        "validation": "#textinput_validation"
-      }
-    },
-    {
-      "id": "66666666666666666666666666666666",
+      "id": "e5f6789012345678901234abcdef1234",
       "type": "button",
       "grid": {
         "classNames": "",
         "style": {},
         "row": {
-          "start": 57,
-          "end": 69
+          "start": 46,
+          "end": 56
         },
         "column": {
-          "start": 8,
-          "end": 24
+          "start": 1,
+          "end": 25
         }
       },
       "children": [],
-      "T_parentId": "a1b2c3d4e5f678901234567890abcdef",
-      "path": "root|a1b2c3d4e5f678901234567890abcdef",
-      "label": "Save",
-      "name": "save",
+      "T_parentId": "a1b2c3d4e5f6789012345678901234ab",
+      "path": "root|a1b2c3d4e5f6789012345678901234ab",
+      "label": "delete",
+      "name": "delete",
       "nodeVersion": "v1",
       "elementInfo": {
         "frameWork": "Nextjs",
@@ -3740,7 +2597,7 @@
               "outlined-contrast",
               "flat-contrast"
             ],
-            "value": "action",
+            "value": "flat-danger",
             "enabled": true
           },
           {
@@ -3765,7 +2622,7 @@
           {
             "name": "disabled",
             "_type": "boolean",
-            "value": false,
+            "value": true,
             "enabled": true
           },
           {
@@ -3838,7 +2695,7 @@
   "UO": {
     "mappedData": {
       "artifact": {
-        "name": "customerregistrationgroup",
+        "name": "productgroup",
         "action": {
           "lock": {
             "lockMode": "",
@@ -3905,8 +2762,8 @@
             "objElements": []
           },
           {
-            "nodeId": "a1b2c3d4e5f678901234567890abcdef",
-            "nodeName": "customerregistrationgroup",
+            "nodeId": "a1b2c3d4e5f6789012345678901234ab",
+            "nodeName": "productgroup",
             "nodeType": "group",
             "nodeVersion": "v1",
             "parentId": "root",
@@ -3942,11 +2799,11 @@
             "objElements": [
               {
                 "elementName": "headline",
-                "elementId": "11111111111111111111111111111111",
+                "elementId": "b2c3d4e5f6789012345678901234abcd",
                 "elementType": "text",
                 "elementVersion": "v1",
-                "parentId": "a1b2c3d4e5f678901234567890abcdef",
-                "path": "root|a1b2c3d4e5f678901234567890abcdef",
+                "parentId": "a1b2c3d4e5f6789012345678901234ab",
+                "path": "root|a1b2c3d4e5f6789012345678901234ab",
                 "action": {
                   "lock": {
                     "lockMode": "",
@@ -3979,11 +2836,11 @@
               },
               {
                 "elementName": "namelabel",
-                "elementId": "22222222222222222222222222222222",
+                "elementId": "c3d4e5f6789012345678901234abcde1",
                 "elementType": "label",
                 "elementVersion": "v1",
-                "parentId": "a1b2c3d4e5f678901234567890abcdef",
-                "path": "root|a1b2c3d4e5f678901234567890abcdef",
+                "parentId": "a1b2c3d4e5f6789012345678901234ab",
+                "path": "root|a1b2c3d4e5f6789012345678901234ab",
                 "action": {
                   "lock": {
                     "lockMode": "",
@@ -4016,11 +2873,11 @@
               },
               {
                 "elementName": "name",
-                "elementId": "33333333333333333333333333333333",
+                "elementId": "d4e5f6789012345678901234abcdef12",
                 "elementType": "textinput",
                 "elementVersion": "v1",
-                "parentId": "a1b2c3d4e5f678901234567890abcdef",
-                "path": "root|a1b2c3d4e5f678901234567890abcdef",
+                "parentId": "a1b2c3d4e5f6789012345678901234ab",
+                "path": "root|a1b2c3d4e5f6789012345678901234ab",
                 "action": {
                   "lock": {
                     "lockMode": "",
@@ -4052,86 +2909,12 @@
                 "objElements": []
               },
               {
-                "elementName": "emaillabel",
-                "elementId": "44444444444444444444444444444444",
-                "elementType": "label",
-                "elementVersion": "v1",
-                "parentId": "a1b2c3d4e5f678901234567890abcdef",
-                "path": "root|a1b2c3d4e5f678901234567890abcdef",
-                "action": {
-                  "lock": {
-                    "lockMode": "",
-                    "name": "",
-                    "ttl": ""
-                  },
-                  "stateTransition": {
-                    "sourceQueue": "",
-                    "sourceStatus": "",
-                    "targetQueue": "",
-                    "targetStatus": ""
-                  },
-                  "pagination": {
-                    "page": "1",
-                    "count": "10"
-                  },
-                  "encryption": {
-                    "isEnabled": false,
-                    "selectedDpd": "",
-                    "encryptionMethod": ""
-                  },
-                  "events": {}
-                },
-                "code": "",
-                "testCode": "",
-                "rule": {},
-                "events": {},
-                "mapper": [],
-                "objElements": []
-              },
-              {
-                "elementName": "email",
-                "elementId": "55555555555555555555555555555555",
-                "elementType": "textinput",
-                "elementVersion": "v1",
-                "parentId": "a1b2c3d4e5f678901234567890abcdef",
-                "path": "root|a1b2c3d4e5f678901234567890abcdef",
-                "action": {
-                  "lock": {
-                    "lockMode": "",
-                    "name": "",
-                    "ttl": ""
-                  },
-                  "stateTransition": {
-                    "sourceQueue": "",
-                    "sourceStatus": "",
-                    "targetQueue": "",
-                    "targetStatus": ""
-                  },
-                  "pagination": {
-                    "page": "1",
-                    "count": "10"
-                  },
-                  "encryption": {
-                    "isEnabled": false,
-                    "selectedDpd": "",
-                    "encryptionMethod": ""
-                  },
-                  "events": {}
-                },
-                "code": "",
-                "testCode": "",
-                "rule": {},
-                "events": {},
-                "mapper": [],
-                "objElements": []
-              },
-              {
-                "elementName": "save",
-                "elementId": "66666666666666666666666666666666",
+                "elementName": "delete",
+                "elementId": "e5f6789012345678901234abcdef1234",
                 "elementType": "button",
                 "elementVersion": "v1",
-                "parentId": "a1b2c3d4e5f678901234567890abcdef",
-                "path": "root|a1b2c3d4e5f678901234567890abcdef",
+                "parentId": "a1b2c3d4e5f6789012345678901234ab",
+                "path": "root|a1b2c3d4e5f6789012345678901234ab",
                 "action": {
                   "lock": {
                     "lockMode": "",
@@ -4172,8 +2955,8 @@
       "securityTemplate": {
         "security": {
           "artifact": {
-            "resource": "customerregistrationgroup",
-            "resourceId": "customerregistrationgroup",
+            "resource": "productgroup",
+            "resourceId": "productgroup",
             "SIFlag": {
               "uiType": "dropdown",
               "selectedValue": "AA",
@@ -4202,8 +2985,8 @@
                 "objElements": []
               },
               {
-                "resource": "customerregistrationgroup",
-                "resourceId": "a1b2c3d4e5f678901234567890abcdef",
+                "resource": "productgroup",
+                "resourceId": "a1b2c3d4e5f6789012345678901234ab",
                 "resourceType": "group",
                 "resourceParentId": "root",
                 "resourcePath": "root",
@@ -4220,10 +3003,10 @@
                 "objElements": [
                   {
                     "resource": "headline",
-                    "resourceId": "11111111111111111111111111111111",
+                    "resourceId": "b2c3d4e5f6789012345678901234abcd",
                     "resourceType": "text",
-                    "resourceParentId": "a1b2c3d4e5f678901234567890abcdef",
-                    "resourcePath": "root|a1b2c3d4e5f678901234567890abcdef",
+                    "resourceParentId": "a1b2c3d4e5f6789012345678901234ab",
+                    "resourcePath": "root|a1b2c3d4e5f6789012345678901234ab",
                     "SIFlag": {
                       "uiType": "dropdown",
                       "selectedValue": "ATO",
@@ -4238,10 +3021,10 @@
                   },
                   {
                     "resource": "namelabel",
-                    "resourceId": "22222222222222222222222222222222",
+                    "resourceId": "c3d4e5f6789012345678901234abcde1",
                     "resourceType": "label",
-                    "resourceParentId": "a1b2c3d4e5f678901234567890abcdef",
-                    "resourcePath": "root|a1b2c3d4e5f678901234567890abcdef",
+                    "resourceParentId": "a1b2c3d4e5f6789012345678901234ab",
+                    "resourcePath": "root|a1b2c3d4e5f6789012345678901234ab",
                     "SIFlag": {
                       "uiType": "dropdown",
                       "selectedValue": "ATO",
@@ -4256,10 +3039,10 @@
                   },
                   {
                     "resource": "name",
-                    "resourceId": "33333333333333333333333333333333",
+                    "resourceId": "d4e5f6789012345678901234abcdef12",
                     "resourceType": "textinput",
-                    "resourceParentId": "a1b2c3d4e5f678901234567890abcdef",
-                    "resourcePath": "root|a1b2c3d4e5f678901234567890abcdef",
+                    "resourceParentId": "a1b2c3d4e5f6789012345678901234ab",
+                    "resourcePath": "root|a1b2c3d4e5f6789012345678901234ab",
                     "SIFlag": {
                       "uiType": "dropdown",
                       "selectedValue": "ATO",
@@ -4273,47 +3056,11 @@
                     "objElements": []
                   },
                   {
-                    "resource": "emaillabel",
-                    "resourceId": "44444444444444444444444444444444",
-                    "resourceType": "label",
-                    "resourceParentId": "a1b2c3d4e5f678901234567890abcdef",
-                    "resourcePath": "root|a1b2c3d4e5f678901234567890abcdef",
-                    "SIFlag": {
-                      "uiType": "dropdown",
-                      "selectedValue": "ATO",
-                      "selectionList": [
-                        "AA",
-                        "BA",
-                        "ATO",
-                        "BTO"
-                      ]
-                    },
-                    "objElements": []
-                  },
-                  {
-                    "resource": "email",
-                    "resourceId": "55555555555555555555555555555555",
-                    "resourceType": "textinput",
-                    "resourceParentId": "a1b2c3d4e5f678901234567890abcdef",
-                    "resourcePath": "root|a1b2c3d4e5f678901234567890abcdef",
-                    "SIFlag": {
-                      "uiType": "dropdown",
-                      "selectedValue": "ATO",
-                      "selectionList": [
-                        "AA",
-                        "BA",
-                        "ATO",
-                        "BTO"
-                      ]
-                    },
-                    "objElements": []
-                  },
-                  {
-                    "resource": "save",
-                    "resourceId": "66666666666666666666666666666666",
+                    "resource": "delete",
+                    "resourceId": "e5f6789012345678901234abcdef1234",
                     "resourceType": "button",
-                    "resourceParentId": "a1b2c3d4e5f678901234567890abcdef",
-                    "resourcePath": "root|a1b2c3d4e5f678901234567890abcdef",
+                    "resourceParentId": "a1b2c3d4e5f6789012345678901234ab",
+                    "resourcePath": "root|a1b2c3d4e5f6789012345678901234ab",
                     "SIFlag": {
                       "uiType": "dropdown",
                       "selectedValue": "ATO",
@@ -4332,13 +3079,13 @@
           }
         }
       },
-      "afk": "CK:CT001:FNGK:AF:FNK:UF-UFW:CATK:TGW01:AFGK:TGW004:AFK:customerregistrationgroup:AFVK:v1"
+      "afk": "CK:CT001:FNGK:AF:FNK:UF-UFW:CATK:TGW01:AFGK:TGW004:AFK:productgroup:AFVK:v1"
     },
     "targetItems": [
       {
         "nodeId": "root",
         "nodeName": "",
-        "nodeLabel": "Customer Registration Page",
+        "nodeLabel": "",
         "nodeType": "Canvas",
         "parentId": "root",
         "path": "root",
@@ -4346,9 +3093,9 @@
         "children": []
       },
       {
-        "nodeId": "a1b2c3d4e5f678901234567890abcdef",
-        "nodeName": "customerregistrationgroup",
-        "nodeLabel": "Customer Registration",
+        "nodeId": "a1b2c3d4e5f6789012345678901234ab",
+        "nodeName": "productgroup",
+        "nodeLabel": "productgroup",
         "nodeType": "group",
         "parentId": "root",
         "path": "root",
@@ -4367,12 +3114,12 @@
         },
         "children": [
           {
-            "nodeId": "11111111111111111111111111111111",
+            "nodeId": "b2c3d4e5f6789012345678901234abcd",
             "nodeName": "headline",
-            "nodeLabel": "Customer Registration",
+            "nodeLabel": "Product",
             "nodeType": "text",
-            "path": "root|a1b2c3d4e5f678901234567890abcdef",
-            "parentId": "a1b2c3d4e5f678901234567890abcdef",
+            "path": "root|a1b2c3d4e5f6789012345678901234ab",
+            "parentId": "a1b2c3d4e5f6789012345678901234ab",
             "nodeVersion": "v1",
             "elementInfo": {
               "frameWork": "Nextjs",
@@ -4389,7 +3136,7 @@
                       "content": {
                         "name": "content",
                         "_type": "text",
-                        "value": "Customer Registration",
+                        "value": "Product",
                         "enabled": true
                       }
                     }
@@ -4504,12 +3251,12 @@
             }
           },
           {
-            "nodeId": "22222222222222222222222222222222",
+            "nodeId": "c3d4e5f6789012345678901234abcde1",
             "nodeName": "namelabel",
             "nodeLabel": "Name",
             "nodeType": "label",
-            "path": "root|a1b2c3d4e5f678901234567890abcdef",
-            "parentId": "a1b2c3d4e5f678901234567890abcdef",
+            "path": "root|a1b2c3d4e5f6789012345678901234ab",
+            "parentId": "a1b2c3d4e5f6789012345678901234ab",
             "nodeVersion": "v1",
             "elementInfo": {
               "frameWork": "Nextjs",
@@ -4609,12 +3356,12 @@
             }
           },
           {
-            "nodeId": "33333333333333333333333333333333",
+            "nodeId": "d4e5f6789012345678901234abcdef12",
             "nodeName": "name",
-            "nodeLabel": "Name",
+            "nodeLabel": "name",
             "nodeType": "textinput",
-            "path": "root|a1b2c3d4e5f678901234567890abcdef",
-            "parentId": "a1b2c3d4e5f678901234567890abcdef",
+            "path": "root|a1b2c3d4e5f6789012345678901234ab",
+            "parentId": "a1b2c3d4e5f6789012345678901234ab",
             "nodeVersion": "v1",
             "elementInfo": {
               "frameWork": "Nextjs",
@@ -4741,249 +3488,12 @@
             }
           },
           {
-            "nodeId": "44444444444444444444444444444444",
-            "nodeName": "emaillabel",
-            "nodeLabel": "Email",
-            "nodeType": "label",
-            "path": "root|a1b2c3d4e5f678901234567890abcdef",
-            "parentId": "a1b2c3d4e5f678901234567890abcdef",
-            "nodeVersion": "v1",
-            "elementInfo": {
-              "frameWork": "Nextjs",
-              "version": "14.2.3",
-              "component": "Label",
-              "label": "",
-              "props": [
-                {
-                  "name": "theme",
-                  "_type": "select",
-                  "selectionList": [
-                    "normal",
-                    "info",
-                    "danger",
-                    "warning",
-                    "success",
-                    "utility",
-                    "unknown",
-                    "clear"
-                  ],
-                  "value": "normal",
-                  "enabled": true
-                },
-                {
-                  "name": "icon",
-                  "_type": "conditionalIconSearch",
-                  "value": "",
-                  "enabled": true,
-                  "subSelection": {
-                    "iconDisplay": {
-                      "name": "iconDisplay",
-                      "_type": "select",
-                      "selectionList": [
-                        "Icon only",
-                        "Start with Icon",
-                        "End with Icon"
-                      ],
-                      "value": "End with Icon",
-                      "enabled": true
-                    }
-                  }
-                },
-                {
-                  "name": "interactive",
-                  "_type": "boolean",
-                  "value": false,
-                  "enabled": true
-                },
-                {
-                  "name": "copy",
-                  "_type": "string",
-                  "value": "",
-                  "enabled": true
-                },
-                {
-                  "name": "disabled",
-                  "_type": "boolean",
-                  "value": false,
-                  "enabled": true
-                },
-                {
-                  "name": "content",
-                  "_type": "string",
-                  "value": "Email",
-                  "enabled": true
-                },
-                {
-                  "name": "enableHeaderText",
-                  "_type": "conditionalBoolean",
-                  "value": false,
-                  "enabled": true,
-                  "subSelection": {
-                    "_true": {
-                      "content": {
-                        "name": "Header Text",
-                        "_type": "string",
-                        "value": "",
-                        "enabled": true
-                      },
-                      "position": {
-                        "name": "Header Position",
-                        "_type": "select",
-                        "selectionList": [
-                          "left",
-                          "top",
-                          "right",
-                          "bottom"
-                        ],
-                        "value": "",
-                        "enabled": true
-                      }
-                    }
-                  }
-                }
-              ],
-              "events": "#label_events"
-            }
-          },
-          {
-            "nodeId": "55555555555555555555555555555555",
-            "nodeName": "email",
-            "nodeLabel": "Email",
-            "nodeType": "textinput",
-            "path": "root|a1b2c3d4e5f678901234567890abcdef",
-            "parentId": "a1b2c3d4e5f678901234567890abcdef",
-            "nodeVersion": "v1",
-            "elementInfo": {
-              "frameWork": "Nextjs",
-              "version": "14.2.3",
-              "component": "TextInput",
-              "props": [
-                {
-                  "name": "disabled",
-                  "_label": "Disabled",
-                  "_type": "boolean",
-                  "value": false,
-                  "enabled": true
-                },
-                {
-                  "name": "readOnly",
-                  "_label": "Read Only",
-                  "_type": "boolean",
-                  "value": false,
-                  "enabled": true
-                },
-                {
-                  "name": "pin",
-                  "_label": "Pin",
-                  "_type": "select",
-                  "selectionList": [
-                    "round-round",
-                    "brick-brick",
-                    "clear-clear"
-                  ],
-                  "value": "brick-brick",
-                  "enabled": true
-                },
-                {
-                  "name": "view",
-                  "_label": "View",
-                  "_type": "select",
-                  "selectionList": [
-                    "normal",
-                    "clear"
-                  ],
-                  "value": "normal",
-                  "enabled": true
-                },
-                {
-                  "name": "placeholder",
-                  "_label": "Placeholder",
-                  "_type": "text",
-                  "value": "type here....",
-                  "enabled": true
-                },
-                {
-                  "name": "leftContent",
-                  "_label": "Left Content",
-                  "_type": "text",
-                  "value": "",
-                  "enabled": true
-                },
-                {
-                  "name": "rightContent",
-                  "_label": "Right Content",
-                  "_type": "text",
-                  "value": "",
-                  "enabled": true
-                },
-                {
-                  "name": "enableHeaderText",
-                  "_label": "Enable Header Text",
-                  "_type": "conditionalBoolean",
-                  "value": false,
-                  "enabled": true,
-                  "subSelection": {
-                    "_true": {
-                      "content": {
-                        "name": "Header Text",
-                        "_type": "text",
-                        "value": "",
-                        "enabled": true
-                      },
-                      "position": {
-                        "name": "Header Position",
-                        "_type": "select",
-                        "selectionList": [
-                          "left",
-                          "top",
-                          "right",
-                          "bottom"
-                        ],
-                        "value": "top",
-                        "enabled": true
-                      }
-                    }
-                  }
-                },
-                {
-                  "name": "numberFormat",
-                  "_label": "Number Format Style",
-                  "_type": "select",
-                  "selectionList": [
-                    "none",
-                    "Indian",
-                    "International",
-                    "European"
-                  ],
-                  "value": "",
-                  "enabled": false
-                },
-                {
-                  "name": "isCurrency",
-                  "_label": "Is Currency",
-                  "_type": "boolean",
-                  "value": false,
-                  "enabled": true
-                },
-                {
-                  "name": "bindInitialData",
-                  "_label": "Bind Initial Data",
-                  "_type": "boolean",
-                  "value": false,
-                  "enabled": true
-                }
-              ],
-              "events": "#textinput_events",
-              "validation": "#textinput_validation"
-            }
-          },
-          {
-            "nodeId": "66666666666666666666666666666666",
-            "nodeName": "save",
-            "nodeLabel": "Save",
+            "nodeId": "e5f6789012345678901234abcdef1234",
+            "nodeName": "delete",
+            "nodeLabel": "delete",
             "nodeType": "button",
-            "path": "root|a1b2c3d4e5f678901234567890abcdef",
-            "parentId": "a1b2c3d4e5f678901234567890abcdef",
+            "path": "root|a1b2c3d4e5f6789012345678901234ab",
+            "parentId": "a1b2c3d4e5f6789012345678901234ab",
             "nodeVersion": "v1",
             "elementInfo": {
               "frameWork": "Nextjs",
@@ -5117,99 +3627,73 @@
       {
         "nodeId": "root",
         "nodeType": "Canvas",
-        "nodeLabel": "Customer Registration Page",
-        "nodeName": "customerregistrationpage",
+        "nodeLabel": "",
+        "nodeName": "",
         "nodeGroupType": "group",
         "nodeAction": [
           "root"
         ],
         "children": [
           {
-            "nodeId": "a1b2c3d4e5f678901234567890abcdef",
+            "nodeId": "a1b2c3d4e5f6789012345678901234ab",
             "nodeType": "group",
-            "nodeLabel": "Customer Registration",
-            "nodeName": "customerregistrationgroup",
+            "nodeLabel": "productgroup",
+            "nodeName": "productgroup",
             "nodeParent": "root",
             "nodeGroupType": "group",
             "nodeAction": [
-              "a1b2c3d4e5f678901234567890abcdef"
+              "a1b2c3d4e5f6789012345678901234ab"
             ],
             "children": [
               {
-                "nodeId": "11111111111111111111111111111111",
+                "nodeId": "b2c3d4e5f6789012345678901234abcd",
                 "nodeType": "text",
-                "nodeLabel": "Customer Registration",
+                "nodeLabel": "Product",
                 "nodeName": "headline",
-                "nodeParent": "a1b2c3d4e5f678901234567890abcdef",
+                "nodeParent": "a1b2c3d4e5f6789012345678901234ab",
                 "nodeGroupType": "group",
                 "nodeAction": [
-                  "a1b2c3d4e5f678901234567890abcdef",
-                  "11111111111111111111111111111111"
+                  "a1b2c3d4e5f6789012345678901234ab",
+                  "b2c3d4e5f6789012345678901234abcd"
                 ],
                 "children": []
               },
               {
-                "nodeId": "22222222222222222222222222222222",
+                "nodeId": "c3d4e5f6789012345678901234abcde1",
                 "nodeType": "label",
                 "nodeLabel": "Name",
                 "nodeName": "namelabel",
-                "nodeParent": "a1b2c3d4e5f678901234567890abcdef",
+                "nodeParent": "a1b2c3d4e5f6789012345678901234ab",
                 "nodeGroupType": "group",
                 "nodeAction": [
-                  "a1b2c3d4e5f678901234567890abcdef",
-                  "22222222222222222222222222222222"
+                  "a1b2c3d4e5f6789012345678901234ab",
+                  "c3d4e5f6789012345678901234abcde1"
                 ],
                 "children": []
               },
               {
-                "nodeId": "33333333333333333333333333333333",
+                "nodeId": "d4e5f6789012345678901234abcdef12",
                 "nodeType": "textinput",
-                "nodeLabel": "Name",
+                "nodeLabel": "name",
                 "nodeName": "name",
-                "nodeParent": "a1b2c3d4e5f678901234567890abcdef",
+                "nodeParent": "a1b2c3d4e5f6789012345678901234ab",
                 "nodeGroupType": "group",
                 "nodeAction": [
-                  "a1b2c3d4e5f678901234567890abcdef",
-                  "33333333333333333333333333333333"
+                  "a1b2c3d4e5f6789012345678901234ab",
+                  "d4e5f6789012345678901234abcdef12"
                 ],
                 "children": []
               },
               {
-                "nodeId": "44444444444444444444444444444444",
-                "nodeType": "label",
-                "nodeLabel": "Email",
-                "nodeName": "emaillabel",
-                "nodeParent": "a1b2c3d4e5f678901234567890abcdef",
-                "nodeGroupType": "group",
-                "nodeAction": [
-                  "a1b2c3d4e5f678901234567890abcdef",
-                  "44444444444444444444444444444444"
-                ],
-                "children": []
-              },
-              {
-                "nodeId": "55555555555555555555555555555555",
-                "nodeType": "textinput",
-                "nodeLabel": "Email",
-                "nodeName": "email",
-                "nodeParent": "a1b2c3d4e5f678901234567890abcdef",
-                "nodeGroupType": "group",
-                "nodeAction": [
-                  "a1b2c3d4e5f678901234567890abcdef",
-                  "55555555555555555555555555555555"
-                ],
-                "children": []
-              },
-              {
-                "nodeId": "66666666666666666666666666666666",
+                "nodeId": "e5f6789012345678901234abcdef1234",
                 "nodeType": "button",
-                "nodeLabel": "Save",
-                "nodeName": "save",
-                "nodeParent": "a1b2c3d4e5f678901234567890abcdef",
+                "nodeLabel": "delete",
+                "nodeName": "delete",
+                "nodeParent": "a1b2c3d4e5f6789012345678901234ab",
                 "nodeGroupType": "group",
                 "nodeAction": [
-                  "a1b2c3d4e5f678901234567890abcdef",
-                  "66666666666666666666666666666666"
+                  "a1b2c3d4e5f6789012345678901234ab",
+                  "e5f6789012345678901234abcdef1234"
                 ],
                 "children": []
               }

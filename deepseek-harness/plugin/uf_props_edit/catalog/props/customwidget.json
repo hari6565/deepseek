@@ -1,0 +1,22 @@
+{
+  "nodeKey": "customwidget",
+  "nodeType": "customwidget",
+  "nodeGroupType": "group",
+  "component": "CustomWidget",
+  "frameWork": "Nextjs",
+  "frameWorkVersion": "14.2.3",
+  "nodeVersion": "v1",
+  "sourceNodeId": "e2944c0b126a4a138292ccce67df6747",
+  "instanceCount": 1,
+  "kind": "props",
+  "count": 1,
+  "props": [
+    {
+      "name": "fileName",
+      "_type": "text",
+      "value": "customwidget",
+      "enabled": true,
+      "_description": "Name of the custom component file to render in this slot. The platform resolves it against the project's custom-widget folder."
+    }
+  ]
+}

@@ -1,0 +1,2068 @@
+{
+  "NDP": {
+    "root": {
+      "nodeId": "root",
+      "nodeName": "Root",
+      "nodeType": "Canvas",
+      "nodeVersion": "v1",
+      "elementInfo": {}
+    },
+    "a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6": {
+      "nodeId": "a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6",
+      "nodeName": "redeemgroup",
+      "nodeType": "group",
+      "nodeVersion": "v1",
+      "elementInfo": {
+        "props": [
+          {
+            "name": "isDynamic",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          }
+        ],
+        "events": "#group_events"
+      }
+    },
+    "b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6": {
+      "nodeId": "b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6",
+      "nodeName": "Voucher Code",
+      "nodeType": "label",
+      "nodeVersion": "v1",
+      "elementInfo": {
+        "frameWork": "Nextjs",
+        "version": "14.2.3",
+        "component": "Label",
+        "label": "",
+        "props": [
+          {
+            "name": "theme",
+            "_type": "select",
+            "selectionList": [
+              "normal",
+              "info",
+              "danger",
+              "warning",
+              "success",
+              "utility",
+              "unknown",
+              "clear"
+            ],
+            "value": "normal",
+            "enabled": true
+          },
+          {
+            "name": "icon",
+            "_type": "conditionalIconSearch",
+            "value": "",
+            "enabled": true,
+            "subSelection": {
+              "iconDisplay": {
+                "name": "iconDisplay",
+                "_type": "select",
+                "selectionList": [
+                  "Icon only",
+                  "Start with Icon",
+                  "End with Icon"
+                ],
+                "value": "End with Icon",
+                "enabled": true
+              }
+            }
+          },
+          {
+            "name": "interactive",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          },
+          {
+            "name": "copy",
+            "_type": "string",
+            "value": "",
+            "enabled": true
+          },
+          {
+            "name": "disabled",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          },
+          {
+            "name": "content",
+            "_type": "string",
+            "value": "Voucher Code",
+            "enabled": true
+          },
+          {
+            "name": "enableHeaderText",
+            "_type": "conditionalBoolean",
+            "value": false,
+            "enabled": true,
+            "subSelection": {
+              "_true": {
+                "content": {
+                  "name": "Header Text",
+                  "_type": "string",
+                  "value": "",
+                  "enabled": true
+                },
+                "position": {
+                  "name": "Header Position",
+                  "_type": "select",
+                  "selectionList": [
+                    "left",
+                    "top",
+                    "right",
+                    "bottom"
+                  ],
+                  "value": "",
+                  "enabled": true
+                }
+              }
+            }
+          }
+        ],
+        "events": "#label_events"
+      }
+    },
+    "c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6": {
+      "nodeId": "c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6",
+      "nodeName": "vouchercode",
+      "nodeType": "textinput",
+      "nodeVersion": "v1",
+      "elementInfo": {
+        "frameWork": "Nextjs",
+        "version": "14.2.3",
+        "component": "TextInput",
+        "props": [
+          {
+            "name": "disabled",
+            "_label": "Disabled",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          },
+          {
+            "name": "readOnly",
+            "_label": "Read Only",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          },
+          {
+            "name": "pin",
+            "_label": "Pin",
+            "_type": "select",
+            "selectionList": [
+              "round-round",
+              "brick-brick",
+              "clear-clear"
+            ],
+            "value": "brick-brick",
+            "enabled": true
+          },
+          {
+            "name": "view",
+            "_label": "View",
+            "_type": "select",
+            "selectionList": [
+              "normal",
+              "clear"
+            ],
+            "value": "normal",
+            "enabled": true
+          },
+          {
+            "name": "placeholder",
+            "_label": "Placeholder",
+            "_type": "text",
+            "value": "type here....",
+            "enabled": true
+          },
+          {
+            "name": "leftContent",
+            "_label": "Left Content",
+            "_type": "text",
+            "value": "",
+            "enabled": true
+          },
+          {
+            "name": "rightContent",
+            "_label": "Right Content",
+            "_type": "text",
+            "value": "",
+            "enabled": true
+          },
+          {
+            "name": "enableHeaderText",
+            "_label": "Enable Header Text",
+            "_type": "conditionalBoolean",
+            "value": false,
+            "enabled": true,
+            "subSelection": {
+              "_true": {
+                "content": {
+                  "name": "Header Text",
+                  "_type": "text",
+                  "value": "",
+                  "enabled": true
+                },
+                "position": {
+                  "name": "Header Position",
+                  "_type": "select",
+                  "selectionList": [
+                    "left",
+                    "top",
+                    "right",
+                    "bottom"
+                  ],
+                  "value": "top",
+                  "enabled": true
+                }
+              }
+            }
+          },
+          {
+            "name": "numberFormat",
+            "_label": "Number Format Style",
+            "_type": "select",
+            "selectionList": [
+              "none",
+              "Indian",
+              "International",
+              "European"
+            ],
+            "value": "",
+            "enabled": false
+          },
+          {
+            "name": "isCurrency",
+            "_label": "Is Currency",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          },
+          {
+            "name": "bindInitialData",
+            "_label": "Bind Initial Data",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          }
+        ],
+        "events": "#textinput_events",
+        "validation": "#textinput_validation"
+      }
+    }
+  },
+  "NDS": [
+    {
+      "id": "root",
+      "parent": "root",
+      "T_parentId": "root",
+      "type": "Canvas",
+      "children": [
+        "a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6"
+      ],
+      "data": {
+        "label": "",
+        "nodeProperty": {
+          "nodeId": "root",
+          "nodeName": "Root",
+          "nodeType": "Canvas",
+          "nodeVersion": "v1",
+          "elementInfo": {}
+        }
+      },
+      "property": {
+        "name": "",
+        "nodeType": "Canvas",
+        "description": ""
+      },
+      "grid": {
+        "classNames": "",
+        "style": {
+          "gridAutoRows": "4px",
+          "columnGap": "0px",
+          "rowGap": "0px"
+        }
+      },
+      "groupType": "group"
+    },
+    {
+      "id": "a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6",
+      "parent": "root",
+      "T_parentId": "root",
+      "type": "group",
+      "children": [
+        "b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6",
+        "c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6"
+      ],
+      "data": {
+        "label": "redeemgroup",
+        "nodeAppearance": {
+          "type": "group",
+          "label": "group",
+          "color": "#F44336",
+          "shape": "square",
+          "icon": "/torus/9.1/resources/nodeicons/UF-UFW/group.svg",
+          "size": 45,
+          "handles": [
+            {
+              "type": "source",
+              "position": "right",
+              "isConnectable": true,
+              "shown": true
+            },
+            {
+              "type": "target",
+              "position": "left",
+              "isConnectable": true,
+              "shown": true
+            }
+          ]
+        },
+        "nodeProperty": {
+          "nodeId": "a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6",
+          "nodeName": "redeemgroup",
+          "nodeType": "group",
+          "nodeVersion": "v1",
+          "elementInfo": {
+            "props": [
+              {
+                "name": "isDynamic",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              }
+            ],
+            "events": "#group_events"
+          }
+        }
+      },
+      "property": {
+        "name": "redeemgroup",
+        "nodeType": "group",
+        "description": ""
+      },
+      "grid": {
+        "classNames": "",
+        "style": {
+          "gridAutoRows": "4px",
+          "columnGap": "0px",
+          "rowGap": "0px"
+        },
+        "row": {
+          "start": 12,
+          "end": 34
+        },
+        "column": {
+          "start": 1,
+          "end": 25
+        }
+      },
+      "groupType": "group",
+      "version": "TRL:AFR:UF-UFW:Next:Defaults:group:v1"
+    },
+    {
+      "id": "b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6",
+      "parent": "a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6",
+      "T_parentId": "a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6",
+      "type": "label",
+      "children": [],
+      "data": {
+        "label": "Voucher Code",
+        "nodeAppearance": {
+          "label": "label",
+          "color": "#0736C4",
+          "icon": "/torus/9.1/resources/nodeicons/UF-UFW/label.svg",
+          "size": 45
+        },
+        "nodeProperty": {
+          "nodeId": "b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6",
+          "nodeName": "Voucher Code",
+          "nodeType": "label",
+          "nodeVersion": "v1",
+          "elementInfo": {
+            "frameWork": "Nextjs",
+            "version": "14.2.3",
+            "component": "Label",
+            "label": "",
+            "props": [
+              {
+                "name": "theme",
+                "_type": "select",
+                "selectionList": [
+                  "normal",
+                  "info",
+                  "danger",
+                  "warning",
+                  "success",
+                  "utility",
+                  "unknown",
+                  "clear"
+                ],
+                "value": "normal",
+                "enabled": true
+              },
+              {
+                "name": "icon",
+                "_type": "conditionalIconSearch",
+                "value": "",
+                "enabled": true,
+                "subSelection": {
+                  "iconDisplay": {
+                    "name": "iconDisplay",
+                    "_type": "select",
+                    "selectionList": [
+                      "Icon only",
+                      "Start with Icon",
+                      "End with Icon"
+                    ],
+                    "value": "End with Icon",
+                    "enabled": true
+                  }
+                }
+              },
+              {
+                "name": "interactive",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              },
+              {
+                "name": "copy",
+                "_type": "string",
+                "value": "",
+                "enabled": true
+              },
+              {
+                "name": "disabled",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              },
+              {
+                "name": "content",
+                "_type": "string",
+                "value": "Voucher Code",
+                "enabled": true
+              },
+              {
+                "name": "enableHeaderText",
+                "_type": "conditionalBoolean",
+                "value": false,
+                "enabled": true,
+                "subSelection": {
+                  "_true": {
+                    "content": {
+                      "name": "Header Text",
+                      "_type": "string",
+                      "value": "",
+                      "enabled": true
+                    },
+                    "position": {
+                      "name": "Header Position",
+                      "_type": "select",
+                      "selectionList": [
+                        "left",
+                        "top",
+                        "right",
+                        "bottom"
+                      ],
+                      "value": "",
+                      "enabled": true
+                    }
+                  }
+                }
+              }
+            ],
+            "events": "#label_events"
+          }
+        }
+      },
+      "property": {
+        "name": "vouchercodelabel",
+        "nodeType": "label",
+        "description": ""
+      },
+      "grid": {
+        "classNames": "",
+        "style": {},
+        "commonprops": {
+          "contentAlign": "left"
+        },
+        "row": {
+          "start": 14,
+          "end": 18
+        },
+        "column": {
+          "start": 2,
+          "end": 24
+        }
+      },
+      "version": "TRL:AFR:UF-UFW:Next:DataDisplay:label:v1"
+    },
+    {
+      "id": "c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6",
+      "parent": "a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6",
+      "T_parentId": "a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6",
+      "type": "textinput",
+      "children": [],
+      "data": {
+        "label": "vouchercode",
+        "nodeAppearance": {
+          "type": "textinput",
+          "label": "textinput",
+          "color": "#0736C4",
+          "shape": "square",
+          "icon": "/torus/9.1/resources/nodeicons/UF-UFW/text_input.svg",
+          "size": 45,
+          "handles": [
+            {
+              "type": "source",
+              "position": "right",
+              "isConnectable": true,
+              "shown": true
+            },
+            {
+              "type": "target",
+              "position": "left",
+              "isConnectable": true,
+              "shown": true
+            }
+          ]
+        },
+        "nodeProperty": {
+          "nodeId": "c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6",
+          "nodeName": "vouchercode",
+          "nodeType": "textinput",
+          "nodeVersion": "v1",
+          "elementInfo": {
+            "frameWork": "Nextjs",
+            "version": "14.2.3",
+            "component": "TextInput",
+            "props": [
+              {
+                "name": "disabled",
+                "_label": "Disabled",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              },
+              {
+                "name": "readOnly",
+                "_label": "Read Only",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              },
+              {
+                "name": "pin",
+                "_label": "Pin",
+                "_type": "select",
+                "selectionList": [
+                  "round-round",
+                  "brick-brick",
+                  "clear-clear"
+                ],
+                "value": "brick-brick",
+                "enabled": true
+              },
+              {
+                "name": "view",
+                "_label": "View",
+                "_type": "select",
+                "selectionList": [
+                  "normal",
+                  "clear"
+                ],
+                "value": "normal",
+                "enabled": true
+              },
+              {
+                "name": "placeholder",
+                "_label": "Placeholder",
+                "_type": "text",
+                "value": "type here....",
+                "enabled": true
+              },
+              {
+                "name": "leftContent",
+                "_label": "Left Content",
+                "_type": "text",
+                "value": "",
+                "enabled": true
+              },
+              {
+                "name": "rightContent",
+                "_label": "Right Content",
+                "_type": "text",
+                "value": "",
+                "enabled": true
+              },
+              {
+                "name": "enableHeaderText",
+                "_label": "Enable Header Text",
+                "_type": "conditionalBoolean",
+                "value": false,
+                "enabled": true,
+                "subSelection": {
+                  "_true": {
+                    "content": {
+                      "name": "Header Text",
+                      "_type": "text",
+                      "value": "",
+                      "enabled": true
+                    },
+                    "position": {
+                      "name": "Header Position",
+                      "_type": "select",
+                      "selectionList": [
+                        "left",
+                        "top",
+                        "right",
+                        "bottom"
+                      ],
+                      "value": "top",
+                      "enabled": true
+                    }
+                  }
+                }
+              },
+              {
+                "name": "numberFormat",
+                "_label": "Number Format Style",
+                "_type": "select",
+                "selectionList": [
+                  "none",
+                  "Indian",
+                  "International",
+                  "European"
+                ],
+                "value": "",
+                "enabled": false
+              },
+              {
+                "name": "isCurrency",
+                "_label": "Is Currency",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              },
+              {
+                "name": "bindInitialData",
+                "_label": "Bind Initial Data",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              }
+            ],
+            "events": "#textinput_events",
+            "validation": "#textinput_validation"
+          }
+        }
+      },
+      "property": {
+        "name": "vouchercode",
+        "nodeType": "textinput",
+        "description": ""
+      },
+      "grid": {
+        "classNames": "",
+        "style": {},
+        "row": {
+          "start": 20,
+          "end": 32
+        },
+        "column": {
+          "start": 2,
+          "end": 24
+        }
+      },
+      "version": "TRL:AFR:UF-UFW:Next:Inputs:textinput:v1"
+    }
+  ],
+  "NDU": {
+    "root": {
+      "id": "root",
+      "Parent": "root",
+      "type": "Canvas",
+      "T_parentId": "root",
+      "children": [
+        "a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6"
+      ],
+      "data": {
+        "label": "",
+        "nodeProperty": {
+          "nodeId": "root",
+          "nodeName": "Root",
+          "nodeType": "Canvas",
+          "nodeVersion": "v1",
+          "elementInfo": {}
+        }
+      },
+      "grid": {
+        "style": {
+          "gridAutoRows": "4px",
+          "columnGap": "0px",
+          "rowGap": "0px"
+        },
+        "classNames": ""
+      },
+      "property": {
+        "name": "",
+        "nodeType": "Canvas",
+        "description": "",
+        "rowHeight": "4px",
+        "rowGap": "0px",
+        "columnGap": "0px",
+        "props": {
+          "meta": {
+            "row": 1,
+            "col": 1,
+            "rowSpan": 24,
+            "colSpan": 24
+          }
+        },
+        "rowCount": 100,
+        "columnCount": 24
+      },
+      "groupType": "group"
+    },
+    "a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6": {
+      "id": "a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6",
+      "parent": "root",
+      "type": "group",
+      "T_parentId": "root",
+      "children": [
+        "b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6",
+        "c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6"
+      ],
+      "property": {
+        "name": "redeemgroup",
+        "nodeType": "group",
+        "description": "",
+        "props": {
+          "meta": {
+            "row": 12,
+            "col": 1,
+            "rowSpan": 22,
+            "colSpan": 24
+          }
+        }
+      },
+      "grid": {
+        "style": {
+          "gridAutoRows": "4px",
+          "columnGap": "0px",
+          "rowGap": "0px"
+        },
+        "classNames": ""
+      },
+      "groupType": "group",
+      "data": {
+        "label": "redeemgroup",
+        "nodeAppearance": {
+          "type": "group",
+          "label": "group",
+          "color": "#F44336",
+          "shape": "square",
+          "icon": "/torus/9.1/resources/nodeicons/UF-UFW/group.svg",
+          "size": 45,
+          "handles": [
+            {
+              "type": "source",
+              "position": "right",
+              "isConnectable": true,
+              "shown": true
+            },
+            {
+              "type": "target",
+              "position": "left",
+              "isConnectable": true,
+              "shown": true
+            }
+          ]
+        },
+        "nodeProperty": {
+          "nodeId": "a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6",
+          "nodeName": "redeemgroup",
+          "nodeType": "group",
+          "nodeVersion": "v1",
+          "elementInfo": {
+            "props": [
+              {
+                "name": "isDynamic",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              }
+            ],
+            "events": "#group_events"
+          }
+        }
+      },
+      "version": "TRL:AFR:UF-UFW:Next:Defaults:group:v1",
+      "t_parentId": "root"
+    },
+    "b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6": {
+      "id": "b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6",
+      "parent": "a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6",
+      "type": "label",
+      "T_parentId": "a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6",
+      "children": [],
+      "property": {
+        "name": "vouchercodelabel",
+        "nodeType": "label",
+        "description": "",
+        "props": {
+          "meta": {
+            "row": 14,
+            "col": 2,
+            "rowSpan": 4,
+            "colSpan": 22
+          }
+        }
+      },
+      "grid": {
+        "style": {},
+        "classNames": "",
+        "commonprops": {
+          "contentAlign": "left"
+        }
+      },
+      "groupType": "group",
+      "data": {
+        "label": "Voucher Code",
+        "nodeAppearance": {
+          "label": "label",
+          "color": "#0736C4",
+          "icon": "/torus/9.1/resources/nodeicons/UF-UFW/label.svg",
+          "size": 45
+        },
+        "nodeProperty": {
+          "nodeId": "b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6",
+          "nodeName": "Voucher Code",
+          "nodeType": "label",
+          "nodeVersion": "v1",
+          "elementInfo": {
+            "frameWork": "Nextjs",
+            "version": "14.2.3",
+            "component": "Label",
+            "label": "",
+            "props": [
+              {
+                "name": "theme",
+                "_type": "select",
+                "selectionList": [
+                  "normal",
+                  "info",
+                  "danger",
+                  "warning",
+                  "success",
+                  "utility",
+                  "unknown",
+                  "clear"
+                ],
+                "value": "normal",
+                "enabled": true
+              },
+              {
+                "name": "icon",
+                "_type": "conditionalIconSearch",
+                "value": "",
+                "enabled": true,
+                "subSelection": {
+                  "iconDisplay": {
+                    "name": "iconDisplay",
+                    "_type": "select",
+                    "selectionList": [
+                      "Icon only",
+                      "Start with Icon",
+                      "End with Icon"
+                    ],
+                    "value": "End with Icon",
+                    "enabled": true
+                  }
+                }
+              },
+              {
+                "name": "interactive",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              },
+              {
+                "name": "copy",
+                "_type": "string",
+                "value": "",
+                "enabled": true
+              },
+              {
+                "name": "disabled",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              },
+              {
+                "name": "content",
+                "_type": "string",
+                "value": "Voucher Code",
+                "enabled": true
+              },
+              {
+                "name": "enableHeaderText",
+                "_type": "conditionalBoolean",
+                "value": false,
+                "enabled": true,
+                "subSelection": {
+                  "_true": {
+                    "content": {
+                      "name": "Header Text",
+                      "_type": "string",
+                      "value": "",
+                      "enabled": true
+                    },
+                    "position": {
+                      "name": "Header Position",
+                      "_type": "select",
+                      "selectionList": [
+                        "left",
+                        "top",
+                        "right",
+                        "bottom"
+                      ],
+                      "value": "",
+                      "enabled": true
+                    }
+                  }
+                }
+              }
+            ],
+            "events": "#label_events"
+          }
+        }
+      },
+      "version": "TRL:AFR:UF-UFW:Next:DataDisplay:label:v1",
+      "t_parentId": "a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6"
+    },
+    "c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6": {
+      "id": "c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6",
+      "parent": "a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6",
+      "type": "textinput",
+      "T_parentId": "a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6",
+      "children": [],
+      "property": {
+        "name": "vouchercode",
+        "nodeType": "textinput",
+        "description": "",
+        "props": {
+          "meta": {
+            "row": 20,
+            "col": 2,
+            "rowSpan": 12,
+            "colSpan": 22
+          }
+        }
+      },
+      "grid": {
+        "style": {},
+        "classNames": ""
+      },
+      "groupType": "group",
+      "data": {
+        "label": "vouchercode",
+        "nodeAppearance": {
+          "type": "textinput",
+          "label": "textinput",
+          "color": "#0736C4",
+          "shape": "square",
+          "icon": "/torus/9.1/resources/nodeicons/UF-UFW/text_input.svg",
+          "size": 45,
+          "handles": [
+            {
+              "type": "source",
+              "position": "right",
+              "isConnectable": true,
+              "shown": true
+            },
+            {
+              "type": "target",
+              "position": "left",
+              "isConnectable": true,
+              "shown": true
+            }
+          ]
+        },
+        "nodeProperty": {
+          "nodeId": "c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6",
+          "nodeName": "vouchercode",
+          "nodeType": "textinput",
+          "nodeVersion": "v1",
+          "elementInfo": {
+            "frameWork": "Nextjs",
+            "version": "14.2.3",
+            "component": "TextInput",
+            "props": [
+              {
+                "name": "disabled",
+                "_label": "Disabled",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              },
+              {
+                "name": "readOnly",
+                "_label": "Read Only",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              },
+              {
+                "name": "pin",
+                "_label": "Pin",
+                "_type": "select",
+                "selectionList": [
+                  "round-round",
+                  "brick-brick",
+                  "clear-clear"
+                ],
+                "value": "brick-brick",
+                "enabled": true
+              },
+              {
+                "name": "view",
+                "_label": "View",
+                "_type": "select",
+                "selectionList": [
+                  "normal",
+                  "clear"
+                ],
+                "value": "normal",
+                "enabled": true
+              },
+              {
+                "name": "placeholder",
+                "_label": "Placeholder",
+                "_type": "text",
+                "value": "type here....",
+                "enabled": true
+              },
+              {
+                "name": "leftContent",
+                "_label": "Left Content",
+                "_type": "text",
+                "value": "",
+                "enabled": true
+              },
+              {
+                "name": "rightContent",
+                "_label": "Right Content",
+                "_type": "text",
+                "value": "",
+                "enabled": true
+              },
+              {
+                "name": "enableHeaderText",
+                "_label": "Enable Header Text",
+                "_type": "conditionalBoolean",
+                "value": false,
+                "enabled": true,
+                "subSelection": {
+                  "_true": {
+                    "content": {
+                      "name": "Header Text",
+                      "_type": "text",
+                      "value": "",
+                      "enabled": true
+                    },
+                    "position": {
+                      "name": "Header Position",
+                      "_type": "select",
+                      "selectionList": [
+                        "left",
+                        "top",
+                        "right",
+                        "bottom"
+                      ],
+                      "value": "top",
+                      "enabled": true
+                    }
+                  }
+                }
+              },
+              {
+                "name": "numberFormat",
+                "_label": "Number Format Style",
+                "_type": "select",
+                "selectionList": [
+                  "none",
+                  "Indian",
+                  "International",
+                  "European"
+                ],
+                "value": "",
+                "enabled": false
+              },
+              {
+                "name": "isCurrency",
+                "_label": "Is Currency",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              },
+              {
+                "name": "bindInitialData",
+                "_label": "Bind Initial Data",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              }
+            ],
+            "events": "#textinput_events",
+            "validation": "#textinput_validation"
+          }
+        }
+      },
+      "version": "TRL:AFR:UF-UFW:Next:Inputs:textinput:v1",
+      "t_parentId": "a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6"
+    }
+  },
+  "UFS": [
+    {
+      "id": "root",
+      "type": "Canvas",
+      "grid": {
+        "classNames": "",
+        "style": {
+          "gridAutoRows": "4px",
+          "columnGap": "0px",
+          "rowGap": "0px"
+        }
+      },
+      "children": [
+        "a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6"
+      ],
+      "groupType": "group",
+      "T_parentId": "root",
+      "path": "root",
+      "label": "",
+      "name": "",
+      "elementInfo": {}
+    },
+    {
+      "id": "a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6",
+      "type": "group",
+      "grid": {
+        "classNames": "",
+        "style": {
+          "gridAutoRows": "4px",
+          "columnGap": "0px",
+          "rowGap": "0px"
+        },
+        "row": {
+          "start": 12,
+          "end": 34
+        },
+        "column": {
+          "start": 1,
+          "end": 25
+        }
+      },
+      "children": [
+        "b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6",
+        "c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6"
+      ],
+      "groupType": "group",
+      "T_parentId": "root",
+      "path": "root",
+      "label": "redeemgroup",
+      "name": "redeemgroup",
+      "nodeVersion": "v1",
+      "elementInfo": {
+        "props": [
+          {
+            "name": "isDynamic",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          }
+        ],
+        "events": "#group_events"
+      }
+    },
+    {
+      "id": "b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6",
+      "type": "label",
+      "grid": {
+        "classNames": "",
+        "style": {},
+        "commonprops": {
+          "contentAlign": "left"
+        },
+        "row": {
+          "start": 14,
+          "end": 18
+        },
+        "column": {
+          "start": 2,
+          "end": 24
+        }
+      },
+      "children": [],
+      "T_parentId": "a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6",
+      "path": "root|a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6",
+      "label": "Voucher Code",
+      "name": "vouchercodelabel",
+      "nodeVersion": "v1",
+      "elementInfo": {
+        "frameWork": "Nextjs",
+        "version": "14.2.3",
+        "component": "Label",
+        "label": "",
+        "props": [
+          {
+            "name": "theme",
+            "_type": "select",
+            "selectionList": [
+              "normal",
+              "info",
+              "danger",
+              "warning",
+              "success",
+              "utility",
+              "unknown",
+              "clear"
+            ],
+            "value": "normal",
+            "enabled": true
+          },
+          {
+            "name": "icon",
+            "_type": "conditionalIconSearch",
+            "value": "",
+            "enabled": true,
+            "subSelection": {
+              "iconDisplay": {
+                "name": "iconDisplay",
+                "_type": "select",
+                "selectionList": [
+                  "Icon only",
+                  "Start with Icon",
+                  "End with Icon"
+                ],
+                "value": "End with Icon",
+                "enabled": true
+              }
+            }
+          },
+          {
+            "name": "interactive",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          },
+          {
+            "name": "copy",
+            "_type": "string",
+            "value": "",
+            "enabled": true
+          },
+          {
+            "name": "disabled",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          },
+          {
+            "name": "content",
+            "_type": "string",
+            "value": "Voucher Code",
+            "enabled": true
+          },
+          {
+            "name": "enableHeaderText",
+            "_type": "conditionalBoolean",
+            "value": false,
+            "enabled": true,
+            "subSelection": {
+              "_true": {
+                "content": {
+                  "name": "Header Text",
+                  "_type": "string",
+                  "value": "",
+                  "enabled": true
+                },
+                "position": {
+                  "name": "Header Position",
+                  "_type": "select",
+                  "selectionList": [
+                    "left",
+                    "top",
+                    "right",
+                    "bottom"
+                  ],
+                  "value": "",
+                  "enabled": true
+                }
+              }
+            }
+          }
+        ],
+        "events": "#label_events"
+      }
+    },
+    {
+      "id": "c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6",
+      "type": "textinput",
+      "grid": {
+        "classNames": "",
+        "style": {},
+        "row": {
+          "start": 20,
+          "end": 32
+        },
+        "column": {
+          "start": 2,
+          "end": 24
+        }
+      },
+      "children": [],
+      "T_parentId": "a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6",
+      "path": "root|a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6",
+      "label": "vouchercode",
+      "name": "vouchercode",
+      "nodeVersion": "v1",
+      "elementInfo": {
+        "frameWork": "Nextjs",
+        "version": "14.2.3",
+        "component": "TextInput",
+        "props": [
+          {
+            "name": "disabled",
+            "_label": "Disabled",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          },
+          {
+            "name": "readOnly",
+            "_label": "Read Only",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          },
+          {
+            "name": "pin",
+            "_label": "Pin",
+            "_type": "select",
+            "selectionList": [
+              "round-round",
+              "brick-brick",
+              "clear-clear"
+            ],
+            "value": "brick-brick",
+            "enabled": true
+          },
+          {
+            "name": "view",
+            "_label": "View",
+            "_type": "select",
+            "selectionList": [
+              "normal",
+              "clear"
+            ],
+            "value": "normal",
+            "enabled": true
+          },
+          {
+            "name": "placeholder",
+            "_label": "Placeholder",
+            "_type": "text",
+            "value": "type here....",
+            "enabled": true
+          },
+          {
+            "name": "leftContent",
+            "_label": "Left Content",
+            "_type": "text",
+            "value": "",
+            "enabled": true
+          },
+          {
+            "name": "rightContent",
+            "_label": "Right Content",
+            "_type": "text",
+            "value": "",
+            "enabled": true
+          },
+          {
+            "name": "enableHeaderText",
+            "_label": "Enable Header Text",
+            "_type": "conditionalBoolean",
+            "value": false,
+            "enabled": true,
+            "subSelection": {
+              "_true": {
+                "content": {
+                  "name": "Header Text",
+                  "_type": "text",
+                  "value": "",
+                  "enabled": true
+                },
+                "position": {
+                  "name": "Header Position",
+                  "_type": "select",
+                  "selectionList": [
+                    "left",
+                    "top",
+                    "right",
+                    "bottom"
+                  ],
+                  "value": "top",
+                  "enabled": true
+                }
+              }
+            }
+          },
+          {
+            "name": "numberFormat",
+            "_label": "Number Format Style",
+            "_type": "select",
+            "selectionList": [
+              "none",
+              "Indian",
+              "International",
+              "European"
+            ],
+            "value": "",
+            "enabled": false
+          },
+          {
+            "name": "isCurrency",
+            "_label": "Is Currency",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          },
+          {
+            "name": "bindInitialData",
+            "_label": "Bind Initial Data",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          }
+        ],
+        "events": "#textinput_events",
+        "validation": "#textinput_validation"
+      }
+    }
+  ],
+  "UO": {
+    "mappedData": {
+      "artifact": {
+        "name": "redeemgroup",
+        "action": {
+          "lock": {
+            "lockMode": "",
+            "name": "",
+            "ttl": ""
+          },
+          "stateTransition": {
+            "sourceQueue": "",
+            "sourceStatus": "",
+            "targetQueue": "",
+            "targetStatus": ""
+          },
+          "pagination": {
+            "page": "1",
+            "count": "10"
+          },
+          "encryption": {
+            "isEnabled": false,
+            "selectedDpd": "",
+            "encryptionMethod": ""
+          },
+          "events": {}
+        },
+        "code": "",
+        "testCode": "",
+        "rule": {},
+        "events": {},
+        "mapper": [],
+        "node": [
+          {
+            "nodeId": "root",
+            "nodeName": "Canvas",
+            "nodeType": "Canvas",
+            "parentId": "root",
+            "path": "root",
+            "action": {
+              "lock": {
+                "lockMode": "",
+                "name": "",
+                "ttl": ""
+              },
+              "stateTransition": {
+                "sourceQueue": "",
+                "sourceStatus": "",
+                "targetQueue": "",
+                "targetStatus": ""
+              },
+              "pagination": {
+                "page": "1",
+                "count": "10"
+              },
+              "encryption": {
+                "isEnabled": false,
+                "selectedDpd": "",
+                "encryptionMethod": ""
+              },
+              "events": {}
+            },
+            "code": "",
+            "testCode": "",
+            "rule": {},
+            "events": {},
+            "mapper": [],
+            "objElements": []
+          },
+          {
+            "nodeId": "a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6",
+            "nodeName": "redeemgroup",
+            "nodeType": "group",
+            "nodeVersion": "v1",
+            "parentId": "root",
+            "path": "root",
+            "action": {
+              "lock": {
+                "lockMode": "",
+                "name": "",
+                "ttl": ""
+              },
+              "stateTransition": {
+                "sourceQueue": "",
+                "sourceStatus": "",
+                "targetQueue": "",
+                "targetStatus": ""
+              },
+              "pagination": {
+                "page": "1",
+                "count": "10"
+              },
+              "encryption": {
+                "isEnabled": false,
+                "selectedDpd": "",
+                "encryptionMethod": ""
+              },
+              "events": {}
+            },
+            "code": "",
+            "testCode": "",
+            "rule": {},
+            "events": {},
+            "mapper": [],
+            "objElements": [
+              {
+                "elementName": "vouchercodelabel",
+                "elementId": "b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6",
+                "elementType": "label",
+                "elementVersion": "v1",
+                "parentId": "a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6",
+                "path": "root|a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6",
+                "action": {
+                  "lock": {
+                    "lockMode": "",
+                    "name": "",
+                    "ttl": ""
+                  },
+                  "stateTransition": {
+                    "sourceQueue": "",
+                    "sourceStatus": "",
+                    "targetQueue": "",
+                    "targetStatus": ""
+                  },
+                  "pagination": {
+                    "page": "1",
+                    "count": "10"
+                  },
+                  "encryption": {
+                    "isEnabled": false,
+                    "selectedDpd": "",
+                    "encryptionMethod": ""
+                  },
+                  "events": {}
+                },
+                "code": "",
+                "testCode": "",
+                "rule": {},
+                "events": {},
+                "mapper": [],
+                "objElements": []
+              },
+              {
+                "elementName": "vouchercode",
+                "elementId": "c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6",
+                "elementType": "textinput",
+                "elementVersion": "v1",
+                "parentId": "a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6",
+                "path": "root|a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6",
+                "action": {
+                  "lock": {
+                    "lockMode": "",
+                    "name": "",
+                    "ttl": ""
+                  },
+                  "stateTransition": {
+                    "sourceQueue": "",
+                    "sourceStatus": "",
+                    "targetQueue": "",
+                    "targetStatus": ""
+                  },
+                  "pagination": {
+                    "page": "1",
+                    "count": "10"
+                  },
+                  "encryption": {
+                    "isEnabled": false,
+                    "selectedDpd": "",
+                    "encryptionMethod": ""
+                  },
+                  "events": {}
+                },
+                "code": "",
+                "testCode": "",
+                "rule": {},
+                "events": {},
+                "mapper": [],
+                "objElements": []
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "securityData": {
+      "accessProfile": [],
+      "securityTemplate": {
+        "security": {
+          "artifact": {
+            "resource": "redeemgroup",
+            "resourceId": "redeemgroup",
+            "SIFlag": {
+              "uiType": "dropdown",
+              "selectedValue": "AA",
+              "selectionList": [
+                "AA",
+                "BA"
+              ]
+            },
+            "node": [
+              {
+                "resource": "Canvas",
+                "resourceId": "root",
+                "resourceType": "Canvas",
+                "resourceParentId": "root",
+                "resourcePath": "root",
+                "SIFlag": {
+                  "uiType": "dropdown",
+                  "selectedValue": "AA",
+                  "selectionList": [
+                    "AA",
+                    "BA",
+                    "ATO",
+                    "BTO"
+                  ]
+                },
+                "objElements": []
+              },
+              {
+                "resource": "redeemgroup",
+                "resourceId": "a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6",
+                "resourceType": "group",
+                "resourceParentId": "root",
+                "resourcePath": "root",
+                "SIFlag": {
+                  "uiType": "dropdown",
+                  "selectedValue": "AA",
+                  "selectionList": [
+                    "AA",
+                    "BA",
+                    "ATO",
+                    "BTO"
+                  ]
+                },
+                "objElements": [
+                  {
+                    "resource": "vouchercodelabel",
+                    "resourceId": "b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6",
+                    "resourceType": "label",
+                    "resourceParentId": "a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6",
+                    "resourcePath": "root|a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6",
+                    "SIFlag": {
+                      "uiType": "dropdown",
+                      "selectedValue": "ATO",
+                      "selectionList": [
+                        "AA",
+                        "BA",
+                        "ATO",
+                        "BTO"
+                      ]
+                    },
+                    "objElements": []
+                  },
+                  {
+                    "resource": "vouchercode",
+                    "resourceId": "c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6",
+                    "resourceType": "textinput",
+                    "resourceParentId": "a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6",
+                    "resourcePath": "root|a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6",
+                    "SIFlag": {
+                      "uiType": "dropdown",
+                      "selectedValue": "ATO",
+                      "selectionList": [
+                        "AA",
+                        "BA",
+                        "ATO",
+                        "BTO"
+                      ]
+                    },
+                    "objElements": []
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "afk": "CK:CT001:FNGK:AF:FNK:UF-UFW:CATK:TGW01:AFGK:TGW004:AFK:redeemgroup:AFVK:v1"
+    },
+    "targetItems": [
+      {
+        "nodeId": "root",
+        "nodeName": "",
+        "nodeLabel": "",
+        "nodeType": "Canvas",
+        "parentId": "root",
+        "path": "root",
+        "elementInfo": {},
+        "children": []
+      },
+      {
+        "nodeId": "a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6",
+        "nodeName": "redeemgroup",
+        "nodeLabel": "redeemgroup",
+        "nodeType": "group",
+        "parentId": "root",
+        "path": "root",
+        "groupType": "group",
+        "nodeVersion": "v1",
+        "elementInfo": {
+          "props": [
+            {
+              "name": "isDynamic",
+              "_type": "boolean",
+              "value": false,
+              "enabled": true
+            }
+          ],
+          "events": "#group_events"
+        },
+        "children": [
+          {
+            "nodeId": "b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6",
+            "nodeName": "vouchercodelabel",
+            "nodeLabel": "Voucher Code",
+            "nodeType": "label",
+            "path": "root|a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6",
+            "parentId": "a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6",
+            "nodeVersion": "v1",
+            "elementInfo": {
+              "frameWork": "Nextjs",
+              "version": "14.2.3",
+              "component": "Label",
+              "label": "",
+              "props": [
+                {
+                  "name": "theme",
+                  "_type": "select",
+                  "selectionList": [
+                    "normal",
+                    "info",
+                    "danger",
+                    "warning",
+                    "success",
+                    "utility",
+                    "unknown",
+                    "clear"
+                  ],
+                  "value": "normal",
+                  "enabled": true
+                },
+                {
+                  "name": "icon",
+                  "_type": "conditionalIconSearch",
+                  "value": "",
+                  "enabled": true,
+                  "subSelection": {
+                    "iconDisplay": {
+                      "name": "iconDisplay",
+                      "_type": "select",
+                      "selectionList": [
+                        "Icon only",
+                        "Start with Icon",
+                        "End with Icon"
+                      ],
+                      "value": "End with Icon",
+                      "enabled": true
+                    }
+                  }
+                },
+                {
+                  "name": "interactive",
+                  "_type": "boolean",
+                  "value": false,
+                  "enabled": true
+                },
+                {
+                  "name": "copy",
+                  "_type": "string",
+                  "value": "",
+                  "enabled": true
+                },
+                {
+                  "name": "disabled",
+                  "_type": "boolean",
+                  "value": false,
+                  "enabled": true
+                },
+                {
+                  "name": "content",
+                  "_type": "string",
+                  "value": "Voucher Code",
+                  "enabled": true
+                },
+                {
+                  "name": "enableHeaderText",
+                  "_type": "conditionalBoolean",
+                  "value": false,
+                  "enabled": true,
+                  "subSelection": {
+                    "_true": {
+                      "content": {
+                        "name": "Header Text",
+                        "_type": "string",
+                        "value": "",
+                        "enabled": true
+                      },
+                      "position": {
+                        "name": "Header Position",
+                        "_type": "select",
+                        "selectionList": [
+                          "left",
+                          "top",
+                          "right",
+                          "bottom"
+                        ],
+                        "value": "",
+                        "enabled": true
+                      }
+                    }
+                  }
+                }
+              ],
+              "events": "#label_events"
+            }
+          },
+          {
+            "nodeId": "c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6",
+            "nodeName": "vouchercode",
+            "nodeLabel": "vouchercode",
+            "nodeType": "textinput",
+            "path": "root|a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6",
+            "parentId": "a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6",
+            "nodeVersion": "v1",
+            "elementInfo": {
+              "frameWork": "Nextjs",
+              "version": "14.2.3",
+              "component": "TextInput",
+              "props": [
+                {
+                  "name": "disabled",
+                  "_label": "Disabled",
+                  "_type": "boolean",
+                  "value": false,
+                  "enabled": true
+                },
+                {
+                  "name": "readOnly",
+                  "_label": "Read Only",
+                  "_type": "boolean",
+                  "value": false,
+                  "enabled": true
+                },
+                {
+                  "name": "pin",
+                  "_label": "Pin",
+                  "_type": "select",
+                  "selectionList": [
+                    "round-round",
+                    "brick-brick",
+                    "clear-clear"
+                  ],
+                  "value": "brick-brick",
+                  "enabled": true
+                },
+                {
+                  "name": "view",
+                  "_label": "View",
+                  "_type": "select",
+                  "selectionList": [
+                    "normal",
+                    "clear"
+                  ],
+                  "value": "normal",
+                  "enabled": true
+                },
+                {
+                  "name": "placeholder",
+                  "_label": "Placeholder",
+                  "_type": "text",
+                  "value": "type here....",
+                  "enabled": true
+                },
+                {
+                  "name": "leftContent",
+                  "_label": "Left Content",
+                  "_type": "text",
+                  "value": "",
+                  "enabled": true
+                },
+                {
+                  "name": "rightContent",
+                  "_label": "Right Content",
+                  "_type": "text",
+                  "value": "",
+                  "enabled": true
+                },
+                {
+                  "name": "enableHeaderText",
+                  "_label": "Enable Header Text",
+                  "_type": "conditionalBoolean",
+                  "value": false,
+                  "enabled": true,
+                  "subSelection": {
+                    "_true": {
+                      "content": {
+                        "name": "Header Text",
+                        "_type": "text",
+                        "value": "",
+                        "enabled": true
+                      },
+                      "position": {
+                        "name": "Header Position",
+                        "_type": "select",
+                        "selectionList": [
+                          "left",
+                          "top",
+                          "right",
+                          "bottom"
+                        ],
+                        "value": "top",
+                        "enabled": true
+                      }
+                    }
+                  }
+                },
+                {
+                  "name": "numberFormat",
+                  "_label": "Number Format Style",
+                  "_type": "select",
+                  "selectionList": [
+                    "none",
+                    "Indian",
+                    "International",
+                    "European"
+                  ],
+                  "value": "",
+                  "enabled": false
+                },
+                {
+                  "name": "isCurrency",
+                  "_label": "Is Currency",
+                  "_type": "boolean",
+                  "value": false,
+                  "enabled": true
+                },
+                {
+                  "name": "bindInitialData",
+                  "_label": "Bind Initial Data",
+                  "_type": "boolean",
+                  "value": false,
+                  "enabled": true
+                }
+              ],
+              "events": "#textinput_events",
+              "validation": "#textinput_validation"
+            }
+          }
+        ]
+      }
+    ],
+    "nodeTree": [
+      {
+        "nodeId": "root",
+        "nodeType": "Canvas",
+        "nodeLabel": "",
+        "nodeName": "",
+        "nodeGroupType": "group",
+        "nodeAction": [
+          "root"
+        ],
+        "children": [
+          {
+            "nodeId": "a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6",
+            "nodeType": "group",
+            "nodeLabel": "redeemgroup",
+            "nodeName": "redeemgroup",
+            "nodeParent": "root",
+            "nodeGroupType": "group",
+            "nodeAction": [
+              "a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6"
+            ],
+            "children": [
+              {
+                "nodeId": "b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6",
+                "nodeType": "label",
+                "nodeLabel": "Voucher Code",
+                "nodeName": "vouchercodelabel",
+                "nodeParent": "a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6",
+                "nodeGroupType": "group",
+                "nodeAction": [
+                  "a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6",
+                  "b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6"
+                ],
+                "children": []
+              },
+              {
+                "nodeId": "c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6",
+                "nodeType": "textinput",
+                "nodeLabel": "vouchercode",
+                "nodeName": "vouchercode",
+                "nodeParent": "a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6",
+                "nodeGroupType": "group",
+                "nodeAction": [
+                  "a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6",
+                  "c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6"
+                ],
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

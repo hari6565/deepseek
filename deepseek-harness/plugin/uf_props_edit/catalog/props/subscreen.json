@@ -1,0 +1,14 @@
+{
+  "nodeKey": "subscreen",
+  "nodeType": "group",
+  "nodeGroupType": "subscreen",
+  "component": null,
+  "frameWork": null,
+  "frameWorkVersion": null,
+  "nodeVersion": "v1",
+  "sourceNodeId": "bdc29be1be9b4a259dc583cd3b84b6cf",
+  "instanceCount": 1,
+  "kind": "props",
+  "count": 0,
+  "props": []
+}

@@ -1,0 +1,14 @@
+{
+  "nodeKey": "tab_header",
+  "nodeType": "tab_header",
+  "nodeGroupType": "group",
+  "component": "TabHeader",
+  "frameWork": "Nextjs",
+  "frameWorkVersion": "14.2.3",
+  "nodeVersion": "v1",
+  "sourceNodeId": "199cd66f50d2470caeb5c94961d08680",
+  "instanceCount": 2,
+  "kind": "props",
+  "count": 0,
+  "props": []
+}

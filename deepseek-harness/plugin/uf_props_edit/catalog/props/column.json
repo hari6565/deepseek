@@ -1,0 +1,93 @@
+{
+  "nodeKey": "column",
+  "nodeType": "column",
+  "nodeGroupType": "table",
+  "component": "column",
+  "frameWork": "Nextjs",
+  "frameWorkVersion": "14.2.3",
+  "nodeVersion": "v1",
+  "sourceNodeId": "94f285adcea24027b881b63b4a404722",
+  "instanceCount": 7,
+  "kind": "props",
+  "count": 4,
+  "props": [
+    {
+      "name": "hide",
+      "_type": "boolean",
+      "value": false,
+      "enabled": true,
+      "_description": "Hides the column from the rendered table while keeping it in the data set, so it can still be read by handlers or shown conditionally. (?)"
+    },
+    {
+      "name": "needSearch",
+      "_type": "boolean",
+      "value": false,
+      "enabled": true,
+      "_description": "Adds a per-column search/filter input to this column's header."
+    },
+    {
+      "name": "isSummable",
+      "_type": "boolean",
+      "value": false,
+      "enabled": true,
+      "_description": "Marks the column as numeric and totalled, so the table can show a sum for it."
+    },
+    {
+      "name": "ShowAsColorIndicator",
+      "_type": "conditionalBoolean",
+      "value": false,
+      "enabled": true,
+      "subSelection": {
+        "_true": {
+          "colorIndicatorViewType": {
+            "name": "colorIndicatorViewType",
+            "_type": "select",
+            "selectionList": [
+              "rectangle",
+              "rounded",
+              "badge"
+            ],
+            "value": "",
+            "enabled": true,
+            "_description": "Chip shape: `rectangle`, `rounded` or `badge`."
+          },
+          "keyValue": {
+            "name": "keyValue",
+            "_label": "keyValue",
+            "_type": "array",
+            "items": [
+              {
+                "key": {
+                  "name": "key",
+                  "_label": "Value",
+                  "_type": "text",
+                  "value": "",
+                  "enabled": true,
+                  "_description": "Cell value this row matches."
+                },
+                "colorCode": {
+                  "name": "colorCode",
+                  "_label": "Color For Value",
+                  "_type": "color",
+                  "value": "",
+                  "enabled": true,
+                  "_description": "Chip colour for that value, as a CSS colour string."
+                },
+                "icon": {
+                  "name": "icon",
+                  "_label": "Icon",
+                  "_type": "iconsearch",
+                  "value": "",
+                  "enabled": true,
+                  "_description": "Icon shown on the chip for that value."
+                }
+              }
+            ],
+            "_description": "Rows mapping a cell value to the colour used for its chip."
+          }
+        }
+      },
+      "_description": "Renders the cell value as a coloured status chip instead of plain text. The `_true` sub-props set the chip shape and the value-to-colour mapping."
+    }
+  ]
+}

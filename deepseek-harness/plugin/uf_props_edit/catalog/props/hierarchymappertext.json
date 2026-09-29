@@ -1,0 +1,14 @@
+{
+  "nodeKey": "hierarchymappertext",
+  "nodeType": "hierarchymappertext",
+  "nodeGroupType": "group",
+  "component": "HierarchyMapperText",
+  "frameWork": "Nextjs",
+  "frameWorkVersion": "14.2.3",
+  "nodeVersion": "v1",
+  "sourceNodeId": "2e66d9ad98a14a48bdb0d804e3c9d2fe",
+  "instanceCount": 1,
+  "kind": "props",
+  "count": 0,
+  "props": []
+}

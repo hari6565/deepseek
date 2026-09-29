@@ -150,7 +150,7 @@ function extractCode(raw: string): string {
 export function apply(ctx: Context, config: Config) {
   ctx.effect(() => {
     const timer = setInterval(() => {
-      console.log("[uf_preview_new_generate] heartbeat");
+      console.log("[uf_preview_new] heartbeat");
     }, 5000);
 
     // Runs automatically when the plugin unloads.

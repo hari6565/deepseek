@@ -1,0 +1,52 @@
+{
+  "nodeKey": "grouparray",
+  "nodeType": "group",
+  "nodeGroupType": "grouparray",
+  "component": null,
+  "frameWork": null,
+  "frameWorkVersion": null,
+  "nodeVersion": "v1",
+  "sourceNodeId": "57435a50ff7d46cfb4708f3685bcd7a8",
+  "instanceCount": 1,
+  "kind": "props",
+  "count": 2,
+  "props": [
+    {
+      "name": "length",
+      "_type": "number",
+      "value": 3,
+      "enabled": true,
+      "_description": "How many copies of the repeating group are rendered initially."
+    },
+    {
+      "name": "titleVariant",
+      "_type": "select",
+      "selectionList": [
+        "display-4",
+        "display-3",
+        "display-2",
+        "display-1",
+        "header-2",
+        "header-1",
+        "subheader-3",
+        "subheader-2",
+        "subheader-1",
+        "body-3",
+        "body-2",
+        "body-1",
+        "body-short",
+        "caption-2",
+        "caption-1",
+        "code-3",
+        "code-inline-3",
+        "code-2",
+        "code-inline-2",
+        "code-1",
+        "code-inline-1"
+      ],
+      "value": "subheader-3",
+      "enabled": true,
+      "_description": "Typography token for each repeat's title — same scale as the `text` node's `variant`."
+    }
+  ]
+}

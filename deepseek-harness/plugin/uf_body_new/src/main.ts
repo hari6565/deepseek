@@ -72,6 +72,14 @@ function resolveArtifactName(root: InputNode, request: GenerateJsonRequest & { a
 }
 
 export function apply(ctx: Context, config: Config) {
+  ctx.effect(() => {
+    const timer = setInterval(() => {
+      console.log("[uf_body_new] heartbeat");
+    }, 5000);
+
+    // Runs automatically when the plugin unloads.
+    return () => clearInterval(timer);
+  });
   ctx.tools.register(defineTool({
     name: 'uf_body_new_generate',
     description:

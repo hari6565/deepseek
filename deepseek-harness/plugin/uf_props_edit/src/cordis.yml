@@ -1,0 +1,16 @@
+# Web/host overlay that mounts this plugin by absolute path. Loaded via:
+#   pnpm dsh web --patch ./plugin/uf_props_edit/src/cordis.yml
+#
+# apiKey is a live credential -- replace the placeholder below with your own
+# key before loading this overlay. Never commit a real key here.
+- insert:
+    - id: uf_props_edit
+      name: 'D:/deepseek/deepseek-harness/plugin/uf_props_edit/src/main.ts'
+      config:
+        apiUrl: 'https://openrouter.ai/api/v1'
+        apiKey: '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'
+        model: 'openrouter/free'
+        temperature: 0
+        timeoutMs: 120000
+        # catalogDir omitted -- defaults to the copy bundled at plugin/uf_props_edit/catalog/props/
+        tempDir: 'D:/deepseek/deepseek-harness/plugin/_tempFiles_'

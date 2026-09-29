@@ -1,0 +1,22 @@
+{
+  "nodeKey": "group",
+  "nodeType": "group",
+  "nodeGroupType": "group",
+  "component": null,
+  "frameWork": null,
+  "frameWorkVersion": null,
+  "nodeVersion": "v1",
+  "sourceNodeId": "22c83896c0074fc28febc0019ecad33a",
+  "instanceCount": 6,
+  "kind": "props",
+  "count": 1,
+  "props": [
+    {
+      "name": "isDynamic",
+      "_type": "boolean",
+      "value": false,
+      "enabled": true,
+      "_description": "Marks the container as runtime-generated, so its children are built from data rather than from the authored layout. (?)"
+    }
+  ]
+}

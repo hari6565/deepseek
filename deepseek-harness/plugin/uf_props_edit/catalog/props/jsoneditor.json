@@ -1,0 +1,23 @@
+{
+  "nodeKey": "jsoneditor",
+  "nodeType": "jsoneditor",
+  "nodeGroupType": "group",
+  "component": "JsonEditor",
+  "frameWork": "Nextjs",
+  "frameWorkVersion": "14.2.3",
+  "nodeVersion": "v1",
+  "sourceNodeId": "28181a2f6af749d594a453dc22d0d9ef",
+  "instanceCount": 1,
+  "kind": "props",
+  "count": 1,
+  "props": [
+    {
+      "name": "needCompare",
+      "_label": "Enable Compare",
+      "_type": "boolean",
+      "value": true,
+      "enabled": true,
+      "_description": "Shows the editor in two-pane compare mode (old vs new JSON) rather than as a single editor. On by default."
+    }
+  ]
+}

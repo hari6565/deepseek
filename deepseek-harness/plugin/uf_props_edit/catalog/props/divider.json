@@ -1,0 +1,58 @@
+{
+  "nodeKey": "divider",
+  "nodeType": "divider",
+  "nodeGroupType": "group",
+  "component": "Divider",
+  "frameWork": "Nextjs",
+  "frameWorkVersion": "14.2.3",
+  "nodeVersion": "v1",
+  "sourceNodeId": "8273a495d20840e0bc8a3b8841b87d51",
+  "instanceCount": 1,
+  "kind": "props",
+  "count": 4,
+  "props": [
+    {
+      "name": "direction",
+      "_label": "Direction",
+      "_type": "select",
+      "selectionList": [
+        "horizontal",
+        "vertical"
+      ],
+      "value": "horizontal",
+      "enabled": true,
+      "_description": "Draws the rule `horizontal` or `vertical`."
+    },
+    {
+      "name": "position",
+      "_label": "Position",
+      "_type": "select",
+      "selectionList": [
+        "start",
+        "middle",
+        "end"
+      ],
+      "value": "middle",
+      "enabled": true,
+      "_description": "Where the rule sits within its grid slot: `start`, `middle` or `end`."
+    },
+    {
+      "name": "thickness",
+      "_label": "Thickness",
+      "_type": "range",
+      "value": 2,
+      "enabled": true,
+      "minValue": 1,
+      "maxValue": 50,
+      "_description": "Line thickness in pixels, 1 to 50."
+    },
+    {
+      "name": "color",
+      "_label": "Color",
+      "_type": "color",
+      "value": "#000",
+      "enabled": true,
+      "_description": "Line colour as a CSS colour string."
+    }
+  ]
+}

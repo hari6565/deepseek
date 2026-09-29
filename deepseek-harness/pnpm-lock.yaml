@@ -12149,6 +12149,19 @@ importers:
         specifier: workspace:^
         version: link:../../vendor/cordis
 
+  plugin/uf_props_edit:
+    dependencies:
+      '@deepseek-ai/dsh-tools':
+        specifier: workspace:^
+        version: link:../../packages/core/tools
+      '@deepseek-ai/schemastery':
+        specifier: link:../../vendor/schemastery
+        version: link:../../vendor/schemastery
+    devDependencies:
+      '@deepseek-ai/cordis':
+        specifier: workspace:^
+        version: link:../../vendor/cordis
+
   plugin/uf_skeleton:
     dependencies:
       '@deepseek-ai/dsh-tools':

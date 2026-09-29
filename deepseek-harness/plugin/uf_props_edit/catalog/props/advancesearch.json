@@ -1,0 +1,55 @@
+{
+  "nodeKey": "advancesearch",
+  "nodeType": "advancesearch",
+  "nodeGroupType": "group",
+  "component": "AdvanceSearch",
+  "frameWork": "Nextjs",
+  "frameWorkVersion": "14.2.3",
+  "nodeVersion": "v1",
+  "sourceNodeId": "51b24970ba6a48a6b0ce91abebddd2eb",
+  "instanceCount": 1,
+  "kind": "props",
+  "count": 2,
+  "props": [
+    {
+      "name": "disabled",
+      "_label": "Disabled",
+      "_type": "boolean",
+      "value": false,
+      "enabled": true,
+      "_description": "Blocks the whole search panel — no field can be edited and the search cannot be run."
+    },
+    {
+      "name": "enableHeaderText",
+      "_label": "Enable Header Text",
+      "_type": "conditionalBoolean",
+      "value": false,
+      "enabled": true,
+      "subSelection": {
+        "_true": {
+          "content": {
+            "name": "Header Text",
+            "_type": "text",
+            "value": "",
+            "enabled": true,
+            "_description": "The caption text shown beside the control."
+          },
+          "position": {
+            "name": "Header Position",
+            "_type": "select",
+            "selectionList": [
+              "left",
+              "top",
+              "right",
+              "bottom"
+            ],
+            "value": "top",
+            "enabled": true,
+            "_description": "Which side of the control the caption sits on: `left`, `top`, `right` or `bottom`."
+          }
+        }
+      },
+      "_description": "Turns on a caption attached to the control. When true, the `_true` sub-props supply the caption text and which side it sits on."
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "nodeKey": "label",
+  "nodeType": "label",
+  "nodeGroupType": "group",
+  "component": "Label",
+  "frameWork": "Nextjs",
+  "frameWorkVersion": "14.2.3",
+  "nodeVersion": "v1",
+  "sourceNodeId": "424c83beb8954421a6998f67c37b4c00",
+  "instanceCount": 3,
+  "kind": "props",
+  "count": 7,
+  "props": [
+    {
+      "name": "theme",
+      "_type": "select",
+      "selectionList": [
+        "normal",
+        "info",
+        "danger",
+        "warning",
+        "success",
+        "utility",
+        "unknown",
+        "clear"
+      ],
+      "value": "normal",
+      "enabled": true,
+      "_description": "Semantic colour role: `normal`, `info`, `danger`, `warning`, `success`, `utility`, `unknown` or `clear`."
+    },
+    {
+      "name": "icon",
+      "_type": "conditionalIconSearch",
+      "value": "",
+      "enabled": true,
+      "subSelection": {
+        "iconDisplay": {
+          "name": "iconDisplay",
+          "_type": "select",
+          "selectionList": [
+            "Icon only",
+            "Start with Icon",
+            "End with Icon"
+          ],
+          "value": "End with Icon",
+          "enabled": true,
+          "_description": "Where the icon is drawn relative to the control's text."
+        }
+      },
+      "_description": "Icon drawn with the label; the `iconDisplay` sub-prop chooses which side."
+    },
+    {
+      "name": "interactive",
+      "_type": "boolean",
+      "value": false,
+      "enabled": true,
+      "_description": "Makes the label clickable, enabling its `onClick` event and hover styling."
+    },
+    {
+      "name": "copy",
+      "_type": "string",
+      "value": "",
+      "enabled": true,
+      "_description": "Text placed on the clipboard when the label's copy affordance is used. Empty means copy the displayed `content`. (?)"
+    },
+    {
+      "name": "disabled",
+      "_type": "boolean",
+      "value": false,
+      "enabled": true,
+      "_description": "Greys the label out and blocks its `onClick` event."
+    },
+    {
+      "name": "content",
+      "_type": "string",
+      "value": "label",
+      "enabled": true,
+      "_description": "The text the label displays."
+    },
+    {
+      "name": "enableHeaderText",
+      "_type": "conditionalBoolean",
+      "value": false,
+      "enabled": true,
+      "subSelection": {
+        "_true": {
+          "content": {
+            "name": "Header Text",
+            "_type": "string",
+            "value": "",
+            "enabled": true,
+            "_description": "The caption text shown beside the control."
+          },
+          "position": {
+            "name": "Header Position",
+            "_type": "select",
+            "selectionList": [
+              "left",
+              "top",
+              "right",
+              "bottom"
+            ],
+            "value": "",
+            "enabled": true,
+            "_description": "Which side of the control the caption sits on: `left`, `top`, `right` or `bottom`."
+          }
+        }
+      },
+      "_description": "Turns on a caption attached to the control. When true, the `_true` sub-props supply the caption text and which side it sits on."
+    }
+  ]
+}

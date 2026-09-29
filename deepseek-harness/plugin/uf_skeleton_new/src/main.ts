@@ -66,7 +66,60 @@ function freshId(): string {
   return randomUUID().replace(/-/g, '')
 }
 
-/** True if every nodeId is unique and every nodeParent matches its real parent. */
+/** The spec's own shape: a 32-char lowercase hex string. */
+const HEX32 = /^[0-9a-f]{32}$/
+
+/**
+ * A real 32-char hex id (e.g. from randomUUID) draws from 16 symbols and
+ * almost always has well over half of them distinct. A model that fakes an
+ * id by repeating one digit ("1111...1", "2222...2") still matches HEX32 --
+ * "1" is a valid hex digit -- but collapses to a single distinct character.
+ * Rejecting anything below this threshold catches that failure mode without
+ * being so strict it flags a genuinely random id.
+ */
+const MIN_DISTINCT_HEX_CHARS = 6
+
+function looksLikeRealId(id: string): boolean {
+  return HEX32.test(id) && new Set(id).size >= MIN_DISTINCT_HEX_CHARS
+}
+
+/**
+ * Rejects a shape corruption the id checks below can't safely repair: a
+ * weak model flattening the tree into top-level siblings with string
+ * "children" references instead of nesting child NODES inside their
+ * parent's own "children" array. Reconstructing a tree from that would mean
+ * guessing at structure from partial signals (array order, sibling counts)
+ * -- a wrong guess would silently produce a plausible-looking but incorrect
+ * tree, which is worse than failing loudly here.
+ */
+function validateTreeShape(data: NodeTreeResponse): void {
+  const visit = (node: unknown, path: string): void => {
+    if (!node || typeof node !== 'object' || Array.isArray(node)) {
+      throw new Error(
+        `uf_skeleton_new: model output is malformed at ${path} -- expected a node object, got `
+        + `${Array.isArray(node) ? 'an array' : typeof node}.`,
+      )
+    }
+    const record = node as TreeNode
+    if (record.children === undefined) return
+    if (!Array.isArray(record.children)) {
+      throw new Error(`uf_skeleton_new: model output is malformed at ${path}.children -- expected an array, got ${typeof record.children}.`)
+    }
+    record.children.forEach((child, index) => {
+      if (typeof child === 'string') {
+        throw new Error(
+          `uf_skeleton_new: model output is malformed at ${path}.children[${String(index)}] -- got the string id `
+          + `"${child}" instead of a nested node object. Every child must be nested INSIDE its parent's own `
+          + `"children" array as a full object, never referenced by id from a flat sibling list.`,
+        )
+      }
+      visit(child, `${path}.children[${String(index)}]`)
+    })
+  }
+  data.nodeTree.forEach((root, index) => visit(root, `nodeTree[${String(index)}]`))
+}
+
+/** True if every non-root nodeId is a real-looking 32-char hex id, unique, and every nodeParent matches its real parent. */
 function idsAreConsistent(data: NodeTreeResponse): boolean {
   const seen = new Set<string>()
   let ok = true
@@ -76,7 +129,7 @@ function idsAreConsistent(data: NodeTreeResponse): boolean {
     if (isRoot) {
       if (node.nodeId !== 'root') ok = false
     } else {
-      if (!node.nodeId || typeof node.nodeId !== 'string' || seen.has(node.nodeId)) ok = false
+      if (!node.nodeId || typeof node.nodeId !== 'string' || seen.has(node.nodeId) || !looksLikeRealId(node.nodeId)) ok = false
       if (node.nodeParent !== expectedParentId) ok = false
     }
     if (typeof node.nodeId === 'string') seen.add(node.nodeId)
@@ -145,6 +198,14 @@ function chatCompletionsUrl(base: string): string {
 }
 
 export function apply(ctx: Context, config: Config) {
+  ctx.effect(() => {
+    const timer = setInterval(() => {
+      console.log("[uf_skeleton_new] heartbeat");
+    }, 5000);
+
+    // Runs automatically when the plugin unloads.
+    return () => clearInterval(timer);
+  });
   ctx.tools.register(defineTool({
     name: 'uf_skeleton_new_generate',
     description:
@@ -238,13 +299,18 @@ export function apply(ctx: Context, config: Config) {
         )
       }
 
-      if (!parsed || typeof parsed !== 'object' || Array.isArray(parsed) || !Array.isArray(parsed.nodeTree) || parsed.nodeTree.length === 0) {
-        const shape = parsed && typeof parsed === 'object' ? `an object with keys [${Object.keys(parsed).join(', ')}]` : typeof parsed
+      if (!parsed || typeof parsed !== 'object' || Array.isArray(parsed) || !Array.isArray(parsed.nodeTree) || parsed.nodeTree.length !== 1) {
+        const shape = parsed && typeof parsed === 'object' && Array.isArray((parsed as { nodeTree?: unknown }).nodeTree)
+          ? `"nodeTree" with ${String((parsed as { nodeTree: unknown[] }).nodeTree.length)} top-level entries`
+          : parsed && typeof parsed === 'object' ? `an object with keys [${Object.keys(parsed).join(', ')}]` : typeof parsed
         throw new Error(
-          `uf_skeleton_new: model output parsed as JSON but has no non-empty "nodeTree" array `
-          + `(got ${shape}). Expected { "nodeTree": [ <root Canvas node> ] }. Raw output: ${raw}`,
+          `uf_skeleton_new: model output parsed as JSON but "nodeTree" isn't an array of exactly one root node `
+          + `(got ${shape}). Expected { "nodeTree": [ <single root Canvas node> ] }, with every child nested `
+          + `INSIDE its parent's own "children" array -- never as a sibling entry or a bare id string. `
+          + `Raw output: ${raw}`,
         )
       }
+      validateTreeShape(parsed)
 
       return idsAreConsistent(parsed) ? parsed : regenerateIds(parsed)
     },
