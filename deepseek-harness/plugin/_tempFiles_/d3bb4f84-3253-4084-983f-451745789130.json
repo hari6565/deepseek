@@ -1,0 +1,2994 @@
+{
+  "NDP": {
+    "root": {
+      "nodeId": "root",
+      "nodeName": "Root",
+      "nodeType": "Canvas",
+      "nodeVersion": "v1",
+      "elementInfo": {}
+    },
+    "6db23b99486040d2b8267491c9c2c2c7": {
+      "nodeId": "6db23b99486040d2b8267491c9c2c2c7",
+      "nodeName": "customertable",
+      "nodeType": "group",
+      "nodeVersion": "v1",
+      "elementInfo": {
+        "frameWork": "Nextjs",
+        "version": "14.2.3",
+        "component": "Table",
+        "props": [
+          {
+            "name": "tableName",
+            "_type": "text",
+            "value": "customertable",
+            "enabled": true
+          },
+          {
+            "name": "primaryKey",
+            "_type": "text",
+            "value": "id",
+            "enabled": true
+          },
+          {
+            "name": "parentTableName",
+            "_type": "text",
+            "value": "",
+            "enabled": true
+          },
+          {
+            "name": "parentTablePrimaryKey",
+            "_label": "Parent Table Column Name",
+            "_type": "text",
+            "value": "",
+            "enabled": true
+          },
+          {
+            "name": "tableSettings",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          },
+          {
+            "name": "tableSorting",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          },
+          {
+            "name": "tableSelection",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          },
+          {
+            "name": "search",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          },
+          {
+            "name": "tableActions",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          },
+          {
+            "name": "needLocking",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          },
+          {
+            "name": "isPivotTable",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          },
+          {
+            "name": "enableHeaderText",
+            "_type": "conditionalBoolean",
+            "value": false,
+            "enabled": true,
+            "subSelection": {
+              "_true": {
+                "content": {
+                  "name": "Header Text",
+                  "_type": "text",
+                  "value": "",
+                  "enabled": true
+                },
+                "position": {
+                  "name": "Header Position",
+                  "_type": "select",
+                  "selectionList": [
+                    "left",
+                    "top",
+                    "right",
+                    "bottom"
+                  ],
+                  "value": "top",
+                  "enabled": true
+                }
+              }
+            }
+          }
+        ],
+        "events": "#table_events"
+      }
+    },
+    "64c43ccdddbc4e7daec3091958d6dedf": {
+      "nodeId": "64c43ccdddbc4e7daec3091958d6dedf",
+      "nodeName": "name",
+      "nodeType": "column",
+      "nodeVersion": "v1",
+      "elementInfo": {
+        "frameWork": "Nextjs",
+        "version": "14.2.3",
+        "component": "column",
+        "props": [
+          {
+            "name": "hide",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          },
+          {
+            "name": "needSearch",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          },
+          {
+            "name": "isSummable",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          },
+          {
+            "name": "ShowAsColorIndicator",
+            "_type": "conditionalBoolean",
+            "value": false,
+            "enabled": true,
+            "subSelection": {
+              "_true": {
+                "colorIndicatorViewType": {
+                  "name": "colorIndicatorViewType",
+                  "_type": "select",
+                  "selectionList": [
+                    "rectangle",
+                    "rounded"
+                  ],
+                  "value": "",
+                  "enabled": true
+                },
+                "keyValue": {
+                  "name": "keyValue",
+                  "_label": "keyValue",
+                  "_type": "array",
+                  "items": [
+                    {
+                      "key": {
+                        "name": "key",
+                        "_label": "Value",
+                        "_type": "text",
+                        "value": "",
+                        "enabled": true
+                      },
+                      "colorCode": {
+                        "name": "colorCode",
+                        "_label": "Color For Value",
+                        "_type": "color",
+                        "value": "",
+                        "enabled": true
+                      },
+                      "icon": {
+                        "name": "icon",
+                        "_label": "Icon",
+                        "_type": "iconsearch",
+                        "value": "",
+                        "enabled": true
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        ],
+        "events": []
+      }
+    },
+    "7c9bef5b7be7458692d8924d4d045fff": {
+      "nodeId": "7c9bef5b7be7458692d8924d4d045fff",
+      "nodeName": "email",
+      "nodeType": "column",
+      "nodeVersion": "v1",
+      "elementInfo": {
+        "frameWork": "Nextjs",
+        "version": "14.2.3",
+        "component": "column",
+        "props": [
+          {
+            "name": "hide",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          },
+          {
+            "name": "needSearch",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          },
+          {
+            "name": "isSummable",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          },
+          {
+            "name": "ShowAsColorIndicator",
+            "_type": "conditionalBoolean",
+            "value": false,
+            "enabled": true,
+            "subSelection": {
+              "_true": {
+                "colorIndicatorViewType": {
+                  "name": "colorIndicatorViewType",
+                  "_type": "select",
+                  "selectionList": [
+                    "rectangle",
+                    "rounded"
+                  ],
+                  "value": "",
+                  "enabled": true
+                },
+                "keyValue": {
+                  "name": "keyValue",
+                  "_label": "keyValue",
+                  "_type": "array",
+                  "items": [
+                    {
+                      "key": {
+                        "name": "key",
+                        "_label": "Value",
+                        "_type": "text",
+                        "value": "",
+                        "enabled": true
+                      },
+                      "colorCode": {
+                        "name": "colorCode",
+                        "_label": "Color For Value",
+                        "_type": "color",
+                        "value": "",
+                        "enabled": true
+                      },
+                      "icon": {
+                        "name": "icon",
+                        "_label": "Icon",
+                        "_type": "iconsearch",
+                        "value": "",
+                        "enabled": true
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        ],
+        "events": []
+      }
+    },
+    "ece3e4a4372643e39e902ec80a4ed0c8": {
+      "nodeId": "ece3e4a4372643e39e902ec80a4ed0c8",
+      "nodeName": "save",
+      "nodeType": "button",
+      "nodeVersion": "v1",
+      "elementInfo": {
+        "frameWork": "Nextjs",
+        "version": "14.2.3",
+        "component": "Button",
+        "props": [
+          {
+            "name": "view",
+            "_type": "select",
+            "selectionList": [
+              "normal",
+              "action",
+              "outlined",
+              "outlined-info",
+              "outlined-success",
+              "outlined-warning",
+              "outlined-danger",
+              "outlined-utility",
+              "outlined-action",
+              "raised",
+              "flat",
+              "flat-secondary",
+              "flat-info",
+              "flat-success",
+              "flat-warning",
+              "flat-danger",
+              "flat-utility",
+              "flat-action",
+              "normal-contrast",
+              "outlined-contrast",
+              "flat-contrast"
+            ],
+            "value": "action",
+            "enabled": true
+          },
+          {
+            "name": "icon",
+            "_type": "conditionalIconSearch",
+            "value": "",
+            "enabled": true,
+            "subSelection": {
+              "iconDisplay": {
+                "name": "iconDisplay",
+                "_type": "select",
+                "selectionList": [
+                  "Icon only",
+                  "Start with Icon",
+                  "End with Icon"
+                ],
+                "value": "End with Icon",
+                "enabled": true
+              }
+            }
+          },
+          {
+            "name": "disabled",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          },
+          {
+            "name": "isRecordLevel",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          },
+          {
+            "name": "pin",
+            "_type": "select",
+            "selectionList": [
+              "round-round",
+              "brick-brick",
+              "clear-clear",
+              "circle-circle",
+              "round-brick",
+              "brick-round",
+              "round-clear",
+              "clear-round",
+              "brick-clear",
+              "clear-brick",
+              "circle-brick",
+              "brick-circle",
+              "circle-clear",
+              "clear-circle"
+            ],
+            "value": "circle-circle",
+            "enabled": true
+          },
+          {
+            "name": "enableHeaderText",
+            "_type": "conditionalBoolean",
+            "value": false,
+            "enabled": true,
+            "subSelection": {
+              "_true": {
+                "content": {
+                  "name": "Header Text",
+                  "_type": "text",
+                  "value": "",
+                  "enabled": true
+                },
+                "position": {
+                  "name": "Header Position",
+                  "_type": "select",
+                  "selectionList": [
+                    "left",
+                    "top",
+                    "right",
+                    "bottom"
+                  ],
+                  "value": "top",
+                  "enabled": true
+                }
+              }
+            }
+          },
+          {
+            "name": "isValidate",
+            "_type": "boolean",
+            "value": true,
+            "enabled": true
+          }
+        ],
+        "events": "#button_events"
+      }
+    }
+  },
+  "NDS": [
+    {
+      "id": "root",
+      "parent": "root",
+      "T_parentId": "root",
+      "type": "Canvas",
+      "children": [
+        "6db23b99486040d2b8267491c9c2c2c7"
+      ],
+      "data": {
+        "label": "Root",
+        "nodeProperty": {
+          "nodeId": "root",
+          "nodeName": "Root",
+          "nodeType": "Canvas",
+          "nodeVersion": "v1",
+          "elementInfo": {}
+        }
+      },
+      "property": {
+        "name": "",
+        "nodeType": "Canvas",
+        "description": ""
+      },
+      "grid": {
+        "classNames": "",
+        "style": {
+          "gridAutoRows": "4px",
+          "columnGap": "0px",
+          "rowGap": "0px"
+        }
+      }
+    },
+    {
+      "id": "6db23b99486040d2b8267491c9c2c2c7",
+      "parent": "root",
+      "T_parentId": "root",
+      "type": "group",
+      "children": [
+        "64c43ccdddbc4e7daec3091958d6dedf",
+        "7c9bef5b7be7458692d8924d4d045fff",
+        "ece3e4a4372643e39e902ec80a4ed0c8"
+      ],
+      "data": {
+        "label": "customertable",
+        "nodeAppearance": {
+          "type": "table",
+          "label": "table",
+          "color": "#0736C4",
+          "shape": "square",
+          "icon": "/torus/9.1/resources/nodeicons/UF-UFW/table.svg",
+          "size": 45,
+          "handles": [
+            {
+              "type": "source",
+              "position": "right",
+              "isConnectable": true,
+              "shown": true
+            },
+            {
+              "type": "target",
+              "position": "left",
+              "isConnectable": true,
+              "shown": true
+            }
+          ]
+        },
+        "nodeProperty": {
+          "nodeId": "6db23b99486040d2b8267491c9c2c2c7",
+          "nodeName": "customertable",
+          "nodeType": "group",
+          "nodeVersion": "v1",
+          "elementInfo": {
+            "frameWork": "Nextjs",
+            "version": "14.2.3",
+            "component": "Table",
+            "props": [
+              {
+                "name": "tableName",
+                "_type": "text",
+                "value": "customertable",
+                "enabled": true
+              },
+              {
+                "name": "primaryKey",
+                "_type": "text",
+                "value": "id",
+                "enabled": true
+              },
+              {
+                "name": "parentTableName",
+                "_type": "text",
+                "value": "",
+                "enabled": true
+              },
+              {
+                "name": "parentTablePrimaryKey",
+                "_label": "Parent Table Column Name",
+                "_type": "text",
+                "value": "",
+                "enabled": true
+              },
+              {
+                "name": "tableSettings",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              },
+              {
+                "name": "tableSorting",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              },
+              {
+                "name": "tableSelection",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              },
+              {
+                "name": "search",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              },
+              {
+                "name": "tableActions",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              },
+              {
+                "name": "needLocking",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              },
+              {
+                "name": "isPivotTable",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              },
+              {
+                "name": "enableHeaderText",
+                "_type": "conditionalBoolean",
+                "value": false,
+                "enabled": true,
+                "subSelection": {
+                  "_true": {
+                    "content": {
+                      "name": "Header Text",
+                      "_type": "text",
+                      "value": "",
+                      "enabled": true
+                    },
+                    "position": {
+                      "name": "Header Position",
+                      "_type": "select",
+                      "selectionList": [
+                        "left",
+                        "top",
+                        "right",
+                        "bottom"
+                      ],
+                      "value": "top",
+                      "enabled": true
+                    }
+                  }
+                }
+              }
+            ],
+            "events": "#table_events"
+          }
+        }
+      },
+      "property": {
+        "name": "customertable",
+        "nodeType": "table",
+        "description": ""
+      },
+      "grid": {
+        "classNames": "",
+        "style": {
+          "gridAutoRows": "4px",
+          "columnGap": "0px",
+          "rowGap": "0px"
+        },
+        "row": {
+          "start": 2,
+          "end": 130
+        },
+        "column": {
+          "start": 1,
+          "end": 25
+        }
+      },
+      "groupType": "table",
+      "version": "TRL:AFR:UF-UFW:Next:Defaults:table:v1"
+    },
+    {
+      "id": "64c43ccdddbc4e7daec3091958d6dedf",
+      "parent": "6db23b99486040d2b8267491c9c2c2c7",
+      "T_parentId": "6db23b99486040d2b8267491c9c2c2c7",
+      "type": "column",
+      "children": [],
+      "data": {
+        "label": "name",
+        "nodeAppearance": {
+          "type": "column",
+          "label": "column",
+          "color": "#F44336",
+          "shape": "square",
+          "icon": "/torus/9.1/resources/nodeicons/UF-UFW/column.svg",
+          "size": 45,
+          "handles": [
+            {
+              "type": "source",
+              "position": "right",
+              "isConnectable": true,
+              "shown": true
+            },
+            {
+              "type": "target",
+              "position": "left",
+              "isConnectable": true,
+              "shown": true
+            }
+          ]
+        },
+        "nodeProperty": {
+          "nodeId": "64c43ccdddbc4e7daec3091958d6dedf",
+          "nodeName": "name",
+          "nodeType": "column",
+          "nodeVersion": "v1",
+          "elementInfo": {
+            "frameWork": "Nextjs",
+            "version": "14.2.3",
+            "component": "column",
+            "props": [
+              {
+                "name": "hide",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              },
+              {
+                "name": "needSearch",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              },
+              {
+                "name": "isSummable",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              },
+              {
+                "name": "ShowAsColorIndicator",
+                "_type": "conditionalBoolean",
+                "value": false,
+                "enabled": true,
+                "subSelection": {
+                  "_true": {
+                    "colorIndicatorViewType": {
+                      "name": "colorIndicatorViewType",
+                      "_type": "select",
+                      "selectionList": [
+                        "rectangle",
+                        "rounded"
+                      ],
+                      "value": "",
+                      "enabled": true
+                    },
+                    "keyValue": {
+                      "name": "keyValue",
+                      "_label": "keyValue",
+                      "_type": "array",
+                      "items": [
+                        {
+                          "key": {
+                            "name": "key",
+                            "_label": "Value",
+                            "_type": "text",
+                            "value": "",
+                            "enabled": true
+                          },
+                          "colorCode": {
+                            "name": "colorCode",
+                            "_label": "Color For Value",
+                            "_type": "color",
+                            "value": "",
+                            "enabled": true
+                          },
+                          "icon": {
+                            "name": "icon",
+                            "_label": "Icon",
+                            "_type": "iconsearch",
+                            "value": "",
+                            "enabled": true
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            ],
+            "events": []
+          }
+        }
+      },
+      "property": {
+        "name": "name",
+        "nodeType": "column",
+        "description": ""
+      },
+      "grid": {
+        "classNames": "",
+        "style": {},
+        "row": {
+          "end": null
+        },
+        "column": {
+          "end": null
+        }
+      },
+      "version": "TRL:AFR:UF-UFW:Next:Defaults:column:v1"
+    },
+    {
+      "id": "7c9bef5b7be7458692d8924d4d045fff",
+      "parent": "6db23b99486040d2b8267491c9c2c2c7",
+      "T_parentId": "6db23b99486040d2b8267491c9c2c2c7",
+      "type": "column",
+      "children": [],
+      "data": {
+        "label": "email",
+        "nodeAppearance": {
+          "type": "column",
+          "label": "column",
+          "color": "#F44336",
+          "shape": "square",
+          "icon": "/torus/9.1/resources/nodeicons/UF-UFW/column.svg",
+          "size": 45,
+          "handles": [
+            {
+              "type": "source",
+              "position": "right",
+              "isConnectable": true,
+              "shown": true
+            },
+            {
+              "type": "target",
+              "position": "left",
+              "isConnectable": true,
+              "shown": true
+            }
+          ]
+        },
+        "nodeProperty": {
+          "nodeId": "7c9bef5b7be7458692d8924d4d045fff",
+          "nodeName": "email",
+          "nodeType": "column",
+          "nodeVersion": "v1",
+          "elementInfo": {
+            "frameWork": "Nextjs",
+            "version": "14.2.3",
+            "component": "column",
+            "props": [
+              {
+                "name": "hide",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              },
+              {
+                "name": "needSearch",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              },
+              {
+                "name": "isSummable",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              },
+              {
+                "name": "ShowAsColorIndicator",
+                "_type": "conditionalBoolean",
+                "value": false,
+                "enabled": true,
+                "subSelection": {
+                  "_true": {
+                    "colorIndicatorViewType": {
+                      "name": "colorIndicatorViewType",
+                      "_type": "select",
+                      "selectionList": [
+                        "rectangle",
+                        "rounded"
+                      ],
+                      "value": "",
+                      "enabled": true
+                    },
+                    "keyValue": {
+                      "name": "keyValue",
+                      "_label": "keyValue",
+                      "_type": "array",
+                      "items": [
+                        {
+                          "key": {
+                            "name": "key",
+                            "_label": "Value",
+                            "_type": "text",
+                            "value": "",
+                            "enabled": true
+                          },
+                          "colorCode": {
+                            "name": "colorCode",
+                            "_label": "Color For Value",
+                            "_type": "color",
+                            "value": "",
+                            "enabled": true
+                          },
+                          "icon": {
+                            "name": "icon",
+                            "_label": "Icon",
+                            "_type": "iconsearch",
+                            "value": "",
+                            "enabled": true
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            ],
+            "events": []
+          }
+        }
+      },
+      "property": {
+        "name": "email",
+        "nodeType": "column",
+        "description": ""
+      },
+      "grid": {
+        "classNames": "",
+        "style": {},
+        "row": {
+          "end": null
+        },
+        "column": {
+          "end": null
+        }
+      },
+      "version": "TRL:AFR:UF-UFW:Next:Defaults:column:v1"
+    },
+    {
+      "id": "ece3e4a4372643e39e902ec80a4ed0c8",
+      "parent": "6db23b99486040d2b8267491c9c2c2c7",
+      "T_parentId": "6db23b99486040d2b8267491c9c2c2c7",
+      "type": "button",
+      "children": [],
+      "data": {
+        "label": "save",
+        "nodeAppearance": {
+          "icon": "/torus/9.1/resources/nodeicons/UF-UFW/button.svg",
+          "color": "#0736C4",
+          "label": "button",
+          "size": 45
+        },
+        "nodeProperty": {
+          "nodeId": "ece3e4a4372643e39e902ec80a4ed0c8",
+          "nodeName": "save",
+          "nodeType": "button",
+          "nodeVersion": "v1",
+          "elementInfo": {
+            "frameWork": "Nextjs",
+            "version": "14.2.3",
+            "component": "Button",
+            "props": [
+              {
+                "name": "view",
+                "_type": "select",
+                "selectionList": [
+                  "normal",
+                  "action",
+                  "outlined",
+                  "outlined-info",
+                  "outlined-success",
+                  "outlined-warning",
+                  "outlined-danger",
+                  "outlined-utility",
+                  "outlined-action",
+                  "raised",
+                  "flat",
+                  "flat-secondary",
+                  "flat-info",
+                  "flat-success",
+                  "flat-warning",
+                  "flat-danger",
+                  "flat-utility",
+                  "flat-action",
+                  "normal-contrast",
+                  "outlined-contrast",
+                  "flat-contrast"
+                ],
+                "value": "action",
+                "enabled": true
+              },
+              {
+                "name": "icon",
+                "_type": "conditionalIconSearch",
+                "value": "",
+                "enabled": true,
+                "subSelection": {
+                  "iconDisplay": {
+                    "name": "iconDisplay",
+                    "_type": "select",
+                    "selectionList": [
+                      "Icon only",
+                      "Start with Icon",
+                      "End with Icon"
+                    ],
+                    "value": "End with Icon",
+                    "enabled": true
+                  }
+                }
+              },
+              {
+                "name": "disabled",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              },
+              {
+                "name": "isRecordLevel",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              },
+              {
+                "name": "pin",
+                "_type": "select",
+                "selectionList": [
+                  "round-round",
+                  "brick-brick",
+                  "clear-clear",
+                  "circle-circle",
+                  "round-brick",
+                  "brick-round",
+                  "round-clear",
+                  "clear-round",
+                  "brick-clear",
+                  "clear-brick",
+                  "circle-brick",
+                  "brick-circle",
+                  "circle-clear",
+                  "clear-circle"
+                ],
+                "value": "circle-circle",
+                "enabled": true
+              },
+              {
+                "name": "enableHeaderText",
+                "_type": "conditionalBoolean",
+                "value": false,
+                "enabled": true,
+                "subSelection": {
+                  "_true": {
+                    "content": {
+                      "name": "Header Text",
+                      "_type": "text",
+                      "value": "",
+                      "enabled": true
+                    },
+                    "position": {
+                      "name": "Header Position",
+                      "_type": "select",
+                      "selectionList": [
+                        "left",
+                        "top",
+                        "right",
+                        "bottom"
+                      ],
+                      "value": "top",
+                      "enabled": true
+                    }
+                  }
+                }
+              },
+              {
+                "name": "isValidate",
+                "_type": "boolean",
+                "value": true,
+                "enabled": true
+              }
+            ],
+            "events": "#button_events"
+          }
+        }
+      },
+      "property": {
+        "name": "save",
+        "nodeType": "button",
+        "description": ""
+      },
+      "grid": {
+        "classNames": "",
+        "style": {},
+        "row": {
+          "end": null
+        },
+        "column": {
+          "end": null
+        }
+      },
+      "version": "TRL:AFR:UF-UFW:Next:Inputs:button:v1"
+    }
+  ],
+  "NDU": {
+    "root": {
+      "id": "root",
+      "Parent": "root",
+      "type": "Canvas",
+      "T_parentId": "root",
+      "children": [
+        "6db23b99486040d2b8267491c9c2c2c7"
+      ],
+      "data": {
+        "label": "Root",
+        "nodeProperty": {
+          "nodeId": "root",
+          "nodeName": "Root",
+          "nodeType": "Canvas",
+          "nodeVersion": "v1",
+          "elementInfo": {}
+        }
+      },
+      "grid": {
+        "style": {
+          "gridAutoRows": "4px",
+          "columnGap": "0px",
+          "rowGap": "0px"
+        },
+        "classNames": ""
+      },
+      "property": {
+        "name": "",
+        "nodeType": "Canvas",
+        "description": "",
+        "rowHeight": "4px",
+        "rowGap": "0px",
+        "columnGap": "0px",
+        "props": {
+          "meta": {
+            "row": 1,
+            "col": 1,
+            "rowSpan": 24,
+            "colSpan": 24
+          }
+        },
+        "rowCount": 143,
+        "columnCount": 24
+      },
+      "groupType": "group"
+    },
+    "6db23b99486040d2b8267491c9c2c2c7": {
+      "id": "6db23b99486040d2b8267491c9c2c2c7",
+      "parent": "root",
+      "type": "group",
+      "T_parentId": "root",
+      "children": [
+        "64c43ccdddbc4e7daec3091958d6dedf",
+        "7c9bef5b7be7458692d8924d4d045fff",
+        "ece3e4a4372643e39e902ec80a4ed0c8"
+      ],
+      "property": {
+        "name": "customertable",
+        "nodeType": "table",
+        "description": "",
+        "props": {
+          "meta": {
+            "row": 2,
+            "col": 1,
+            "rowSpan": 128,
+            "colSpan": 24
+          }
+        }
+      },
+      "grid": {
+        "style": {
+          "gridAutoRows": "4px",
+          "columnGap": "0px",
+          "rowGap": "0px"
+        },
+        "classNames": ""
+      },
+      "groupType": "table",
+      "data": {
+        "label": "customertable",
+        "nodeAppearance": {
+          "type": "table",
+          "label": "table",
+          "color": "#0736C4",
+          "shape": "square",
+          "icon": "/torus/9.1/resources/nodeicons/UF-UFW/table.svg",
+          "size": 45,
+          "handles": [
+            {
+              "type": "source",
+              "position": "right",
+              "isConnectable": true,
+              "shown": true
+            },
+            {
+              "type": "target",
+              "position": "left",
+              "isConnectable": true,
+              "shown": true
+            }
+          ]
+        },
+        "nodeProperty": {
+          "nodeId": "6db23b99486040d2b8267491c9c2c2c7",
+          "nodeName": "customertable",
+          "nodeType": "group",
+          "nodeVersion": "v1",
+          "elementInfo": {
+            "frameWork": "Nextjs",
+            "version": "14.2.3",
+            "component": "Table",
+            "props": [
+              {
+                "name": "tableName",
+                "_type": "text",
+                "value": "customertable",
+                "enabled": true
+              },
+              {
+                "name": "primaryKey",
+                "_type": "text",
+                "value": "id",
+                "enabled": true
+              },
+              {
+                "name": "parentTableName",
+                "_type": "text",
+                "value": "",
+                "enabled": true
+              },
+              {
+                "name": "parentTablePrimaryKey",
+                "_label": "Parent Table Column Name",
+                "_type": "text",
+                "value": "",
+                "enabled": true
+              },
+              {
+                "name": "tableSettings",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              },
+              {
+                "name": "tableSorting",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              },
+              {
+                "name": "tableSelection",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              },
+              {
+                "name": "search",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              },
+              {
+                "name": "tableActions",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              },
+              {
+                "name": "needLocking",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              },
+              {
+                "name": "isPivotTable",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              },
+              {
+                "name": "enableHeaderText",
+                "_type": "conditionalBoolean",
+                "value": false,
+                "enabled": true,
+                "subSelection": {
+                  "_true": {
+                    "content": {
+                      "name": "Header Text",
+                      "_type": "text",
+                      "value": "",
+                      "enabled": true
+                    },
+                    "position": {
+                      "name": "Header Position",
+                      "_type": "select",
+                      "selectionList": [
+                        "left",
+                        "top",
+                        "right",
+                        "bottom"
+                      ],
+                      "value": "top",
+                      "enabled": true
+                    }
+                  }
+                }
+              }
+            ],
+            "events": "#table_events"
+          }
+        }
+      },
+      "version": "TRL:AFR:UF-UFW:Next:Defaults:table:v1",
+      "t_parentId": "root"
+    },
+    "64c43ccdddbc4e7daec3091958d6dedf": {
+      "id": "64c43ccdddbc4e7daec3091958d6dedf",
+      "parent": "6db23b99486040d2b8267491c9c2c2c7",
+      "type": "column",
+      "T_parentId": "6db23b99486040d2b8267491c9c2c2c7",
+      "children": [],
+      "property": {
+        "id": "64c43ccdddbc4e7daec3091958d6dedf",
+        "name": "name",
+        "displayName": "column",
+        "className": "",
+        "placeholder": "—",
+        "align": "start",
+        "primary": true,
+        "nodeType": "column",
+        "description": ""
+      },
+      "grid": {
+        "style": {},
+        "classNames": ""
+      },
+      "groupType": "table",
+      "data": {
+        "label": "name",
+        "nodeAppearance": {
+          "type": "column",
+          "label": "column",
+          "color": "#F44336",
+          "shape": "square",
+          "icon": "/torus/9.1/resources/nodeicons/UF-UFW/column.svg",
+          "size": 45,
+          "handles": [
+            {
+              "type": "source",
+              "position": "right",
+              "isConnectable": true,
+              "shown": true
+            },
+            {
+              "type": "target",
+              "position": "left",
+              "isConnectable": true,
+              "shown": true
+            }
+          ]
+        },
+        "nodeProperty": {
+          "nodeId": "64c43ccdddbc4e7daec3091958d6dedf",
+          "nodeName": "name",
+          "nodeType": "column",
+          "nodeVersion": "v1",
+          "elementInfo": {
+            "frameWork": "Nextjs",
+            "version": "14.2.3",
+            "component": "column",
+            "props": [
+              {
+                "name": "hide",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              },
+              {
+                "name": "needSearch",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              },
+              {
+                "name": "isSummable",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              },
+              {
+                "name": "ShowAsColorIndicator",
+                "_type": "conditionalBoolean",
+                "value": false,
+                "enabled": true,
+                "subSelection": {
+                  "_true": {
+                    "colorIndicatorViewType": {
+                      "name": "colorIndicatorViewType",
+                      "_type": "select",
+                      "selectionList": [
+                        "rectangle",
+                        "rounded"
+                      ],
+                      "value": "",
+                      "enabled": true
+                    },
+                    "keyValue": {
+                      "name": "keyValue",
+                      "_label": "keyValue",
+                      "_type": "array",
+                      "items": [
+                        {
+                          "key": {
+                            "name": "key",
+                            "_label": "Value",
+                            "_type": "text",
+                            "value": "",
+                            "enabled": true
+                          },
+                          "colorCode": {
+                            "name": "colorCode",
+                            "_label": "Color For Value",
+                            "_type": "color",
+                            "value": "",
+                            "enabled": true
+                          },
+                          "icon": {
+                            "name": "icon",
+                            "_label": "Icon",
+                            "_type": "iconsearch",
+                            "value": "",
+                            "enabled": true
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            ],
+            "events": []
+          }
+        }
+      },
+      "version": "TRL:AFR:UF-UFW:Next:Defaults:column:v1",
+      "t_parentId": "6db23b99486040d2b8267491c9c2c2c7"
+    },
+    "7c9bef5b7be7458692d8924d4d045fff": {
+      "id": "7c9bef5b7be7458692d8924d4d045fff",
+      "parent": "6db23b99486040d2b8267491c9c2c2c7",
+      "type": "column",
+      "T_parentId": "6db23b99486040d2b8267491c9c2c2c7",
+      "children": [],
+      "property": {
+        "id": "7c9bef5b7be7458692d8924d4d045fff",
+        "name": "email",
+        "displayName": "column",
+        "className": "",
+        "placeholder": "—",
+        "align": "start",
+        "primary": false,
+        "nodeType": "column",
+        "description": ""
+      },
+      "grid": {
+        "style": {},
+        "classNames": ""
+      },
+      "groupType": "table",
+      "data": {
+        "label": "email",
+        "nodeAppearance": {
+          "type": "column",
+          "label": "column",
+          "color": "#F44336",
+          "shape": "square",
+          "icon": "/torus/9.1/resources/nodeicons/UF-UFW/column.svg",
+          "size": 45,
+          "handles": [
+            {
+              "type": "source",
+              "position": "right",
+              "isConnectable": true,
+              "shown": true
+            },
+            {
+              "type": "target",
+              "position": "left",
+              "isConnectable": true,
+              "shown": true
+            }
+          ]
+        },
+        "nodeProperty": {
+          "nodeId": "7c9bef5b7be7458692d8924d4d045fff",
+          "nodeName": "email",
+          "nodeType": "column",
+          "nodeVersion": "v1",
+          "elementInfo": {
+            "frameWork": "Nextjs",
+            "version": "14.2.3",
+            "component": "column",
+            "props": [
+              {
+                "name": "hide",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              },
+              {
+                "name": "needSearch",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              },
+              {
+                "name": "isSummable",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              },
+              {
+                "name": "ShowAsColorIndicator",
+                "_type": "conditionalBoolean",
+                "value": false,
+                "enabled": true,
+                "subSelection": {
+                  "_true": {
+                    "colorIndicatorViewType": {
+                      "name": "colorIndicatorViewType",
+                      "_type": "select",
+                      "selectionList": [
+                        "rectangle",
+                        "rounded"
+                      ],
+                      "value": "",
+                      "enabled": true
+                    },
+                    "keyValue": {
+                      "name": "keyValue",
+                      "_label": "keyValue",
+                      "_type": "array",
+                      "items": [
+                        {
+                          "key": {
+                            "name": "key",
+                            "_label": "Value",
+                            "_type": "text",
+                            "value": "",
+                            "enabled": true
+                          },
+                          "colorCode": {
+                            "name": "colorCode",
+                            "_label": "Color For Value",
+                            "_type": "color",
+                            "value": "",
+                            "enabled": true
+                          },
+                          "icon": {
+                            "name": "icon",
+                            "_label": "Icon",
+                            "_type": "iconsearch",
+                            "value": "",
+                            "enabled": true
+                          }
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            ],
+            "events": []
+          }
+        }
+      },
+      "version": "TRL:AFR:UF-UFW:Next:Defaults:column:v1",
+      "t_parentId": "6db23b99486040d2b8267491c9c2c2c7"
+    },
+    "ece3e4a4372643e39e902ec80a4ed0c8": {
+      "id": "ece3e4a4372643e39e902ec80a4ed0c8",
+      "parent": "6db23b99486040d2b8267491c9c2c2c7",
+      "type": "button",
+      "T_parentId": "6db23b99486040d2b8267491c9c2c2c7",
+      "children": [],
+      "property": {
+        "name": "save",
+        "nodeType": "button",
+        "description": ""
+      },
+      "grid": {
+        "style": {},
+        "classNames": ""
+      },
+      "groupType": "table",
+      "data": {
+        "label": "save",
+        "nodeAppearance": {
+          "icon": "/torus/9.1/resources/nodeicons/UF-UFW/button.svg",
+          "color": "#0736C4",
+          "label": "button",
+          "size": 45
+        },
+        "nodeProperty": {
+          "nodeId": "ece3e4a4372643e39e902ec80a4ed0c8",
+          "nodeName": "save",
+          "nodeType": "button",
+          "nodeVersion": "v1",
+          "elementInfo": {
+            "frameWork": "Nextjs",
+            "version": "14.2.3",
+            "component": "Button",
+            "props": [
+              {
+                "name": "view",
+                "_type": "select",
+                "selectionList": [
+                  "normal",
+                  "action",
+                  "outlined",
+                  "outlined-info",
+                  "outlined-success",
+                  "outlined-warning",
+                  "outlined-danger",
+                  "outlined-utility",
+                  "outlined-action",
+                  "raised",
+                  "flat",
+                  "flat-secondary",
+                  "flat-info",
+                  "flat-success",
+                  "flat-warning",
+                  "flat-danger",
+                  "flat-utility",
+                  "flat-action",
+                  "normal-contrast",
+                  "outlined-contrast",
+                  "flat-contrast"
+                ],
+                "value": "action",
+                "enabled": true
+              },
+              {
+                "name": "icon",
+                "_type": "conditionalIconSearch",
+                "value": "",
+                "enabled": true,
+                "subSelection": {
+                  "iconDisplay": {
+                    "name": "iconDisplay",
+                    "_type": "select",
+                    "selectionList": [
+                      "Icon only",
+                      "Start with Icon",
+                      "End with Icon"
+                    ],
+                    "value": "End with Icon",
+                    "enabled": true
+                  }
+                }
+              },
+              {
+                "name": "disabled",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              },
+              {
+                "name": "isRecordLevel",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              },
+              {
+                "name": "pin",
+                "_type": "select",
+                "selectionList": [
+                  "round-round",
+                  "brick-brick",
+                  "clear-clear",
+                  "circle-circle",
+                  "round-brick",
+                  "brick-round",
+                  "round-clear",
+                  "clear-round",
+                  "brick-clear",
+                  "clear-brick",
+                  "circle-brick",
+                  "brick-circle",
+                  "circle-clear",
+                  "clear-circle"
+                ],
+                "value": "circle-circle",
+                "enabled": true
+              },
+              {
+                "name": "enableHeaderText",
+                "_type": "conditionalBoolean",
+                "value": false,
+                "enabled": true,
+                "subSelection": {
+                  "_true": {
+                    "content": {
+                      "name": "Header Text",
+                      "_type": "text",
+                      "value": "",
+                      "enabled": true
+                    },
+                    "position": {
+                      "name": "Header Position",
+                      "_type": "select",
+                      "selectionList": [
+                        "left",
+                        "top",
+                        "right",
+                        "bottom"
+                      ],
+                      "value": "top",
+                      "enabled": true
+                    }
+                  }
+                }
+              },
+              {
+                "name": "isValidate",
+                "_type": "boolean",
+                "value": true,
+                "enabled": true
+              }
+            ],
+            "events": "#button_events"
+          }
+        }
+      },
+      "version": "TRL:AFR:UF-UFW:Next:Inputs:button:v1",
+      "t_parentId": "6db23b99486040d2b8267491c9c2c2c7"
+    }
+  },
+  "UFS": [
+    {
+      "id": "root",
+      "type": "Canvas",
+      "grid": {
+        "classNames": "",
+        "style": {
+          "gridAutoRows": "4px",
+          "columnGap": "0px",
+          "rowGap": "0px"
+        }
+      },
+      "children": [
+        "6db23b99486040d2b8267491c9c2c2c7"
+      ],
+      "T_parentId": "root",
+      "path": "root",
+      "label": "Root",
+      "name": "",
+      "elementInfo": {}
+    },
+    {
+      "id": "6db23b99486040d2b8267491c9c2c2c7",
+      "type": "group",
+      "grid": {
+        "classNames": "",
+        "style": {
+          "gridAutoRows": "4px",
+          "columnGap": "0px",
+          "rowGap": "0px"
+        },
+        "row": {
+          "start": 2,
+          "end": 130
+        },
+        "column": {
+          "start": 1,
+          "end": 25
+        }
+      },
+      "children": [
+        "64c43ccdddbc4e7daec3091958d6dedf",
+        "7c9bef5b7be7458692d8924d4d045fff",
+        "ece3e4a4372643e39e902ec80a4ed0c8"
+      ],
+      "groupType": "table",
+      "T_parentId": "root",
+      "path": "root",
+      "label": "customertable",
+      "name": "customertable",
+      "nodeVersion": "v1",
+      "elementInfo": {
+        "frameWork": "Nextjs",
+        "version": "14.2.3",
+        "component": "Table",
+        "props": [
+          {
+            "name": "tableName",
+            "_type": "text",
+            "value": "customertable",
+            "enabled": true
+          },
+          {
+            "name": "primaryKey",
+            "_type": "text",
+            "value": "id",
+            "enabled": true
+          },
+          {
+            "name": "parentTableName",
+            "_type": "text",
+            "value": "",
+            "enabled": true
+          },
+          {
+            "name": "parentTablePrimaryKey",
+            "_label": "Parent Table Column Name",
+            "_type": "text",
+            "value": "",
+            "enabled": true
+          },
+          {
+            "name": "tableSettings",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          },
+          {
+            "name": "tableSorting",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          },
+          {
+            "name": "tableSelection",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          },
+          {
+            "name": "search",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          },
+          {
+            "name": "tableActions",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          },
+          {
+            "name": "needLocking",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          },
+          {
+            "name": "isPivotTable",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          },
+          {
+            "name": "enableHeaderText",
+            "_type": "conditionalBoolean",
+            "value": false,
+            "enabled": true,
+            "subSelection": {
+              "_true": {
+                "content": {
+                  "name": "Header Text",
+                  "_type": "text",
+                  "value": "",
+                  "enabled": true
+                },
+                "position": {
+                  "name": "Header Position",
+                  "_type": "select",
+                  "selectionList": [
+                    "left",
+                    "top",
+                    "right",
+                    "bottom"
+                  ],
+                  "value": "top",
+                  "enabled": true
+                }
+              }
+            }
+          }
+        ],
+        "events": "#table_events"
+      }
+    },
+    {
+      "id": "64c43ccdddbc4e7daec3091958d6dedf",
+      "type": "column",
+      "grid": {
+        "classNames": "",
+        "style": {},
+        "row": {
+          "end": null
+        },
+        "column": {
+          "end": null
+        }
+      },
+      "children": [],
+      "T_parentId": "6db23b99486040d2b8267491c9c2c2c7",
+      "path": "root|6db23b99486040d2b8267491c9c2c2c7",
+      "label": "name",
+      "name": "name",
+      "nodeVersion": "v1",
+      "elementInfo": {
+        "frameWork": "Nextjs",
+        "version": "14.2.3",
+        "component": "column",
+        "props": [
+          {
+            "name": "hide",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          },
+          {
+            "name": "needSearch",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          },
+          {
+            "name": "isSummable",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          },
+          {
+            "name": "ShowAsColorIndicator",
+            "_type": "conditionalBoolean",
+            "value": false,
+            "enabled": true,
+            "subSelection": {
+              "_true": {
+                "colorIndicatorViewType": {
+                  "name": "colorIndicatorViewType",
+                  "_type": "select",
+                  "selectionList": [
+                    "rectangle",
+                    "rounded"
+                  ],
+                  "value": "",
+                  "enabled": true
+                },
+                "keyValue": {
+                  "name": "keyValue",
+                  "_label": "keyValue",
+                  "_type": "array",
+                  "items": [
+                    {
+                      "key": {
+                        "name": "key",
+                        "_label": "Value",
+                        "_type": "text",
+                        "value": "",
+                        "enabled": true
+                      },
+                      "colorCode": {
+                        "name": "colorCode",
+                        "_label": "Color For Value",
+                        "_type": "color",
+                        "value": "",
+                        "enabled": true
+                      },
+                      "icon": {
+                        "name": "icon",
+                        "_label": "Icon",
+                        "_type": "iconsearch",
+                        "value": "",
+                        "enabled": true
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        ],
+        "events": []
+      }
+    },
+    {
+      "id": "7c9bef5b7be7458692d8924d4d045fff",
+      "type": "column",
+      "grid": {
+        "classNames": "",
+        "style": {},
+        "row": {
+          "end": null
+        },
+        "column": {
+          "end": null
+        }
+      },
+      "children": [],
+      "T_parentId": "6db23b99486040d2b8267491c9c2c2c7",
+      "path": "root|6db23b99486040d2b8267491c9c2c2c7",
+      "label": "email",
+      "name": "email",
+      "nodeVersion": "v1",
+      "elementInfo": {
+        "frameWork": "Nextjs",
+        "version": "14.2.3",
+        "component": "column",
+        "props": [
+          {
+            "name": "hide",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          },
+          {
+            "name": "needSearch",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          },
+          {
+            "name": "isSummable",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          },
+          {
+            "name": "ShowAsColorIndicator",
+            "_type": "conditionalBoolean",
+            "value": false,
+            "enabled": true,
+            "subSelection": {
+              "_true": {
+                "colorIndicatorViewType": {
+                  "name": "colorIndicatorViewType",
+                  "_type": "select",
+                  "selectionList": [
+                    "rectangle",
+                    "rounded"
+                  ],
+                  "value": "",
+                  "enabled": true
+                },
+                "keyValue": {
+                  "name": "keyValue",
+                  "_label": "keyValue",
+                  "_type": "array",
+                  "items": [
+                    {
+                      "key": {
+                        "name": "key",
+                        "_label": "Value",
+                        "_type": "text",
+                        "value": "",
+                        "enabled": true
+                      },
+                      "colorCode": {
+                        "name": "colorCode",
+                        "_label": "Color For Value",
+                        "_type": "color",
+                        "value": "",
+                        "enabled": true
+                      },
+                      "icon": {
+                        "name": "icon",
+                        "_label": "Icon",
+                        "_type": "iconsearch",
+                        "value": "",
+                        "enabled": true
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        ],
+        "events": []
+      }
+    },
+    {
+      "id": "ece3e4a4372643e39e902ec80a4ed0c8",
+      "type": "button",
+      "grid": {
+        "classNames": "",
+        "style": {},
+        "row": {
+          "end": null
+        },
+        "column": {
+          "end": null
+        }
+      },
+      "children": [],
+      "T_parentId": "6db23b99486040d2b8267491c9c2c2c7",
+      "path": "root|6db23b99486040d2b8267491c9c2c2c7",
+      "label": "save",
+      "name": "save",
+      "nodeVersion": "v1",
+      "elementInfo": {
+        "frameWork": "Nextjs",
+        "version": "14.2.3",
+        "component": "Button",
+        "props": [
+          {
+            "name": "view",
+            "_type": "select",
+            "selectionList": [
+              "normal",
+              "action",
+              "outlined",
+              "outlined-info",
+              "outlined-success",
+              "outlined-warning",
+              "outlined-danger",
+              "outlined-utility",
+              "outlined-action",
+              "raised",
+              "flat",
+              "flat-secondary",
+              "flat-info",
+              "flat-success",
+              "flat-warning",
+              "flat-danger",
+              "flat-utility",
+              "flat-action",
+              "normal-contrast",
+              "outlined-contrast",
+              "flat-contrast"
+            ],
+            "value": "action",
+            "enabled": true
+          },
+          {
+            "name": "icon",
+            "_type": "conditionalIconSearch",
+            "value": "",
+            "enabled": true,
+            "subSelection": {
+              "iconDisplay": {
+                "name": "iconDisplay",
+                "_type": "select",
+                "selectionList": [
+                  "Icon only",
+                  "Start with Icon",
+                  "End with Icon"
+                ],
+                "value": "End with Icon",
+                "enabled": true
+              }
+            }
+          },
+          {
+            "name": "disabled",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          },
+          {
+            "name": "isRecordLevel",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          },
+          {
+            "name": "pin",
+            "_type": "select",
+            "selectionList": [
+              "round-round",
+              "brick-brick",
+              "clear-clear",
+              "circle-circle",
+              "round-brick",
+              "brick-round",
+              "round-clear",
+              "clear-round",
+              "brick-clear",
+              "clear-brick",
+              "circle-brick",
+              "brick-circle",
+              "circle-clear",
+              "clear-circle"
+            ],
+            "value": "circle-circle",
+            "enabled": true
+          },
+          {
+            "name": "enableHeaderText",
+            "_type": "conditionalBoolean",
+            "value": false,
+            "enabled": true,
+            "subSelection": {
+              "_true": {
+                "content": {
+                  "name": "Header Text",
+                  "_type": "text",
+                  "value": "",
+                  "enabled": true
+                },
+                "position": {
+                  "name": "Header Position",
+                  "_type": "select",
+                  "selectionList": [
+                    "left",
+                    "top",
+                    "right",
+                    "bottom"
+                  ],
+                  "value": "top",
+                  "enabled": true
+                }
+              }
+            }
+          },
+          {
+            "name": "isValidate",
+            "_type": "boolean",
+            "value": true,
+            "enabled": true
+          }
+        ],
+        "events": "#button_events"
+      }
+    }
+  ],
+  "UO": {
+    "mappedData": {
+      "artifact": {
+        "name": "customertable",
+        "action": {
+          "lock": {
+            "lockMode": "",
+            "name": "",
+            "ttl": ""
+          },
+          "stateTransition": {
+            "sourceQueue": "",
+            "sourceStatus": "",
+            "targetQueue": "",
+            "targetStatus": ""
+          },
+          "pagination": {
+            "page": "1",
+            "count": "10"
+          },
+          "encryption": {
+            "isEnabled": false,
+            "selectedDpd": "",
+            "encryptionMethod": ""
+          },
+          "events": {}
+        },
+        "code": "",
+        "testCode": "",
+        "rule": {},
+        "events": {},
+        "mapper": [],
+        "node": [
+          {
+            "nodeId": "root",
+            "nodeName": "Canvas",
+            "nodeType": "Canvas",
+            "parentId": "root",
+            "path": "root",
+            "action": {
+              "lock": {
+                "lockMode": "",
+                "name": "",
+                "ttl": ""
+              },
+              "stateTransition": {
+                "sourceQueue": "",
+                "sourceStatus": "",
+                "targetQueue": "",
+                "targetStatus": ""
+              },
+              "pagination": {
+                "page": "1",
+                "count": "10"
+              },
+              "encryption": {
+                "isEnabled": false,
+                "selectedDpd": "",
+                "encryptionMethod": ""
+              },
+              "events": {}
+            },
+            "code": "",
+            "testCode": "",
+            "rule": {},
+            "events": {},
+            "mapper": [],
+            "objElements": []
+          },
+          {
+            "nodeId": "6db23b99486040d2b8267491c9c2c2c7",
+            "nodeName": "customertable",
+            "nodeType": "group",
+            "nodeVersion": "v1",
+            "parentId": "root",
+            "path": "root",
+            "action": {
+              "lock": {
+                "lockMode": "",
+                "name": "",
+                "ttl": ""
+              },
+              "stateTransition": {
+                "sourceQueue": "",
+                "sourceStatus": "",
+                "targetQueue": "",
+                "targetStatus": ""
+              },
+              "pagination": {
+                "page": "1",
+                "count": "10"
+              },
+              "encryption": {
+                "isEnabled": false,
+                "selectedDpd": "",
+                "encryptionMethod": ""
+              },
+              "events": {}
+            },
+            "code": "",
+            "testCode": "",
+            "rule": {},
+            "events": {},
+            "mapper": [],
+            "objElements": [
+              {
+                "elementName": "name",
+                "elementId": "64c43ccdddbc4e7daec3091958d6dedf",
+                "elementType": "column",
+                "elementVersion": "v1",
+                "parentId": "6db23b99486040d2b8267491c9c2c2c7",
+                "path": "root|6db23b99486040d2b8267491c9c2c2c7",
+                "action": {
+                  "lock": {
+                    "lockMode": "",
+                    "name": "",
+                    "ttl": ""
+                  },
+                  "stateTransition": {
+                    "sourceQueue": "",
+                    "sourceStatus": "",
+                    "targetQueue": "",
+                    "targetStatus": ""
+                  },
+                  "pagination": {
+                    "page": "1",
+                    "count": "10"
+                  },
+                  "encryption": {
+                    "isEnabled": false,
+                    "selectedDpd": "",
+                    "encryptionMethod": ""
+                  },
+                  "events": {}
+                },
+                "code": "",
+                "testCode": "",
+                "rule": {},
+                "events": {},
+                "mapper": []
+              },
+              {
+                "elementName": "email",
+                "elementId": "7c9bef5b7be7458692d8924d4d045fff",
+                "elementType": "column",
+                "elementVersion": "v1",
+                "parentId": "6db23b99486040d2b8267491c9c2c2c7",
+                "path": "root|6db23b99486040d2b8267491c9c2c2c7",
+                "action": {
+                  "lock": {
+                    "lockMode": "",
+                    "name": "",
+                    "ttl": ""
+                  },
+                  "stateTransition": {
+                    "sourceQueue": "",
+                    "sourceStatus": "",
+                    "targetQueue": "",
+                    "targetStatus": ""
+                  },
+                  "pagination": {
+                    "page": "1",
+                    "count": "10"
+                  },
+                  "encryption": {
+                    "isEnabled": false,
+                    "selectedDpd": "",
+                    "encryptionMethod": ""
+                  },
+                  "events": {}
+                },
+                "code": "",
+                "testCode": "",
+                "rule": {},
+                "events": {},
+                "mapper": []
+              },
+              {
+                "elementName": "save",
+                "elementId": "ece3e4a4372643e39e902ec80a4ed0c8",
+                "elementType": "button",
+                "elementVersion": "v1",
+                "parentId": "6db23b99486040d2b8267491c9c2c2c7",
+                "path": "root|6db23b99486040d2b8267491c9c2c2c7",
+                "action": {
+                  "lock": {
+                    "lockMode": "",
+                    "name": "",
+                    "ttl": ""
+                  },
+                  "stateTransition": {
+                    "sourceQueue": "",
+                    "sourceStatus": "",
+                    "targetQueue": "",
+                    "targetStatus": ""
+                  },
+                  "pagination": {
+                    "page": "1",
+                    "count": "10"
+                  },
+                  "encryption": {
+                    "isEnabled": false,
+                    "selectedDpd": "",
+                    "encryptionMethod": ""
+                  },
+                  "events": {}
+                },
+                "code": "",
+                "testCode": "",
+                "rule": {},
+                "events": {},
+                "mapper": []
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "securityData": {
+      "accessProfile": [],
+      "securityTemplate": {
+        "security": {
+          "artifact": {
+            "resource": "customertable",
+            "resourceId": "customertable",
+            "SIFlag": {
+              "uiType": "dropdown",
+              "selectedValue": "AA",
+              "selectionList": [
+                "AA",
+                "BA"
+              ]
+            },
+            "node": [
+              {
+                "resource": "Canvas",
+                "resourceId": "root",
+                "resourceType": "Canvas",
+                "resourceParentId": "root",
+                "resourcePath": "root",
+                "SIFlag": {
+                  "uiType": "dropdown",
+                  "selectedValue": "AA",
+                  "selectionList": [
+                    "AA",
+                    "BA",
+                    "ATO",
+                    "BTO"
+                  ]
+                },
+                "objElements": []
+              },
+              {
+                "resource": "customertable",
+                "resourceId": "6db23b99486040d2b8267491c9c2c2c7",
+                "resourceType": "group",
+                "resourceParentId": "root",
+                "resourcePath": "root",
+                "SIFlag": {
+                  "uiType": "dropdown",
+                  "selectedValue": "AA",
+                  "selectionList": [
+                    "AA",
+                    "BA",
+                    "ATO",
+                    "BTO"
+                  ]
+                },
+                "objElements": [
+                  {
+                    "resource": "name",
+                    "resourceId": "64c43ccdddbc4e7daec3091958d6dedf",
+                    "resourceType": "column",
+                    "resourceParentId": "6db23b99486040d2b8267491c9c2c2c7",
+                    "resourcePath": "root|6db23b99486040d2b8267491c9c2c2c7",
+                    "SIFlag": {
+                      "uiType": "dropdown",
+                      "selectedValue": "ATO",
+                      "selectionList": [
+                        "AA",
+                        "BA",
+                        "ATO",
+                        "BTO"
+                      ]
+                    }
+                  },
+                  {
+                    "resource": "email",
+                    "resourceId": "7c9bef5b7be7458692d8924d4d045fff",
+                    "resourceType": "column",
+                    "resourceParentId": "6db23b99486040d2b8267491c9c2c2c7",
+                    "resourcePath": "root|6db23b99486040d2b8267491c9c2c2c7",
+                    "SIFlag": {
+                      "uiType": "dropdown",
+                      "selectedValue": "ATO",
+                      "selectionList": [
+                        "AA",
+                        "BA",
+                        "ATO",
+                        "BTO"
+                      ]
+                    }
+                  },
+                  {
+                    "resource": "save",
+                    "resourceId": "ece3e4a4372643e39e902ec80a4ed0c8",
+                    "resourceType": "button",
+                    "resourceParentId": "6db23b99486040d2b8267491c9c2c2c7",
+                    "resourcePath": "root|6db23b99486040d2b8267491c9c2c2c7",
+                    "SIFlag": {
+                      "uiType": "dropdown",
+                      "selectedValue": "ATO",
+                      "selectionList": [
+                        "AA",
+                        "BA",
+                        "ATO",
+                        "BTO"
+                      ]
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "afk": "CK:CT001:FNGK:AF:FNK:UF-UFW:CATK:TGW01:AFGK:TGW004:AFK:customertable:AFVK:v1"
+    },
+    "targetItems": [
+      {
+        "nodeId": "root",
+        "nodeName": "",
+        "nodeLabel": "Root",
+        "nodeType": "Canvas",
+        "parentId": "root",
+        "path": "root",
+        "elementInfo": {},
+        "children": []
+      },
+      {
+        "nodeId": "6db23b99486040d2b8267491c9c2c2c7",
+        "nodeName": "customertable",
+        "nodeLabel": "customertable",
+        "nodeType": "group",
+        "parentId": "root",
+        "path": "root",
+        "groupType": "table",
+        "nodeVersion": "v1",
+        "elementInfo": {
+          "frameWork": "Nextjs",
+          "version": "14.2.3",
+          "component": "Table",
+          "props": [
+            {
+              "name": "tableName",
+              "_type": "text",
+              "value": "customertable",
+              "enabled": true
+            },
+            {
+              "name": "primaryKey",
+              "_type": "text",
+              "value": "id",
+              "enabled": true
+            },
+            {
+              "name": "parentTableName",
+              "_type": "text",
+              "value": "",
+              "enabled": true
+            },
+            {
+              "name": "parentTablePrimaryKey",
+              "_label": "Parent Table Column Name",
+              "_type": "text",
+              "value": "",
+              "enabled": true
+            },
+            {
+              "name": "tableSettings",
+              "_type": "boolean",
+              "value": false,
+              "enabled": true
+            },
+            {
+              "name": "tableSorting",
+              "_type": "boolean",
+              "value": false,
+              "enabled": true
+            },
+            {
+              "name": "tableSelection",
+              "_type": "boolean",
+              "value": false,
+              "enabled": true
+            },
+            {
+              "name": "search",
+              "_type": "boolean",
+              "value": false,
+              "enabled": true
+            },
+            {
+              "name": "tableActions",
+              "_type": "boolean",
+              "value": false,
+              "enabled": true
+            },
+            {
+              "name": "needLocking",
+              "_type": "boolean",
+              "value": false,
+              "enabled": true
+            },
+            {
+              "name": "isPivotTable",
+              "_type": "boolean",
+              "value": false,
+              "enabled": true
+            },
+            {
+              "name": "enableHeaderText",
+              "_type": "conditionalBoolean",
+              "value": false,
+              "enabled": true,
+              "subSelection": {
+                "_true": {
+                  "content": {
+                    "name": "Header Text",
+                    "_type": "text",
+                    "value": "",
+                    "enabled": true
+                  },
+                  "position": {
+                    "name": "Header Position",
+                    "_type": "select",
+                    "selectionList": [
+                      "left",
+                      "top",
+                      "right",
+                      "bottom"
+                    ],
+                    "value": "top",
+                    "enabled": true
+                  }
+                }
+              }
+            }
+          ],
+          "events": "#table_events"
+        },
+        "children": [
+          {
+            "nodeId": "64c43ccdddbc4e7daec3091958d6dedf",
+            "nodeName": "name",
+            "nodeLabel": "name",
+            "nodeType": "column",
+            "path": "root|6db23b99486040d2b8267491c9c2c2c7",
+            "parentId": "6db23b99486040d2b8267491c9c2c2c7",
+            "nodeVersion": "v1",
+            "elementInfo": {
+              "frameWork": "Nextjs",
+              "version": "14.2.3",
+              "component": "column",
+              "props": [
+                {
+                  "name": "hide",
+                  "_type": "boolean",
+                  "value": false,
+                  "enabled": true
+                },
+                {
+                  "name": "needSearch",
+                  "_type": "boolean",
+                  "value": false,
+                  "enabled": true
+                },
+                {
+                  "name": "isSummable",
+                  "_type": "boolean",
+                  "value": false,
+                  "enabled": true
+                },
+                {
+                  "name": "ShowAsColorIndicator",
+                  "_type": "conditionalBoolean",
+                  "value": false,
+                  "enabled": true,
+                  "subSelection": {
+                    "_true": {
+                      "colorIndicatorViewType": {
+                        "name": "colorIndicatorViewType",
+                        "_type": "select",
+                        "selectionList": [
+                          "rectangle",
+                          "rounded"
+                        ],
+                        "value": "",
+                        "enabled": true
+                      },
+                      "keyValue": {
+                        "name": "keyValue",
+                        "_label": "keyValue",
+                        "_type": "array",
+                        "items": [
+                          {
+                            "key": {
+                              "name": "key",
+                              "_label": "Value",
+                              "_type": "text",
+                              "value": "",
+                              "enabled": true
+                            },
+                            "colorCode": {
+                              "name": "colorCode",
+                              "_label": "Color For Value",
+                              "_type": "color",
+                              "value": "",
+                              "enabled": true
+                            },
+                            "icon": {
+                              "name": "icon",
+                              "_label": "Icon",
+                              "_type": "iconsearch",
+                              "value": "",
+                              "enabled": true
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              ],
+              "events": []
+            }
+          },
+          {
+            "nodeId": "7c9bef5b7be7458692d8924d4d045fff",
+            "nodeName": "email",
+            "nodeLabel": "email",
+            "nodeType": "column",
+            "path": "root|6db23b99486040d2b8267491c9c2c2c7",
+            "parentId": "6db23b99486040d2b8267491c9c2c2c7",
+            "nodeVersion": "v1",
+            "elementInfo": {
+              "frameWork": "Nextjs",
+              "version": "14.2.3",
+              "component": "column",
+              "props": [
+                {
+                  "name": "hide",
+                  "_type": "boolean",
+                  "value": false,
+                  "enabled": true
+                },
+                {
+                  "name": "needSearch",
+                  "_type": "boolean",
+                  "value": false,
+                  "enabled": true
+                },
+                {
+                  "name": "isSummable",
+                  "_type": "boolean",
+                  "value": false,
+                  "enabled": true
+                },
+                {
+                  "name": "ShowAsColorIndicator",
+                  "_type": "conditionalBoolean",
+                  "value": false,
+                  "enabled": true,
+                  "subSelection": {
+                    "_true": {
+                      "colorIndicatorViewType": {
+                        "name": "colorIndicatorViewType",
+                        "_type": "select",
+                        "selectionList": [
+                          "rectangle",
+                          "rounded"
+                        ],
+                        "value": "",
+                        "enabled": true
+                      },
+                      "keyValue": {
+                        "name": "keyValue",
+                        "_label": "keyValue",
+                        "_type": "array",
+                        "items": [
+                          {
+                            "key": {
+                              "name": "key",
+                              "_label": "Value",
+                              "_type": "text",
+                              "value": "",
+                              "enabled": true
+                            },
+                            "colorCode": {
+                              "name": "colorCode",
+                              "_label": "Color For Value",
+                              "_type": "color",
+                              "value": "",
+                              "enabled": true
+                            },
+                            "icon": {
+                              "name": "icon",
+                              "_label": "Icon",
+                              "_type": "iconsearch",
+                              "value": "",
+                              "enabled": true
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              ],
+              "events": []
+            }
+          },
+          {
+            "nodeId": "ece3e4a4372643e39e902ec80a4ed0c8",
+            "nodeName": "save",
+            "nodeLabel": "save",
+            "nodeType": "button",
+            "path": "root|6db23b99486040d2b8267491c9c2c2c7",
+            "parentId": "6db23b99486040d2b8267491c9c2c2c7",
+            "nodeVersion": "v1",
+            "elementInfo": {
+              "frameWork": "Nextjs",
+              "version": "14.2.3",
+              "component": "Button",
+              "props": [
+                {
+                  "name": "view",
+                  "_type": "select",
+                  "selectionList": [
+                    "normal",
+                    "action",
+                    "outlined",
+                    "outlined-info",
+                    "outlined-success",
+                    "outlined-warning",
+                    "outlined-danger",
+                    "outlined-utility",
+                    "outlined-action",
+                    "raised",
+                    "flat",
+                    "flat-secondary",
+                    "flat-info",
+                    "flat-success",
+                    "flat-warning",
+                    "flat-danger",
+                    "flat-utility",
+                    "flat-action",
+                    "normal-contrast",
+                    "outlined-contrast",
+                    "flat-contrast"
+                  ],
+                  "value": "action",
+                  "enabled": true
+                },
+                {
+                  "name": "icon",
+                  "_type": "conditionalIconSearch",
+                  "value": "",
+                  "enabled": true,
+                  "subSelection": {
+                    "iconDisplay": {
+                      "name": "iconDisplay",
+                      "_type": "select",
+                      "selectionList": [
+                        "Icon only",
+                        "Start with Icon",
+                        "End with Icon"
+                      ],
+                      "value": "End with Icon",
+                      "enabled": true
+                    }
+                  }
+                },
+                {
+                  "name": "disabled",
+                  "_type": "boolean",
+                  "value": false,
+                  "enabled": true
+                },
+                {
+                  "name": "isRecordLevel",
+                  "_type": "boolean",
+                  "value": false,
+                  "enabled": true
+                },
+                {
+                  "name": "pin",
+                  "_type": "select",
+                  "selectionList": [
+                    "round-round",
+                    "brick-brick",
+                    "clear-clear",
+                    "circle-circle",
+                    "round-brick",
+                    "brick-round",
+                    "round-clear",
+                    "clear-round",
+                    "brick-clear",
+                    "clear-brick",
+                    "circle-brick",
+                    "brick-circle",
+                    "circle-clear",
+                    "clear-circle"
+                  ],
+                  "value": "circle-circle",
+                  "enabled": true
+                },
+                {
+                  "name": "enableHeaderText",
+                  "_type": "conditionalBoolean",
+                  "value": false,
+                  "enabled": true,
+                  "subSelection": {
+                    "_true": {
+                      "content": {
+                        "name": "Header Text",
+                        "_type": "text",
+                        "value": "",
+                        "enabled": true
+                      },
+                      "position": {
+                        "name": "Header Position",
+                        "_type": "select",
+                        "selectionList": [
+                          "left",
+                          "top",
+                          "right",
+                          "bottom"
+                        ],
+                        "value": "top",
+                        "enabled": true
+                      }
+                    }
+                  }
+                },
+                {
+                  "name": "isValidate",
+                  "_type": "boolean",
+                  "value": true,
+                  "enabled": true
+                }
+              ],
+              "events": "#button_events"
+            }
+          }
+        ]
+      }
+    ],
+    "nodeTree": [
+      {
+        "nodeId": "root",
+        "nodeType": "Canvas",
+        "nodeLabel": "Root",
+        "nodeName": "",
+        "nodeGroupType": "group",
+        "nodeAction": [
+          "root"
+        ],
+        "children": [
+          {
+            "nodeId": "6db23b99486040d2b8267491c9c2c2c7",
+            "nodeType": "group",
+            "nodeLabel": "customertable",
+            "nodeName": "customertable",
+            "nodeParent": "root",
+            "nodeGroupType": "table",
+            "nodeAction": [
+              "6db23b99486040d2b8267491c9c2c2c7"
+            ],
+            "children": [
+              {
+                "nodeId": "64c43ccdddbc4e7daec3091958d6dedf",
+                "nodeType": "column",
+                "nodeLabel": "name",
+                "nodeName": "name",
+                "nodeParent": "6db23b99486040d2b8267491c9c2c2c7",
+                "nodeGroupType": "table",
+                "nodeAction": [
+                  "6db23b99486040d2b8267491c9c2c2c7",
+                  "64c43ccdddbc4e7daec3091958d6dedf"
+                ],
+                "children": []
+              },
+              {
+                "nodeId": "7c9bef5b7be7458692d8924d4d045fff",
+                "nodeType": "column",
+                "nodeLabel": "email",
+                "nodeName": "email",
+                "nodeParent": "6db23b99486040d2b8267491c9c2c2c7",
+                "nodeGroupType": "table",
+                "nodeAction": [
+                  "6db23b99486040d2b8267491c9c2c2c7",
+                  "7c9bef5b7be7458692d8924d4d045fff"
+                ],
+                "children": []
+              },
+              {
+                "nodeId": "ece3e4a4372643e39e902ec80a4ed0c8",
+                "nodeType": "button",
+                "nodeLabel": "save",
+                "nodeName": "save",
+                "nodeParent": "6db23b99486040d2b8267491c9c2c2c7",
+                "nodeGroupType": "table",
+                "nodeAction": [
+                  "6db23b99486040d2b8267491c9c2c2c7",
+                  "ece3e4a4372643e39e902ec80a4ed0c8"
+                ],
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

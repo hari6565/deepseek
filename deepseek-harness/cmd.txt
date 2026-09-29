@@ -1,0 +1,34 @@
+for plugin package install
+    npm i @deepseek-ai/dsh-tools
+
+
+for run 
+    pnpm dsh web --patch ./plugin/learn/src/cordis.yml
+    pnpm dsh web --patch ./plugin/uf_skeleton/src/cordis.yml
+    "Use uf_skeleton_generate to create a customer registration page with Name, Email, and a Save button."
+
+    pnpm dsh web --patch ./plugin/uf_skeleton/src/cordis.yml --patch ./plugin/uf_body/src/cordis.yml
+    "Use uf_skeleton_generate to create a customer registration page with Name, Email, and a Save button. Then pass its nodeTree result into uf_body_generate to get the full artifact bundle."
+
+    pnpm dsh web --patch ./plugin/uf_skeleton/src/cordis.yml --patch ./plugin/uf_body/src/cordis.yml --patch ./plugin/uf_preview/src/cordis.yml
+    "Use uf_skeleton_generate to create a customer registration page with Name, Email, and a Save button. Then pass its nodeTree result into uf_body_generate to get the full artifact bundle. then pass the uf_body_generate result to uf_preview_generate."
+
+
+ollama server
+    set OLLAMA_HOST=0.0.0.0:11434
+
+    Use uf_skeleton_generate to create a customer registration page with Name, Email, and a Save button
+
+    Use uf_skeleton_generate to create a customer registration page with Name, Email, and a Save button. Then pass its nodeTree result into uf_body_generate to get the full artifact bundle. 
+    
+    Use uf_skeleton_generate to create a customer registration page with Name, Email, and a Save button. Then pass its nodeTree result into uf_body_generate to get the full artifact bundle. then pass the uf_body_generate result to uf_preview_generate.
+
+    Use uf_skeleton_generate Create a shipmentgroup with tracking number input.
+
+new approach
+
+    Use uf_skeleton_new_generate to create a customer registration page with Name, Email, and a Save button. Then pass its nodeTree result into uf_body_new_generate to get the full artifact bundle. 
+   
+
+   Use uf_skeleton_new_generate to create a customer registration page with Name, Email, and a Save button. Then pass its nodeTree result into uf_body_new_generate to get the full artifact bundle. then pass the uf_body_new_generate result to uf_preview_new_generate.
+   

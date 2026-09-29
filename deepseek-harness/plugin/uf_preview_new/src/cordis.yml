@@ -1,0 +1,23 @@
+# Web/host overlay that mounts this plugin by absolute path. Loaded via:
+#   pnpm dsh web --patch ./plugin/uf_preview_new/src/cordis.yml
+#
+# authToken is a live credential. The value below was copied over from
+# uf_preview's own cordis.yml -- if that token is no longer valid, or you
+# want a separate credential for this pipeline, replace it here.
+- insert:
+    - id: uf_preview_new
+      name: 'D:/deepseek/deepseek-harness/plugin/uf_preview_new/src/main.ts'
+      config:
+        codeGenUrl: 'http://192.168.2.86:3000/tgw-codeGeneration'
+        authToken: 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InpiWVBDelF0dy1jQmFUc1VDQWczdTJVWldjYyJ9.eyJhdWQiOiJmYzI2YjIzZC1mNjVkLTQwM2UtYWI5Zi0wZDViNThjYmM1ZjUiLCJleHAiOjE3ODkzOTA2MzMsImlhdCI6MTc4OTM4NzAzMywiaXNzIjoiaHR0cDovLzE5Mi4xNjguMi4xNzg6OTAxMSIsInN1YiI6IjkzNWM5ZWU2LWNiMjQtNDZlNC1hYTM1LTk4MDNlZjAxZmYzOCIsImp0aSI6ImUzMjIwMzIzLTVlZGMtNDUzZi04Nzc2LTcxOGI0OTFkNjI0NiIsImF1dGhlbnRpY2F0aW9uVHlwZSI6IlJFRlJFU0hfVE9LRU4iLCJ0dHkiOiJhdCIsInJvbGVzIjpbIlVJIl0sImF1dGhfdGltZSI6MTc4OTM2MjA4Niwic2NvcGUiOiJvZmZsaW5lX2FjY2VzcyIsImFwcGxpY2F0aW9uSWQiOiJmYzI2YjIzZC1mNjVkLTQwM2UtYWI5Zi0wZDViNThjYmM1ZjUiLCJ0aWQiOiIyNWU0NTA4YS0wMTJjLTQ0NTEtOGQxNi1mODc1N2MyMTk4NzMiLCJzaWQiOiIwN2Q5YjdkNC1iNDRkLTQ1YTEtYjY2NC0wNzA0ZWYyMjgzN2UiLCJsb2dpbklkIjoiaGFyaSIsInR5cGUiOiJjIiwiY2xpZW50IjoiQ1QwMDEiLCJndHkiOlsicGFzc3dvcmQiLCJyZWZyZXNoX3Rva2VuIl19.lS_Va4xJdlwyATiPLaNwjlFseVcK_T2li1eFWEn1HBA1hdPyTufaNM-MR9l1MNKB0oBr5_fnJhwWpD8oROmkuBjHzSoeUpndD6qqQnU5RFqCvLW7eNL9EI8cQzc1O4XbNJYKnYM0NEou1T36lQIiTv_dqDmjtji4T6uIy33VVeDOYuZWOiaro3FD6Ic5UpGGZ7N4WpI1MxKpSUZAJFXRREd98d-fDzTAsOomFcOJi98YvbOSExnuBi28yRdkiHUrCdllNmJ2C4PLMAW7B84ehuyAGMj9GfS2SyktIYY-4jBsXK2kU2-fA1OLwr-D_P7kZaMxw6F_RQM3yyCOX4_acg'
+        key: 'CK:CT001:FNGK:AF:FNK:UF-UFW:CATK:TGW01:AFGK:TGW004:AFK:emp:AFVK:v1'
+        setupKey: 'CK:TGA:FNGK:SETUP:FNK:SF:CATK:CT001:AFGK:TGW01:AFK:TGW004:AFVK:v1:appearance'
+        dpdKey: 'CK:CT001:FNGK:AF:FNK:CDF-DPD:CATK:TGW01:AFGK:TGW004:AFK:tgw4_dpd:AFVK:v1'
+        isModal: false
+        width: '100%'
+        height: '100%'
+        timeoutMs: 120000
+        appCwd: 'D:/CREATEUF/hhh'
+        appPort: 4005
+        autoStart: true
+        startTimeoutMs: 30000

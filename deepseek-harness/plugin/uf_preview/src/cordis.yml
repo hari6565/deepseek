@@ -1,0 +1,22 @@
+# Web/host overlay that mounts this plugin by absolute path. Loaded via:
+#   pnpm dsh web --patch ./plugin/uf_preview/src/cordis.yml
+#
+# authToken is a live credential -- replace the placeholder below with your
+# own token before loading this overlay. Never commit a real token here.
+- insert:
+    - id: uf_preview
+      name: 'D:/deepseek/deepseek-harness/plugin/uf_preview/src/main.ts'
+      config:
+        codeGenUrl: 'http://192.168.2.86:3000/tgw-codeGeneration'
+        authToken: 'REPLACE_WITH_YOUR_BEARER_TOKEN'
+        key: 'CK:CT001:FNGK:AF:FNK:UF-UFW:CATK:TGW01:AFGK:TGW004:AFK:emp:AFVK:v1'
+        setupKey: 'CK:TGA:FNGK:SETUP:FNK:SF:CATK:CT001:AFGK:TGW01:AFK:TGW004:AFVK:v1:appearance'
+        dpdKey: 'CK:CT001:FNGK:AF:FNK:CDF-DPD:CATK:TGW01:AFGK:TGW004:AFK:tgw4_dpd:AFVK:v1'
+        isModal: false
+        width: '100%'
+        height: '100%'
+        timeoutMs: 120000
+        appCwd: 'D:/CREATEUF/hhh'
+        appPort: 4000
+        autoStart: true
+        startTimeoutMs: 30000

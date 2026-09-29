@@ -1,0 +1,5 @@
+# Web/host overlay that mounts this plugin by absolute path. Loaded via:
+#   pnpm dsh web --patch ./plugin/learn/src/cordis.yml
+- insert:
+    - id: learn
+      name: 'D:/deepseek/deepseek-harness/plugin/learn/src/main.ts'

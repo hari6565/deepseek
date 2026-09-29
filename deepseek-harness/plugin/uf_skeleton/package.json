@@ -1,0 +1,13 @@
+{
+  "name": "@deepseek-ai/dsh-plugin-uf-skeleton",
+  "private": true,
+  "version": "0.1.6-alpha.1",
+  "type": "module",
+  "dependencies": {
+    "@deepseek-ai/dsh-tools": "workspace:^",
+    "@deepseek-ai/schemastery": "workspace:^"
+  },
+  "devDependencies": {
+    "@deepseek-ai/cordis": "workspace:^"
+  }
+}

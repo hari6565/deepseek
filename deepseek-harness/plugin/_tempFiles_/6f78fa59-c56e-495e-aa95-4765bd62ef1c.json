@@ -1,0 +1,1362 @@
+{
+  "NDP": {
+    "root": {
+      "nodeId": "root",
+      "nodeName": "Root",
+      "nodeType": "Canvas",
+      "nodeVersion": "v1",
+      "elementInfo": {}
+    },
+    "g1": {
+      "nodeId": "g1",
+      "nodeName": "infogroup",
+      "nodeType": "group",
+      "nodeVersion": "v1",
+      "elementInfo": {
+        "props": [
+          {
+            "name": "isDynamic",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          }
+        ],
+        "events": "#group_events"
+      }
+    },
+    "b1": {
+      "nodeId": "b1",
+      "nodeName": "save",
+      "nodeType": "button",
+      "nodeVersion": "v1",
+      "elementInfo": {
+        "frameWork": "Nextjs",
+        "version": "14.2.3",
+        "component": "Button",
+        "props": [
+          {
+            "name": "view",
+            "_type": "select",
+            "selectionList": [
+              "normal",
+              "action",
+              "outlined",
+              "outlined-info",
+              "outlined-success",
+              "outlined-warning",
+              "outlined-danger",
+              "outlined-utility",
+              "outlined-action",
+              "raised",
+              "flat",
+              "flat-secondary",
+              "flat-info",
+              "flat-success",
+              "flat-warning",
+              "flat-danger",
+              "flat-utility",
+              "flat-action",
+              "normal-contrast",
+              "outlined-contrast",
+              "flat-contrast"
+            ],
+            "value": "action",
+            "enabled": true
+          },
+          {
+            "name": "icon",
+            "_type": "conditionalIconSearch",
+            "value": "",
+            "enabled": true,
+            "subSelection": {
+              "iconDisplay": {
+                "name": "iconDisplay",
+                "_type": "select",
+                "selectionList": [
+                  "Icon only",
+                  "Start with Icon",
+                  "End with Icon"
+                ],
+                "value": "End with Icon",
+                "enabled": true
+              }
+            }
+          },
+          {
+            "name": "disabled",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          },
+          {
+            "name": "isRecordLevel",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          },
+          {
+            "name": "pin",
+            "_type": "select",
+            "selectionList": [
+              "round-round",
+              "brick-brick",
+              "clear-clear",
+              "circle-circle",
+              "round-brick",
+              "brick-round",
+              "round-clear",
+              "clear-round",
+              "brick-clear",
+              "clear-brick",
+              "circle-brick",
+              "brick-circle",
+              "circle-clear",
+              "clear-circle"
+            ],
+            "value": "circle-circle",
+            "enabled": true
+          },
+          {
+            "name": "enableHeaderText",
+            "_type": "conditionalBoolean",
+            "value": false,
+            "enabled": true,
+            "subSelection": {
+              "_true": {
+                "content": {
+                  "name": "Header Text",
+                  "_type": "text",
+                  "value": "",
+                  "enabled": true
+                },
+                "position": {
+                  "name": "Header Position",
+                  "_type": "select",
+                  "selectionList": [
+                    "left",
+                    "top",
+                    "right",
+                    "bottom"
+                  ],
+                  "value": "top",
+                  "enabled": true
+                }
+              }
+            }
+          },
+          {
+            "name": "isValidate",
+            "_type": "boolean",
+            "value": true,
+            "enabled": true
+          }
+        ],
+        "events": "#button_events"
+      }
+    }
+  },
+  "NDS": [
+    {
+      "id": "root",
+      "parent": "root",
+      "T_parentId": "root",
+      "type": "Canvas",
+      "children": [
+        "g1"
+      ],
+      "data": {
+        "label": "",
+        "nodeProperty": {
+          "nodeId": "root",
+          "nodeName": "Root",
+          "nodeType": "Canvas",
+          "nodeVersion": "v1",
+          "elementInfo": {}
+        }
+      },
+      "property": {
+        "name": "",
+        "nodeType": "Canvas",
+        "description": ""
+      },
+      "grid": {
+        "classNames": "",
+        "style": {
+          "gridAutoRows": "4px",
+          "columnGap": "0px",
+          "rowGap": "0px"
+        }
+      },
+      "groupType": "group"
+    },
+    {
+      "id": "g1",
+      "parent": "root",
+      "T_parentId": "root",
+      "type": "group",
+      "children": [
+        "b1"
+      ],
+      "data": {
+        "label": "infogroup",
+        "nodeAppearance": {
+          "type": "group",
+          "label": "group",
+          "color": "#F44336",
+          "shape": "square",
+          "icon": "/torus/9.1/resources/nodeicons/UF-UFW/group.svg",
+          "size": 45,
+          "handles": [
+            {
+              "type": "source",
+              "position": "right",
+              "isConnectable": true,
+              "shown": true
+            },
+            {
+              "type": "target",
+              "position": "left",
+              "isConnectable": true,
+              "shown": true
+            }
+          ]
+        },
+        "nodeProperty": {
+          "nodeId": "g1",
+          "nodeName": "infogroup",
+          "nodeType": "group",
+          "nodeVersion": "v1",
+          "elementInfo": {
+            "props": [
+              {
+                "name": "isDynamic",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              }
+            ],
+            "events": "#group_events"
+          }
+        }
+      },
+      "property": {
+        "name": "infogroup",
+        "nodeType": "group",
+        "description": ""
+      },
+      "grid": {
+        "classNames": "",
+        "style": {
+          "gridAutoRows": "4px",
+          "columnGap": "0px",
+          "rowGap": "0px"
+        },
+        "row": {
+          "start": 1,
+          "end": 50
+        },
+        "column": {
+          "start": 1,
+          "end": 25
+        }
+      },
+      "groupType": "group",
+      "version": "TRL:AFR:UF-UFW:Next:Defaults:group:v1"
+    },
+    {
+      "id": "b1",
+      "parent": "g1",
+      "T_parentId": "g1",
+      "type": "button",
+      "children": [],
+      "data": {
+        "label": "save",
+        "nodeAppearance": {
+          "icon": "/torus/9.1/resources/nodeicons/UF-UFW/button.svg",
+          "color": "#0736C4",
+          "label": "button",
+          "size": 45
+        },
+        "nodeProperty": {
+          "nodeId": "b1",
+          "nodeName": "save",
+          "nodeType": "button",
+          "nodeVersion": "v1",
+          "elementInfo": {
+            "frameWork": "Nextjs",
+            "version": "14.2.3",
+            "component": "Button",
+            "props": [
+              {
+                "name": "view",
+                "_type": "select",
+                "selectionList": [
+                  "normal",
+                  "action",
+                  "outlined",
+                  "outlined-info",
+                  "outlined-success",
+                  "outlined-warning",
+                  "outlined-danger",
+                  "outlined-utility",
+                  "outlined-action",
+                  "raised",
+                  "flat",
+                  "flat-secondary",
+                  "flat-info",
+                  "flat-success",
+                  "flat-warning",
+                  "flat-danger",
+                  "flat-utility",
+                  "flat-action",
+                  "normal-contrast",
+                  "outlined-contrast",
+                  "flat-contrast"
+                ],
+                "value": "action",
+                "enabled": true
+              },
+              {
+                "name": "icon",
+                "_type": "conditionalIconSearch",
+                "value": "",
+                "enabled": true,
+                "subSelection": {
+                  "iconDisplay": {
+                    "name": "iconDisplay",
+                    "_type": "select",
+                    "selectionList": [
+                      "Icon only",
+                      "Start with Icon",
+                      "End with Icon"
+                    ],
+                    "value": "End with Icon",
+                    "enabled": true
+                  }
+                }
+              },
+              {
+                "name": "disabled",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              },
+              {
+                "name": "isRecordLevel",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              },
+              {
+                "name": "pin",
+                "_type": "select",
+                "selectionList": [
+                  "round-round",
+                  "brick-brick",
+                  "clear-clear",
+                  "circle-circle",
+                  "round-brick",
+                  "brick-round",
+                  "round-clear",
+                  "clear-round",
+                  "brick-clear",
+                  "clear-brick",
+                  "circle-brick",
+                  "brick-circle",
+                  "circle-clear",
+                  "clear-circle"
+                ],
+                "value": "circle-circle",
+                "enabled": true
+              },
+              {
+                "name": "enableHeaderText",
+                "_type": "conditionalBoolean",
+                "value": false,
+                "enabled": true,
+                "subSelection": {
+                  "_true": {
+                    "content": {
+                      "name": "Header Text",
+                      "_type": "text",
+                      "value": "",
+                      "enabled": true
+                    },
+                    "position": {
+                      "name": "Header Position",
+                      "_type": "select",
+                      "selectionList": [
+                        "left",
+                        "top",
+                        "right",
+                        "bottom"
+                      ],
+                      "value": "top",
+                      "enabled": true
+                    }
+                  }
+                }
+              },
+              {
+                "name": "isValidate",
+                "_type": "boolean",
+                "value": true,
+                "enabled": true
+              }
+            ],
+            "events": "#button_events"
+          }
+        }
+      },
+      "property": {
+        "name": "save",
+        "nodeType": "button",
+        "description": ""
+      },
+      "grid": {
+        "classNames": "",
+        "style": {},
+        "row": {
+          "start": 10,
+          "end": 20
+        },
+        "column": {
+          "start": 2,
+          "end": 10
+        }
+      },
+      "version": "TRL:AFR:UF-UFW:Next:Inputs:button:v1"
+    }
+  ],
+  "NDU": {
+    "root": {
+      "id": "root",
+      "Parent": "root",
+      "type": "Canvas",
+      "T_parentId": "root",
+      "children": [
+        "g1"
+      ],
+      "data": {
+        "label": "",
+        "nodeProperty": {
+          "nodeId": "root",
+          "nodeName": "Root",
+          "nodeType": "Canvas",
+          "nodeVersion": "v1",
+          "elementInfo": {}
+        }
+      },
+      "grid": {
+        "style": {
+          "gridAutoRows": "4px",
+          "columnGap": "0px",
+          "rowGap": "0px"
+        },
+        "classNames": ""
+      },
+      "property": {
+        "name": "",
+        "nodeType": "Canvas",
+        "description": "",
+        "rowHeight": "4px",
+        "rowGap": "0px",
+        "columnGap": "0px",
+        "props": {
+          "meta": {
+            "row": 1,
+            "col": 1,
+            "rowSpan": 24,
+            "colSpan": 24
+          }
+        },
+        "rowCount": 100,
+        "columnCount": 24
+      },
+      "groupType": "group"
+    },
+    "g1": {
+      "id": "g1",
+      "parent": "root",
+      "type": "group",
+      "T_parentId": "root",
+      "children": [
+        "b1"
+      ],
+      "property": {
+        "name": "infogroup",
+        "nodeType": "group",
+        "description": "",
+        "props": {
+          "meta": {
+            "row": 1,
+            "col": 1,
+            "rowSpan": 49,
+            "colSpan": 24
+          }
+        }
+      },
+      "grid": {
+        "style": {
+          "gridAutoRows": "4px",
+          "columnGap": "0px",
+          "rowGap": "0px"
+        },
+        "classNames": ""
+      },
+      "groupType": "group",
+      "data": {
+        "label": "infogroup",
+        "nodeAppearance": {
+          "type": "group",
+          "label": "group",
+          "color": "#F44336",
+          "shape": "square",
+          "icon": "/torus/9.1/resources/nodeicons/UF-UFW/group.svg",
+          "size": 45,
+          "handles": [
+            {
+              "type": "source",
+              "position": "right",
+              "isConnectable": true,
+              "shown": true
+            },
+            {
+              "type": "target",
+              "position": "left",
+              "isConnectable": true,
+              "shown": true
+            }
+          ]
+        },
+        "nodeProperty": {
+          "nodeId": "g1",
+          "nodeName": "infogroup",
+          "nodeType": "group",
+          "nodeVersion": "v1",
+          "elementInfo": {
+            "props": [
+              {
+                "name": "isDynamic",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              }
+            ],
+            "events": "#group_events"
+          }
+        }
+      },
+      "version": "TRL:AFR:UF-UFW:Next:Defaults:group:v1",
+      "t_parentId": "root"
+    },
+    "b1": {
+      "id": "b1",
+      "parent": "g1",
+      "type": "button",
+      "T_parentId": "g1",
+      "children": [],
+      "property": {
+        "name": "save",
+        "nodeType": "button",
+        "description": "",
+        "props": {
+          "meta": {
+            "row": 10,
+            "col": 2,
+            "rowSpan": 10,
+            "colSpan": 8
+          }
+        }
+      },
+      "grid": {
+        "style": {},
+        "classNames": ""
+      },
+      "groupType": "group",
+      "data": {
+        "label": "save",
+        "nodeAppearance": {
+          "icon": "/torus/9.1/resources/nodeicons/UF-UFW/button.svg",
+          "color": "#0736C4",
+          "label": "button",
+          "size": 45
+        },
+        "nodeProperty": {
+          "nodeId": "b1",
+          "nodeName": "save",
+          "nodeType": "button",
+          "nodeVersion": "v1",
+          "elementInfo": {
+            "frameWork": "Nextjs",
+            "version": "14.2.3",
+            "component": "Button",
+            "props": [
+              {
+                "name": "view",
+                "_type": "select",
+                "selectionList": [
+                  "normal",
+                  "action",
+                  "outlined",
+                  "outlined-info",
+                  "outlined-success",
+                  "outlined-warning",
+                  "outlined-danger",
+                  "outlined-utility",
+                  "outlined-action",
+                  "raised",
+                  "flat",
+                  "flat-secondary",
+                  "flat-info",
+                  "flat-success",
+                  "flat-warning",
+                  "flat-danger",
+                  "flat-utility",
+                  "flat-action",
+                  "normal-contrast",
+                  "outlined-contrast",
+                  "flat-contrast"
+                ],
+                "value": "action",
+                "enabled": true
+              },
+              {
+                "name": "icon",
+                "_type": "conditionalIconSearch",
+                "value": "",
+                "enabled": true,
+                "subSelection": {
+                  "iconDisplay": {
+                    "name": "iconDisplay",
+                    "_type": "select",
+                    "selectionList": [
+                      "Icon only",
+                      "Start with Icon",
+                      "End with Icon"
+                    ],
+                    "value": "End with Icon",
+                    "enabled": true
+                  }
+                }
+              },
+              {
+                "name": "disabled",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              },
+              {
+                "name": "isRecordLevel",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              },
+              {
+                "name": "pin",
+                "_type": "select",
+                "selectionList": [
+                  "round-round",
+                  "brick-brick",
+                  "clear-clear",
+                  "circle-circle",
+                  "round-brick",
+                  "brick-round",
+                  "round-clear",
+                  "clear-round",
+                  "brick-clear",
+                  "clear-brick",
+                  "circle-brick",
+                  "brick-circle",
+                  "circle-clear",
+                  "clear-circle"
+                ],
+                "value": "circle-circle",
+                "enabled": true
+              },
+              {
+                "name": "enableHeaderText",
+                "_type": "conditionalBoolean",
+                "value": false,
+                "enabled": true,
+                "subSelection": {
+                  "_true": {
+                    "content": {
+                      "name": "Header Text",
+                      "_type": "text",
+                      "value": "",
+                      "enabled": true
+                    },
+                    "position": {
+                      "name": "Header Position",
+                      "_type": "select",
+                      "selectionList": [
+                        "left",
+                        "top",
+                        "right",
+                        "bottom"
+                      ],
+                      "value": "top",
+                      "enabled": true
+                    }
+                  }
+                }
+              },
+              {
+                "name": "isValidate",
+                "_type": "boolean",
+                "value": true,
+                "enabled": true
+              }
+            ],
+            "events": "#button_events"
+          }
+        }
+      },
+      "version": "TRL:AFR:UF-UFW:Next:Inputs:button:v1",
+      "t_parentId": "g1"
+    }
+  },
+  "UFS": [
+    {
+      "id": "root",
+      "type": "Canvas",
+      "grid": {
+        "classNames": "",
+        "style": {
+          "gridAutoRows": "4px",
+          "columnGap": "0px",
+          "rowGap": "0px"
+        }
+      },
+      "children": [
+        "g1"
+      ],
+      "groupType": "group",
+      "T_parentId": "root",
+      "path": "root",
+      "label": "",
+      "name": "",
+      "elementInfo": {}
+    },
+    {
+      "id": "g1",
+      "type": "group",
+      "grid": {
+        "classNames": "",
+        "style": {
+          "gridAutoRows": "4px",
+          "columnGap": "0px",
+          "rowGap": "0px"
+        },
+        "row": {
+          "start": 1,
+          "end": 50
+        },
+        "column": {
+          "start": 1,
+          "end": 25
+        }
+      },
+      "children": [
+        "b1"
+      ],
+      "groupType": "group",
+      "T_parentId": "root",
+      "path": "root",
+      "label": "infogroup",
+      "name": "infogroup",
+      "nodeVersion": "v1",
+      "elementInfo": {
+        "props": [
+          {
+            "name": "isDynamic",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          }
+        ],
+        "events": "#group_events"
+      }
+    },
+    {
+      "id": "b1",
+      "type": "button",
+      "grid": {
+        "classNames": "",
+        "style": {},
+        "row": {
+          "start": 10,
+          "end": 20
+        },
+        "column": {
+          "start": 2,
+          "end": 10
+        }
+      },
+      "children": [],
+      "T_parentId": "g1",
+      "path": "root|g1",
+      "label": "save",
+      "name": "save",
+      "nodeVersion": "v1",
+      "elementInfo": {
+        "frameWork": "Nextjs",
+        "version": "14.2.3",
+        "component": "Button",
+        "props": [
+          {
+            "name": "view",
+            "_type": "select",
+            "selectionList": [
+              "normal",
+              "action",
+              "outlined",
+              "outlined-info",
+              "outlined-success",
+              "outlined-warning",
+              "outlined-danger",
+              "outlined-utility",
+              "outlined-action",
+              "raised",
+              "flat",
+              "flat-secondary",
+              "flat-info",
+              "flat-success",
+              "flat-warning",
+              "flat-danger",
+              "flat-utility",
+              "flat-action",
+              "normal-contrast",
+              "outlined-contrast",
+              "flat-contrast"
+            ],
+            "value": "action",
+            "enabled": true
+          },
+          {
+            "name": "icon",
+            "_type": "conditionalIconSearch",
+            "value": "",
+            "enabled": true,
+            "subSelection": {
+              "iconDisplay": {
+                "name": "iconDisplay",
+                "_type": "select",
+                "selectionList": [
+                  "Icon only",
+                  "Start with Icon",
+                  "End with Icon"
+                ],
+                "value": "End with Icon",
+                "enabled": true
+              }
+            }
+          },
+          {
+            "name": "disabled",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          },
+          {
+            "name": "isRecordLevel",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          },
+          {
+            "name": "pin",
+            "_type": "select",
+            "selectionList": [
+              "round-round",
+              "brick-brick",
+              "clear-clear",
+              "circle-circle",
+              "round-brick",
+              "brick-round",
+              "round-clear",
+              "clear-round",
+              "brick-clear",
+              "clear-brick",
+              "circle-brick",
+              "brick-circle",
+              "circle-clear",
+              "clear-circle"
+            ],
+            "value": "circle-circle",
+            "enabled": true
+          },
+          {
+            "name": "enableHeaderText",
+            "_type": "conditionalBoolean",
+            "value": false,
+            "enabled": true,
+            "subSelection": {
+              "_true": {
+                "content": {
+                  "name": "Header Text",
+                  "_type": "text",
+                  "value": "",
+                  "enabled": true
+                },
+                "position": {
+                  "name": "Header Position",
+                  "_type": "select",
+                  "selectionList": [
+                    "left",
+                    "top",
+                    "right",
+                    "bottom"
+                  ],
+                  "value": "top",
+                  "enabled": true
+                }
+              }
+            }
+          },
+          {
+            "name": "isValidate",
+            "_type": "boolean",
+            "value": true,
+            "enabled": true
+          }
+        ],
+        "events": "#button_events"
+      }
+    }
+  ],
+  "UO": {
+    "mappedData": {
+      "artifact": {
+        "name": "infogroup",
+        "action": {
+          "lock": {
+            "lockMode": "",
+            "name": "",
+            "ttl": ""
+          },
+          "stateTransition": {
+            "sourceQueue": "",
+            "sourceStatus": "",
+            "targetQueue": "",
+            "targetStatus": ""
+          },
+          "pagination": {
+            "page": "1",
+            "count": "10"
+          },
+          "encryption": {
+            "isEnabled": false,
+            "selectedDpd": "",
+            "encryptionMethod": ""
+          },
+          "events": {}
+        },
+        "code": "",
+        "testCode": "",
+        "rule": {},
+        "events": {},
+        "mapper": [],
+        "node": [
+          {
+            "nodeId": "root",
+            "nodeName": "Canvas",
+            "nodeType": "Canvas",
+            "parentId": "root",
+            "path": "root",
+            "action": {
+              "lock": {
+                "lockMode": "",
+                "name": "",
+                "ttl": ""
+              },
+              "stateTransition": {
+                "sourceQueue": "",
+                "sourceStatus": "",
+                "targetQueue": "",
+                "targetStatus": ""
+              },
+              "pagination": {
+                "page": "1",
+                "count": "10"
+              },
+              "encryption": {
+                "isEnabled": false,
+                "selectedDpd": "",
+                "encryptionMethod": ""
+              },
+              "events": {}
+            },
+            "code": "",
+            "testCode": "",
+            "rule": {},
+            "events": {},
+            "mapper": [],
+            "objElements": []
+          },
+          {
+            "nodeId": "g1",
+            "nodeName": "infogroup",
+            "nodeType": "group",
+            "nodeVersion": "v1",
+            "parentId": "root",
+            "path": "root",
+            "action": {
+              "lock": {
+                "lockMode": "",
+                "name": "",
+                "ttl": ""
+              },
+              "stateTransition": {
+                "sourceQueue": "",
+                "sourceStatus": "",
+                "targetQueue": "",
+                "targetStatus": ""
+              },
+              "pagination": {
+                "page": "1",
+                "count": "10"
+              },
+              "encryption": {
+                "isEnabled": false,
+                "selectedDpd": "",
+                "encryptionMethod": ""
+              },
+              "events": {}
+            },
+            "code": "",
+            "testCode": "",
+            "rule": {},
+            "events": {},
+            "mapper": [],
+            "objElements": [
+              {
+                "elementName": "save",
+                "elementId": "b1",
+                "elementType": "button",
+                "elementVersion": "v1",
+                "parentId": "g1",
+                "path": "root|g1",
+                "action": {
+                  "lock": {
+                    "lockMode": "",
+                    "name": "",
+                    "ttl": ""
+                  },
+                  "stateTransition": {
+                    "sourceQueue": "",
+                    "sourceStatus": "",
+                    "targetQueue": "",
+                    "targetStatus": ""
+                  },
+                  "pagination": {
+                    "page": "1",
+                    "count": "10"
+                  },
+                  "encryption": {
+                    "isEnabled": false,
+                    "selectedDpd": "",
+                    "encryptionMethod": ""
+                  },
+                  "events": {}
+                },
+                "code": "",
+                "testCode": "",
+                "rule": {},
+                "events": {},
+                "mapper": [],
+                "objElements": []
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "securityData": {
+      "accessProfile": [],
+      "securityTemplate": {
+        "security": {
+          "artifact": {
+            "resource": "infogroup",
+            "resourceId": "infogroup",
+            "SIFlag": {
+              "uiType": "dropdown",
+              "selectedValue": "AA",
+              "selectionList": [
+                "AA",
+                "BA"
+              ]
+            },
+            "node": [
+              {
+                "resource": "Canvas",
+                "resourceId": "root",
+                "resourceType": "Canvas",
+                "resourceParentId": "root",
+                "resourcePath": "root",
+                "SIFlag": {
+                  "uiType": "dropdown",
+                  "selectedValue": "AA",
+                  "selectionList": [
+                    "AA",
+                    "BA",
+                    "ATO",
+                    "BTO"
+                  ]
+                },
+                "objElements": []
+              },
+              {
+                "resource": "infogroup",
+                "resourceId": "g1",
+                "resourceType": "group",
+                "resourceParentId": "root",
+                "resourcePath": "root",
+                "SIFlag": {
+                  "uiType": "dropdown",
+                  "selectedValue": "AA",
+                  "selectionList": [
+                    "AA",
+                    "BA",
+                    "ATO",
+                    "BTO"
+                  ]
+                },
+                "objElements": [
+                  {
+                    "resource": "save",
+                    "resourceId": "b1",
+                    "resourceType": "button",
+                    "resourceParentId": "g1",
+                    "resourcePath": "root|g1",
+                    "SIFlag": {
+                      "uiType": "dropdown",
+                      "selectedValue": "ATO",
+                      "selectionList": [
+                        "AA",
+                        "BA",
+                        "ATO",
+                        "BTO"
+                      ]
+                    },
+                    "objElements": []
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "afk": "CK:CT001:FNGK:AF:FNK:UF-UFW:CATK:TGW01:AFGK:TGW004:AFK:infogroup:AFVK:v1"
+    },
+    "targetItems": [
+      {
+        "nodeId": "root",
+        "nodeName": "",
+        "nodeLabel": "",
+        "nodeType": "Canvas",
+        "parentId": "root",
+        "path": "root",
+        "elementInfo": {},
+        "children": []
+      },
+      {
+        "nodeId": "g1",
+        "nodeName": "infogroup",
+        "nodeLabel": "infogroup",
+        "nodeType": "group",
+        "parentId": "root",
+        "path": "root",
+        "groupType": "group",
+        "nodeVersion": "v1",
+        "elementInfo": {
+          "props": [
+            {
+              "name": "isDynamic",
+              "_type": "boolean",
+              "value": false,
+              "enabled": true
+            }
+          ],
+          "events": "#group_events"
+        },
+        "children": [
+          {
+            "nodeId": "b1",
+            "nodeName": "save",
+            "nodeLabel": "save",
+            "nodeType": "button",
+            "path": "root|g1",
+            "parentId": "g1",
+            "nodeVersion": "v1",
+            "elementInfo": {
+              "frameWork": "Nextjs",
+              "version": "14.2.3",
+              "component": "Button",
+              "props": [
+                {
+                  "name": "view",
+                  "_type": "select",
+                  "selectionList": [
+                    "normal",
+                    "action",
+                    "outlined",
+                    "outlined-info",
+                    "outlined-success",
+                    "outlined-warning",
+                    "outlined-danger",
+                    "outlined-utility",
+                    "outlined-action",
+                    "raised",
+                    "flat",
+                    "flat-secondary",
+                    "flat-info",
+                    "flat-success",
+                    "flat-warning",
+                    "flat-danger",
+                    "flat-utility",
+                    "flat-action",
+                    "normal-contrast",
+                    "outlined-contrast",
+                    "flat-contrast"
+                  ],
+                  "value": "action",
+                  "enabled": true
+                },
+                {
+                  "name": "icon",
+                  "_type": "conditionalIconSearch",
+                  "value": "",
+                  "enabled": true,
+                  "subSelection": {
+                    "iconDisplay": {
+                      "name": "iconDisplay",
+                      "_type": "select",
+                      "selectionList": [
+                        "Icon only",
+                        "Start with Icon",
+                        "End with Icon"
+                      ],
+                      "value": "End with Icon",
+                      "enabled": true
+                    }
+                  }
+                },
+                {
+                  "name": "disabled",
+                  "_type": "boolean",
+                  "value": false,
+                  "enabled": true
+                },
+                {
+                  "name": "isRecordLevel",
+                  "_type": "boolean",
+                  "value": false,
+                  "enabled": true
+                },
+                {
+                  "name": "pin",
+                  "_type": "select",
+                  "selectionList": [
+                    "round-round",
+                    "brick-brick",
+                    "clear-clear",
+                    "circle-circle",
+                    "round-brick",
+                    "brick-round",
+                    "round-clear",
+                    "clear-round",
+                    "brick-clear",
+                    "clear-brick",
+                    "circle-brick",
+                    "brick-circle",
+                    "circle-clear",
+                    "clear-circle"
+                  ],
+                  "value": "circle-circle",
+                  "enabled": true
+                },
+                {
+                  "name": "enableHeaderText",
+                  "_type": "conditionalBoolean",
+                  "value": false,
+                  "enabled": true,
+                  "subSelection": {
+                    "_true": {
+                      "content": {
+                        "name": "Header Text",
+                        "_type": "text",
+                        "value": "",
+                        "enabled": true
+                      },
+                      "position": {
+                        "name": "Header Position",
+                        "_type": "select",
+                        "selectionList": [
+                          "left",
+                          "top",
+                          "right",
+                          "bottom"
+                        ],
+                        "value": "top",
+                        "enabled": true
+                      }
+                    }
+                  }
+                },
+                {
+                  "name": "isValidate",
+                  "_type": "boolean",
+                  "value": true,
+                  "enabled": true
+                }
+              ],
+              "events": "#button_events"
+            }
+          }
+        ]
+      }
+    ],
+    "nodeTree": [
+      {
+        "nodeId": "root",
+        "nodeType": "Canvas",
+        "nodeLabel": "",
+        "nodeName": "",
+        "nodeGroupType": "group",
+        "nodeAction": [
+          "root"
+        ],
+        "children": [
+          {
+            "nodeId": "g1",
+            "nodeType": "group",
+            "nodeLabel": "infogroup",
+            "nodeName": "infogroup",
+            "nodeParent": "root",
+            "nodeGroupType": "group",
+            "nodeAction": [
+              "g1"
+            ],
+            "children": [
+              {
+                "nodeId": "b1",
+                "nodeType": "button",
+                "nodeLabel": "save",
+                "nodeName": "save",
+                "nodeParent": "g1",
+                "nodeGroupType": "group",
+                "nodeAction": [
+                  "g1",
+                  "b1"
+                ],
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

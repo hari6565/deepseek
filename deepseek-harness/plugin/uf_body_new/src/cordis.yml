@@ -1,0 +1,9 @@
+# Web/host overlay that mounts this plugin by absolute path. Loaded via:
+#   pnpm dsh web --patch ./plugin/uf_body_new/src/cordis.yml
+- insert:
+    - id: uf_body_new
+      name: 'D:/deepseek/deepseek-harness/plugin/uf_body_new/src/main.ts'
+      config:
+        afkClientCode: 'CT001'
+        afkCategoryCode: 'TGW01'
+        afkGroupCode: 'TGW004'
