@@ -1,0 +1,34 @@
+
+{
+  "b9645485b1bd4c5da6b85563f75b853a": [
+    {
+      "key": "CK:CT001:FNGK:AF:FNK:DF-DFD:CATK:TGW01:AFGK:TGW004:AFK:chart:AFVK:v1",
+      "fa03cf6c52304be49484a558759f0ab2": {
+        "items.properties.country": "b9645485b1bd4c5da6b85563f75b853a"
+      }
+    }
+  ],
+  "43c87c8ce2d346939e4e77427d57807e": [],
+  "6e86f8bc63db4bd1a9797629f9f0bf98": [
+    {
+      "key": "CK:CT001:FNGK:AF:FNK:DF-DFD:CATK:TGW01:AFGK:TGW004:AFK:chart:AFVK:v1",
+      "fa03cf6c52304be49484a558759f0ab2": {
+        "items.properties.state": "6e86f8bc63db4bd1a9797629f9f0bf98"
+      }
+    }
+  ],
+  "f2ec2d780f594f7689801981a98f25ad": [
+    {
+      "key": "CK:CT001:FNGK:AF:FNK:DF-DFD:CATK:TGW01:AFGK:TGW004:AFK:chart:AFVK:v1",
+      "dfa46021e92642c48c77af06e293b113": {
+        "properties.name": "f2ec2d780f594f7689801981a98f25ad"
+      }
+    },
+    {
+      "key": "CK:CT001:FNGK:AF:FNK:DF-DFD:CATK:TGW01:AFGK:TGW004:AFK:country_code_dfd:AFVK:v1",
+      "fa03cf6c52304be49484a558759f0ab2": {
+        "items.properties.state_code": "6e86f8bc63db4bd1a9797629f9f0bf98"
+      }
+    }
+  ]
+}

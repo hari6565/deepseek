@@ -1,0 +1,16 @@
+node_modules
+**/node_modules
+.next
+out
+build
+dist
+.git
+.gitignore
+Dockerfile
+Jenkinsfile
+README.md
+*.log
+.vscode
+.idea
+.DS_Store
+Thumbs.db

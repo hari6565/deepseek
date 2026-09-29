@@ -1,0 +1,79 @@
+
+{
+  "Canvasroot": [],
+  "b9645485b1bd4c5da6b85563f75b853a": {
+    "source": "combobox",
+    "target": "combobox",
+    "mapper": [
+      {
+        "sourceKey": [
+          "CK:CT001:FNGK:AF:FNK:DF-DFD:CATK:TGW01:AFGK:TGW004:AFK:country_code_dfd:AFVK:v1|fa03cf6c52304be49484a558759f0ab2|items.properties.country"
+        ],
+        "targetKey": "CK:CT001:FNGK:AF:FNK:UF-UFW:CATK:TGW01:AFGK:TGW004:AFK:barchart:AFVK:v1|e130ce7ca9d247d397cf8271aba951d8|b9645485b1bd4c5da6b85563f75b853a|text"
+      },
+      {
+        "sourceKey": [
+          "CK:CT001:FNGK:AF:FNK:DF-DFD:CATK:TGW01:AFGK:TGW004:AFK:country_code_dfd:AFVK:v1|fa03cf6c52304be49484a558759f0ab2|items.properties.country"
+        ],
+        "targetKey": "CK:CT001:FNGK:AF:FNK:UF-UFW:CATK:TGW01:AFGK:TGW004:AFK:barchart:AFVK:v1|e130ce7ca9d247d397cf8271aba951d8|b9645485b1bd4c5da6b85563f75b853a|value"
+      }
+    ],
+    "controlName": "combobox",
+    "text": "country",
+    "value": "country"
+  },
+  "43c87c8ce2d346939e4e77427d57807e": {
+    "source": "button",
+    "target": "button",
+    "controlName": "button"
+  },
+  "6e86f8bc63db4bd1a9797629f9f0bf98": {
+    "source": "name",
+    "target": "piechart",
+    "mapper": [
+      {
+        "sourceKey": [
+          "CK:CT001:FNGK:AF:FNK:DF-DFD:CATK:TGW01:AFGK:TGW004:AFK:chart:AFVK:v1|dfa46021e92642c48c77af06e293b113|properties.name"
+        ],
+        "targetKey": "CK:CT001:FNGK:AF:FNK:UF-UFW:CATK:TGW01:AFGK:TGW004:AFK:barchart:AFVK:v1|e130ce7ca9d247d397cf8271aba951d8|6e86f8bc63db4bd1a9797629f9f0bf98"
+      }
+    ],
+    "controlName": "piechart"
+  },
+  "f2ec2d780f594f7689801981a98f25ad": {
+    "source": "name",
+    "target": "barchart",
+    "mapper": [
+      {
+        "sourceKey": [
+          "CK:CT001:FNGK:AF:FNK:DF-DFD:CATK:TGW01:AFGK:TGW004:AFK:chart:AFVK:v1|dfa46021e92642c48c77af06e293b113|properties.name"
+        ],
+        "targetKey": "CK:CT001:FNGK:AF:FNK:UF-UFW:CATK:TGW01:AFGK:TGW004:AFK:barchart:AFVK:v1|e130ce7ca9d247d397cf8271aba951d8|f2ec2d780f594f7689801981a98f25ad"
+      }
+    ],
+    "controlName": "barchart"
+  },
+  "group951d8": [
+    "combobox",
+    "combobox",
+    "button",
+    "name",
+    "name"
+  ],
+  "6ad994c6bbf7425b892f5012cc00215e": {
+    "source": "country",
+    "target": "country",
+    "mapper": [
+      {
+        "sourceKey": [
+          "CK:CT001:FNGK:AF:FNK:DF-DFD:CATK:TGW01:AFGK:TGW004:AFK:country_code_dfd:AFVK:v1|fa03cf6c52304be49484a558759f0ab2|items.properties.country"
+        ],
+        "targetKey": "CK:CT001:FNGK:AF:FNK:UF-UFW:CATK:TGW01:AFGK:TGW004:AFK:barchart:AFVK:v1|cdeceea0e5344cea97f5c25ae52d733f|6ad994c6bbf7425b892f5012cc00215e"
+      }
+    ],
+    "controlName": "country"
+  },
+  "tabled733f": [
+    "country"
+  ]
+}

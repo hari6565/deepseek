@@ -1,0 +1,16 @@
+{
+  "language": {
+    "label_error-widget-no-access": "No access to the chart",
+    "welcome_message": "Hello World",
+  "click_me": "Click me"
+  },
+  "DATE_FORMAT" : {
+    "en": "DD/MM/YYYY"
+  },
+  "TIME_FORMAT" : {
+    "en": "HH:mm:ss"
+  },
+  "TIME_ZONE" : {
+    "en": "asia/kolkata"
+  }
+}

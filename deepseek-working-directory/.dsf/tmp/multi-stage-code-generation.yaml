@@ -1,0 +1,11 @@
+{
+  "$schema": "@deepseek/harness/dsf",
+  "meta": {
+    "name": "multi-stage-code-generation",
+    "description": "Code generation workflow with multiple stages and model overrides",
+    "whenToUse": "When you need to generate code, debug bugs, or refactor existing code"
+  },
+  "args": {
+    "files": {}
+  }
+}

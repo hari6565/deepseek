@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── Custom rich-text editor content styles (newApproach / RichTextEditor) ── */
+.rich-editor p { margin: 0 0 0.5rem; }
+.rich-editor p:last-child { margin-bottom: 0; }
+.rich-editor h1 { font-size: 1.75rem; font-weight: 700; margin: 0.75rem 0 0.5rem; }
+.rich-editor h2 { font-size: 1.375rem; font-weight: 600; margin: 0.75rem 0 0.5rem; }
+.rich-editor h3 { font-size: 1.125rem; font-weight: 600; margin: 0.75rem 0 0.5rem; }
+.rich-editor ul { list-style: disc; padding-left: 1.5rem; margin: 0.5rem 0; }
+.rich-editor ol { list-style: decimal; padding-left: 1.5rem; margin: 0.5rem 0; }
+.rich-editor li { margin: 0.2rem 0; }
+.rich-editor blockquote { border-left: 3px solid #d1d5db; padding-left: 1rem; color: #6b7280; margin: 0.5rem 0; }
+.rich-editor code { background: #e5e7eb; border-radius: 4px; padding: 0.1em 0.35em; font-size: 0.875em; font-family: ui-monospace, monospace !important; }
+.rich-editor pre { background: #1f2937; color: #f9fafb; border-radius: 8px; padding: 1rem; margin: 0.5rem 0; overflow-x: auto; }
+.rich-editor pre code { background: none; padding: 0; }
+.rich-editor a { color: #2563eb; text-decoration: underline; }
+.rich-editor hr { border: none; border-top: 2px solid #d1d5db; margin: 1rem 0; }
+.rich-editor img { max-width: 100%; border-radius: 6px; margin: 0.5rem 0; }
+
+/* CSS Variables for Typography - These will be set dynamically by setUpKey.tsx */
+:root {
+  --g-font-family-sans: "Inter", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  --font-body:var(--g-font-family-sans);
+  --font-header:var(--g-font-family-monospace);  
+  --font-display:var(--g-font-family-sans);  
+  --font-size-base: clamp(5px, 0.675vw, 18px);
+
+}
+
+
+/* .pc-Grid .container-fluid, .pc-Grid .container {
+    max-width: none !important
+}
+.container-fluid{
+    padding-right: 0px !important;
+    padding-left: 0px !important
+}
+
+.g-table__table{
+    width: 100% !important;
+}
+
+.g-label_size_m {
+    --_--height: 50px !important;
+    --_--border-radius: var(--g-border-radius-m);
+    --_--margin-inline: 12px;
+    --_--margin-addon-start: 32px;
+    --_--margin-addon-end: 32px;
+    .g-label__text {
+        font-size: 20px !important;
+    }
+  }
+
+.g-date-calendar__controls{
+    display: flex;
+    scale: 0.8;
+}
+
+.g-tabs_direction_horizontal .g-tabs__item_active,
+.g-tabs_direction_horizontal .g-tabs__item_active:hover,
+.g-tabs_direction_horizontal .g-tabs__item_active:focus-visible {
+  border-color: var(--g-color-line-brand);
+  background-color: var(--g-color-base-brandcolor) ;
+}
+
+.g-tabs_direction_horizontal .g-tabs__item {
+  color: var(--g-color-text-secondary);
+  transition: all 0.25s ease;
+  border-radius: 9999px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  height: var(--g-tabs-item-height, var(--_--item-height));
+  border-block-end: var(--g-tabs-item-border-width, var(--_--item-border-width))
+    solid transparent;
+  padding-block-start: var(--_--item-border-width);
+} */
+
+/* Theme Support */
+html.light {
+  color-scheme: light;
+}
+
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+    display: none;
+}
+
+input[type="password"]::-webkit-credentials-auto-fill-button,
+input[type="password"]::-webkit-textfield-decoration-container {
+    display: none !important;
+}
+
+html.dark,
+html.dark-hc {
+  color-scheme: dark;
+}
+
+/* Ensure smooth theme transitions */
+html,
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  font-family: var(--font-body);
+}
+
+/* Typography - Apply fonts and responsive base font size to all elements */
+* {
+  font-family: var(--font-body) !important;
+  font-size: var(--font-size-base);
+}
+
+body,
+p,
+span,
+div,
+input,
+textarea,
+button,
+select,
+label,
+a,
+li,
+td,
+th {
+  font-family: var(--font-body) !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-header) !important;
+}
+
+/* Table column headers — header font gives visual separation from cell content */
+thead th {
+  font-family: var(--font-header) !important;
+}
+
+
+
+/* Component header labels (headerText prop renders) */
+.component-header-text {
+  font-family: var(--font-header) !important;
+}
+
+/* Display text - large headings, hero text, card/modal titles */
+.display-text,
+[class*="display-"],
+[class*="hero-"],
+.modal-title,
+.card-title,
+.section-title {
+  font-family: var(--font-display) !important;
+}
+
+/* Gravity UI Text Components */
+.g-text {
+  font-family: var(--font-body) !important;
+}
+
+/* Override for header variants */
+.g-text[class*="header"],
+.g-text[class*="display"] {
+  font-family: var(--font-header) !important;
+}
+
+/* Subheaders use header font */
+.g-text[class*="subheader"] {
+  font-family: var(--font-header) !important;
+}
+
+/* Gravity UI buttons and other components */
+.g-button,
+.g-button *,
+.g-button__text,
+button.g-button,
+button[class*="g-button"] {
+  font-family: var(--font-body) !important;
+}
+
+/* All button elements - maximum specificity */
+button,
+button *,
+[role="button"],
+[type="button"],
+[type="submit"],
+[type="reset"] {
+  font-family: var(--font-body) !important;
+}
+
+/* Ensure all text inputs use body font */
+.g-text-input__input,
+.g-text-area__control {
+  font-family: var(--font-body) !important;
+}
+
+/* Dark theme styling */
+html.dark,
+html.dark-hc {
+  background-color: transparent;
+  color: #ffffff;
+}
+
+html.dark body,
+html.dark-hc body {
+  background-color: #1f2937;
+  color: #ffffff;
+}
+
+/* html.dark *,
+html.dark-hc * {
+  border-color: #374151;
+} */
+
+/* Light theme styling */
+html.light {
+ background-color: transparent;
+  color: #000000;
+}
+
+html.light body {
+  background-color: transparent;
+  color: #000000;
+}
+
+/* html.light * {
+  border-color: #e5e7eb;
+} */
+
+/* Page container theme support */
+html.dark main,
+html.dark-hc main,
+html.dark div[class*="page"],
+html.dark-hc div[class*="page"] {
+  background-color: transparent;
+  color: #ffffff;
+}
+
+html.light main,
+html.light div[class*="page"] {
+  background-color: transparent;
+  color: #000000;
+}
+
+/* Container theme support */
+html.dark .container,
+html.dark-hc .container,
+html.dark [class*="container"],
+html.dark-hc [class*="container"] {
+  background-color: transparent;
+  color: inherit;
+}
+
+html.light .container,
+html.light [class*="container"] {
+  background-color: transparent;
+  color: inherit;
+}
+
+/* Override ALL Gravity UI component fonts - Use body font by default */
+.g-root,
+.g-root *,
+.g-button,
+.g-button *,
+.g-text-input,
+.g-text-input *,
+.g-select,
+.g-select *,
+.g-modal,
+.g-modal *,
+.g-dialog,
+.g-dialog *,
+.g-card,
+.g-card *,
+.g-tabs,
+.g-tabs *,
+.g-table,
+.g-table *,
+[class^="g-"],
+[class^="g-"] * {
+  font-family: var(--font-family-DancingScript) !important;
+}
+
+/* Gravity UI Headers - Use header font */
+.g-root h1,
+.g-root h2,
+.g-root h3,
+.g-root h4,
+.g-root h5,
+.g-root h6,
+.g-modal h1,
+.g-modal h2,
+.g-modal h3,
+.g-modal h4,
+.g-modal h5,
+.g-modal h6,
+.g-dialog h1,
+.g-dialog h2,
+.g-dialog h3,
+.g-dialog h4,
+.g-dialog h5,
+.g-dialog h6,
+.g-card h1,
+.g-card h2,
+.g-card h3,
+.g-card h4,
+.g-card h5,
+.g-card h6 {
+  font-family: var(--font-family-Roboto) !important;
+}
+
+/* Gravity UI Display text - Use display font */
+.g-root [class*="display"],
+.g-root [class*="hero"],
+.g-modal [class*="display"],
+.g-modal [class*="hero"],
+.g-dialog [class*="display"],
+.g-dialog [class*="hero"] {
+  font-family: var(--font-family-Roboto) !important;
+}
+
