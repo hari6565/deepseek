@@ -8,7 +8,7 @@
       name: 'D:/deepseek/deepseek-harness/plugin/uf_skeleton_new/src/main.ts'
       config:
         apiUrl: 'https://openrouter.ai/api/v1'
-        apiKey: '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'
+        apiKey: 'jjjjjjjjjjjjjjjjjjjj'
         model: 'openrouter/free'
         temperature: 0
         timeoutMs: 120000
