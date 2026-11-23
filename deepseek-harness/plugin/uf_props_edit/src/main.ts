@@ -41,7 +41,7 @@ export const Config: Schema<Config> = Schema.object({
   temperature: Schema.number().default(0),
   timeoutMs: Schema.number().default(120_000),
   catalogDir: Schema.string().default(DEFAULT_CATALOG_DIR),
-  tempDir: Schema.string().default('D:/deepseek/deepseek-harness/plugin/_tempFiles_'),
+  tempDir: Schema.string().default('D:/deepseekgitcode/deepseek-harness/plugin/_tempFiles_'),
 })
 
 interface UfsEntry {

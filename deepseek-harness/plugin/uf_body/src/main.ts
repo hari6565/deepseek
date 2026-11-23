@@ -30,7 +30,7 @@ export const Config: Schema<Config> = Schema.object({
   afkClientCode: Schema.string().default("CT001"),
   afkCategoryCode: Schema.string().default("TGW01"),
   afkGroupCode: Schema.string().default("TGW004"),
-  tempDir: Schema.string().default("D:/deepseek/deepseek-harness/plugin/_tempFiles_"),
+  tempDir: Schema.string().default("D:/deepseekgitcode/deepseek-harness/plugin/_tempFiles_"),
 });
 
 export interface GenerateJsonResult {

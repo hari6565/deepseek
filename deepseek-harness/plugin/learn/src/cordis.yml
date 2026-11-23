@@ -2,4 +2,4 @@
 #   pnpm dsh web --patch ./plugin/learn/src/cordis.yml
 - insert:
     - id: learn
-      name: 'D:/deepseek/deepseek-harness/plugin/learn/src/main.ts'
+      name: 'D:/deepseekgitcode/deepseek-harness/plugin/learn/src/main.ts'

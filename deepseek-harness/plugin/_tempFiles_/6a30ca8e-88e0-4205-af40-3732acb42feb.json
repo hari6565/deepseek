@@ -1,0 +1,5902 @@
+{
+  "NDP": {
+    "root": {
+      "nodeId": "root",
+      "nodeName": "Root",
+      "nodeType": "Canvas",
+      "nodeVersion": "v1",
+      "elementInfo": {}
+    },
+    "b73f3e4fcd0840da8d1e57be2d47d04d": {
+      "nodeId": "b73f3e4fcd0840da8d1e57be2d47d04d",
+      "nodeName": "customerregistrationgroup",
+      "nodeType": "group",
+      "nodeVersion": "v1",
+      "elementInfo": {
+        "props": [
+          {
+            "name": "isDynamic",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          }
+        ],
+        "events": "#group_events"
+      }
+    },
+    "fb0278b6980541398e6a608001214a97": {
+      "nodeId": "fb0278b6980541398e6a608001214a97",
+      "nodeName": "Name",
+      "nodeType": "label",
+      "nodeVersion": "v1",
+      "elementInfo": {
+        "frameWork": "Nextjs",
+        "version": "14.2.3",
+        "component": "Label",
+        "label": "",
+        "props": [
+          {
+            "name": "theme",
+            "_type": "select",
+            "selectionList": [
+              "normal",
+              "info",
+              "danger",
+              "warning",
+              "success",
+              "utility",
+              "unknown",
+              "clear"
+            ],
+            "value": "normal",
+            "enabled": true
+          },
+          {
+            "name": "icon",
+            "_type": "conditionalIconSearch",
+            "value": "",
+            "enabled": true,
+            "subSelection": {
+              "iconDisplay": {
+                "name": "iconDisplay",
+                "_type": "select",
+                "selectionList": [
+                  "Icon only",
+                  "Start with Icon",
+                  "End with Icon"
+                ],
+                "value": "End with Icon",
+                "enabled": true
+              }
+            }
+          },
+          {
+            "name": "interactive",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          },
+          {
+            "name": "copy",
+            "_type": "string",
+            "value": "",
+            "enabled": true
+          },
+          {
+            "name": "disabled",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          },
+          {
+            "name": "content",
+            "_type": "string",
+            "value": "Name",
+            "enabled": true
+          },
+          {
+            "name": "enableHeaderText",
+            "_type": "conditionalBoolean",
+            "value": false,
+            "enabled": true,
+            "subSelection": {
+              "_true": {
+                "content": {
+                  "name": "Header Text",
+                  "_type": "string",
+                  "value": "",
+                  "enabled": true
+                },
+                "position": {
+                  "name": "Header Position",
+                  "_type": "select",
+                  "selectionList": [
+                    "left",
+                    "top",
+                    "right",
+                    "bottom"
+                  ],
+                  "value": "",
+                  "enabled": true
+                }
+              }
+            }
+          }
+        ],
+        "events": "#label_events"
+      }
+    },
+    "eb23a4919cee4a05982cec747c0d3f42": {
+      "nodeId": "eb23a4919cee4a05982cec747c0d3f42",
+      "nodeName": "name",
+      "nodeType": "textinput",
+      "nodeVersion": "v1",
+      "elementInfo": {
+        "frameWork": "Nextjs",
+        "version": "14.2.3",
+        "component": "TextInput",
+        "props": [
+          {
+            "name": "disabled",
+            "_label": "Disabled",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          },
+          {
+            "name": "readOnly",
+            "_label": "Read Only",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          },
+          {
+            "name": "pin",
+            "_label": "Pin",
+            "_type": "select",
+            "selectionList": [
+              "round-round",
+              "brick-brick",
+              "clear-clear"
+            ],
+            "value": "brick-brick",
+            "enabled": true
+          },
+          {
+            "name": "view",
+            "_label": "View",
+            "_type": "select",
+            "selectionList": [
+              "normal",
+              "clear"
+            ],
+            "value": "normal",
+            "enabled": true
+          },
+          {
+            "name": "placeholder",
+            "_label": "Placeholder",
+            "_type": "text",
+            "value": "type here....",
+            "enabled": true
+          },
+          {
+            "name": "leftContent",
+            "_label": "Left Content",
+            "_type": "text",
+            "value": "",
+            "enabled": true
+          },
+          {
+            "name": "rightContent",
+            "_label": "Right Content",
+            "_type": "text",
+            "value": "",
+            "enabled": true
+          },
+          {
+            "name": "enableHeaderText",
+            "_label": "Enable Header Text",
+            "_type": "conditionalBoolean",
+            "value": false,
+            "enabled": true,
+            "subSelection": {
+              "_true": {
+                "content": {
+                  "name": "Header Text",
+                  "_type": "text",
+                  "value": "",
+                  "enabled": true
+                },
+                "position": {
+                  "name": "Header Position",
+                  "_type": "select",
+                  "selectionList": [
+                    "left",
+                    "top",
+                    "right",
+                    "bottom"
+                  ],
+                  "value": "top",
+                  "enabled": true
+                }
+              }
+            }
+          },
+          {
+            "name": "numberFormat",
+            "_label": "Number Format Style",
+            "_type": "select",
+            "selectionList": [
+              "none",
+              "Indian",
+              "International",
+              "European"
+            ],
+            "value": "",
+            "enabled": false
+          },
+          {
+            "name": "isCurrency",
+            "_label": "Is Currency",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          },
+          {
+            "name": "bindInitialData",
+            "_label": "Bind Initial Data",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          }
+        ],
+        "events": "#textinput_events",
+        "validation": "#textinput_validation"
+      }
+    },
+    "abc9801175584c6da982d4ccbf3fc236": {
+      "nodeId": "abc9801175584c6da982d4ccbf3fc236",
+      "nodeName": "Email",
+      "nodeType": "label",
+      "nodeVersion": "v1",
+      "elementInfo": {
+        "frameWork": "Nextjs",
+        "version": "14.2.3",
+        "component": "Label",
+        "label": "",
+        "props": [
+          {
+            "name": "theme",
+            "_type": "select",
+            "selectionList": [
+              "normal",
+              "info",
+              "danger",
+              "warning",
+              "success",
+              "utility",
+              "unknown",
+              "clear"
+            ],
+            "value": "normal",
+            "enabled": true
+          },
+          {
+            "name": "icon",
+            "_type": "conditionalIconSearch",
+            "value": "",
+            "enabled": true,
+            "subSelection": {
+              "iconDisplay": {
+                "name": "iconDisplay",
+                "_type": "select",
+                "selectionList": [
+                  "Icon only",
+                  "Start with Icon",
+                  "End with Icon"
+                ],
+                "value": "End with Icon",
+                "enabled": true
+              }
+            }
+          },
+          {
+            "name": "interactive",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          },
+          {
+            "name": "copy",
+            "_type": "string",
+            "value": "",
+            "enabled": true
+          },
+          {
+            "name": "disabled",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          },
+          {
+            "name": "content",
+            "_type": "string",
+            "value": "Email",
+            "enabled": true
+          },
+          {
+            "name": "enableHeaderText",
+            "_type": "conditionalBoolean",
+            "value": false,
+            "enabled": true,
+            "subSelection": {
+              "_true": {
+                "content": {
+                  "name": "Header Text",
+                  "_type": "string",
+                  "value": "",
+                  "enabled": true
+                },
+                "position": {
+                  "name": "Header Position",
+                  "_type": "select",
+                  "selectionList": [
+                    "left",
+                    "top",
+                    "right",
+                    "bottom"
+                  ],
+                  "value": "",
+                  "enabled": true
+                }
+              }
+            }
+          }
+        ],
+        "events": "#label_events"
+      }
+    },
+    "540d81629b7045b88352c23e926cbbbc": {
+      "nodeId": "540d81629b7045b88352c23e926cbbbc",
+      "nodeName": "email",
+      "nodeType": "textinput",
+      "nodeVersion": "v1",
+      "elementInfo": {
+        "frameWork": "Nextjs",
+        "version": "14.2.3",
+        "component": "TextInput",
+        "props": [
+          {
+            "name": "disabled",
+            "_label": "Disabled",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          },
+          {
+            "name": "readOnly",
+            "_label": "Read Only",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          },
+          {
+            "name": "pin",
+            "_label": "Pin",
+            "_type": "select",
+            "selectionList": [
+              "round-round",
+              "brick-brick",
+              "clear-clear"
+            ],
+            "value": "brick-brick",
+            "enabled": true
+          },
+          {
+            "name": "view",
+            "_label": "View",
+            "_type": "select",
+            "selectionList": [
+              "normal",
+              "clear"
+            ],
+            "value": "normal",
+            "enabled": true
+          },
+          {
+            "name": "placeholder",
+            "_label": "Placeholder",
+            "_type": "text",
+            "value": "type here....",
+            "enabled": true
+          },
+          {
+            "name": "leftContent",
+            "_label": "Left Content",
+            "_type": "text",
+            "value": "",
+            "enabled": true
+          },
+          {
+            "name": "rightContent",
+            "_label": "Right Content",
+            "_type": "text",
+            "value": "",
+            "enabled": true
+          },
+          {
+            "name": "enableHeaderText",
+            "_label": "Enable Header Text",
+            "_type": "conditionalBoolean",
+            "value": false,
+            "enabled": true,
+            "subSelection": {
+              "_true": {
+                "content": {
+                  "name": "Header Text",
+                  "_type": "text",
+                  "value": "",
+                  "enabled": true
+                },
+                "position": {
+                  "name": "Header Position",
+                  "_type": "select",
+                  "selectionList": [
+                    "left",
+                    "top",
+                    "right",
+                    "bottom"
+                  ],
+                  "value": "top",
+                  "enabled": true
+                }
+              }
+            }
+          },
+          {
+            "name": "numberFormat",
+            "_label": "Number Format Style",
+            "_type": "select",
+            "selectionList": [
+              "none",
+              "Indian",
+              "International",
+              "European"
+            ],
+            "value": "",
+            "enabled": false
+          },
+          {
+            "name": "isCurrency",
+            "_label": "Is Currency",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          },
+          {
+            "name": "bindInitialData",
+            "_label": "Bind Initial Data",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          }
+        ],
+        "events": "#textinput_events",
+        "validation": "#textinput_validation"
+      }
+    },
+    "098ded89b54b49218a1839c6f28ba801": {
+      "nodeId": "098ded89b54b49218a1839c6f28ba801",
+      "nodeName": "Salary",
+      "nodeType": "label",
+      "nodeVersion": "v1",
+      "elementInfo": {
+        "frameWork": "Nextjs",
+        "version": "14.2.3",
+        "component": "Label",
+        "label": "",
+        "props": [
+          {
+            "name": "theme",
+            "_type": "select",
+            "selectionList": [
+              "normal",
+              "info",
+              "danger",
+              "warning",
+              "success",
+              "utility",
+              "unknown",
+              "clear"
+            ],
+            "value": "normal",
+            "enabled": true
+          },
+          {
+            "name": "icon",
+            "_type": "conditionalIconSearch",
+            "value": "",
+            "enabled": true,
+            "subSelection": {
+              "iconDisplay": {
+                "name": "iconDisplay",
+                "_type": "select",
+                "selectionList": [
+                  "Icon only",
+                  "Start with Icon",
+                  "End with Icon"
+                ],
+                "value": "End with Icon",
+                "enabled": true
+              }
+            }
+          },
+          {
+            "name": "interactive",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          },
+          {
+            "name": "copy",
+            "_type": "string",
+            "value": "",
+            "enabled": true
+          },
+          {
+            "name": "disabled",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          },
+          {
+            "name": "content",
+            "_type": "string",
+            "value": "Salary",
+            "enabled": true
+          },
+          {
+            "name": "enableHeaderText",
+            "_type": "conditionalBoolean",
+            "value": false,
+            "enabled": true,
+            "subSelection": {
+              "_true": {
+                "content": {
+                  "name": "Header Text",
+                  "_type": "string",
+                  "value": "",
+                  "enabled": true
+                },
+                "position": {
+                  "name": "Header Position",
+                  "_type": "select",
+                  "selectionList": [
+                    "left",
+                    "top",
+                    "right",
+                    "bottom"
+                  ],
+                  "value": "",
+                  "enabled": true
+                }
+              }
+            }
+          }
+        ],
+        "events": "#label_events"
+      }
+    },
+    "b2f7f201db5c4356a37cab229018f952": {
+      "nodeId": "b2f7f201db5c4356a37cab229018f952",
+      "nodeName": "salary",
+      "nodeType": "textinput",
+      "nodeVersion": "v1",
+      "elementInfo": {
+        "frameWork": "Nextjs",
+        "version": "14.2.3",
+        "component": "TextInput",
+        "props": [
+          {
+            "name": "disabled",
+            "_label": "Disabled",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          },
+          {
+            "name": "readOnly",
+            "_label": "Read Only",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          },
+          {
+            "name": "pin",
+            "_label": "Pin",
+            "_type": "select",
+            "selectionList": [
+              "round-round",
+              "brick-brick",
+              "clear-clear"
+            ],
+            "value": "brick-brick",
+            "enabled": true
+          },
+          {
+            "name": "view",
+            "_label": "View",
+            "_type": "select",
+            "selectionList": [
+              "normal",
+              "clear"
+            ],
+            "value": "normal",
+            "enabled": true
+          },
+          {
+            "name": "placeholder",
+            "_label": "Placeholder",
+            "_type": "text",
+            "value": "type here....",
+            "enabled": true
+          },
+          {
+            "name": "leftContent",
+            "_label": "Left Content",
+            "_type": "text",
+            "value": "",
+            "enabled": true
+          },
+          {
+            "name": "rightContent",
+            "_label": "Right Content",
+            "_type": "text",
+            "value": "",
+            "enabled": true
+          },
+          {
+            "name": "enableHeaderText",
+            "_label": "Enable Header Text",
+            "_type": "conditionalBoolean",
+            "value": false,
+            "enabled": true,
+            "subSelection": {
+              "_true": {
+                "content": {
+                  "name": "Header Text",
+                  "_type": "text",
+                  "value": "",
+                  "enabled": true
+                },
+                "position": {
+                  "name": "Header Position",
+                  "_type": "select",
+                  "selectionList": [
+                    "left",
+                    "top",
+                    "right",
+                    "bottom"
+                  ],
+                  "value": "top",
+                  "enabled": true
+                }
+              }
+            }
+          },
+          {
+            "name": "numberFormat",
+            "_label": "Number Format Style",
+            "_type": "select",
+            "selectionList": [
+              "none",
+              "Indian",
+              "International",
+              "European"
+            ],
+            "value": "",
+            "enabled": false
+          },
+          {
+            "name": "isCurrency",
+            "_label": "Is Currency",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          },
+          {
+            "name": "bindInitialData",
+            "_label": "Bind Initial Data",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          }
+        ],
+        "events": "#textinput_events",
+        "validation": "#textinput_validation"
+      }
+    },
+    "6d73ac95111b44f49e4d168936f0550d": {
+      "nodeId": "6d73ac95111b44f49e4d168936f0550d",
+      "nodeName": "save",
+      "nodeType": "button",
+      "nodeVersion": "v1",
+      "elementInfo": {
+        "frameWork": "Nextjs",
+        "version": "14.2.3",
+        "component": "Button",
+        "props": [
+          {
+            "name": "view",
+            "_type": "select",
+            "selectionList": [
+              "normal",
+              "action",
+              "outlined",
+              "outlined-info",
+              "outlined-success",
+              "outlined-warning",
+              "outlined-danger",
+              "outlined-utility",
+              "outlined-action",
+              "raised",
+              "flat",
+              "flat-secondary",
+              "flat-info",
+              "flat-success",
+              "flat-warning",
+              "flat-danger",
+              "flat-utility",
+              "flat-action",
+              "normal-contrast",
+              "outlined-contrast",
+              "flat-contrast"
+            ],
+            "value": "action",
+            "enabled": true
+          },
+          {
+            "name": "icon",
+            "_type": "conditionalIconSearch",
+            "value": "",
+            "enabled": true,
+            "subSelection": {
+              "iconDisplay": {
+                "name": "iconDisplay",
+                "_type": "select",
+                "selectionList": [
+                  "Icon only",
+                  "Start with Icon",
+                  "End with Icon"
+                ],
+                "value": "End with Icon",
+                "enabled": true
+              }
+            }
+          },
+          {
+            "name": "disabled",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          },
+          {
+            "name": "isRecordLevel",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          },
+          {
+            "name": "pin",
+            "_type": "select",
+            "selectionList": [
+              "round-round",
+              "brick-brick",
+              "clear-clear",
+              "circle-circle",
+              "round-brick",
+              "brick-round",
+              "round-clear",
+              "clear-round",
+              "brick-clear",
+              "clear-brick",
+              "circle-brick",
+              "brick-circle",
+              "circle-clear",
+              "clear-circle"
+            ],
+            "value": "circle-circle",
+            "enabled": true
+          },
+          {
+            "name": "enableHeaderText",
+            "_type": "conditionalBoolean",
+            "value": false,
+            "enabled": true,
+            "subSelection": {
+              "_true": {
+                "content": {
+                  "name": "Header Text",
+                  "_type": "text",
+                  "value": "",
+                  "enabled": true
+                },
+                "position": {
+                  "name": "Header Position",
+                  "_type": "select",
+                  "selectionList": [
+                    "left",
+                    "top",
+                    "right",
+                    "bottom"
+                  ],
+                  "value": "top",
+                  "enabled": true
+                }
+              }
+            }
+          },
+          {
+            "name": "isValidate",
+            "_type": "boolean",
+            "value": true,
+            "enabled": true
+          }
+        ],
+        "events": "#button_events"
+      }
+    }
+  },
+  "NDS": [
+    {
+      "id": "root",
+      "parent": "root",
+      "T_parentId": "root",
+      "type": "Canvas",
+      "children": [
+        "b73f3e4fcd0840da8d1e57be2d47d04d"
+      ],
+      "data": {
+        "label": "",
+        "nodeProperty": {
+          "nodeId": "root",
+          "nodeName": "Root",
+          "nodeType": "Canvas",
+          "nodeVersion": "v1",
+          "elementInfo": {}
+        }
+      },
+      "property": {
+        "name": "",
+        "nodeType": "Canvas",
+        "description": ""
+      },
+      "grid": {
+        "classNames": "",
+        "style": {}
+      },
+      "groupType": "group"
+    },
+    {
+      "id": "b73f3e4fcd0840da8d1e57be2d47d04d",
+      "parent": "root",
+      "T_parentId": "root",
+      "type": "group",
+      "children": [
+        "fb0278b6980541398e6a608001214a97",
+        "eb23a4919cee4a05982cec747c0d3f42",
+        "abc9801175584c6da982d4ccbf3fc236",
+        "540d81629b7045b88352c23e926cbbbc",
+        "098ded89b54b49218a1839c6f28ba801",
+        "b2f7f201db5c4356a37cab229018f952",
+        "6d73ac95111b44f49e4d168936f0550d"
+      ],
+      "data": {
+        "label": "customerregistrationgroup",
+        "nodeAppearance": {
+          "type": "group",
+          "label": "group",
+          "color": "#F44336",
+          "shape": "square",
+          "icon": "/torus/9.1/resources/nodeicons/UF-UFW/group.svg",
+          "size": 45,
+          "handles": [
+            {
+              "type": "source",
+              "position": "right",
+              "isConnectable": true,
+              "shown": true
+            },
+            {
+              "type": "target",
+              "position": "left",
+              "isConnectable": true,
+              "shown": true
+            }
+          ]
+        },
+        "nodeProperty": {
+          "nodeId": "b73f3e4fcd0840da8d1e57be2d47d04d",
+          "nodeName": "customerregistrationgroup",
+          "nodeType": "group",
+          "nodeVersion": "v1",
+          "elementInfo": {
+            "props": [
+              {
+                "name": "isDynamic",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              }
+            ],
+            "events": "#group_events"
+          }
+        }
+      },
+      "property": {
+        "name": "customerregistrationgroup",
+        "nodeType": "group",
+        "description": ""
+      },
+      "grid": {
+        "classNames": "",
+        "style": {
+          "columnGap": "0px",
+          "gridAutoRows": "4px",
+          "rowGap": "0px"
+        },
+        "row": {
+          "end": 23,
+          "start": 12
+        },
+        "column": {
+          "end": 25,
+          "start": 1
+        }
+      },
+      "groupType": "group",
+      "version": "TRL:AFR:UF-UFW:Next:Defaults:group:v1"
+    },
+    {
+      "id": "fb0278b6980541398e6a608001214a97",
+      "parent": "b73f3e4fcd0840da8d1e57be2d47d04d",
+      "T_parentId": "b73f3e4fcd0840da8d1e57be2d47d04d",
+      "type": "label",
+      "children": [],
+      "data": {
+        "label": "Name",
+        "nodeAppearance": {
+          "label": "label",
+          "color": "#0736C4",
+          "icon": "/torus/9.1/resources/nodeicons/UF-UFW/label.svg",
+          "size": 45
+        },
+        "nodeProperty": {
+          "nodeId": "fb0278b6980541398e6a608001214a97",
+          "nodeName": "Name",
+          "nodeType": "label",
+          "nodeVersion": "v1",
+          "elementInfo": {
+            "frameWork": "Nextjs",
+            "version": "14.2.3",
+            "component": "Label",
+            "label": "",
+            "props": [
+              {
+                "name": "theme",
+                "_type": "select",
+                "selectionList": [
+                  "normal",
+                  "info",
+                  "danger",
+                  "warning",
+                  "success",
+                  "utility",
+                  "unknown",
+                  "clear"
+                ],
+                "value": "normal",
+                "enabled": true
+              },
+              {
+                "name": "icon",
+                "_type": "conditionalIconSearch",
+                "value": "",
+                "enabled": true,
+                "subSelection": {
+                  "iconDisplay": {
+                    "name": "iconDisplay",
+                    "_type": "select",
+                    "selectionList": [
+                      "Icon only",
+                      "Start with Icon",
+                      "End with Icon"
+                    ],
+                    "value": "End with Icon",
+                    "enabled": true
+                  }
+                }
+              },
+              {
+                "name": "interactive",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              },
+              {
+                "name": "copy",
+                "_type": "string",
+                "value": "",
+                "enabled": true
+              },
+              {
+                "name": "disabled",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              },
+              {
+                "name": "content",
+                "_type": "string",
+                "value": "Name",
+                "enabled": true
+              },
+              {
+                "name": "enableHeaderText",
+                "_type": "conditionalBoolean",
+                "value": false,
+                "enabled": true,
+                "subSelection": {
+                  "_true": {
+                    "content": {
+                      "name": "Header Text",
+                      "_type": "string",
+                      "value": "",
+                      "enabled": true
+                    },
+                    "position": {
+                      "name": "Header Position",
+                      "_type": "select",
+                      "selectionList": [
+                        "left",
+                        "top",
+                        "right",
+                        "bottom"
+                      ],
+                      "value": "",
+                      "enabled": true
+                    }
+                  }
+                }
+              }
+            ],
+            "events": "#label_events"
+          }
+        }
+      },
+      "property": {
+        "name": "namelabel",
+        "nodeType": "label",
+        "description": ""
+      },
+      "grid": {
+        "classNames": "",
+        "style": {},
+        "commonprops": {
+          "contentAlign": "left"
+        },
+        "row": {
+          "end": 3,
+          "start": 1
+        },
+        "column": {
+          "end": 5,
+          "start": 2
+        }
+      },
+      "version": "TRL:AFR:UF-UFW:Next:DataDisplay:label:v1"
+    },
+    {
+      "id": "eb23a4919cee4a05982cec747c0d3f42",
+      "parent": "b73f3e4fcd0840da8d1e57be2d47d04d",
+      "T_parentId": "b73f3e4fcd0840da8d1e57be2d47d04d",
+      "type": "textinput",
+      "children": [],
+      "data": {
+        "label": "name",
+        "nodeAppearance": {
+          "type": "textinput",
+          "label": "textinput",
+          "color": "#0736C4",
+          "shape": "square",
+          "icon": "/torus/9.1/resources/nodeicons/UF-UFW/text_input.svg",
+          "size": 45,
+          "handles": [
+            {
+              "type": "source",
+              "position": "right",
+              "isConnectable": true,
+              "shown": true
+            },
+            {
+              "type": "target",
+              "position": "left",
+              "isConnectable": true,
+              "shown": true
+            }
+          ]
+        },
+        "nodeProperty": {
+          "nodeId": "eb23a4919cee4a05982cec747c0d3f42",
+          "nodeName": "name",
+          "nodeType": "textinput",
+          "nodeVersion": "v1",
+          "elementInfo": {
+            "frameWork": "Nextjs",
+            "version": "14.2.3",
+            "component": "TextInput",
+            "props": [
+              {
+                "name": "disabled",
+                "_label": "Disabled",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              },
+              {
+                "name": "readOnly",
+                "_label": "Read Only",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              },
+              {
+                "name": "pin",
+                "_label": "Pin",
+                "_type": "select",
+                "selectionList": [
+                  "round-round",
+                  "brick-brick",
+                  "clear-clear"
+                ],
+                "value": "brick-brick",
+                "enabled": true
+              },
+              {
+                "name": "view",
+                "_label": "View",
+                "_type": "select",
+                "selectionList": [
+                  "normal",
+                  "clear"
+                ],
+                "value": "normal",
+                "enabled": true
+              },
+              {
+                "name": "placeholder",
+                "_label": "Placeholder",
+                "_type": "text",
+                "value": "type here....",
+                "enabled": true
+              },
+              {
+                "name": "leftContent",
+                "_label": "Left Content",
+                "_type": "text",
+                "value": "",
+                "enabled": true
+              },
+              {
+                "name": "rightContent",
+                "_label": "Right Content",
+                "_type": "text",
+                "value": "",
+                "enabled": true
+              },
+              {
+                "name": "enableHeaderText",
+                "_label": "Enable Header Text",
+                "_type": "conditionalBoolean",
+                "value": false,
+                "enabled": true,
+                "subSelection": {
+                  "_true": {
+                    "content": {
+                      "name": "Header Text",
+                      "_type": "text",
+                      "value": "",
+                      "enabled": true
+                    },
+                    "position": {
+                      "name": "Header Position",
+                      "_type": "select",
+                      "selectionList": [
+                        "left",
+                        "top",
+                        "right",
+                        "bottom"
+                      ],
+                      "value": "top",
+                      "enabled": true
+                    }
+                  }
+                }
+              },
+              {
+                "name": "numberFormat",
+                "_label": "Number Format Style",
+                "_type": "select",
+                "selectionList": [
+                  "none",
+                  "Indian",
+                  "International",
+                  "European"
+                ],
+                "value": "",
+                "enabled": false
+              },
+              {
+                "name": "isCurrency",
+                "_label": "Is Currency",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              },
+              {
+                "name": "bindInitialData",
+                "_label": "Bind Initial Data",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              }
+            ],
+            "events": "#textinput_events",
+            "validation": "#textinput_validation"
+          }
+        }
+      },
+      "property": {
+        "name": "name",
+        "nodeType": "textinput",
+        "description": ""
+      },
+      "grid": {
+        "classNames": "",
+        "style": {},
+        "row": {
+          "end": 6,
+          "start": 3
+        },
+        "column": {
+          "end": 5,
+          "start": 2
+        }
+      },
+      "version": "TRL:AFR:UF-UFW:Next:Inputs:textinput:v1"
+    },
+    {
+      "id": "abc9801175584c6da982d4ccbf3fc236",
+      "parent": "b73f3e4fcd0840da8d1e57be2d47d04d",
+      "T_parentId": "b73f3e4fcd0840da8d1e57be2d47d04d",
+      "type": "label",
+      "children": [],
+      "data": {
+        "label": "Email",
+        "nodeAppearance": {
+          "label": "label",
+          "color": "#0736C4",
+          "icon": "/torus/9.1/resources/nodeicons/UF-UFW/label.svg",
+          "size": 45
+        },
+        "nodeProperty": {
+          "nodeId": "abc9801175584c6da982d4ccbf3fc236",
+          "nodeName": "Email",
+          "nodeType": "label",
+          "nodeVersion": "v1",
+          "elementInfo": {
+            "frameWork": "Nextjs",
+            "version": "14.2.3",
+            "component": "Label",
+            "label": "",
+            "props": [
+              {
+                "name": "theme",
+                "_type": "select",
+                "selectionList": [
+                  "normal",
+                  "info",
+                  "danger",
+                  "warning",
+                  "success",
+                  "utility",
+                  "unknown",
+                  "clear"
+                ],
+                "value": "normal",
+                "enabled": true
+              },
+              {
+                "name": "icon",
+                "_type": "conditionalIconSearch",
+                "value": "",
+                "enabled": true,
+                "subSelection": {
+                  "iconDisplay": {
+                    "name": "iconDisplay",
+                    "_type": "select",
+                    "selectionList": [
+                      "Icon only",
+                      "Start with Icon",
+                      "End with Icon"
+                    ],
+                    "value": "End with Icon",
+                    "enabled": true
+                  }
+                }
+              },
+              {
+                "name": "interactive",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              },
+              {
+                "name": "copy",
+                "_type": "string",
+                "value": "",
+                "enabled": true
+              },
+              {
+                "name": "disabled",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              },
+              {
+                "name": "content",
+                "_type": "string",
+                "value": "Email",
+                "enabled": true
+              },
+              {
+                "name": "enableHeaderText",
+                "_type": "conditionalBoolean",
+                "value": false,
+                "enabled": true,
+                "subSelection": {
+                  "_true": {
+                    "content": {
+                      "name": "Header Text",
+                      "_type": "string",
+                      "value": "",
+                      "enabled": true
+                    },
+                    "position": {
+                      "name": "Header Position",
+                      "_type": "select",
+                      "selectionList": [
+                        "left",
+                        "top",
+                        "right",
+                        "bottom"
+                      ],
+                      "value": "",
+                      "enabled": true
+                    }
+                  }
+                }
+              }
+            ],
+            "events": "#label_events"
+          }
+        }
+      },
+      "property": {
+        "name": "emaillabel",
+        "nodeType": "label",
+        "description": ""
+      },
+      "grid": {
+        "classNames": "",
+        "style": {},
+        "commonprops": {
+          "contentAlign": "left"
+        },
+        "row": {
+          "end": 8,
+          "start": 6
+        },
+        "column": {
+          "end": 5,
+          "start": 2
+        }
+      },
+      "version": "TRL:AFR:UF-UFW:Next:DataDisplay:label:v1"
+    },
+    {
+      "id": "540d81629b7045b88352c23e926cbbbc",
+      "parent": "b73f3e4fcd0840da8d1e57be2d47d04d",
+      "T_parentId": "b73f3e4fcd0840da8d1e57be2d47d04d",
+      "type": "textinput",
+      "children": [],
+      "data": {
+        "label": "email",
+        "nodeAppearance": {
+          "type": "textinput",
+          "label": "textinput",
+          "color": "#0736C4",
+          "shape": "square",
+          "icon": "/torus/9.1/resources/nodeicons/UF-UFW/text_input.svg",
+          "size": 45,
+          "handles": [
+            {
+              "type": "source",
+              "position": "right",
+              "isConnectable": true,
+              "shown": true
+            },
+            {
+              "type": "target",
+              "position": "left",
+              "isConnectable": true,
+              "shown": true
+            }
+          ]
+        },
+        "nodeProperty": {
+          "nodeId": "540d81629b7045b88352c23e926cbbbc",
+          "nodeName": "email",
+          "nodeType": "textinput",
+          "nodeVersion": "v1",
+          "elementInfo": {
+            "frameWork": "Nextjs",
+            "version": "14.2.3",
+            "component": "TextInput",
+            "props": [
+              {
+                "name": "disabled",
+                "_label": "Disabled",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              },
+              {
+                "name": "readOnly",
+                "_label": "Read Only",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              },
+              {
+                "name": "pin",
+                "_label": "Pin",
+                "_type": "select",
+                "selectionList": [
+                  "round-round",
+                  "brick-brick",
+                  "clear-clear"
+                ],
+                "value": "brick-brick",
+                "enabled": true
+              },
+              {
+                "name": "view",
+                "_label": "View",
+                "_type": "select",
+                "selectionList": [
+                  "normal",
+                  "clear"
+                ],
+                "value": "normal",
+                "enabled": true
+              },
+              {
+                "name": "placeholder",
+                "_label": "Placeholder",
+                "_type": "text",
+                "value": "type here....",
+                "enabled": true
+              },
+              {
+                "name": "leftContent",
+                "_label": "Left Content",
+                "_type": "text",
+                "value": "",
+                "enabled": true
+              },
+              {
+                "name": "rightContent",
+                "_label": "Right Content",
+                "_type": "text",
+                "value": "",
+                "enabled": true
+              },
+              {
+                "name": "enableHeaderText",
+                "_label": "Enable Header Text",
+                "_type": "conditionalBoolean",
+                "value": false,
+                "enabled": true,
+                "subSelection": {
+                  "_true": {
+                    "content": {
+                      "name": "Header Text",
+                      "_type": "text",
+                      "value": "",
+                      "enabled": true
+                    },
+                    "position": {
+                      "name": "Header Position",
+                      "_type": "select",
+                      "selectionList": [
+                        "left",
+                        "top",
+                        "right",
+                        "bottom"
+                      ],
+                      "value": "top",
+                      "enabled": true
+                    }
+                  }
+                }
+              },
+              {
+                "name": "numberFormat",
+                "_label": "Number Format Style",
+                "_type": "select",
+                "selectionList": [
+                  "none",
+                  "Indian",
+                  "International",
+                  "European"
+                ],
+                "value": "",
+                "enabled": false
+              },
+              {
+                "name": "isCurrency",
+                "_label": "Is Currency",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              },
+              {
+                "name": "bindInitialData",
+                "_label": "Bind Initial Data",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              }
+            ],
+            "events": "#textinput_events",
+            "validation": "#textinput_validation"
+          }
+        }
+      },
+      "property": {
+        "name": "email",
+        "nodeType": "textinput",
+        "description": ""
+      },
+      "grid": {
+        "classNames": "",
+        "style": {},
+        "row": {
+          "end": 11,
+          "start": 8
+        },
+        "column": {
+          "end": 5,
+          "start": 2
+        }
+      },
+      "version": "TRL:AFR:UF-UFW:Next:Inputs:textinput:v1"
+    },
+    {
+      "id": "098ded89b54b49218a1839c6f28ba801",
+      "parent": "b73f3e4fcd0840da8d1e57be2d47d04d",
+      "T_parentId": "b73f3e4fcd0840da8d1e57be2d47d04d",
+      "type": "label",
+      "children": [],
+      "data": {
+        "label": "Salary",
+        "nodeAppearance": {
+          "label": "label",
+          "color": "#0736C4",
+          "icon": "/torus/9.1/resources/nodeicons/UF-UFW/label.svg",
+          "size": 45
+        },
+        "nodeProperty": {
+          "nodeId": "098ded89b54b49218a1839c6f28ba801",
+          "nodeName": "Salary",
+          "nodeType": "label",
+          "nodeVersion": "v1",
+          "elementInfo": {
+            "frameWork": "Nextjs",
+            "version": "14.2.3",
+            "component": "Label",
+            "label": "",
+            "props": [
+              {
+                "name": "theme",
+                "_type": "select",
+                "selectionList": [
+                  "normal",
+                  "info",
+                  "danger",
+                  "warning",
+                  "success",
+                  "utility",
+                  "unknown",
+                  "clear"
+                ],
+                "value": "normal",
+                "enabled": true
+              },
+              {
+                "name": "icon",
+                "_type": "conditionalIconSearch",
+                "value": "",
+                "enabled": true,
+                "subSelection": {
+                  "iconDisplay": {
+                    "name": "iconDisplay",
+                    "_type": "select",
+                    "selectionList": [
+                      "Icon only",
+                      "Start with Icon",
+                      "End with Icon"
+                    ],
+                    "value": "End with Icon",
+                    "enabled": true
+                  }
+                }
+              },
+              {
+                "name": "interactive",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              },
+              {
+                "name": "copy",
+                "_type": "string",
+                "value": "",
+                "enabled": true
+              },
+              {
+                "name": "disabled",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              },
+              {
+                "name": "content",
+                "_type": "string",
+                "value": "Salary",
+                "enabled": true
+              },
+              {
+                "name": "enableHeaderText",
+                "_type": "conditionalBoolean",
+                "value": false,
+                "enabled": true,
+                "subSelection": {
+                  "_true": {
+                    "content": {
+                      "name": "Header Text",
+                      "_type": "string",
+                      "value": "",
+                      "enabled": true
+                    },
+                    "position": {
+                      "name": "Header Position",
+                      "_type": "select",
+                      "selectionList": [
+                        "left",
+                        "top",
+                        "right",
+                        "bottom"
+                      ],
+                      "value": "",
+                      "enabled": true
+                    }
+                  }
+                }
+              }
+            ],
+            "events": "#label_events"
+          }
+        }
+      },
+      "property": {
+        "name": "salarylabel",
+        "nodeType": "label",
+        "description": ""
+      },
+      "grid": {
+        "classNames": "",
+        "style": {},
+        "commonprops": {
+          "contentAlign": "left"
+        },
+        "row": {
+          "end": 13,
+          "start": 11
+        },
+        "column": {
+          "end": 5,
+          "start": 2
+        }
+      },
+      "version": "TRL:AFR:UF-UFW:Next:DataDisplay:label:v1"
+    },
+    {
+      "id": "b2f7f201db5c4356a37cab229018f952",
+      "parent": "b73f3e4fcd0840da8d1e57be2d47d04d",
+      "T_parentId": "b73f3e4fcd0840da8d1e57be2d47d04d",
+      "type": "textinput",
+      "children": [],
+      "data": {
+        "label": "salary",
+        "nodeAppearance": {
+          "type": "textinput",
+          "label": "textinput",
+          "color": "#0736C4",
+          "shape": "square",
+          "icon": "/torus/9.1/resources/nodeicons/UF-UFW/text_input.svg",
+          "size": 45,
+          "handles": [
+            {
+              "type": "source",
+              "position": "right",
+              "isConnectable": true,
+              "shown": true
+            },
+            {
+              "type": "target",
+              "position": "left",
+              "isConnectable": true,
+              "shown": true
+            }
+          ]
+        },
+        "nodeProperty": {
+          "nodeId": "b2f7f201db5c4356a37cab229018f952",
+          "nodeName": "salary",
+          "nodeType": "textinput",
+          "nodeVersion": "v1",
+          "elementInfo": {
+            "frameWork": "Nextjs",
+            "version": "14.2.3",
+            "component": "TextInput",
+            "props": [
+              {
+                "name": "disabled",
+                "_label": "Disabled",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              },
+              {
+                "name": "readOnly",
+                "_label": "Read Only",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              },
+              {
+                "name": "pin",
+                "_label": "Pin",
+                "_type": "select",
+                "selectionList": [
+                  "round-round",
+                  "brick-brick",
+                  "clear-clear"
+                ],
+                "value": "brick-brick",
+                "enabled": true
+              },
+              {
+                "name": "view",
+                "_label": "View",
+                "_type": "select",
+                "selectionList": [
+                  "normal",
+                  "clear"
+                ],
+                "value": "normal",
+                "enabled": true
+              },
+              {
+                "name": "placeholder",
+                "_label": "Placeholder",
+                "_type": "text",
+                "value": "type here....",
+                "enabled": true
+              },
+              {
+                "name": "leftContent",
+                "_label": "Left Content",
+                "_type": "text",
+                "value": "",
+                "enabled": true
+              },
+              {
+                "name": "rightContent",
+                "_label": "Right Content",
+                "_type": "text",
+                "value": "",
+                "enabled": true
+              },
+              {
+                "name": "enableHeaderText",
+                "_label": "Enable Header Text",
+                "_type": "conditionalBoolean",
+                "value": false,
+                "enabled": true,
+                "subSelection": {
+                  "_true": {
+                    "content": {
+                      "name": "Header Text",
+                      "_type": "text",
+                      "value": "",
+                      "enabled": true
+                    },
+                    "position": {
+                      "name": "Header Position",
+                      "_type": "select",
+                      "selectionList": [
+                        "left",
+                        "top",
+                        "right",
+                        "bottom"
+                      ],
+                      "value": "top",
+                      "enabled": true
+                    }
+                  }
+                }
+              },
+              {
+                "name": "numberFormat",
+                "_label": "Number Format Style",
+                "_type": "select",
+                "selectionList": [
+                  "none",
+                  "Indian",
+                  "International",
+                  "European"
+                ],
+                "value": "",
+                "enabled": false
+              },
+              {
+                "name": "isCurrency",
+                "_label": "Is Currency",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              },
+              {
+                "name": "bindInitialData",
+                "_label": "Bind Initial Data",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              }
+            ],
+            "events": "#textinput_events",
+            "validation": "#textinput_validation"
+          }
+        }
+      },
+      "property": {
+        "name": "salary",
+        "nodeType": "textinput",
+        "description": ""
+      },
+      "grid": {
+        "classNames": "",
+        "style": {},
+        "row": {
+          "end": 16,
+          "start": 13
+        },
+        "column": {
+          "end": 5,
+          "start": 2
+        }
+      },
+      "version": "TRL:AFR:UF-UFW:Next:Inputs:textinput:v1"
+    },
+    {
+      "id": "6d73ac95111b44f49e4d168936f0550d",
+      "parent": "b73f3e4fcd0840da8d1e57be2d47d04d",
+      "T_parentId": "b73f3e4fcd0840da8d1e57be2d47d04d",
+      "type": "button",
+      "children": [],
+      "data": {
+        "label": "save",
+        "nodeAppearance": {
+          "icon": "/torus/9.1/resources/nodeicons/UF-UFW/button.svg",
+          "color": "#0736C4",
+          "label": "button",
+          "size": 45
+        },
+        "nodeProperty": {
+          "nodeId": "6d73ac95111b44f49e4d168936f0550d",
+          "nodeName": "save",
+          "nodeType": "button",
+          "nodeVersion": "v1",
+          "elementInfo": {
+            "frameWork": "Nextjs",
+            "version": "14.2.3",
+            "component": "Button",
+            "props": [
+              {
+                "name": "view",
+                "_type": "select",
+                "selectionList": [
+                  "normal",
+                  "action",
+                  "outlined",
+                  "outlined-info",
+                  "outlined-success",
+                  "outlined-warning",
+                  "outlined-danger",
+                  "outlined-utility",
+                  "outlined-action",
+                  "raised",
+                  "flat",
+                  "flat-secondary",
+                  "flat-info",
+                  "flat-success",
+                  "flat-warning",
+                  "flat-danger",
+                  "flat-utility",
+                  "flat-action",
+                  "normal-contrast",
+                  "outlined-contrast",
+                  "flat-contrast"
+                ],
+                "value": "action",
+                "enabled": true
+              },
+              {
+                "name": "icon",
+                "_type": "conditionalIconSearch",
+                "value": "",
+                "enabled": true,
+                "subSelection": {
+                  "iconDisplay": {
+                    "name": "iconDisplay",
+                    "_type": "select",
+                    "selectionList": [
+                      "Icon only",
+                      "Start with Icon",
+                      "End with Icon"
+                    ],
+                    "value": "End with Icon",
+                    "enabled": true
+                  }
+                }
+              },
+              {
+                "name": "disabled",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              },
+              {
+                "name": "isRecordLevel",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              },
+              {
+                "name": "pin",
+                "_type": "select",
+                "selectionList": [
+                  "round-round",
+                  "brick-brick",
+                  "clear-clear",
+                  "circle-circle",
+                  "round-brick",
+                  "brick-round",
+                  "round-clear",
+                  "clear-round",
+                  "brick-clear",
+                  "clear-brick",
+                  "circle-brick",
+                  "brick-circle",
+                  "circle-clear",
+                  "clear-circle"
+                ],
+                "value": "circle-circle",
+                "enabled": true
+              },
+              {
+                "name": "enableHeaderText",
+                "_type": "conditionalBoolean",
+                "value": false,
+                "enabled": true,
+                "subSelection": {
+                  "_true": {
+                    "content": {
+                      "name": "Header Text",
+                      "_type": "text",
+                      "value": "",
+                      "enabled": true
+                    },
+                    "position": {
+                      "name": "Header Position",
+                      "_type": "select",
+                      "selectionList": [
+                        "left",
+                        "top",
+                        "right",
+                        "bottom"
+                      ],
+                      "value": "top",
+                      "enabled": true
+                    }
+                  }
+                }
+              },
+              {
+                "name": "isValidate",
+                "_type": "boolean",
+                "value": true,
+                "enabled": true
+              }
+            ],
+            "events": "#button_events"
+          }
+        }
+      },
+      "property": {
+        "name": "save",
+        "nodeType": "button",
+        "description": ""
+      },
+      "grid": {
+        "classNames": "",
+        "style": {},
+        "row": {
+          "end": 20,
+          "start": 16
+        },
+        "column": {
+          "end": 5,
+          "start": 2
+        }
+      },
+      "version": "TRL:AFR:UF-UFW:Next:Inputs:button:v1"
+    }
+  ],
+  "NDU": {
+    "root": {
+      "id": "root",
+      "Parent": "root",
+      "type": "Canvas",
+      "T_parentId": "root",
+      "children": [
+        "b73f3e4fcd0840da8d1e57be2d47d04d"
+      ],
+      "data": {
+        "label": "",
+        "nodeProperty": {
+          "nodeId": "root",
+          "nodeName": "Root",
+          "nodeType": "Canvas",
+          "nodeVersion": "v1",
+          "elementInfo": {}
+        }
+      },
+      "grid": {
+        "style": {
+          "gridAutoRows": "4px",
+          "columnGap": "0px",
+          "rowGap": "0px"
+        },
+        "classNames": ""
+      },
+      "property": {
+        "name": "",
+        "nodeType": "Canvas",
+        "description": "",
+        "rowHeight": "4px",
+        "rowGap": "0px",
+        "columnGap": "0px",
+        "props": {
+          "meta": {
+            "row": 1,
+            "col": 1,
+            "rowSpan": 24,
+            "colSpan": 24
+          }
+        },
+        "rowCount": 100,
+        "columnCount": 24
+      },
+      "groupType": "group"
+    },
+    "b73f3e4fcd0840da8d1e57be2d47d04d": {
+      "id": "b73f3e4fcd0840da8d1e57be2d47d04d",
+      "parent": "root",
+      "type": "group",
+      "T_parentId": "root",
+      "children": [
+        "fb0278b6980541398e6a608001214a97",
+        "eb23a4919cee4a05982cec747c0d3f42",
+        "abc9801175584c6da982d4ccbf3fc236",
+        "540d81629b7045b88352c23e926cbbbc",
+        "098ded89b54b49218a1839c6f28ba801",
+        "b2f7f201db5c4356a37cab229018f952",
+        "6d73ac95111b44f49e4d168936f0550d"
+      ],
+      "property": {
+        "name": "customerregistrationgroup",
+        "nodeType": "group",
+        "description": "",
+        "props": {
+          "meta": {
+            "row": 12,
+            "col": 1,
+            "rowSpan": 11,
+            "colSpan": 24
+          }
+        }
+      },
+      "grid": {
+        "style": {
+          "gridAutoRows": "4px",
+          "columnGap": "0px",
+          "rowGap": "0px"
+        },
+        "classNames": ""
+      },
+      "groupType": "group",
+      "data": {
+        "label": "customerregistrationgroup",
+        "nodeAppearance": {
+          "type": "group",
+          "label": "group",
+          "color": "#F44336",
+          "shape": "square",
+          "icon": "/torus/9.1/resources/nodeicons/UF-UFW/group.svg",
+          "size": 45,
+          "handles": [
+            {
+              "type": "source",
+              "position": "right",
+              "isConnectable": true,
+              "shown": true
+            },
+            {
+              "type": "target",
+              "position": "left",
+              "isConnectable": true,
+              "shown": true
+            }
+          ]
+        },
+        "nodeProperty": {
+          "nodeId": "b73f3e4fcd0840da8d1e57be2d47d04d",
+          "nodeName": "customerregistrationgroup",
+          "nodeType": "group",
+          "nodeVersion": "v1",
+          "elementInfo": {
+            "props": [
+              {
+                "name": "isDynamic",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              }
+            ],
+            "events": "#group_events"
+          }
+        }
+      },
+      "version": "TRL:AFR:UF-UFW:Next:Defaults:group:v1",
+      "t_parentId": "root"
+    },
+    "fb0278b6980541398e6a608001214a97": {
+      "id": "fb0278b6980541398e6a608001214a97",
+      "parent": "b73f3e4fcd0840da8d1e57be2d47d04d",
+      "type": "label",
+      "T_parentId": "b73f3e4fcd0840da8d1e57be2d47d04d",
+      "children": [],
+      "property": {
+        "name": "namelabel",
+        "nodeType": "label",
+        "description": "",
+        "props": {
+          "meta": {
+            "row": 1,
+            "col": 2,
+            "rowSpan": 2,
+            "colSpan": 3
+          }
+        }
+      },
+      "grid": {
+        "style": {},
+        "classNames": "",
+        "commonprops": {
+          "contentAlign": "left"
+        }
+      },
+      "groupType": "group",
+      "data": {
+        "label": "Name",
+        "nodeAppearance": {
+          "label": "label",
+          "color": "#0736C4",
+          "icon": "/torus/9.1/resources/nodeicons/UF-UFW/label.svg",
+          "size": 45
+        },
+        "nodeProperty": {
+          "nodeId": "fb0278b6980541398e6a608001214a97",
+          "nodeName": "Name",
+          "nodeType": "label",
+          "nodeVersion": "v1",
+          "elementInfo": {
+            "frameWork": "Nextjs",
+            "version": "14.2.3",
+            "component": "Label",
+            "label": "",
+            "props": [
+              {
+                "name": "theme",
+                "_type": "select",
+                "selectionList": [
+                  "normal",
+                  "info",
+                  "danger",
+                  "warning",
+                  "success",
+                  "utility",
+                  "unknown",
+                  "clear"
+                ],
+                "value": "normal",
+                "enabled": true
+              },
+              {
+                "name": "icon",
+                "_type": "conditionalIconSearch",
+                "value": "",
+                "enabled": true,
+                "subSelection": {
+                  "iconDisplay": {
+                    "name": "iconDisplay",
+                    "_type": "select",
+                    "selectionList": [
+                      "Icon only",
+                      "Start with Icon",
+                      "End with Icon"
+                    ],
+                    "value": "End with Icon",
+                    "enabled": true
+                  }
+                }
+              },
+              {
+                "name": "interactive",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              },
+              {
+                "name": "copy",
+                "_type": "string",
+                "value": "",
+                "enabled": true
+              },
+              {
+                "name": "disabled",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              },
+              {
+                "name": "content",
+                "_type": "string",
+                "value": "Name",
+                "enabled": true
+              },
+              {
+                "name": "enableHeaderText",
+                "_type": "conditionalBoolean",
+                "value": false,
+                "enabled": true,
+                "subSelection": {
+                  "_true": {
+                    "content": {
+                      "name": "Header Text",
+                      "_type": "string",
+                      "value": "",
+                      "enabled": true
+                    },
+                    "position": {
+                      "name": "Header Position",
+                      "_type": "select",
+                      "selectionList": [
+                        "left",
+                        "top",
+                        "right",
+                        "bottom"
+                      ],
+                      "value": "",
+                      "enabled": true
+                    }
+                  }
+                }
+              }
+            ],
+            "events": "#label_events"
+          }
+        }
+      },
+      "version": "TRL:AFR:UF-UFW:Next:DataDisplay:label:v1",
+      "t_parentId": "b73f3e4fcd0840da8d1e57be2d47d04d"
+    },
+    "eb23a4919cee4a05982cec747c0d3f42": {
+      "id": "eb23a4919cee4a05982cec747c0d3f42",
+      "parent": "b73f3e4fcd0840da8d1e57be2d47d04d",
+      "type": "textinput",
+      "T_parentId": "b73f3e4fcd0840da8d1e57be2d47d04d",
+      "children": [],
+      "property": {
+        "name": "name",
+        "nodeType": "textinput",
+        "description": "",
+        "props": {
+          "meta": {
+            "row": 3,
+            "col": 2,
+            "rowSpan": 3,
+            "colSpan": 3
+          }
+        }
+      },
+      "grid": {
+        "style": {},
+        "classNames": ""
+      },
+      "groupType": "group",
+      "data": {
+        "label": "name",
+        "nodeAppearance": {
+          "type": "textinput",
+          "label": "textinput",
+          "color": "#0736C4",
+          "shape": "square",
+          "icon": "/torus/9.1/resources/nodeicons/UF-UFW/text_input.svg",
+          "size": 45,
+          "handles": [
+            {
+              "type": "source",
+              "position": "right",
+              "isConnectable": true,
+              "shown": true
+            },
+            {
+              "type": "target",
+              "position": "left",
+              "isConnectable": true,
+              "shown": true
+            }
+          ]
+        },
+        "nodeProperty": {
+          "nodeId": "eb23a4919cee4a05982cec747c0d3f42",
+          "nodeName": "name",
+          "nodeType": "textinput",
+          "nodeVersion": "v1",
+          "elementInfo": {
+            "frameWork": "Nextjs",
+            "version": "14.2.3",
+            "component": "TextInput",
+            "props": [
+              {
+                "name": "disabled",
+                "_label": "Disabled",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              },
+              {
+                "name": "readOnly",
+                "_label": "Read Only",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              },
+              {
+                "name": "pin",
+                "_label": "Pin",
+                "_type": "select",
+                "selectionList": [
+                  "round-round",
+                  "brick-brick",
+                  "clear-clear"
+                ],
+                "value": "brick-brick",
+                "enabled": true
+              },
+              {
+                "name": "view",
+                "_label": "View",
+                "_type": "select",
+                "selectionList": [
+                  "normal",
+                  "clear"
+                ],
+                "value": "normal",
+                "enabled": true
+              },
+              {
+                "name": "placeholder",
+                "_label": "Placeholder",
+                "_type": "text",
+                "value": "type here....",
+                "enabled": true
+              },
+              {
+                "name": "leftContent",
+                "_label": "Left Content",
+                "_type": "text",
+                "value": "",
+                "enabled": true
+              },
+              {
+                "name": "rightContent",
+                "_label": "Right Content",
+                "_type": "text",
+                "value": "",
+                "enabled": true
+              },
+              {
+                "name": "enableHeaderText",
+                "_label": "Enable Header Text",
+                "_type": "conditionalBoolean",
+                "value": false,
+                "enabled": true,
+                "subSelection": {
+                  "_true": {
+                    "content": {
+                      "name": "Header Text",
+                      "_type": "text",
+                      "value": "",
+                      "enabled": true
+                    },
+                    "position": {
+                      "name": "Header Position",
+                      "_type": "select",
+                      "selectionList": [
+                        "left",
+                        "top",
+                        "right",
+                        "bottom"
+                      ],
+                      "value": "top",
+                      "enabled": true
+                    }
+                  }
+                }
+              },
+              {
+                "name": "numberFormat",
+                "_label": "Number Format Style",
+                "_type": "select",
+                "selectionList": [
+                  "none",
+                  "Indian",
+                  "International",
+                  "European"
+                ],
+                "value": "",
+                "enabled": false
+              },
+              {
+                "name": "isCurrency",
+                "_label": "Is Currency",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              },
+              {
+                "name": "bindInitialData",
+                "_label": "Bind Initial Data",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              }
+            ],
+            "events": "#textinput_events",
+            "validation": "#textinput_validation"
+          }
+        }
+      },
+      "version": "TRL:AFR:UF-UFW:Next:Inputs:textinput:v1",
+      "t_parentId": "b73f3e4fcd0840da8d1e57be2d47d04d"
+    },
+    "abc9801175584c6da982d4ccbf3fc236": {
+      "id": "abc9801175584c6da982d4ccbf3fc236",
+      "parent": "b73f3e4fcd0840da8d1e57be2d47d04d",
+      "type": "label",
+      "T_parentId": "b73f3e4fcd0840da8d1e57be2d47d04d",
+      "children": [],
+      "property": {
+        "name": "emaillabel",
+        "nodeType": "label",
+        "description": "",
+        "props": {
+          "meta": {
+            "row": 6,
+            "col": 2,
+            "rowSpan": 2,
+            "colSpan": 3
+          }
+        }
+      },
+      "grid": {
+        "style": {},
+        "classNames": "",
+        "commonprops": {
+          "contentAlign": "left"
+        }
+      },
+      "groupType": "group",
+      "data": {
+        "label": "Email",
+        "nodeAppearance": {
+          "label": "label",
+          "color": "#0736C4",
+          "icon": "/torus/9.1/resources/nodeicons/UF-UFW/label.svg",
+          "size": 45
+        },
+        "nodeProperty": {
+          "nodeId": "abc9801175584c6da982d4ccbf3fc236",
+          "nodeName": "Email",
+          "nodeType": "label",
+          "nodeVersion": "v1",
+          "elementInfo": {
+            "frameWork": "Nextjs",
+            "version": "14.2.3",
+            "component": "Label",
+            "label": "",
+            "props": [
+              {
+                "name": "theme",
+                "_type": "select",
+                "selectionList": [
+                  "normal",
+                  "info",
+                  "danger",
+                  "warning",
+                  "success",
+                  "utility",
+                  "unknown",
+                  "clear"
+                ],
+                "value": "normal",
+                "enabled": true
+              },
+              {
+                "name": "icon",
+                "_type": "conditionalIconSearch",
+                "value": "",
+                "enabled": true,
+                "subSelection": {
+                  "iconDisplay": {
+                    "name": "iconDisplay",
+                    "_type": "select",
+                    "selectionList": [
+                      "Icon only",
+                      "Start with Icon",
+                      "End with Icon"
+                    ],
+                    "value": "End with Icon",
+                    "enabled": true
+                  }
+                }
+              },
+              {
+                "name": "interactive",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              },
+              {
+                "name": "copy",
+                "_type": "string",
+                "value": "",
+                "enabled": true
+              },
+              {
+                "name": "disabled",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              },
+              {
+                "name": "content",
+                "_type": "string",
+                "value": "Email",
+                "enabled": true
+              },
+              {
+                "name": "enableHeaderText",
+                "_type": "conditionalBoolean",
+                "value": false,
+                "enabled": true,
+                "subSelection": {
+                  "_true": {
+                    "content": {
+                      "name": "Header Text",
+                      "_type": "string",
+                      "value": "",
+                      "enabled": true
+                    },
+                    "position": {
+                      "name": "Header Position",
+                      "_type": "select",
+                      "selectionList": [
+                        "left",
+                        "top",
+                        "right",
+                        "bottom"
+                      ],
+                      "value": "",
+                      "enabled": true
+                    }
+                  }
+                }
+              }
+            ],
+            "events": "#label_events"
+          }
+        }
+      },
+      "version": "TRL:AFR:UF-UFW:Next:DataDisplay:label:v1",
+      "t_parentId": "b73f3e4fcd0840da8d1e57be2d47d04d"
+    },
+    "540d81629b7045b88352c23e926cbbbc": {
+      "id": "540d81629b7045b88352c23e926cbbbc",
+      "parent": "b73f3e4fcd0840da8d1e57be2d47d04d",
+      "type": "textinput",
+      "T_parentId": "b73f3e4fcd0840da8d1e57be2d47d04d",
+      "children": [],
+      "property": {
+        "name": "email",
+        "nodeType": "textinput",
+        "description": "",
+        "props": {
+          "meta": {
+            "row": 8,
+            "col": 2,
+            "rowSpan": 3,
+            "colSpan": 3
+          }
+        }
+      },
+      "grid": {
+        "style": {},
+        "classNames": ""
+      },
+      "groupType": "group",
+      "data": {
+        "label": "email",
+        "nodeAppearance": {
+          "type": "textinput",
+          "label": "textinput",
+          "color": "#0736C4",
+          "shape": "square",
+          "icon": "/torus/9.1/resources/nodeicons/UF-UFW/text_input.svg",
+          "size": 45,
+          "handles": [
+            {
+              "type": "source",
+              "position": "right",
+              "isConnectable": true,
+              "shown": true
+            },
+            {
+              "type": "target",
+              "position": "left",
+              "isConnectable": true,
+              "shown": true
+            }
+          ]
+        },
+        "nodeProperty": {
+          "nodeId": "540d81629b7045b88352c23e926cbbbc",
+          "nodeName": "email",
+          "nodeType": "textinput",
+          "nodeVersion": "v1",
+          "elementInfo": {
+            "frameWork": "Nextjs",
+            "version": "14.2.3",
+            "component": "TextInput",
+            "props": [
+              {
+                "name": "disabled",
+                "_label": "Disabled",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              },
+              {
+                "name": "readOnly",
+                "_label": "Read Only",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              },
+              {
+                "name": "pin",
+                "_label": "Pin",
+                "_type": "select",
+                "selectionList": [
+                  "round-round",
+                  "brick-brick",
+                  "clear-clear"
+                ],
+                "value": "brick-brick",
+                "enabled": true
+              },
+              {
+                "name": "view",
+                "_label": "View",
+                "_type": "select",
+                "selectionList": [
+                  "normal",
+                  "clear"
+                ],
+                "value": "normal",
+                "enabled": true
+              },
+              {
+                "name": "placeholder",
+                "_label": "Placeholder",
+                "_type": "text",
+                "value": "type here....",
+                "enabled": true
+              },
+              {
+                "name": "leftContent",
+                "_label": "Left Content",
+                "_type": "text",
+                "value": "",
+                "enabled": true
+              },
+              {
+                "name": "rightContent",
+                "_label": "Right Content",
+                "_type": "text",
+                "value": "",
+                "enabled": true
+              },
+              {
+                "name": "enableHeaderText",
+                "_label": "Enable Header Text",
+                "_type": "conditionalBoolean",
+                "value": false,
+                "enabled": true,
+                "subSelection": {
+                  "_true": {
+                    "content": {
+                      "name": "Header Text",
+                      "_type": "text",
+                      "value": "",
+                      "enabled": true
+                    },
+                    "position": {
+                      "name": "Header Position",
+                      "_type": "select",
+                      "selectionList": [
+                        "left",
+                        "top",
+                        "right",
+                        "bottom"
+                      ],
+                      "value": "top",
+                      "enabled": true
+                    }
+                  }
+                }
+              },
+              {
+                "name": "numberFormat",
+                "_label": "Number Format Style",
+                "_type": "select",
+                "selectionList": [
+                  "none",
+                  "Indian",
+                  "International",
+                  "European"
+                ],
+                "value": "",
+                "enabled": false
+              },
+              {
+                "name": "isCurrency",
+                "_label": "Is Currency",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              },
+              {
+                "name": "bindInitialData",
+                "_label": "Bind Initial Data",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              }
+            ],
+            "events": "#textinput_events",
+            "validation": "#textinput_validation"
+          }
+        }
+      },
+      "version": "TRL:AFR:UF-UFW:Next:Inputs:textinput:v1",
+      "t_parentId": "b73f3e4fcd0840da8d1e57be2d47d04d"
+    },
+    "098ded89b54b49218a1839c6f28ba801": {
+      "id": "098ded89b54b49218a1839c6f28ba801",
+      "parent": "b73f3e4fcd0840da8d1e57be2d47d04d",
+      "type": "label",
+      "T_parentId": "b73f3e4fcd0840da8d1e57be2d47d04d",
+      "children": [],
+      "property": {
+        "name": "salarylabel",
+        "nodeType": "label",
+        "description": "",
+        "props": {
+          "meta": {
+            "row": 11,
+            "col": 2,
+            "rowSpan": 2,
+            "colSpan": 3
+          }
+        }
+      },
+      "grid": {
+        "style": {},
+        "classNames": "",
+        "commonprops": {
+          "contentAlign": "left"
+        }
+      },
+      "groupType": "group",
+      "data": {
+        "label": "Salary",
+        "nodeAppearance": {
+          "label": "label",
+          "color": "#0736C4",
+          "icon": "/torus/9.1/resources/nodeicons/UF-UFW/label.svg",
+          "size": 45
+        },
+        "nodeProperty": {
+          "nodeId": "098ded89b54b49218a1839c6f28ba801",
+          "nodeName": "Salary",
+          "nodeType": "label",
+          "nodeVersion": "v1",
+          "elementInfo": {
+            "frameWork": "Nextjs",
+            "version": "14.2.3",
+            "component": "Label",
+            "label": "",
+            "props": [
+              {
+                "name": "theme",
+                "_type": "select",
+                "selectionList": [
+                  "normal",
+                  "info",
+                  "danger",
+                  "warning",
+                  "success",
+                  "utility",
+                  "unknown",
+                  "clear"
+                ],
+                "value": "normal",
+                "enabled": true
+              },
+              {
+                "name": "icon",
+                "_type": "conditionalIconSearch",
+                "value": "",
+                "enabled": true,
+                "subSelection": {
+                  "iconDisplay": {
+                    "name": "iconDisplay",
+                    "_type": "select",
+                    "selectionList": [
+                      "Icon only",
+                      "Start with Icon",
+                      "End with Icon"
+                    ],
+                    "value": "End with Icon",
+                    "enabled": true
+                  }
+                }
+              },
+              {
+                "name": "interactive",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              },
+              {
+                "name": "copy",
+                "_type": "string",
+                "value": "",
+                "enabled": true
+              },
+              {
+                "name": "disabled",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              },
+              {
+                "name": "content",
+                "_type": "string",
+                "value": "Salary",
+                "enabled": true
+              },
+              {
+                "name": "enableHeaderText",
+                "_type": "conditionalBoolean",
+                "value": false,
+                "enabled": true,
+                "subSelection": {
+                  "_true": {
+                    "content": {
+                      "name": "Header Text",
+                      "_type": "string",
+                      "value": "",
+                      "enabled": true
+                    },
+                    "position": {
+                      "name": "Header Position",
+                      "_type": "select",
+                      "selectionList": [
+                        "left",
+                        "top",
+                        "right",
+                        "bottom"
+                      ],
+                      "value": "",
+                      "enabled": true
+                    }
+                  }
+                }
+              }
+            ],
+            "events": "#label_events"
+          }
+        }
+      },
+      "version": "TRL:AFR:UF-UFW:Next:DataDisplay:label:v1",
+      "t_parentId": "b73f3e4fcd0840da8d1e57be2d47d04d"
+    },
+    "b2f7f201db5c4356a37cab229018f952": {
+      "id": "b2f7f201db5c4356a37cab229018f952",
+      "parent": "b73f3e4fcd0840da8d1e57be2d47d04d",
+      "type": "textinput",
+      "T_parentId": "b73f3e4fcd0840da8d1e57be2d47d04d",
+      "children": [],
+      "property": {
+        "name": "salary",
+        "nodeType": "textinput",
+        "description": "",
+        "props": {
+          "meta": {
+            "row": 13,
+            "col": 2,
+            "rowSpan": 3,
+            "colSpan": 3
+          }
+        }
+      },
+      "grid": {
+        "style": {},
+        "classNames": ""
+      },
+      "groupType": "group",
+      "data": {
+        "label": "salary",
+        "nodeAppearance": {
+          "type": "textinput",
+          "label": "textinput",
+          "color": "#0736C4",
+          "shape": "square",
+          "icon": "/torus/9.1/resources/nodeicons/UF-UFW/text_input.svg",
+          "size": 45,
+          "handles": [
+            {
+              "type": "source",
+              "position": "right",
+              "isConnectable": true,
+              "shown": true
+            },
+            {
+              "type": "target",
+              "position": "left",
+              "isConnectable": true,
+              "shown": true
+            }
+          ]
+        },
+        "nodeProperty": {
+          "nodeId": "b2f7f201db5c4356a37cab229018f952",
+          "nodeName": "salary",
+          "nodeType": "textinput",
+          "nodeVersion": "v1",
+          "elementInfo": {
+            "frameWork": "Nextjs",
+            "version": "14.2.3",
+            "component": "TextInput",
+            "props": [
+              {
+                "name": "disabled",
+                "_label": "Disabled",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              },
+              {
+                "name": "readOnly",
+                "_label": "Read Only",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              },
+              {
+                "name": "pin",
+                "_label": "Pin",
+                "_type": "select",
+                "selectionList": [
+                  "round-round",
+                  "brick-brick",
+                  "clear-clear"
+                ],
+                "value": "brick-brick",
+                "enabled": true
+              },
+              {
+                "name": "view",
+                "_label": "View",
+                "_type": "select",
+                "selectionList": [
+                  "normal",
+                  "clear"
+                ],
+                "value": "normal",
+                "enabled": true
+              },
+              {
+                "name": "placeholder",
+                "_label": "Placeholder",
+                "_type": "text",
+                "value": "type here....",
+                "enabled": true
+              },
+              {
+                "name": "leftContent",
+                "_label": "Left Content",
+                "_type": "text",
+                "value": "",
+                "enabled": true
+              },
+              {
+                "name": "rightContent",
+                "_label": "Right Content",
+                "_type": "text",
+                "value": "",
+                "enabled": true
+              },
+              {
+                "name": "enableHeaderText",
+                "_label": "Enable Header Text",
+                "_type": "conditionalBoolean",
+                "value": false,
+                "enabled": true,
+                "subSelection": {
+                  "_true": {
+                    "content": {
+                      "name": "Header Text",
+                      "_type": "text",
+                      "value": "",
+                      "enabled": true
+                    },
+                    "position": {
+                      "name": "Header Position",
+                      "_type": "select",
+                      "selectionList": [
+                        "left",
+                        "top",
+                        "right",
+                        "bottom"
+                      ],
+                      "value": "top",
+                      "enabled": true
+                    }
+                  }
+                }
+              },
+              {
+                "name": "numberFormat",
+                "_label": "Number Format Style",
+                "_type": "select",
+                "selectionList": [
+                  "none",
+                  "Indian",
+                  "International",
+                  "European"
+                ],
+                "value": "",
+                "enabled": false
+              },
+              {
+                "name": "isCurrency",
+                "_label": "Is Currency",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              },
+              {
+                "name": "bindInitialData",
+                "_label": "Bind Initial Data",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              }
+            ],
+            "events": "#textinput_events",
+            "validation": "#textinput_validation"
+          }
+        }
+      },
+      "version": "TRL:AFR:UF-UFW:Next:Inputs:textinput:v1",
+      "t_parentId": "b73f3e4fcd0840da8d1e57be2d47d04d"
+    },
+    "6d73ac95111b44f49e4d168936f0550d": {
+      "id": "6d73ac95111b44f49e4d168936f0550d",
+      "parent": "b73f3e4fcd0840da8d1e57be2d47d04d",
+      "type": "button",
+      "T_parentId": "b73f3e4fcd0840da8d1e57be2d47d04d",
+      "children": [],
+      "property": {
+        "name": "save",
+        "nodeType": "button",
+        "description": "",
+        "props": {
+          "meta": {
+            "row": 16,
+            "col": 2,
+            "rowSpan": 4,
+            "colSpan": 3
+          }
+        }
+      },
+      "grid": {
+        "style": {},
+        "classNames": ""
+      },
+      "groupType": "group",
+      "data": {
+        "label": "save",
+        "nodeAppearance": {
+          "icon": "/torus/9.1/resources/nodeicons/UF-UFW/button.svg",
+          "color": "#0736C4",
+          "label": "button",
+          "size": 45
+        },
+        "nodeProperty": {
+          "nodeId": "6d73ac95111b44f49e4d168936f0550d",
+          "nodeName": "save",
+          "nodeType": "button",
+          "nodeVersion": "v1",
+          "elementInfo": {
+            "frameWork": "Nextjs",
+            "version": "14.2.3",
+            "component": "Button",
+            "props": [
+              {
+                "name": "view",
+                "_type": "select",
+                "selectionList": [
+                  "normal",
+                  "action",
+                  "outlined",
+                  "outlined-info",
+                  "outlined-success",
+                  "outlined-warning",
+                  "outlined-danger",
+                  "outlined-utility",
+                  "outlined-action",
+                  "raised",
+                  "flat",
+                  "flat-secondary",
+                  "flat-info",
+                  "flat-success",
+                  "flat-warning",
+                  "flat-danger",
+                  "flat-utility",
+                  "flat-action",
+                  "normal-contrast",
+                  "outlined-contrast",
+                  "flat-contrast"
+                ],
+                "value": "action",
+                "enabled": true
+              },
+              {
+                "name": "icon",
+                "_type": "conditionalIconSearch",
+                "value": "",
+                "enabled": true,
+                "subSelection": {
+                  "iconDisplay": {
+                    "name": "iconDisplay",
+                    "_type": "select",
+                    "selectionList": [
+                      "Icon only",
+                      "Start with Icon",
+                      "End with Icon"
+                    ],
+                    "value": "End with Icon",
+                    "enabled": true
+                  }
+                }
+              },
+              {
+                "name": "disabled",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              },
+              {
+                "name": "isRecordLevel",
+                "_type": "boolean",
+                "value": false,
+                "enabled": true
+              },
+              {
+                "name": "pin",
+                "_type": "select",
+                "selectionList": [
+                  "round-round",
+                  "brick-brick",
+                  "clear-clear",
+                  "circle-circle",
+                  "round-brick",
+                  "brick-round",
+                  "round-clear",
+                  "clear-round",
+                  "brick-clear",
+                  "clear-brick",
+                  "circle-brick",
+                  "brick-circle",
+                  "circle-clear",
+                  "clear-circle"
+                ],
+                "value": "circle-circle",
+                "enabled": true
+              },
+              {
+                "name": "enableHeaderText",
+                "_type": "conditionalBoolean",
+                "value": false,
+                "enabled": true,
+                "subSelection": {
+                  "_true": {
+                    "content": {
+                      "name": "Header Text",
+                      "_type": "text",
+                      "value": "",
+                      "enabled": true
+                    },
+                    "position": {
+                      "name": "Header Position",
+                      "_type": "select",
+                      "selectionList": [
+                        "left",
+                        "top",
+                        "right",
+                        "bottom"
+                      ],
+                      "value": "top",
+                      "enabled": true
+                    }
+                  }
+                }
+              },
+              {
+                "name": "isValidate",
+                "_type": "boolean",
+                "value": true,
+                "enabled": true
+              }
+            ],
+            "events": "#button_events"
+          }
+        }
+      },
+      "version": "TRL:AFR:UF-UFW:Next:Inputs:button:v1",
+      "t_parentId": "b73f3e4fcd0840da8d1e57be2d47d04d"
+    }
+  },
+  "UFS": [
+    {
+      "id": "root",
+      "type": "Canvas",
+      "grid": {
+        "classNames": "",
+        "style": {}
+      },
+      "children": [
+        "b73f3e4fcd0840da8d1e57be2d47d04d"
+      ],
+      "groupType": "group",
+      "T_parentId": "root",
+      "path": "root",
+      "label": "",
+      "name": "",
+      "elementInfo": {}
+    },
+    {
+      "id": "b73f3e4fcd0840da8d1e57be2d47d04d",
+      "type": "group",
+      "grid": {
+        "classNames": "",
+        "style": {
+          "columnGap": "0px",
+          "gridAutoRows": "4px",
+          "rowGap": "0px"
+        },
+        "row": {
+          "end": 23,
+          "start": 12
+        },
+        "column": {
+          "end": 25,
+          "start": 1
+        }
+      },
+      "children": [
+        "fb0278b6980541398e6a608001214a97",
+        "eb23a4919cee4a05982cec747c0d3f42",
+        "abc9801175584c6da982d4ccbf3fc236",
+        "540d81629b7045b88352c23e926cbbbc",
+        "098ded89b54b49218a1839c6f28ba801",
+        "b2f7f201db5c4356a37cab229018f952",
+        "6d73ac95111b44f49e4d168936f0550d"
+      ],
+      "groupType": "group",
+      "T_parentId": "root",
+      "path": "root",
+      "label": "customerregistrationgroup",
+      "name": "customerregistrationgroup",
+      "nodeVersion": "v1",
+      "elementInfo": {
+        "props": [
+          {
+            "name": "isDynamic",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          }
+        ],
+        "events": "#group_events"
+      }
+    },
+    {
+      "id": "fb0278b6980541398e6a608001214a97",
+      "type": "label",
+      "grid": {
+        "classNames": "",
+        "style": {},
+        "commonprops": {
+          "contentAlign": "left"
+        },
+        "row": {
+          "end": 3,
+          "start": 1
+        },
+        "column": {
+          "end": 5,
+          "start": 2
+        }
+      },
+      "children": [],
+      "T_parentId": "b73f3e4fcd0840da8d1e57be2d47d04d",
+      "path": "root|b73f3e4fcd0840da8d1e57be2d47d04d",
+      "label": "Name",
+      "name": "namelabel",
+      "nodeVersion": "v1",
+      "elementInfo": {
+        "frameWork": "Nextjs",
+        "version": "14.2.3",
+        "component": "Label",
+        "label": "",
+        "props": [
+          {
+            "name": "theme",
+            "_type": "select",
+            "selectionList": [
+              "normal",
+              "info",
+              "danger",
+              "warning",
+              "success",
+              "utility",
+              "unknown",
+              "clear"
+            ],
+            "value": "normal",
+            "enabled": true
+          },
+          {
+            "name": "icon",
+            "_type": "conditionalIconSearch",
+            "value": "",
+            "enabled": true,
+            "subSelection": {
+              "iconDisplay": {
+                "name": "iconDisplay",
+                "_type": "select",
+                "selectionList": [
+                  "Icon only",
+                  "Start with Icon",
+                  "End with Icon"
+                ],
+                "value": "End with Icon",
+                "enabled": true
+              }
+            }
+          },
+          {
+            "name": "interactive",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          },
+          {
+            "name": "copy",
+            "_type": "string",
+            "value": "",
+            "enabled": true
+          },
+          {
+            "name": "disabled",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          },
+          {
+            "name": "content",
+            "_type": "string",
+            "value": "Name",
+            "enabled": true
+          },
+          {
+            "name": "enableHeaderText",
+            "_type": "conditionalBoolean",
+            "value": false,
+            "enabled": true,
+            "subSelection": {
+              "_true": {
+                "content": {
+                  "name": "Header Text",
+                  "_type": "string",
+                  "value": "",
+                  "enabled": true
+                },
+                "position": {
+                  "name": "Header Position",
+                  "_type": "select",
+                  "selectionList": [
+                    "left",
+                    "top",
+                    "right",
+                    "bottom"
+                  ],
+                  "value": "",
+                  "enabled": true
+                }
+              }
+            }
+          }
+        ],
+        "events": "#label_events"
+      }
+    },
+    {
+      "id": "eb23a4919cee4a05982cec747c0d3f42",
+      "type": "textinput",
+      "grid": {
+        "classNames": "",
+        "style": {},
+        "row": {
+          "end": 6,
+          "start": 3
+        },
+        "column": {
+          "end": 5,
+          "start": 2
+        }
+      },
+      "children": [],
+      "T_parentId": "b73f3e4fcd0840da8d1e57be2d47d04d",
+      "path": "root|b73f3e4fcd0840da8d1e57be2d47d04d",
+      "label": "name",
+      "name": "name",
+      "nodeVersion": "v1",
+      "elementInfo": {
+        "frameWork": "Nextjs",
+        "version": "14.2.3",
+        "component": "TextInput",
+        "props": [
+          {
+            "name": "disabled",
+            "_label": "Disabled",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          },
+          {
+            "name": "readOnly",
+            "_label": "Read Only",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          },
+          {
+            "name": "pin",
+            "_label": "Pin",
+            "_type": "select",
+            "selectionList": [
+              "round-round",
+              "brick-brick",
+              "clear-clear"
+            ],
+            "value": "brick-brick",
+            "enabled": true
+          },
+          {
+            "name": "view",
+            "_label": "View",
+            "_type": "select",
+            "selectionList": [
+              "normal",
+              "clear"
+            ],
+            "value": "normal",
+            "enabled": true
+          },
+          {
+            "name": "placeholder",
+            "_label": "Placeholder",
+            "_type": "text",
+            "value": "type here....",
+            "enabled": true
+          },
+          {
+            "name": "leftContent",
+            "_label": "Left Content",
+            "_type": "text",
+            "value": "",
+            "enabled": true
+          },
+          {
+            "name": "rightContent",
+            "_label": "Right Content",
+            "_type": "text",
+            "value": "",
+            "enabled": true
+          },
+          {
+            "name": "enableHeaderText",
+            "_label": "Enable Header Text",
+            "_type": "conditionalBoolean",
+            "value": false,
+            "enabled": true,
+            "subSelection": {
+              "_true": {
+                "content": {
+                  "name": "Header Text",
+                  "_type": "text",
+                  "value": "",
+                  "enabled": true
+                },
+                "position": {
+                  "name": "Header Position",
+                  "_type": "select",
+                  "selectionList": [
+                    "left",
+                    "top",
+                    "right",
+                    "bottom"
+                  ],
+                  "value": "top",
+                  "enabled": true
+                }
+              }
+            }
+          },
+          {
+            "name": "numberFormat",
+            "_label": "Number Format Style",
+            "_type": "select",
+            "selectionList": [
+              "none",
+              "Indian",
+              "International",
+              "European"
+            ],
+            "value": "",
+            "enabled": false
+          },
+          {
+            "name": "isCurrency",
+            "_label": "Is Currency",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          },
+          {
+            "name": "bindInitialData",
+            "_label": "Bind Initial Data",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          }
+        ],
+        "events": "#textinput_events",
+        "validation": "#textinput_validation"
+      }
+    },
+    {
+      "id": "abc9801175584c6da982d4ccbf3fc236",
+      "type": "label",
+      "grid": {
+        "classNames": "",
+        "style": {},
+        "commonprops": {
+          "contentAlign": "left"
+        },
+        "row": {
+          "end": 8,
+          "start": 6
+        },
+        "column": {
+          "end": 5,
+          "start": 2
+        }
+      },
+      "children": [],
+      "T_parentId": "b73f3e4fcd0840da8d1e57be2d47d04d",
+      "path": "root|b73f3e4fcd0840da8d1e57be2d47d04d",
+      "label": "Email",
+      "name": "emaillabel",
+      "nodeVersion": "v1",
+      "elementInfo": {
+        "frameWork": "Nextjs",
+        "version": "14.2.3",
+        "component": "Label",
+        "label": "",
+        "props": [
+          {
+            "name": "theme",
+            "_type": "select",
+            "selectionList": [
+              "normal",
+              "info",
+              "danger",
+              "warning",
+              "success",
+              "utility",
+              "unknown",
+              "clear"
+            ],
+            "value": "normal",
+            "enabled": true
+          },
+          {
+            "name": "icon",
+            "_type": "conditionalIconSearch",
+            "value": "",
+            "enabled": true,
+            "subSelection": {
+              "iconDisplay": {
+                "name": "iconDisplay",
+                "_type": "select",
+                "selectionList": [
+                  "Icon only",
+                  "Start with Icon",
+                  "End with Icon"
+                ],
+                "value": "End with Icon",
+                "enabled": true
+              }
+            }
+          },
+          {
+            "name": "interactive",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          },
+          {
+            "name": "copy",
+            "_type": "string",
+            "value": "",
+            "enabled": true
+          },
+          {
+            "name": "disabled",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          },
+          {
+            "name": "content",
+            "_type": "string",
+            "value": "Email",
+            "enabled": true
+          },
+          {
+            "name": "enableHeaderText",
+            "_type": "conditionalBoolean",
+            "value": false,
+            "enabled": true,
+            "subSelection": {
+              "_true": {
+                "content": {
+                  "name": "Header Text",
+                  "_type": "string",
+                  "value": "",
+                  "enabled": true
+                },
+                "position": {
+                  "name": "Header Position",
+                  "_type": "select",
+                  "selectionList": [
+                    "left",
+                    "top",
+                    "right",
+                    "bottom"
+                  ],
+                  "value": "",
+                  "enabled": true
+                }
+              }
+            }
+          }
+        ],
+        "events": "#label_events"
+      }
+    },
+    {
+      "id": "540d81629b7045b88352c23e926cbbbc",
+      "type": "textinput",
+      "grid": {
+        "classNames": "",
+        "style": {},
+        "row": {
+          "end": 11,
+          "start": 8
+        },
+        "column": {
+          "end": 5,
+          "start": 2
+        }
+      },
+      "children": [],
+      "T_parentId": "b73f3e4fcd0840da8d1e57be2d47d04d",
+      "path": "root|b73f3e4fcd0840da8d1e57be2d47d04d",
+      "label": "email",
+      "name": "email",
+      "nodeVersion": "v1",
+      "elementInfo": {
+        "frameWork": "Nextjs",
+        "version": "14.2.3",
+        "component": "TextInput",
+        "props": [
+          {
+            "name": "disabled",
+            "_label": "Disabled",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          },
+          {
+            "name": "readOnly",
+            "_label": "Read Only",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          },
+          {
+            "name": "pin",
+            "_label": "Pin",
+            "_type": "select",
+            "selectionList": [
+              "round-round",
+              "brick-brick",
+              "clear-clear"
+            ],
+            "value": "brick-brick",
+            "enabled": true
+          },
+          {
+            "name": "view",
+            "_label": "View",
+            "_type": "select",
+            "selectionList": [
+              "normal",
+              "clear"
+            ],
+            "value": "normal",
+            "enabled": true
+          },
+          {
+            "name": "placeholder",
+            "_label": "Placeholder",
+            "_type": "text",
+            "value": "type here....",
+            "enabled": true
+          },
+          {
+            "name": "leftContent",
+            "_label": "Left Content",
+            "_type": "text",
+            "value": "",
+            "enabled": true
+          },
+          {
+            "name": "rightContent",
+            "_label": "Right Content",
+            "_type": "text",
+            "value": "",
+            "enabled": true
+          },
+          {
+            "name": "enableHeaderText",
+            "_label": "Enable Header Text",
+            "_type": "conditionalBoolean",
+            "value": false,
+            "enabled": true,
+            "subSelection": {
+              "_true": {
+                "content": {
+                  "name": "Header Text",
+                  "_type": "text",
+                  "value": "",
+                  "enabled": true
+                },
+                "position": {
+                  "name": "Header Position",
+                  "_type": "select",
+                  "selectionList": [
+                    "left",
+                    "top",
+                    "right",
+                    "bottom"
+                  ],
+                  "value": "top",
+                  "enabled": true
+                }
+              }
+            }
+          },
+          {
+            "name": "numberFormat",
+            "_label": "Number Format Style",
+            "_type": "select",
+            "selectionList": [
+              "none",
+              "Indian",
+              "International",
+              "European"
+            ],
+            "value": "",
+            "enabled": false
+          },
+          {
+            "name": "isCurrency",
+            "_label": "Is Currency",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          },
+          {
+            "name": "bindInitialData",
+            "_label": "Bind Initial Data",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          }
+        ],
+        "events": "#textinput_events",
+        "validation": "#textinput_validation"
+      }
+    },
+    {
+      "id": "098ded89b54b49218a1839c6f28ba801",
+      "type": "label",
+      "grid": {
+        "classNames": "",
+        "style": {},
+        "commonprops": {
+          "contentAlign": "left"
+        },
+        "row": {
+          "end": 13,
+          "start": 11
+        },
+        "column": {
+          "end": 5,
+          "start": 2
+        }
+      },
+      "children": [],
+      "T_parentId": "b73f3e4fcd0840da8d1e57be2d47d04d",
+      "path": "root|b73f3e4fcd0840da8d1e57be2d47d04d",
+      "label": "Salary",
+      "name": "salarylabel",
+      "nodeVersion": "v1",
+      "elementInfo": {
+        "frameWork": "Nextjs",
+        "version": "14.2.3",
+        "component": "Label",
+        "label": "",
+        "props": [
+          {
+            "name": "theme",
+            "_type": "select",
+            "selectionList": [
+              "normal",
+              "info",
+              "danger",
+              "warning",
+              "success",
+              "utility",
+              "unknown",
+              "clear"
+            ],
+            "value": "normal",
+            "enabled": true
+          },
+          {
+            "name": "icon",
+            "_type": "conditionalIconSearch",
+            "value": "",
+            "enabled": true,
+            "subSelection": {
+              "iconDisplay": {
+                "name": "iconDisplay",
+                "_type": "select",
+                "selectionList": [
+                  "Icon only",
+                  "Start with Icon",
+                  "End with Icon"
+                ],
+                "value": "End with Icon",
+                "enabled": true
+              }
+            }
+          },
+          {
+            "name": "interactive",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          },
+          {
+            "name": "copy",
+            "_type": "string",
+            "value": "",
+            "enabled": true
+          },
+          {
+            "name": "disabled",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          },
+          {
+            "name": "content",
+            "_type": "string",
+            "value": "Salary",
+            "enabled": true
+          },
+          {
+            "name": "enableHeaderText",
+            "_type": "conditionalBoolean",
+            "value": false,
+            "enabled": true,
+            "subSelection": {
+              "_true": {
+                "content": {
+                  "name": "Header Text",
+                  "_type": "string",
+                  "value": "",
+                  "enabled": true
+                },
+                "position": {
+                  "name": "Header Position",
+                  "_type": "select",
+                  "selectionList": [
+                    "left",
+                    "top",
+                    "right",
+                    "bottom"
+                  ],
+                  "value": "",
+                  "enabled": true
+                }
+              }
+            }
+          }
+        ],
+        "events": "#label_events"
+      }
+    },
+    {
+      "id": "b2f7f201db5c4356a37cab229018f952",
+      "type": "textinput",
+      "grid": {
+        "classNames": "",
+        "style": {},
+        "row": {
+          "end": 16,
+          "start": 13
+        },
+        "column": {
+          "end": 5,
+          "start": 2
+        }
+      },
+      "children": [],
+      "T_parentId": "b73f3e4fcd0840da8d1e57be2d47d04d",
+      "path": "root|b73f3e4fcd0840da8d1e57be2d47d04d",
+      "label": "salary",
+      "name": "salary",
+      "nodeVersion": "v1",
+      "elementInfo": {
+        "frameWork": "Nextjs",
+        "version": "14.2.3",
+        "component": "TextInput",
+        "props": [
+          {
+            "name": "disabled",
+            "_label": "Disabled",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          },
+          {
+            "name": "readOnly",
+            "_label": "Read Only",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          },
+          {
+            "name": "pin",
+            "_label": "Pin",
+            "_type": "select",
+            "selectionList": [
+              "round-round",
+              "brick-brick",
+              "clear-clear"
+            ],
+            "value": "brick-brick",
+            "enabled": true
+          },
+          {
+            "name": "view",
+            "_label": "View",
+            "_type": "select",
+            "selectionList": [
+              "normal",
+              "clear"
+            ],
+            "value": "normal",
+            "enabled": true
+          },
+          {
+            "name": "placeholder",
+            "_label": "Placeholder",
+            "_type": "text",
+            "value": "type here....",
+            "enabled": true
+          },
+          {
+            "name": "leftContent",
+            "_label": "Left Content",
+            "_type": "text",
+            "value": "",
+            "enabled": true
+          },
+          {
+            "name": "rightContent",
+            "_label": "Right Content",
+            "_type": "text",
+            "value": "",
+            "enabled": true
+          },
+          {
+            "name": "enableHeaderText",
+            "_label": "Enable Header Text",
+            "_type": "conditionalBoolean",
+            "value": false,
+            "enabled": true,
+            "subSelection": {
+              "_true": {
+                "content": {
+                  "name": "Header Text",
+                  "_type": "text",
+                  "value": "",
+                  "enabled": true
+                },
+                "position": {
+                  "name": "Header Position",
+                  "_type": "select",
+                  "selectionList": [
+                    "left",
+                    "top",
+                    "right",
+                    "bottom"
+                  ],
+                  "value": "top",
+                  "enabled": true
+                }
+              }
+            }
+          },
+          {
+            "name": "numberFormat",
+            "_label": "Number Format Style",
+            "_type": "select",
+            "selectionList": [
+              "none",
+              "Indian",
+              "International",
+              "European"
+            ],
+            "value": "",
+            "enabled": false
+          },
+          {
+            "name": "isCurrency",
+            "_label": "Is Currency",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          },
+          {
+            "name": "bindInitialData",
+            "_label": "Bind Initial Data",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          }
+        ],
+        "events": "#textinput_events",
+        "validation": "#textinput_validation"
+      }
+    },
+    {
+      "id": "6d73ac95111b44f49e4d168936f0550d",
+      "type": "button",
+      "grid": {
+        "classNames": "",
+        "style": {},
+        "row": {
+          "end": 20,
+          "start": 16
+        },
+        "column": {
+          "end": 5,
+          "start": 2
+        }
+      },
+      "children": [],
+      "T_parentId": "b73f3e4fcd0840da8d1e57be2d47d04d",
+      "path": "root|b73f3e4fcd0840da8d1e57be2d47d04d",
+      "label": "save",
+      "name": "save",
+      "nodeVersion": "v1",
+      "elementInfo": {
+        "frameWork": "Nextjs",
+        "version": "14.2.3",
+        "component": "Button",
+        "props": [
+          {
+            "name": "view",
+            "_type": "select",
+            "selectionList": [
+              "normal",
+              "action",
+              "outlined",
+              "outlined-info",
+              "outlined-success",
+              "outlined-warning",
+              "outlined-danger",
+              "outlined-utility",
+              "outlined-action",
+              "raised",
+              "flat",
+              "flat-secondary",
+              "flat-info",
+              "flat-success",
+              "flat-warning",
+              "flat-danger",
+              "flat-utility",
+              "flat-action",
+              "normal-contrast",
+              "outlined-contrast",
+              "flat-contrast"
+            ],
+            "value": "action",
+            "enabled": true
+          },
+          {
+            "name": "icon",
+            "_type": "conditionalIconSearch",
+            "value": "",
+            "enabled": true,
+            "subSelection": {
+              "iconDisplay": {
+                "name": "iconDisplay",
+                "_type": "select",
+                "selectionList": [
+                  "Icon only",
+                  "Start with Icon",
+                  "End with Icon"
+                ],
+                "value": "End with Icon",
+                "enabled": true
+              }
+            }
+          },
+          {
+            "name": "disabled",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          },
+          {
+            "name": "isRecordLevel",
+            "_type": "boolean",
+            "value": false,
+            "enabled": true
+          },
+          {
+            "name": "pin",
+            "_type": "select",
+            "selectionList": [
+              "round-round",
+              "brick-brick",
+              "clear-clear",
+              "circle-circle",
+              "round-brick",
+              "brick-round",
+              "round-clear",
+              "clear-round",
+              "brick-clear",
+              "clear-brick",
+              "circle-brick",
+              "brick-circle",
+              "circle-clear",
+              "clear-circle"
+            ],
+            "value": "circle-circle",
+            "enabled": true
+          },
+          {
+            "name": "enableHeaderText",
+            "_type": "conditionalBoolean",
+            "value": false,
+            "enabled": true,
+            "subSelection": {
+              "_true": {
+                "content": {
+                  "name": "Header Text",
+                  "_type": "text",
+                  "value": "",
+                  "enabled": true
+                },
+                "position": {
+                  "name": "Header Position",
+                  "_type": "select",
+                  "selectionList": [
+                    "left",
+                    "top",
+                    "right",
+                    "bottom"
+                  ],
+                  "value": "top",
+                  "enabled": true
+                }
+              }
+            }
+          },
+          {
+            "name": "isValidate",
+            "_type": "boolean",
+            "value": true,
+            "enabled": true
+          }
+        ],
+        "events": "#button_events"
+      }
+    }
+  ],
+  "UO": {
+    "mappedData": {
+      "artifact": {
+        "name": "CustomerRegistration",
+        "action": {
+          "lock": {
+            "lockMode": "",
+            "name": "",
+            "ttl": ""
+          },
+          "stateTransition": {
+            "sourceQueue": "",
+            "sourceStatus": "",
+            "targetQueue": "",
+            "targetStatus": ""
+          },
+          "pagination": {
+            "page": "1",
+            "count": "10"
+          },
+          "encryption": {
+            "isEnabled": false,
+            "selectedDpd": "",
+            "encryptionMethod": ""
+          },
+          "events": {}
+        },
+        "code": "",
+        "testCode": "",
+        "rule": {},
+        "events": {},
+        "mapper": [],
+        "node": [
+          {
+            "nodeId": "root",
+            "nodeName": "Canvas",
+            "nodeType": "Canvas",
+            "parentId": "root",
+            "path": "root",
+            "action": {
+              "lock": {
+                "lockMode": "",
+                "name": "",
+                "ttl": ""
+              },
+              "stateTransition": {
+                "sourceQueue": "",
+                "sourceStatus": "",
+                "targetQueue": "",
+                "targetStatus": ""
+              },
+              "pagination": {
+                "page": "1",
+                "count": "10"
+              },
+              "encryption": {
+                "isEnabled": false,
+                "selectedDpd": "",
+                "encryptionMethod": ""
+              },
+              "events": {}
+            },
+            "code": "",
+            "testCode": "",
+            "rule": {},
+            "events": {},
+            "mapper": [],
+            "objElements": []
+          },
+          {
+            "nodeId": "b73f3e4fcd0840da8d1e57be2d47d04d",
+            "nodeName": "customerregistrationgroup",
+            "nodeType": "group",
+            "nodeVersion": "v1",
+            "parentId": "root",
+            "path": "root",
+            "action": {
+              "lock": {
+                "lockMode": "",
+                "name": "",
+                "ttl": ""
+              },
+              "stateTransition": {
+                "sourceQueue": "",
+                "sourceStatus": "",
+                "targetQueue": "",
+                "targetStatus": ""
+              },
+              "pagination": {
+                "page": "1",
+                "count": "10"
+              },
+              "encryption": {
+                "isEnabled": false,
+                "selectedDpd": "",
+                "encryptionMethod": ""
+              },
+              "events": {}
+            },
+            "code": "",
+            "testCode": "",
+            "rule": {},
+            "events": {},
+            "mapper": [],
+            "objElements": [
+              {
+                "elementName": "namelabel",
+                "elementId": "fb0278b6980541398e6a608001214a97",
+                "elementType": "label",
+                "elementVersion": "v1",
+                "parentId": "b73f3e4fcd0840da8d1e57be2d47d04d",
+                "path": "root|b73f3e4fcd0840da8d1e57be2d47d04d",
+                "action": {
+                  "lock": {
+                    "lockMode": "",
+                    "name": "",
+                    "ttl": ""
+                  },
+                  "stateTransition": {
+                    "sourceQueue": "",
+                    "sourceStatus": "",
+                    "targetQueue": "",
+                    "targetStatus": ""
+                  },
+                  "pagination": {
+                    "page": "1",
+                    "count": "10"
+                  },
+                  "encryption": {
+                    "isEnabled": false,
+                    "selectedDpd": "",
+                    "encryptionMethod": ""
+                  },
+                  "events": {}
+                },
+                "code": "",
+                "testCode": "",
+                "rule": {},
+                "events": {},
+                "mapper": [],
+                "objElements": []
+              },
+              {
+                "elementName": "name",
+                "elementId": "eb23a4919cee4a05982cec747c0d3f42",
+                "elementType": "textinput",
+                "elementVersion": "v1",
+                "parentId": "b73f3e4fcd0840da8d1e57be2d47d04d",
+                "path": "root|b73f3e4fcd0840da8d1e57be2d47d04d",
+                "action": {
+                  "lock": {
+                    "lockMode": "",
+                    "name": "",
+                    "ttl": ""
+                  },
+                  "stateTransition": {
+                    "sourceQueue": "",
+                    "sourceStatus": "",
+                    "targetQueue": "",
+                    "targetStatus": ""
+                  },
+                  "pagination": {
+                    "page": "1",
+                    "count": "10"
+                  },
+                  "encryption": {
+                    "isEnabled": false,
+                    "selectedDpd": "",
+                    "encryptionMethod": ""
+                  },
+                  "events": {}
+                },
+                "code": "",
+                "testCode": "",
+                "rule": {},
+                "events": {},
+                "mapper": [],
+                "objElements": []
+              },
+              {
+                "elementName": "emaillabel",
+                "elementId": "abc9801175584c6da982d4ccbf3fc236",
+                "elementType": "label",
+                "elementVersion": "v1",
+                "parentId": "b73f3e4fcd0840da8d1e57be2d47d04d",
+                "path": "root|b73f3e4fcd0840da8d1e57be2d47d04d",
+                "action": {
+                  "lock": {
+                    "lockMode": "",
+                    "name": "",
+                    "ttl": ""
+                  },
+                  "stateTransition": {
+                    "sourceQueue": "",
+                    "sourceStatus": "",
+                    "targetQueue": "",
+                    "targetStatus": ""
+                  },
+                  "pagination": {
+                    "page": "1",
+                    "count": "10"
+                  },
+                  "encryption": {
+                    "isEnabled": false,
+                    "selectedDpd": "",
+                    "encryptionMethod": ""
+                  },
+                  "events": {}
+                },
+                "code": "",
+                "testCode": "",
+                "rule": {},
+                "events": {},
+                "mapper": [],
+                "objElements": []
+              },
+              {
+                "elementName": "email",
+                "elementId": "540d81629b7045b88352c23e926cbbbc",
+                "elementType": "textinput",
+                "elementVersion": "v1",
+                "parentId": "b73f3e4fcd0840da8d1e57be2d47d04d",
+                "path": "root|b73f3e4fcd0840da8d1e57be2d47d04d",
+                "action": {
+                  "lock": {
+                    "lockMode": "",
+                    "name": "",
+                    "ttl": ""
+                  },
+                  "stateTransition": {
+                    "sourceQueue": "",
+                    "sourceStatus": "",
+                    "targetQueue": "",
+                    "targetStatus": ""
+                  },
+                  "pagination": {
+                    "page": "1",
+                    "count": "10"
+                  },
+                  "encryption": {
+                    "isEnabled": false,
+                    "selectedDpd": "",
+                    "encryptionMethod": ""
+                  },
+                  "events": {}
+                },
+                "code": "",
+                "testCode": "",
+                "rule": {},
+                "events": {},
+                "mapper": [],
+                "objElements": []
+              },
+              {
+                "elementName": "salarylabel",
+                "elementId": "098ded89b54b49218a1839c6f28ba801",
+                "elementType": "label",
+                "elementVersion": "v1",
+                "parentId": "b73f3e4fcd0840da8d1e57be2d47d04d",
+                "path": "root|b73f3e4fcd0840da8d1e57be2d47d04d",
+                "action": {
+                  "lock": {
+                    "lockMode": "",
+                    "name": "",
+                    "ttl": ""
+                  },
+                  "stateTransition": {
+                    "sourceQueue": "",
+                    "sourceStatus": "",
+                    "targetQueue": "",
+                    "targetStatus": ""
+                  },
+                  "pagination": {
+                    "page": "1",
+                    "count": "10"
+                  },
+                  "encryption": {
+                    "isEnabled": false,
+                    "selectedDpd": "",
+                    "encryptionMethod": ""
+                  },
+                  "events": {}
+                },
+                "code": "",
+                "testCode": "",
+                "rule": {},
+                "events": {},
+                "mapper": [],
+                "objElements": []
+              },
+              {
+                "elementName": "salary",
+                "elementId": "b2f7f201db5c4356a37cab229018f952",
+                "elementType": "textinput",
+                "elementVersion": "v1",
+                "parentId": "b73f3e4fcd0840da8d1e57be2d47d04d",
+                "path": "root|b73f3e4fcd0840da8d1e57be2d47d04d",
+                "action": {
+                  "lock": {
+                    "lockMode": "",
+                    "name": "",
+                    "ttl": ""
+                  },
+                  "stateTransition": {
+                    "sourceQueue": "",
+                    "sourceStatus": "",
+                    "targetQueue": "",
+                    "targetStatus": ""
+                  },
+                  "pagination": {
+                    "page": "1",
+                    "count": "10"
+                  },
+                  "encryption": {
+                    "isEnabled": false,
+                    "selectedDpd": "",
+                    "encryptionMethod": ""
+                  },
+                  "events": {}
+                },
+                "code": "",
+                "testCode": "",
+                "rule": {},
+                "events": {},
+                "mapper": [],
+                "objElements": []
+              },
+              {
+                "elementName": "save",
+                "elementId": "6d73ac95111b44f49e4d168936f0550d",
+                "elementType": "button",
+                "elementVersion": "v1",
+                "parentId": "b73f3e4fcd0840da8d1e57be2d47d04d",
+                "path": "root|b73f3e4fcd0840da8d1e57be2d47d04d",
+                "action": {
+                  "lock": {
+                    "lockMode": "",
+                    "name": "",
+                    "ttl": ""
+                  },
+                  "stateTransition": {
+                    "sourceQueue": "",
+                    "sourceStatus": "",
+                    "targetQueue": "",
+                    "targetStatus": ""
+                  },
+                  "pagination": {
+                    "page": "1",
+                    "count": "10"
+                  },
+                  "encryption": {
+                    "isEnabled": false,
+                    "selectedDpd": "",
+                    "encryptionMethod": ""
+                  },
+                  "events": {}
+                },
+                "code": "",
+                "testCode": "",
+                "rule": {},
+                "events": {},
+                "mapper": [],
+                "objElements": []
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "securityData": {
+      "accessProfile": [],
+      "securityTemplate": {
+        "security": {
+          "artifact": {
+            "resource": "CustomerRegistration",
+            "resourceId": "CustomerRegistration",
+            "SIFlag": {
+              "uiType": "dropdown",
+              "selectedValue": "AA",
+              "selectionList": [
+                "AA",
+                "BA"
+              ]
+            },
+            "node": [
+              {
+                "resource": "Canvas",
+                "resourceId": "root",
+                "resourceType": "Canvas",
+                "resourceParentId": "root",
+                "resourcePath": "root",
+                "SIFlag": {
+                  "uiType": "dropdown",
+                  "selectedValue": "AA",
+                  "selectionList": [
+                    "AA",
+                    "BA",
+                    "ATO",
+                    "BTO"
+                  ]
+                },
+                "objElements": []
+              },
+              {
+                "resource": "customerregistrationgroup",
+                "resourceId": "b73f3e4fcd0840da8d1e57be2d47d04d",
+                "resourceType": "group",
+                "resourceParentId": "root",
+                "resourcePath": "root",
+                "SIFlag": {
+                  "uiType": "dropdown",
+                  "selectedValue": "AA",
+                  "selectionList": [
+                    "AA",
+                    "BA",
+                    "ATO",
+                    "BTO"
+                  ]
+                },
+                "objElements": [
+                  {
+                    "resource": "namelabel",
+                    "resourceId": "fb0278b6980541398e6a608001214a97",
+                    "resourceType": "label",
+                    "resourceParentId": "b73f3e4fcd0840da8d1e57be2d47d04d",
+                    "resourcePath": "root|b73f3e4fcd0840da8d1e57be2d47d04d",
+                    "SIFlag": {
+                      "uiType": "dropdown",
+                      "selectedValue": "ATO",
+                      "selectionList": [
+                        "AA",
+                        "BA",
+                        "ATO",
+                        "BTO"
+                      ]
+                    },
+                    "objElements": []
+                  },
+                  {
+                    "resource": "name",
+                    "resourceId": "eb23a4919cee4a05982cec747c0d3f42",
+                    "resourceType": "textinput",
+                    "resourceParentId": "b73f3e4fcd0840da8d1e57be2d47d04d",
+                    "resourcePath": "root|b73f3e4fcd0840da8d1e57be2d47d04d",
+                    "SIFlag": {
+                      "uiType": "dropdown",
+                      "selectedValue": "ATO",
+                      "selectionList": [
+                        "AA",
+                        "BA",
+                        "ATO",
+                        "BTO"
+                      ]
+                    },
+                    "objElements": []
+                  },
+                  {
+                    "resource": "emaillabel",
+                    "resourceId": "abc9801175584c6da982d4ccbf3fc236",
+                    "resourceType": "label",
+                    "resourceParentId": "b73f3e4fcd0840da8d1e57be2d47d04d",
+                    "resourcePath": "root|b73f3e4fcd0840da8d1e57be2d47d04d",
+                    "SIFlag": {
+                      "uiType": "dropdown",
+                      "selectedValue": "ATO",
+                      "selectionList": [
+                        "AA",
+                        "BA",
+                        "ATO",
+                        "BTO"
+                      ]
+                    },
+                    "objElements": []
+                  },
+                  {
+                    "resource": "email",
+                    "resourceId": "540d81629b7045b88352c23e926cbbbc",
+                    "resourceType": "textinput",
+                    "resourceParentId": "b73f3e4fcd0840da8d1e57be2d47d04d",
+                    "resourcePath": "root|b73f3e4fcd0840da8d1e57be2d47d04d",
+                    "SIFlag": {
+                      "uiType": "dropdown",
+                      "selectedValue": "ATO",
+                      "selectionList": [
+                        "AA",
+                        "BA",
+                        "ATO",
+                        "BTO"
+                      ]
+                    },
+                    "objElements": []
+                  },
+                  {
+                    "resource": "salarylabel",
+                    "resourceId": "098ded89b54b49218a1839c6f28ba801",
+                    "resourceType": "label",
+                    "resourceParentId": "b73f3e4fcd0840da8d1e57be2d47d04d",
+                    "resourcePath": "root|b73f3e4fcd0840da8d1e57be2d47d04d",
+                    "SIFlag": {
+                      "uiType": "dropdown",
+                      "selectedValue": "ATO",
+                      "selectionList": [
+                        "AA",
+                        "BA",
+                        "ATO",
+                        "BTO"
+                      ]
+                    },
+                    "objElements": []
+                  },
+                  {
+                    "resource": "salary",
+                    "resourceId": "b2f7f201db5c4356a37cab229018f952",
+                    "resourceType": "textinput",
+                    "resourceParentId": "b73f3e4fcd0840da8d1e57be2d47d04d",
+                    "resourcePath": "root|b73f3e4fcd0840da8d1e57be2d47d04d",
+                    "SIFlag": {
+                      "uiType": "dropdown",
+                      "selectedValue": "ATO",
+                      "selectionList": [
+                        "AA",
+                        "BA",
+                        "ATO",
+                        "BTO"
+                      ]
+                    },
+                    "objElements": []
+                  },
+                  {
+                    "resource": "save",
+                    "resourceId": "6d73ac95111b44f49e4d168936f0550d",
+                    "resourceType": "button",
+                    "resourceParentId": "b73f3e4fcd0840da8d1e57be2d47d04d",
+                    "resourcePath": "root|b73f3e4fcd0840da8d1e57be2d47d04d",
+                    "SIFlag": {
+                      "uiType": "dropdown",
+                      "selectedValue": "ATO",
+                      "selectionList": [
+                        "AA",
+                        "BA",
+                        "ATO",
+                        "BTO"
+                      ]
+                    },
+                    "objElements": []
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "afk": "CK:CT001:FNGK:AF:FNK:UF-UFW:CATK:TGW01:AFGK:TGW004:AFK:CustomerRegistration:AFVK:v1"
+    },
+    "targetItems": [
+      {
+        "nodeId": "root",
+        "nodeName": "",
+        "nodeLabel": "",
+        "nodeType": "Canvas",
+        "parentId": "root",
+        "path": "root",
+        "elementInfo": {},
+        "children": []
+      },
+      {
+        "nodeId": "b73f3e4fcd0840da8d1e57be2d47d04d",
+        "nodeName": "customerregistrationgroup",
+        "nodeLabel": "customerregistrationgroup",
+        "nodeType": "group",
+        "parentId": "root",
+        "path": "root",
+        "groupType": "group",
+        "nodeVersion": "v1",
+        "elementInfo": {
+          "props": [
+            {
+              "name": "isDynamic",
+              "_type": "boolean",
+              "value": false,
+              "enabled": true
+            }
+          ],
+          "events": "#group_events"
+        },
+        "children": [
+          {
+            "nodeId": "fb0278b6980541398e6a608001214a97",
+            "nodeName": "namelabel",
+            "nodeLabel": "Name",
+            "nodeType": "label",
+            "path": "root|b73f3e4fcd0840da8d1e57be2d47d04d",
+            "parentId": "b73f3e4fcd0840da8d1e57be2d47d04d",
+            "nodeVersion": "v1",
+            "elementInfo": {
+              "frameWork": "Nextjs",
+              "version": "14.2.3",
+              "component": "Label",
+              "label": "",
+              "props": [
+                {
+                  "name": "theme",
+                  "_type": "select",
+                  "selectionList": [
+                    "normal",
+                    "info",
+                    "danger",
+                    "warning",
+                    "success",
+                    "utility",
+                    "unknown",
+                    "clear"
+                  ],
+                  "value": "normal",
+                  "enabled": true
+                },
+                {
+                  "name": "icon",
+                  "_type": "conditionalIconSearch",
+                  "value": "",
+                  "enabled": true,
+                  "subSelection": {
+                    "iconDisplay": {
+                      "name": "iconDisplay",
+                      "_type": "select",
+                      "selectionList": [
+                        "Icon only",
+                        "Start with Icon",
+                        "End with Icon"
+                      ],
+                      "value": "End with Icon",
+                      "enabled": true
+                    }
+                  }
+                },
+                {
+                  "name": "interactive",
+                  "_type": "boolean",
+                  "value": false,
+                  "enabled": true
+                },
+                {
+                  "name": "copy",
+                  "_type": "string",
+                  "value": "",
+                  "enabled": true
+                },
+                {
+                  "name": "disabled",
+                  "_type": "boolean",
+                  "value": false,
+                  "enabled": true
+                },
+                {
+                  "name": "content",
+                  "_type": "string",
+                  "value": "Name",
+                  "enabled": true
+                },
+                {
+                  "name": "enableHeaderText",
+                  "_type": "conditionalBoolean",
+                  "value": false,
+                  "enabled": true,
+                  "subSelection": {
+                    "_true": {
+                      "content": {
+                        "name": "Header Text",
+                        "_type": "string",
+                        "value": "",
+                        "enabled": true
+                      },
+                      "position": {
+                        "name": "Header Position",
+                        "_type": "select",
+                        "selectionList": [
+                          "left",
+                          "top",
+                          "right",
+                          "bottom"
+                        ],
+                        "value": "",
+                        "enabled": true
+                      }
+                    }
+                  }
+                }
+              ],
+              "events": "#label_events"
+            }
+          },
+          {
+            "nodeId": "eb23a4919cee4a05982cec747c0d3f42",
+            "nodeName": "name",
+            "nodeLabel": "name",
+            "nodeType": "textinput",
+            "path": "root|b73f3e4fcd0840da8d1e57be2d47d04d",
+            "parentId": "b73f3e4fcd0840da8d1e57be2d47d04d",
+            "nodeVersion": "v1",
+            "elementInfo": {
+              "frameWork": "Nextjs",
+              "version": "14.2.3",
+              "component": "TextInput",
+              "props": [
+                {
+                  "name": "disabled",
+                  "_label": "Disabled",
+                  "_type": "boolean",
+                  "value": false,
+                  "enabled": true
+                },
+                {
+                  "name": "readOnly",
+                  "_label": "Read Only",
+                  "_type": "boolean",
+                  "value": false,
+                  "enabled": true
+                },
+                {
+                  "name": "pin",
+                  "_label": "Pin",
+                  "_type": "select",
+                  "selectionList": [
+                    "round-round",
+                    "brick-brick",
+                    "clear-clear"
+                  ],
+                  "value": "brick-brick",
+                  "enabled": true
+                },
+                {
+                  "name": "view",
+                  "_label": "View",
+                  "_type": "select",
+                  "selectionList": [
+                    "normal",
+                    "clear"
+                  ],
+                  "value": "normal",
+                  "enabled": true
+                },
+                {
+                  "name": "placeholder",
+                  "_label": "Placeholder",
+                  "_type": "text",
+                  "value": "type here....",
+                  "enabled": true
+                },
+                {
+                  "name": "leftContent",
+                  "_label": "Left Content",
+                  "_type": "text",
+                  "value": "",
+                  "enabled": true
+                },
+                {
+                  "name": "rightContent",
+                  "_label": "Right Content",
+                  "_type": "text",
+                  "value": "",
+                  "enabled": true
+                },
+                {
+                  "name": "enableHeaderText",
+                  "_label": "Enable Header Text",
+                  "_type": "conditionalBoolean",
+                  "value": false,
+                  "enabled": true,
+                  "subSelection": {
+                    "_true": {
+                      "content": {
+                        "name": "Header Text",
+                        "_type": "text",
+                        "value": "",
+                        "enabled": true
+                      },
+                      "position": {
+                        "name": "Header Position",
+                        "_type": "select",
+                        "selectionList": [
+                          "left",
+                          "top",
+                          "right",
+                          "bottom"
+                        ],
+                        "value": "top",
+                        "enabled": true
+                      }
+                    }
+                  }
+                },
+                {
+                  "name": "numberFormat",
+                  "_label": "Number Format Style",
+                  "_type": "select",
+                  "selectionList": [
+                    "none",
+                    "Indian",
+                    "International",
+                    "European"
+                  ],
+                  "value": "",
+                  "enabled": false
+                },
+                {
+                  "name": "isCurrency",
+                  "_label": "Is Currency",
+                  "_type": "boolean",
+                  "value": false,
+                  "enabled": true
+                },
+                {
+                  "name": "bindInitialData",
+                  "_label": "Bind Initial Data",
+                  "_type": "boolean",
+                  "value": false,
+                  "enabled": true
+                }
+              ],
+              "events": "#textinput_events",
+              "validation": "#textinput_validation"
+            }
+          },
+          {
+            "nodeId": "abc9801175584c6da982d4ccbf3fc236",
+            "nodeName": "emaillabel",
+            "nodeLabel": "Email",
+            "nodeType": "label",
+            "path": "root|b73f3e4fcd0840da8d1e57be2d47d04d",
+            "parentId": "b73f3e4fcd0840da8d1e57be2d47d04d",
+            "nodeVersion": "v1",
+            "elementInfo": {
+              "frameWork": "Nextjs",
+              "version": "14.2.3",
+              "component": "Label",
+              "label": "",
+              "props": [
+                {
+                  "name": "theme",
+                  "_type": "select",
+                  "selectionList": [
+                    "normal",
+                    "info",
+                    "danger",
+                    "warning",
+                    "success",
+                    "utility",
+                    "unknown",
+                    "clear"
+                  ],
+                  "value": "normal",
+                  "enabled": true
+                },
+                {
+                  "name": "icon",
+                  "_type": "conditionalIconSearch",
+                  "value": "",
+                  "enabled": true,
+                  "subSelection": {
+                    "iconDisplay": {
+                      "name": "iconDisplay",
+                      "_type": "select",
+                      "selectionList": [
+                        "Icon only",
+                        "Start with Icon",
+                        "End with Icon"
+                      ],
+                      "value": "End with Icon",
+                      "enabled": true
+                    }
+                  }
+                },
+                {
+                  "name": "interactive",
+                  "_type": "boolean",
+                  "value": false,
+                  "enabled": true
+                },
+                {
+                  "name": "copy",
+                  "_type": "string",
+                  "value": "",
+                  "enabled": true
+                },
+                {
+                  "name": "disabled",
+                  "_type": "boolean",
+                  "value": false,
+                  "enabled": true
+                },
+                {
+                  "name": "content",
+                  "_type": "string",
+                  "value": "Email",
+                  "enabled": true
+                },
+                {
+                  "name": "enableHeaderText",
+                  "_type": "conditionalBoolean",
+                  "value": false,
+                  "enabled": true,
+                  "subSelection": {
+                    "_true": {
+                      "content": {
+                        "name": "Header Text",
+                        "_type": "string",
+                        "value": "",
+                        "enabled": true
+                      },
+                      "position": {
+                        "name": "Header Position",
+                        "_type": "select",
+                        "selectionList": [
+                          "left",
+                          "top",
+                          "right",
+                          "bottom"
+                        ],
+                        "value": "",
+                        "enabled": true
+                      }
+                    }
+                  }
+                }
+              ],
+              "events": "#label_events"
+            }
+          },
+          {
+            "nodeId": "540d81629b7045b88352c23e926cbbbc",
+            "nodeName": "email",
+            "nodeLabel": "email",
+            "nodeType": "textinput",
+            "path": "root|b73f3e4fcd0840da8d1e57be2d47d04d",
+            "parentId": "b73f3e4fcd0840da8d1e57be2d47d04d",
+            "nodeVersion": "v1",
+            "elementInfo": {
+              "frameWork": "Nextjs",
+              "version": "14.2.3",
+              "component": "TextInput",
+              "props": [
+                {
+                  "name": "disabled",
+                  "_label": "Disabled",
+                  "_type": "boolean",
+                  "value": false,
+                  "enabled": true
+                },
+                {
+                  "name": "readOnly",
+                  "_label": "Read Only",
+                  "_type": "boolean",
+                  "value": false,
+                  "enabled": true
+                },
+                {
+                  "name": "pin",
+                  "_label": "Pin",
+                  "_type": "select",
+                  "selectionList": [
+                    "round-round",
+                    "brick-brick",
+                    "clear-clear"
+                  ],
+                  "value": "brick-brick",
+                  "enabled": true
+                },
+                {
+                  "name": "view",
+                  "_label": "View",
+                  "_type": "select",
+                  "selectionList": [
+                    "normal",
+                    "clear"
+                  ],
+                  "value": "normal",
+                  "enabled": true
+                },
+                {
+                  "name": "placeholder",
+                  "_label": "Placeholder",
+                  "_type": "text",
+                  "value": "type here....",
+                  "enabled": true
+                },
+                {
+                  "name": "leftContent",
+                  "_label": "Left Content",
+                  "_type": "text",
+                  "value": "",
+                  "enabled": true
+                },
+                {
+                  "name": "rightContent",
+                  "_label": "Right Content",
+                  "_type": "text",
+                  "value": "",
+                  "enabled": true
+                },
+                {
+                  "name": "enableHeaderText",
+                  "_label": "Enable Header Text",
+                  "_type": "conditionalBoolean",
+                  "value": false,
+                  "enabled": true,
+                  "subSelection": {
+                    "_true": {
+                      "content": {
+                        "name": "Header Text",
+                        "_type": "text",
+                        "value": "",
+                        "enabled": true
+                      },
+                      "position": {
+                        "name": "Header Position",
+                        "_type": "select",
+                        "selectionList": [
+                          "left",
+                          "top",
+                          "right",
+                          "bottom"
+                        ],
+                        "value": "top",
+                        "enabled": true
+                      }
+                    }
+                  }
+                },
+                {
+                  "name": "numberFormat",
+                  "_label": "Number Format Style",
+                  "_type": "select",
+                  "selectionList": [
+                    "none",
+                    "Indian",
+                    "International",
+                    "European"
+                  ],
+                  "value": "",
+                  "enabled": false
+                },
+                {
+                  "name": "isCurrency",
+                  "_label": "Is Currency",
+                  "_type": "boolean",
+                  "value": false,
+                  "enabled": true
+                },
+                {
+                  "name": "bindInitialData",
+                  "_label": "Bind Initial Data",
+                  "_type": "boolean",
+                  "value": false,
+                  "enabled": true
+                }
+              ],
+              "events": "#textinput_events",
+              "validation": "#textinput_validation"
+            }
+          },
+          {
+            "nodeId": "098ded89b54b49218a1839c6f28ba801",
+            "nodeName": "salarylabel",
+            "nodeLabel": "Salary",
+            "nodeType": "label",
+            "path": "root|b73f3e4fcd0840da8d1e57be2d47d04d",
+            "parentId": "b73f3e4fcd0840da8d1e57be2d47d04d",
+            "nodeVersion": "v1",
+            "elementInfo": {
+              "frameWork": "Nextjs",
+              "version": "14.2.3",
+              "component": "Label",
+              "label": "",
+              "props": [
+                {
+                  "name": "theme",
+                  "_type": "select",
+                  "selectionList": [
+                    "normal",
+                    "info",
+                    "danger",
+                    "warning",
+                    "success",
+                    "utility",
+                    "unknown",
+                    "clear"
+                  ],
+                  "value": "normal",
+                  "enabled": true
+                },
+                {
+                  "name": "icon",
+                  "_type": "conditionalIconSearch",
+                  "value": "",
+                  "enabled": true,
+                  "subSelection": {
+                    "iconDisplay": {
+                      "name": "iconDisplay",
+                      "_type": "select",
+                      "selectionList": [
+                        "Icon only",
+                        "Start with Icon",
+                        "End with Icon"
+                      ],
+                      "value": "End with Icon",
+                      "enabled": true
+                    }
+                  }
+                },
+                {
+                  "name": "interactive",
+                  "_type": "boolean",
+                  "value": false,
+                  "enabled": true
+                },
+                {
+                  "name": "copy",
+                  "_type": "string",
+                  "value": "",
+                  "enabled": true
+                },
+                {
+                  "name": "disabled",
+                  "_type": "boolean",
+                  "value": false,
+                  "enabled": true
+                },
+                {
+                  "name": "content",
+                  "_type": "string",
+                  "value": "Salary",
+                  "enabled": true
+                },
+                {
+                  "name": "enableHeaderText",
+                  "_type": "conditionalBoolean",
+                  "value": false,
+                  "enabled": true,
+                  "subSelection": {
+                    "_true": {
+                      "content": {
+                        "name": "Header Text",
+                        "_type": "string",
+                        "value": "",
+                        "enabled": true
+                      },
+                      "position": {
+                        "name": "Header Position",
+                        "_type": "select",
+                        "selectionList": [
+                          "left",
+                          "top",
+                          "right",
+                          "bottom"
+                        ],
+                        "value": "",
+                        "enabled": true
+                      }
+                    }
+                  }
+                }
+              ],
+              "events": "#label_events"
+            }
+          },
+          {
+            "nodeId": "b2f7f201db5c4356a37cab229018f952",
+            "nodeName": "salary",
+            "nodeLabel": "salary",
+            "nodeType": "textinput",
+            "path": "root|b73f3e4fcd0840da8d1e57be2d47d04d",
+            "parentId": "b73f3e4fcd0840da8d1e57be2d47d04d",
+            "nodeVersion": "v1",
+            "elementInfo": {
+              "frameWork": "Nextjs",
+              "version": "14.2.3",
+              "component": "TextInput",
+              "props": [
+                {
+                  "name": "disabled",
+                  "_label": "Disabled",
+                  "_type": "boolean",
+                  "value": false,
+                  "enabled": true
+                },
+                {
+                  "name": "readOnly",
+                  "_label": "Read Only",
+                  "_type": "boolean",
+                  "value": false,
+                  "enabled": true
+                },
+                {
+                  "name": "pin",
+                  "_label": "Pin",
+                  "_type": "select",
+                  "selectionList": [
+                    "round-round",
+                    "brick-brick",
+                    "clear-clear"
+                  ],
+                  "value": "brick-brick",
+                  "enabled": true
+                },
+                {
+                  "name": "view",
+                  "_label": "View",
+                  "_type": "select",
+                  "selectionList": [
+                    "normal",
+                    "clear"
+                  ],
+                  "value": "normal",
+                  "enabled": true
+                },
+                {
+                  "name": "placeholder",
+                  "_label": "Placeholder",
+                  "_type": "text",
+                  "value": "type here....",
+                  "enabled": true
+                },
+                {
+                  "name": "leftContent",
+                  "_label": "Left Content",
+                  "_type": "text",
+                  "value": "",
+                  "enabled": true
+                },
+                {
+                  "name": "rightContent",
+                  "_label": "Right Content",
+                  "_type": "text",
+                  "value": "",
+                  "enabled": true
+                },
+                {
+                  "name": "enableHeaderText",
+                  "_label": "Enable Header Text",
+                  "_type": "conditionalBoolean",
+                  "value": false,
+                  "enabled": true,
+                  "subSelection": {
+                    "_true": {
+                      "content": {
+                        "name": "Header Text",
+                        "_type": "text",
+                        "value": "",
+                        "enabled": true
+                      },
+                      "position": {
+                        "name": "Header Position",
+                        "_type": "select",
+                        "selectionList": [
+                          "left",
+                          "top",
+                          "right",
+                          "bottom"
+                        ],
+                        "value": "top",
+                        "enabled": true
+                      }
+                    }
+                  }
+                },
+                {
+                  "name": "numberFormat",
+                  "_label": "Number Format Style",
+                  "_type": "select",
+                  "selectionList": [
+                    "none",
+                    "Indian",
+                    "International",
+                    "European"
+                  ],
+                  "value": "",
+                  "enabled": false
+                },
+                {
+                  "name": "isCurrency",
+                  "_label": "Is Currency",
+                  "_type": "boolean",
+                  "value": false,
+                  "enabled": true
+                },
+                {
+                  "name": "bindInitialData",
+                  "_label": "Bind Initial Data",
+                  "_type": "boolean",
+                  "value": false,
+                  "enabled": true
+                }
+              ],
+              "events": "#textinput_events",
+              "validation": "#textinput_validation"
+            }
+          },
+          {
+            "nodeId": "6d73ac95111b44f49e4d168936f0550d",
+            "nodeName": "save",
+            "nodeLabel": "save",
+            "nodeType": "button",
+            "path": "root|b73f3e4fcd0840da8d1e57be2d47d04d",
+            "parentId": "b73f3e4fcd0840da8d1e57be2d47d04d",
+            "nodeVersion": "v1",
+            "elementInfo": {
+              "frameWork": "Nextjs",
+              "version": "14.2.3",
+              "component": "Button",
+              "props": [
+                {
+                  "name": "view",
+                  "_type": "select",
+                  "selectionList": [
+                    "normal",
+                    "action",
+                    "outlined",
+                    "outlined-info",
+                    "outlined-success",
+                    "outlined-warning",
+                    "outlined-danger",
+                    "outlined-utility",
+                    "outlined-action",
+                    "raised",
+                    "flat",
+                    "flat-secondary",
+                    "flat-info",
+                    "flat-success",
+                    "flat-warning",
+                    "flat-danger",
+                    "flat-utility",
+                    "flat-action",
+                    "normal-contrast",
+                    "outlined-contrast",
+                    "flat-contrast"
+                  ],
+                  "value": "action",
+                  "enabled": true
+                },
+                {
+                  "name": "icon",
+                  "_type": "conditionalIconSearch",
+                  "value": "",
+                  "enabled": true,
+                  "subSelection": {
+                    "iconDisplay": {
+                      "name": "iconDisplay",
+                      "_type": "select",
+                      "selectionList": [
+                        "Icon only",
+                        "Start with Icon",
+                        "End with Icon"
+                      ],
+                      "value": "End with Icon",
+                      "enabled": true
+                    }
+                  }
+                },
+                {
+                  "name": "disabled",
+                  "_type": "boolean",
+                  "value": false,
+                  "enabled": true
+                },
+                {
+                  "name": "isRecordLevel",
+                  "_type": "boolean",
+                  "value": false,
+                  "enabled": true
+                },
+                {
+                  "name": "pin",
+                  "_type": "select",
+                  "selectionList": [
+                    "round-round",
+                    "brick-brick",
+                    "clear-clear",
+                    "circle-circle",
+                    "round-brick",
+                    "brick-round",
+                    "round-clear",
+                    "clear-round",
+                    "brick-clear",
+                    "clear-brick",
+                    "circle-brick",
+                    "brick-circle",
+                    "circle-clear",
+                    "clear-circle"
+                  ],
+                  "value": "circle-circle",
+                  "enabled": true
+                },
+                {
+                  "name": "enableHeaderText",
+                  "_type": "conditionalBoolean",
+                  "value": false,
+                  "enabled": true,
+                  "subSelection": {
+                    "_true": {
+                      "content": {
+                        "name": "Header Text",
+                        "_type": "text",
+                        "value": "",
+                        "enabled": true
+                      },
+                      "position": {
+                        "name": "Header Position",
+                        "_type": "select",
+                        "selectionList": [
+                          "left",
+                          "top",
+                          "right",
+                          "bottom"
+                        ],
+                        "value": "top",
+                        "enabled": true
+                      }
+                    }
+                  }
+                },
+                {
+                  "name": "isValidate",
+                  "_type": "boolean",
+                  "value": true,
+                  "enabled": true
+                }
+              ],
+              "events": "#button_events"
+            }
+          }
+        ]
+      }
+    ],
+    "nodeTree": [
+      {
+        "nodeId": "root",
+        "nodeType": "Canvas",
+        "nodeLabel": "",
+        "nodeName": "",
+        "nodeGroupType": "group",
+        "nodeAction": [
+          "root"
+        ],
+        "children": [
+          {
+            "nodeId": "b73f3e4fcd0840da8d1e57be2d47d04d",
+            "nodeType": "group",
+            "nodeLabel": "customerregistrationgroup",
+            "nodeName": "customerregistrationgroup",
+            "nodeParent": "root",
+            "nodeGroupType": "group",
+            "nodeAction": [
+              "b73f3e4fcd0840da8d1e57be2d47d04d"
+            ],
+            "children": [
+              {
+                "nodeId": "fb0278b6980541398e6a608001214a97",
+                "nodeType": "label",
+                "nodeLabel": "Name",
+                "nodeName": "namelabel",
+                "nodeParent": "b73f3e4fcd0840da8d1e57be2d47d04d",
+                "nodeGroupType": "group",
+                "nodeAction": [
+                  "b73f3e4fcd0840da8d1e57be2d47d04d",
+                  "fb0278b6980541398e6a608001214a97"
+                ],
+                "children": []
+              },
+              {
+                "nodeId": "eb23a4919cee4a05982cec747c0d3f42",
+                "nodeType": "textinput",
+                "nodeLabel": "name",
+                "nodeName": "name",
+                "nodeParent": "b73f3e4fcd0840da8d1e57be2d47d04d",
+                "nodeGroupType": "group",
+                "nodeAction": [
+                  "b73f3e4fcd0840da8d1e57be2d47d04d",
+                  "eb23a4919cee4a05982cec747c0d3f42"
+                ],
+                "children": []
+              },
+              {
+                "nodeId": "abc9801175584c6da982d4ccbf3fc236",
+                "nodeType": "label",
+                "nodeLabel": "Email",
+                "nodeName": "emaillabel",
+                "nodeParent": "b73f3e4fcd0840da8d1e57be2d47d04d",
+                "nodeGroupType": "group",
+                "nodeAction": [
+                  "b73f3e4fcd0840da8d1e57be2d47d04d",
+                  "abc9801175584c6da982d4ccbf3fc236"
+                ],
+                "children": []
+              },
+              {
+                "nodeId": "540d81629b7045b88352c23e926cbbbc",
+                "nodeType": "textinput",
+                "nodeLabel": "email",
+                "nodeName": "email",
+                "nodeParent": "b73f3e4fcd0840da8d1e57be2d47d04d",
+                "nodeGroupType": "group",
+                "nodeAction": [
+                  "b73f3e4fcd0840da8d1e57be2d47d04d",
+                  "540d81629b7045b88352c23e926cbbbc"
+                ],
+                "children": []
+              },
+              {
+                "nodeId": "098ded89b54b49218a1839c6f28ba801",
+                "nodeType": "label",
+                "nodeLabel": "Salary",
+                "nodeName": "salarylabel",
+                "nodeParent": "b73f3e4fcd0840da8d1e57be2d47d04d",
+                "nodeGroupType": "group",
+                "nodeAction": [
+                  "b73f3e4fcd0840da8d1e57be2d47d04d",
+                  "098ded89b54b49218a1839c6f28ba801"
+                ],
+                "children": []
+              },
+              {
+                "nodeId": "b2f7f201db5c4356a37cab229018f952",
+                "nodeType": "textinput",
+                "nodeLabel": "salary",
+                "nodeName": "salary",
+                "nodeParent": "b73f3e4fcd0840da8d1e57be2d47d04d",
+                "nodeGroupType": "group",
+                "nodeAction": [
+                  "b73f3e4fcd0840da8d1e57be2d47d04d",
+                  "b2f7f201db5c4356a37cab229018f952"
+                ],
+                "children": []
+              },
+              {
+                "nodeId": "6d73ac95111b44f49e4d168936f0550d",
+                "nodeType": "button",
+                "nodeLabel": "save",
+                "nodeName": "save",
+                "nodeParent": "b73f3e4fcd0840da8d1e57be2d47d04d",
+                "nodeGroupType": "group",
+                "nodeAction": [
+                  "b73f3e4fcd0840da8d1e57be2d47d04d",
+                  "6d73ac95111b44f49e4d168936f0550d"
+                ],
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

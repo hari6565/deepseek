@@ -5,7 +5,7 @@
 # own token before loading this overlay. Never commit a real token here.
 - insert:
     - id: uf_preview
-      name: 'D:/deepseek/deepseek-harness/plugin/uf_preview/src/main.ts'
+      name: 'D:/deepseekgitcode/deepseek-harness/plugin/uf_preview/src/main.ts'
       config:
         codeGenUrl: 'http://192.168.2.86:3000/tgw-codeGeneration'
         authToken: 'REPLACE_WITH_YOUR_BEARER_TOKEN'

@@ -2,7 +2,7 @@
 #   pnpm dsh web --patch ./plugin/uf_skeleton/src/cordis.yml
 - insert:
     - id: uf_skeleton
-      name: 'D:/deepseek/deepseek-harness/plugin/uf_skeleton/src/main.ts'
+      name: 'D:/deepseekgitcode/deepseek-harness/plugin/uf_skeleton/src/main.ts'
       config:
         baseUrl: 'http://192.168.2.99:11434'
         model: 'testmodel'

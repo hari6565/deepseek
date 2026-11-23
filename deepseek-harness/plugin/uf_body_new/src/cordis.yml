@@ -2,7 +2,7 @@
 #   pnpm dsh web --patch ./plugin/uf_body_new/src/cordis.yml
 - insert:
     - id: uf_body_new
-      name: 'D:/deepseek/deepseek-harness/plugin/uf_body_new/src/main.ts'
+      name: 'D:/deepseekgitcode/deepseek-harness/plugin/uf_body_new/src/main.ts'
       config:
         afkClientCode: 'CT001'
         afkCategoryCode: 'TGW01'

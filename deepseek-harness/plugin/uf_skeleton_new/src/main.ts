@@ -229,7 +229,8 @@ export function apply(ctx: Context, config: Config) {
       render: (_args, value) => [{ type: 'text', text: JSON.stringify(value, null, 2) }],
     },
     async execute(args, exec) {
-      const targetModel = args.model ?? config.model
+    //  const targetModel = args.model ?? config.model
+      const targetModel = 'openrouter/free'
 
       const controller = new AbortController()
       const onAbort = () => controller.abort(exec.signal.reason)

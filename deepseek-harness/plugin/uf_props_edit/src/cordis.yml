@@ -5,7 +5,7 @@
 # key before loading this overlay. Never commit a real key here.
 - insert:
     - id: uf_props_edit
-      name: 'D:/deepseek/deepseek-harness/plugin/uf_props_edit/src/main.ts'
+      name: 'D:/deepseekgitcode/deepseek-harness/plugin/uf_props_edit/src/main.ts'
       config:
         apiUrl: 'https://openrouter.ai/api/v1'
         apiKey: 'AAAAAAAAAAAAAAA'
@@ -13,4 +13,4 @@
         temperature: 0
         timeoutMs: 120000
         # catalogDir omitted -- defaults to the copy bundled at plugin/uf_props_edit/catalog/props/
-        tempDir: 'D:/deepseek/deepseek-harness/plugin/_tempFiles_'
+        tempDir: 'D:/deepseekgitcode/deepseek-harness/plugin/_tempFiles_'
