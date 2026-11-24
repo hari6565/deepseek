@@ -5,7 +5,7 @@
 # key before loading this overlay. Never commit a real key here.
 - insert:
     - id: uf_skeleton_new
-      name: 'D:/deepseek/deepseek-harness/plugin/uf_skeleton_new/src/main.ts'
+      name: 'D:/deepseekgitcode/deepseek-harness/plugin/uf_skeleton_new/src/main.ts'
       config:
         apiUrl: 'https://openrouter.ai/api/v1'
         apiKey: 'jjjjjjjjjjjjjjjjjjjj'

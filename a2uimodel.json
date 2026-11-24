@@ -1,0 +1,282 @@
+[
+  {
+    "version": "1.0",
+    "createSurface": {
+      "surfaceId": "ui-329585",
+      "catalogId": "https://copilotkit.ai/a2ui/catalogs/playground/v1",
+      "components": [
+        {
+          "id": "root",
+          "component": "Column",
+          "children": [
+            "header",
+            "kpi_grid",
+            "chart_row",
+            "bottom_grid",
+            "footnote"
+          ],
+          "gap": 6
+        },
+        {
+          "id": "header",
+          "component": "Heading",
+          "text": "Q3 Regional Sales Performance",
+          "eyebrow": "Executive Commercial Report",
+          "subtitle": "Global revenue reached $48.2M, beating quarterly target by 7.1%"
+        },
+        {
+          "id": "kpi_grid",
+          "component": "Grid",
+          "children": [
+            "stat_total",
+            "stat_growth",
+            "stat_deal",
+            "stat_leader"
+          ],
+          "columns": 4,
+          "gap": 4
+        },
+        {
+          "id": "chart_row",
+          "component": "Grid",
+          "children": [
+            "regional_bar",
+            "share_pie"
+          ],
+          "columns": "2fr 1.2fr",
+          "gap": 4
+        },
+        {
+          "id": "bottom_grid",
+          "component": "Grid",
+          "children": [
+            "products_table",
+            "takeaways_card"
+          ],
+          "columns": "1.8fr 1.2fr",
+          "gap": 4
+        },
+        {
+          "id": "footnote",
+          "component": "Caption",
+          "text": "Illustrative data based on Q3 audited regional sales reports.",
+          "color": "tertiary",
+          "size": "sm"
+        },
+        {
+          "id": "stat_total",
+          "component": "Stat",
+          "label": "Q3 Net Revenue",
+          "value": "$48.2M",
+          "delta": "+14.2% YoY",
+          "trend": "up",
+          "caption": "Consolidated gross billing",
+          "tone": "positive"
+        },
+        {
+          "id": "stat_growth",
+          "component": "Stat",
+          "label": "Target Attainment",
+          "value": "107.1%",
+          "delta": "+7.1% vs plan",
+          "trend": "up",
+          "caption": "Target was $45.0M",
+          "tone": "positive"
+        },
+        {
+          "id": "stat_target",
+          "component": "Stat",
+          "label": "Average Deal Size",
+          "value": "$64.5K",
+          "delta": "+8.4% QoQ",
+          "trend": "up",
+          "caption": "Enterprise & mid-market",
+          "tone": "accent"
+        },
+        {
+          "id": "stat_top_region",
+          "component": "Stat",
+          "label": "Leading Region",
+          "value": "North America",
+          "delta": "$21.4M",
+          "trend": "flat",
+          "caption": "44.4% global share",
+          "tone": "info"
+        },
+        {
+          "id": "regional_bar",
+          "component": "BarChart",
+          "title": "Regional Revenue vs Target",
+          "subtitle": "Actual closed revenue compared to target in millions USD",
+          "height": 280,
+          "format": "currency",
+          "unit": "USD",
+          "data": [
+            {
+              "x": "North America",
+              "y": 21.4,
+              "series": "Actual"
+            },
+            {
+              "x": "North America",
+              "y": 19.5,
+              "series": "Target"
+            },
+            {
+              "x": "Europe",
+              "y": 14.8,
+              "series": "Actual"
+            },
+            {
+              "x": "Europe",
+              "y": 14,
+              "series": "Target"
+            },
+            {
+              "x": "Asia-Pacific",
+              "y": 8.4,
+              "series": "Actual"
+            },
+            {
+              "x": "Asia-Pacific",
+              "y": 8,
+              "series": "Target"
+            },
+            {
+              "x": "Latin America",
+              "y": 3.6,
+              "series": "Actual"
+            },
+            {
+              "x": "Latin America",
+              "y": 3.5,
+              "series": "Target"
+            }
+          ]
+        },
+        {
+          "id": "share_pie",
+          "component": "PieChart",
+          "title": "Regional Contribution",
+          "subtitle": "Percentage share of total Q3 revenue",
+          "height": 280,
+          "format": "percent",
+          "unit": "%",
+          "data": [
+            {
+              "label": "North America",
+              "value": 44.4
+            },
+            {
+              "label": "Europe",
+              "value": 30.7
+            },
+            {
+              "label": "Asia-Pacific",
+              "value": 17.4
+            },
+            {
+              "label": "Latin America",
+              "value": 7.5
+            }
+          ],
+          "donut": true,
+          "centerLabel": "$48.2M"
+        },
+        {
+          "id": "products_table",
+          "component": "DataTable",
+          "title": "Top Products by Regional Performance",
+          "columns": [
+            {
+              "key": "product",
+              "label": "Product Line"
+            },
+            {
+              "key": "leadRegion",
+              "label": "Top Region"
+            },
+            {
+              "key": "revenue",
+              "label": "Q3 Revenue",
+              "format": "currency"
+            },
+            {
+              "key": "growth",
+              "label": "YoY Growth",
+              "format": "percent"
+            }
+          ],
+          "rows": [
+            {
+              "product": "Cloud Enterprise Suite",
+              "leadRegion": "North America",
+              "revenue": 22800000,
+              "growth": 18.5
+            },
+            {
+              "product": "Data & AI Platform",
+              "leadRegion": "Europe",
+              "revenue": 13400000,
+              "growth": 31.2
+            },
+            {
+              "product": "Security Operations",
+              "leadRegion": "Asia-Pacific",
+              "revenue": 7600000,
+              "growth": 14
+            },
+            {
+              "product": "Workflow Automation",
+              "leadRegion": "Latin America",
+              "revenue": 4400000,
+              "growth": 9.8
+            }
+          ]
+        },
+        {
+          "id": "takeaways_card",
+          "component": "Section",
+          "eyebrow": "Strategic Execution",
+          "title": "Q3 Growth Drivers",
+          "description": "Highlights across regional sales motions",
+          "children": [
+            "takeaway_markdown",
+            "action_callout"
+          ]
+        },
+        {
+          "id": "action_callout",
+          "component": "Callout",
+          "title": "Growth Focus for Q4",
+          "text": "Accelerate APAC enterprise hiring and expand Cloud Platform tiering to meet elevated seasonal demand in EMEA."
+        },
+        {
+          "id": "stat_deal",
+          "component": "Stat",
+          "label": "Average Deal Size",
+          "value": "$64.5K",
+          "delta": "+8.4% QoQ",
+          "trend": "up",
+          "caption": "Enterprise and mid-market",
+          "tone": "accent"
+        },
+        {
+          "id": "stat_leader",
+          "component": "Stat",
+          "label": "Leading Region",
+          "value": "North America",
+          "delta": "$21.4M",
+          "trend": "flat",
+          "caption": "44.4% global share",
+          "tone": "info"
+        },
+        {
+          "id": "takeaway_markdown",
+          "component": "Markdown",
+          "text": "- **North America**: Enterprise cloud renewals drove $21.4M total\n- **Asia-Pacific**: Fastest expanding territory with +28.6% YoY growth\n- **Latin America**: Regional fintech integrations raised revenue to $3.6M\n- **Gross Retention**: 96.2% across Tier-1 enterprise accounts globally"
+        }
+      ]
+    }
+  }
+]

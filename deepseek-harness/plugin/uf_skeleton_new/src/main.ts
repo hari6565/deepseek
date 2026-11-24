@@ -24,6 +24,14 @@ export interface Config {
   timeoutMs: number
   /** The instructions sent as the system message. Defaults to the resolved ui-skeleton-spec.md rules. */
   systemPrompt: string
+  /**
+   * Cap on generated tokens ("max_tokens"). Without one, many providers apply a small default and a
+   * reasoning model can spend all of it "thinking" before writing any JSON (finish_reason "length",
+   * content null). 0 omits the field.
+   */
+  maxTokens: number
+  /** Tries per call for transient failures: empty/truncated completions, HTTP 429 and 5xx. */
+  maxAttempts: number
 }
 
 export const Config: Schema<Config> = Schema.object({
@@ -33,6 +41,8 @@ export const Config: Schema<Config> = Schema.object({
   temperature: Schema.number().default(0),
   timeoutMs: Schema.number().default(120_000),
   systemPrompt: Schema.string().default(SYSTEM_PROMPT),
+  maxTokens: Schema.number().default(8192),
+  maxAttempts: Schema.number().default(3),
 })
 
 // --- UI node tree -----------------------------------------------------
@@ -187,7 +197,8 @@ function extractJsonObject(text: string): string {
 }
 
 interface ChatCompletionsResponse {
-  choices?: Array<{ message?: { content?: string } }>
+  model?: string
+  choices?: Array<{ finish_reason?: string, message?: { content?: string | null } }>
   [key: string]: unknown
 }
 
@@ -201,7 +212,7 @@ export function apply(ctx: Context, config: Config) {
   ctx.effect(() => {
     const timer = setInterval(() => {
       console.log("[uf_skeleton_new] heartbeat");
-    }, 5000);
+    }, 10000);
 
     // Runs automatically when the plugin unloads.
     return () => clearInterval(timer);
@@ -229,8 +240,7 @@ export function apply(ctx: Context, config: Config) {
       render: (_args, value) => [{ type: 'text', text: JSON.stringify(value, null, 2) }],
     },
     async execute(args, exec) {
-    //  const targetModel = args.model ?? config.model
-      const targetModel = 'openrouter/free'
+      const targetModel = args.model ?? config.model
 
       const controller = new AbortController()
       const onAbort = () => controller.abort(exec.signal.reason)
@@ -241,48 +251,69 @@ export function apply(ctx: Context, config: Config) {
       )
 
       const endpoint = chatCompletionsUrl(config.apiUrl)
-      let raw: string
+      let raw = ''
       try {
-        let response: Response
-        try {
-          response = await fetch(endpoint, {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-              Authorization: `Bearer ${config.apiKey}`,
-            },
-            body: JSON.stringify({
-              model: targetModel,
-              temperature: config.temperature,
-              messages: [
-                { role: 'system', content: config.systemPrompt },
-                { role: 'user', content: args.prompt },
-              ],
-            }),
-            signal: controller.signal,
-          })
-        } catch (cause) {
-          const message = cause instanceof Error ? cause.message : String(cause)
-          throw new Error(
-            `uf_skeleton_new: could not reach the model API at ${endpoint} using model "${targetModel}": ${message}.`,
-          )
+        const maxAttempts = Math.max(1, Math.floor(config.maxAttempts))
+        for (let attempt = 1; attempt <= maxAttempts; attempt++) {
+          const isLast = attempt === maxAttempts
+          let response: Response
+          try {
+            response = await fetch(endpoint, {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+                Authorization: `Bearer ${config.apiKey}`,
+              },
+              body: JSON.stringify({
+                model: targetModel,
+                temperature: config.temperature,
+                ...(config.maxTokens > 0 ? { max_tokens: config.maxTokens } : {}),
+                messages: [
+                  { role: 'system', content: config.systemPrompt },
+                  { role: 'user', content: args.prompt },
+                ],
+              }),
+              signal: controller.signal,
+            })
+          } catch (cause) {
+            const message = cause instanceof Error ? cause.message : String(cause)
+            throw new Error(
+              `uf_skeleton_new: could not reach the model API at ${endpoint} using model "${targetModel}": ${message}.`,
+            )
+          }
+          if (!response.ok) {
+            // Rate limits and upstream hiccups are routine on free tiers -- worth another try.
+            if (!isLast && (response.status === 429 || response.status >= 500)) {
+              await new Promise(resolve => setTimeout(resolve, 1500 * attempt))
+              continue
+            }
+            const body = await response.text().catch(() => '')
+            throw new Error(
+              `uf_skeleton_new: model API at ${endpoint} responded ${String(response.status)} ${response.statusText}`
+              + (body ? `: ${body.slice(0, 500)}` : ''),
+            )
+          }
+          const data = await response.json() as ChatCompletionsResponse
+          const choice = data.choices?.[0]
+          const content = choice?.message?.content
+          const truncated = choice?.finish_reason === 'length'
+          if (typeof content === 'string' && content.length > 0 && !truncated) {
+            raw = content
+            break
+          }
+          // Empty content or a response cut off by the token limit. With a router model
+          // (e.g. "openrouter/free") the next attempt can land on a different, better model.
+          if (isLast) {
+            throw new Error(
+              `uf_skeleton_new: the model returned ${truncated ? 'a response cut off by the token limit' : 'no content'} `
+              + `on all ${String(maxAttempts)} attempts (served by "${data.model ?? targetModel}", `
+              + `finish_reason "${choice?.finish_reason ?? 'unknown'}", maxTokens ${String(config.maxTokens)}). `
+              + `That model is too small or too slow for a node tree: it likely spent its whole budget reasoning `
+              + `before writing JSON. Set a stronger, fixed model in cordis.yml instead of a router like `
+              + `"openrouter/free", or raise maxTokens.`,
+            )
+          }
         }
-        if (!response.ok) {
-          const body = await response.text().catch(() => '')
-          throw new Error(
-            `uf_skeleton_new: model API at ${endpoint} responded ${String(response.status)} ${response.statusText}`
-            + (body ? `: ${body.slice(0, 500)}` : ''),
-          )
-        }
-        const data = await response.json() as ChatCompletionsResponse
-        const content = data.choices?.[0]?.message?.content
-        if (typeof content !== 'string' || content.length === 0) {
-          throw new Error(
-            `uf_skeleton_new: model API response had no choices[0].message.content. `
-            + `Raw response: ${JSON.stringify(data).slice(0, 500)}`,
-          )
-        }
-        raw = content
       } finally {
         clearTimeout(timer)
         exec.signal.removeEventListener('abort', onAbort)

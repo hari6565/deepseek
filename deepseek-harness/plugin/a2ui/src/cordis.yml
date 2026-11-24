@@ -1,0 +1,16 @@
+# Web/host overlay that mounts this plugin by absolute path. Loaded via:
+#   pnpm dsh web --patch ./plugin/a2ui/src/cordis.yml
+#
+# apiKey is a live credential -- replace the placeholder below with your own
+# key before loading this overlay. Never commit a real key here.
+- insert:
+    - id: a2ui
+      name: 'D:/deepseekgitcode/deepseek-harness/plugin/a2ui/src/main.ts'
+      config:
+        apiUrl: 'https://openrouter.ai/api/v1'
+        apiKey: 'jjjjjjjjjjjjjjjjjjjjjjjjjj'
+        model: 'openrouter/free'
+        temperature: 0
+        timeoutMs: 120000
+        maxRepairAttempts: 2
+        # tempDir omitted -- defaults to plugin/_tempFiles_ next to the other plugins

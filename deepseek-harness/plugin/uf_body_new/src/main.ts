@@ -75,7 +75,7 @@ export function apply(ctx: Context, config: Config) {
   ctx.effect(() => {
     const timer = setInterval(() => {
       console.log("[uf_body_new] heartbeat");
-    }, 5000);
+    }, 10000);
 
     // Runs automatically when the plugin unloads.
     return () => clearInterval(timer);

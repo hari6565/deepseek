@@ -12075,17 +12075,7 @@ importers:
         specifier: workspace:^
         version: link:../../typert/protocol
 
-  plugin/learn:
-    dependencies:
-      '@deepseek-ai/dsh-tools':
-        specifier: workspace:^
-        version: link:../../packages/core/tools
-    devDependencies:
-      '@deepseek-ai/cordis':
-        specifier: workspace:^
-        version: link:../../vendor/cordis
-
-  plugin/uf_body:
+  plugin/a2ui:
     dependencies:
       '@deepseek-ai/dsh-tools':
         specifier: workspace:^
@@ -12111,25 +12101,6 @@ importers:
         specifier: workspace:^
         version: link:../../vendor/cordis
 
-  plugin/uf_preview:
-    dependencies:
-      '@deepseek-ai/dsh-tools':
-        specifier: workspace:^
-        version: link:../../packages/core/tools
-      '@deepseek-ai/schemastery':
-        specifier: link:../../vendor/schemastery
-        version: link:../../vendor/schemastery
-      axios:
-        specifier: ^1.7.7
-        version: 1.20.0(debug@4.4.3(supports-color@9.4.0))(supports-color@9.4.0)
-      uuid:
-        specifier: ^14.0.2
-        version: 14.0.2
-    devDependencies:
-      '@deepseek-ai/cordis':
-        specifier: workspace:^
-        version: link:../../vendor/cordis
-
   plugin/uf_preview_new:
     dependencies:
       '@deepseek-ai/dsh-tools':
@@ -12150,19 +12121,6 @@ importers:
         version: link:../../vendor/cordis
 
   plugin/uf_props_edit:
-    dependencies:
-      '@deepseek-ai/dsh-tools':
-        specifier: workspace:^
-        version: link:../../packages/core/tools
-      '@deepseek-ai/schemastery':
-        specifier: link:../../vendor/schemastery
-        version: link:../../vendor/schemastery
-    devDependencies:
-      '@deepseek-ai/cordis':
-        specifier: workspace:^
-        version: link:../../vendor/cordis
-
-  plugin/uf_skeleton:
     dependencies:
       '@deepseek-ai/dsh-tools':
         specifier: workspace:^

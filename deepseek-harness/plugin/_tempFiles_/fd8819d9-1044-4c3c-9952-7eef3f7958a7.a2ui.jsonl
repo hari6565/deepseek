@@ -1,0 +1,6 @@
+{"surfaceUpdate":{"surfaceId":"main","components":[{"id":"root","component":{"Column":{"children":{"explicitList":["title","name-field","email-field","message-field","actions"]}}}},{"id":"title","component":{"Text":{"text":{"literalString":"Contact Us"},"usageHint":"h1"}}},{"id":"name-field","component":{"TextField":{"label":{"literalString":"Name"},"text":{"path":"/form/name"}}}},{"id":"email-field","component":{"TextField":{"label":{"literalString":"Email"},"text":{"path":"/form/email"}}}},{"id":"message-field","component":{"TextField":{"label":{"literalString":"Message"},"text":{"path":"/form/message"},"textFieldType":"longText"}}},{"id":"actions","component":{"Row":{"children":{"explicitList":["send-btn"]},"distribution":"end"}}},{"id":"send-btn","component":{"Button":{"child":"send-label","primary":true,"action":{"name":"send_contact","context":[{"key":"name","value":{"path":"/form/name"}},{"key":"email","value":{"path":"/form/email"}},{"key":"message","value":{"path":"/form/message"}}]}}}},{"id":"send-label","component":{"Text":{"text":{"literalString":"Send"}}}}]}}
+
+
+
+{"dataModelUpdate":{"surfaceId":"main","path":"/form","contents":[{"key":"name","valueString":""},{"key":"email","valueString":""},{"key":"message","valueString":""}]}}
+{"beginRendering":{"surfaceId":"main","root":"root"}}

@@ -45,3 +45,7 @@ new approach
     Use uf_skeleton_new tool to create a customer registration page with Name, Email, and a Save button. Then pass its nodeTree result into uf_body_new  tool to get the full artifact bundle. then pass the uf_body_new tool result to uf_preview_new tool.
    
     Use uf_skeleton_new_generate to build a product group with a Name field and a Delete button. Pass the result into uf_body_new_generate. Then pass its filePath and the instruction "make the delete button red and disable it" into uf_props_edit_generate. Then pass that result's filePath into uf_preview_new_generate to get a live preview.
+
+
+
+    User uf_skeleton_new to Create a customergroup with a heading 'Customer Form' and name, email and phone number inputs and save and cancel buttons and a customer table with name, email and phone number column.Then pass its nodeTree result into uf_body_new  tool to get the full artifact bundle. then pass the uf_body_new tool result to uf_preview_new tool.
