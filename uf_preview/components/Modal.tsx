@@ -177,12 +177,17 @@ export const Modal: React.FC<ModalProps> = ({
   }, [shouldRender]);
 
   // Listen for closeModal event and close if modalName matches
+  const onCloseRef = useRef(onClose);
+  useEffect(() => {
+    onCloseRef.current = onClose;
+  });
+
   useEffect(() => {
     if (!modalName) return;
 
     const handleCloseModal = (name: string) => {
       if (name === modalName) {
-        onClose();
+        onCloseRef.current();
       }
     };
 
@@ -190,7 +195,7 @@ export const Modal: React.FC<ModalProps> = ({
     return () => {
       eventBus.off('closeModal', handleCloseModal);
     };
-  }, [modalName, onClose]);
+  }, [modalName]);
 
   if (!shouldRender) return null;
 

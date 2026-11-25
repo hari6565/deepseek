@@ -11,6 +11,14 @@ import { useInfoMsg } from "@/app/components/infoMsgHandler";
 
 type ContentAlign = "left" | "center" | "right";
 
+// Exact stroke colors - single source of truth for every border state
+const STROKE = {
+  light: "#E5E5E5",
+  dark: "#484848",
+  invalid: "#EF4444",
+  valid: "#10B981",
+} as const;
+
 interface DropdownProps {
   static?: boolean;
   dynamic?: boolean;
@@ -306,11 +314,12 @@ export const Dropdown: React.FC<DropdownProps> = ({
 
   const isDark = theme === "dark" || theme === "dark-hc";
 
+  const defaultStroke = isDark ? STROKE.dark : STROKE.light;
+
   const getBorderColor = () => {
-    if (validationState === "invalid") return "border-red-500";
-    if (validationState === "valid") return "border-green-500";
-    if (isOpen) return "";
-    return isDark ? "border-gray-600" : "border-gray-300";
+    if (validationState === "invalid") return STROKE.invalid;
+    if (validationState === "valid") return STROKE.valid;
+    return defaultStroke;
   };
 
   // No fixed validation color (invalid/valid) is driving the border,
@@ -339,12 +348,12 @@ export const Dropdown: React.FC<DropdownProps> = ({
       ref={listRef}
       data-modal="true"
       className={`
-        border-2
-        ${isDark ? "bg-gray-800 border-gray-600" : "bg-white border-gray-300"}
+        border
+        ${isDark ? "bg-gray-800" : "bg-white"}
         shadow-lg
         overflow-auto
       `}
-      style={{ borderRadius: "var(--border-radius)", maxHeight: panelStyle.maxHeight ?? 240, overscrollBehavior: "contain", ...panelStyle }}
+      style={{ borderRadius: "var(--border-radius)", borderColor: defaultStroke, maxHeight: panelStyle.maxHeight ?? 240, overscrollBehavior: "contain", ...panelStyle }}
       onMouseDown={(e) => e.stopPropagation()}
     >
       {filteredOptions.map((option, index) => {
@@ -421,8 +430,7 @@ export const Dropdown: React.FC<DropdownProps> = ({
               h-full
               px-4 py-2
               ${hasClear && selectedValues.length > 0 ? "pr-16" : "pr-10"}
-              border-2
-              ${getBorderColor()}
+              border
               ${isDark ? "bg-gray-800 text-white placeholder-white" : "bg-white text-black placeholder-black"}
               ${disabled ? "opacity-50 cursor-not-allowed pointer-events-none" : ""}
               transition-colors
@@ -431,7 +439,7 @@ export const Dropdown: React.FC<DropdownProps> = ({
             `}
             style={{
               borderRadius: "var(--border-radius)",
-              borderColor: isNeutralValidation && isOpen ? branding.selectionColor : undefined,
+              borderColor: isNeutralValidation && isOpen ? branding.selectionColor : getBorderColor(),
             }}
             onMouseEnter={e => {
               if (!disabled && isNeutralValidation && !isOpen) {
@@ -440,7 +448,7 @@ export const Dropdown: React.FC<DropdownProps> = ({
             }}
             onMouseLeave={e => {
               if (!disabled && isNeutralValidation && !isOpen) {
-                e.currentTarget.style.borderColor = ''
+                e.currentTarget.style.borderColor = getBorderColor()
               }
             }}
             onFocus={() => {
@@ -484,8 +492,7 @@ export const Dropdown: React.FC<DropdownProps> = ({
           className={`
             w-full
             px-4 py-2
-            border-2
-            ${getBorderColor()}
+            border
             flex items-center justify-between
             ${isDark ? "bg-gray-800 text-white" : "bg-white text-black"}
             ${disabled ? "opacity-50 cursor-not-allowed pointer-events-none" : "cursor-pointer"}
@@ -494,7 +501,7 @@ export const Dropdown: React.FC<DropdownProps> = ({
           `}
           style={{
             borderRadius: "var(--border-radius)",
-            borderColor: isNeutralValidation && isOpen ? branding.selectionColor : undefined,
+            borderColor: isNeutralValidation && isOpen ? branding.selectionColor : getBorderColor(),
           }}
           onMouseEnter={e => {
             if (!disabled && isNeutralValidation && !isOpen) {
@@ -503,7 +510,7 @@ export const Dropdown: React.FC<DropdownProps> = ({
           }}
           onMouseLeave={e => {
             if (!disabled && isNeutralValidation && !isOpen) {
-              e.currentTarget.style.borderColor = ''
+              e.currentTarget.style.borderColor = getBorderColor()
             }
           }}
           onKeyDown={handleKeyDown}

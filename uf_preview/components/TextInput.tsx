@@ -19,6 +19,18 @@ import { getBorderRadiusClass } from '@/app/utils/branding'
 import { RiCloseCircleLine } from 'react-icons/ri'
 import { CommonHeaderAndTooltip } from './CommonHeaderAndTooltip'
 type ContentAlign = 'center' | 'left' | 'right'
+
+// Exact stroke colors - single source of truth for every border state
+const STROKE = {
+  light: '#E5E5E5',
+  dark: '#484848',
+  invalid: '#EF4444',
+  valid: '#10B981',
+  none: 'transparent'
+} as const
+
+const getDefaultStroke = (isDark: boolean, view: TextInputView) =>
+  view === 'clear' ? STROKE.none : isDark ? STROKE.dark : STROKE.light
 interface TextInputProps {
   nodeId?: string
   disabled?: boolean
@@ -258,13 +270,11 @@ export const TextInput: React.FC<TextInputProps> = ({
     const styles: React.CSSProperties = {}
 
     if (validationState === 'invalid' || errorMessage) {
-      styles.borderColor = '#EF4444'
+      styles.borderColor = STROKE.invalid
     } else if (validationState === 'valid') {
-      styles.borderColor = '#10B981'
-    } else if (view === 'normal') {
-      styles.borderColor = isDark ? '#4B5563' : '#D1D5DB'
-    } else if (view === 'clear') {
-      styles.borderColor = 'transparent'
+      styles.borderColor = STROKE.valid
+    } else {
+      styles.borderColor = getDefaultStroke(isDark, view)
     }
 
     return styles
@@ -288,13 +298,6 @@ export const TextInput: React.FC<TextInputProps> = ({
   }
   const isDark = theme === 'dark' || theme === 'dark-hc'
 
-  // Helper to convert hex to rgba
-  const hexToRgba = (hex: string, alpha: number) => {
-    const r = parseInt(hex?.slice(1, 3), 16);
-    const g = parseInt(hex?.slice(3, 5), 16);
-    const b = parseInt(hex?.slice(5, 7), 16);
-    return `rgba(${r}, ${g}, ${b}, ${alpha})`;
-  };
   const customeOnBlur=(e:any)=>{
     onBlur(e)
     if(type=='number' && itsHaveCurrency)
@@ -389,10 +392,10 @@ export const TextInput: React.FC<TextInputProps> = ({
             
             ${
               view === 'normal'
-                ? 'border-2'
+                ? 'border'
                 : view === 'clear'
-                ? 'border-2 border-transparent'
-                : 'border-0 border-b-2'
+                ? 'border border-transparent'
+                : 'border-0 border-b'
             }
             ${disabled ? 'cursor-not-allowed opacity-50' : ''}
             ${isDark ? 'bg-gray-800 text-white' : 'bg-white text-gray-900'}
@@ -421,33 +424,20 @@ export const TextInput: React.FC<TextInputProps> = ({
           }}
           onMouseLeave={e => {
             if (!disabled && !errorMessage && !validationState && document.activeElement !== e.currentTarget) {
-              if (view === 'clear') {
-                e.currentTarget.style.borderColor = 'transparent'
-              } else {
-                e.currentTarget.style.borderColor = isDark ? '#4B5563' : '#D1D5DB'
-              }
+              e.currentTarget.style.borderColor = getDefaultStroke(isDark, view)
             }
           }}
           onFocus={e => {
             if (!errorMessage && !validationState) {
               e.currentTarget.style.borderColor = branding.selectionColor
-              if (view !== 'clear') {
-                e.currentTarget.style.boxShadow = `0 0 0 3px ${hexToRgba(branding.selectionColor, 0.2)}`
-              }
+              e.currentTarget.style.boxShadow = 'none'
             }
             customeOnFocus(e)
           }}
           onBlur={e => {
             if (!errorMessage && !validationState) {
-              if (view === 'clear') {
-                e.currentTarget.style.borderColor = 'transparent'
-                e.currentTarget.style.boxShadow = 'none'
-              } else {
-                e.currentTarget.style.borderColor = isDark
-                  ? '#4B5563'
-                  : '#D1D5DB'
-                e.currentTarget.style.boxShadow = 'none'
-              }
+              e.currentTarget.style.borderColor = getDefaultStroke(isDark, view)
+              e.currentTarget.style.boxShadow = 'none'
             }
             customeOnBlur(e)
           }}

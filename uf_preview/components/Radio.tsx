@@ -109,6 +109,7 @@ export const Radio: React.FC<RadioProps> = ({
   const radioElement = (
     <label
       className={`
+        relative
         ${fillContainer ? 'flex' : 'inline-flex'} 
         items-center 
         ${getContentAlignClasses()} 

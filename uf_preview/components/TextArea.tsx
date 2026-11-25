@@ -13,6 +13,16 @@ import {
 import { getBorderRadiusClass } from '@/app/utils/branding'
 import { CommonHeaderAndTooltip } from './CommonHeaderAndTooltip'
 type ContentAlign = 'left' | 'right' | 'center'
+
+// Exact stroke colors - single source of truth for every border state
+const STROKE = {
+  light: '#E5E5E5',
+  dark: '#484848',
+  invalid: '#EF4444',
+  valid: '#10B981'
+} as const
+
+const getDefaultStroke = (isDark: boolean) => (isDark ? STROKE.dark : STROKE.light)
 interface TextAreaProps {
   disabled?: boolean
   pin?: TextAreaPin
@@ -113,24 +123,14 @@ export const TextArea: React.FC<TextAreaProps> = ({
     const styles: React.CSSProperties = {}
 
     if (validationState === 'invalid' || errorMessage) {
-      styles.borderColor = '#EF4444'
+      styles.borderColor = STROKE.invalid
     } else if (validationState === 'valid') {
-      styles.borderColor = '#10B981'
-    } else if (isDark) {
-      styles.borderColor = '#4B5563'
+      styles.borderColor = STROKE.valid
     } else {
-      styles.borderColor = '#D1D5DB'
+      styles.borderColor = getDefaultStroke(isDark)
     }
 
     return styles
-  }
-
-  // Helper to convert hex to rgba
-  const hexToRgba = (hex: string, alpha: number) => {
-    const r = parseInt(hex?.slice(1, 3), 16)
-    const g = parseInt(hex?.slice(3, 5), 16)
-    const b = parseInt(hex?.slice(5, 7), 16)
-    return `rgba(${r}, ${g}, ${b}, ${alpha})`
   }
 
   const textAreaElement = (
@@ -147,7 +147,7 @@ export const TextArea: React.FC<TextAreaProps> = ({
           ${getFillClasses()}
           ${getPinClasses()}
           ${getTextAlignClasses()}
-          border-2
+          border
           ${disabled ? 'cursor-not-allowed opacity-50' : ''}
           ${
             isDark
@@ -182,22 +182,19 @@ export const TextArea: React.FC<TextAreaProps> = ({
             !validationState &&
             document.activeElement !== e.currentTarget
           ) {
-            e.currentTarget.style.borderColor = isDark ? '#4B5563' : '#D1D5DB'
+            e.currentTarget.style.borderColor = getDefaultStroke(isDark)
           }
         }}
         onFocus={e => {
           if (!errorMessage && !validationState) {
             e.currentTarget.style.borderColor = branding.selectionColor
-            e.currentTarget.style.boxShadow = `0 0 0 3px ${hexToRgba(
-              branding.selectionColor,
-              0.2
-            )}`
+            e.currentTarget.style.boxShadow = 'none'
           }
           onFocus?.(e)
         }}
         onBlur={e => {
           if (!errorMessage && !validationState) {
-            e.currentTarget.style.borderColor = isDark ? '#4B5563' : '#D1D5DB'
+            e.currentTarget.style.borderColor = getDefaultStroke(isDark)
             e.currentTarget.style.boxShadow = 'none'
           }
           onBlur?.(e)

@@ -1,0 +1,9 @@
+# Web/host overlay that mounts this plugin by absolute path. Loaded via:
+#   pnpm dsh web --patch ./plugin/skeleton_maker/src/cordis.yml
+#
+# No API key or model needed: skeleton_maker is a pure transformation of the
+# humantoai_generate result (no LLM call).
+- insert:
+    - id: skeleton_maker
+      name: 'D:/deepseekgitcode/deepseek-harness/plugin/skeleton_maker/src/main.ts'
+      config: {}

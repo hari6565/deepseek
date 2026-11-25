@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect, useMemo } from "react";
+import React, { useState, useEffect } from "react";
 import { useGlobal } from "@/context/GlobalContext";
 import { Icon } from "./Icon";
 import { getBorderRadiusClass } from"@/app/utils/branding";
@@ -147,20 +147,10 @@ export const DynamicTable: React.FC<TableProps> = ({
   }, [columns]);
 
   // Use controlled selection if selectedIds is provided, otherwise use internal state
-  // Helper function to get row ID.
-  // Prefer an explicit getRowId, then a stable id/_id field on the row, and
-  // only fall back to the array index as a last resort. Falling back to index
-  // is unsafe once the table is sorted/filtered because the same index maps to
-  // a different data object, breaking React reconciliation and selection.
+  // Helper function to get row ID
   const getRowIdHelper = (row: any, index: number): string => {
     if (getRowId) {
       return getRowId(row, index);
-    }
-    if (row?.id != null) {
-      return String(row.id);
-    }
-    if (row?._id != null) {
-      return String(row._id);
     }
     return index.toString();
   };
@@ -216,35 +206,28 @@ export const DynamicTable: React.FC<TableProps> = ({
     setVisibleColumns([]);
   };
 
-  // Memoized so filtering only reruns when the inputs actually change,
-  // instead of on every render (hover, modal toggle, etc.).
-  const filteredData = useMemo(() => {
-    if (!search) return data;
-    const term = searchTerm.toLowerCase();
-    return data.filter((row) =>
-      Object.values(row).some((value) =>
-        String(value).toLowerCase().includes(term)
+  const filteredData = search
+    ? data.filter((row) =>
+        Object.values(row).some((value) =>
+          String(value).toLowerCase().includes(searchTerm.toLowerCase())
+        )
       )
-    );
-  }, [search, data, searchTerm]);
+    : data;
 
-  // Memoized so we only allocate/sort a new array when the data, sort column,
-  // or sort direction changes.
-  const sortedData = useMemo(() => {
-    if (!sortColumn) return filteredData;
-    return [...filteredData].sort((a, b) => {
+const sortedData = sortColumn
+  ? [...filteredData].sort((a, b) => {
       const aVal = a[sortColumn];
       const bVal = b[sortColumn];
-
+      
       // Handle null/undefined values
       if (aVal == null && bVal == null) return 0;
       if (aVal == null) return 1;  // Push nulls to end
       if (bVal == null) return -1;
-
+      
       const comparison = aVal > bVal ? 1 : aVal < bVal ? -1 : 0;
       return sortDirection === "asc" ? comparison : -comparison;
-    });
-  }, [filteredData, sortColumn, sortDirection]);
+    })
+  : filteredData;
 
   // Use all sorted data without pagination
   const displayData = sortedData;

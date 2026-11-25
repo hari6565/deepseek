@@ -307,16 +307,25 @@ export const Popup: React.FC<PopupProps> = ({
     };
 
     const handleScroll = (event: Event) => {
-      // Check if scroll is happening inside a modal
-      const target = event.target as HTMLElement;
-      const isInsideModal = target?.closest('[role="dialog"]') || target?.closest('.modal') || target?.closest('[data-modal="true"]');
+      const target = event.target as Node | null;
+      const anchor = anchorRef.current;
+      const popup = popupRef.current;
 
-      // Don't close if scrolling inside a modal
-      if (isInsideModal) {
-        return;
-      }
+      // Scrolling the popup's own content never means the anchor moved.
+      if (target && popup?.contains(target)) return;
 
-      // Close popup if scrolling outside
+      // The point of closing on scroll is that the anchor has moved out from
+      // under the popup -- which only happens when the thing being scrolled
+      // is an ancestor of the anchor (or the document itself). Anything else
+      // is an unrelated scroller: a dialog's body, or a dropdown panel
+      // portaled to document.body by a control rendered *inside* this popup.
+      // Those used to close the popup and tear down everything it renders.
+      if (!target || !anchor) return;
+      const movesAnchor =
+        target === document ||
+        (typeof (target as HTMLElement).contains === "function" && target.contains(anchor));
+      if (!movesAnchor) return;
+
       if (onClose) {
         onClose();
       }

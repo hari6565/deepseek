@@ -35,7 +35,7 @@ export interface BarChartProps {
   headerPosition?: HeaderPosition;
   className?: string;
   colors?: string[];
-  numberKey?: string;
+  numberKey?: string | string[];
   onClick?: (data: any, index: number, event: React.MouseEvent) => void;
 }
 
@@ -98,6 +98,11 @@ export const BarChart: React.FC<BarChartProps> = ({
     return acc + sum;
   }, 0);
   const isDark = theme === "dark" || theme === "dark-hc";
+  // numberKey accepts a single key or a list of keys; when omitted every value key is drawn
+  const availableKeys = Object.keys(parsedExpenseData[0] || {}).filter(key => key !== 'name');
+  const requestedKeys =
+    numberKey === undefined ? availableKeys : Array.isArray(numberKey) ? numberKey : [numberKey];
+  const chartKeys = requestedKeys.filter(key => key !== 'name' && availableKeys.includes(key));
 
   const chartElement = (
     <div className={`w-full h-full ${className}`}>
@@ -156,9 +161,7 @@ export const BarChart: React.FC<BarChartProps> = ({
               }}
             />
             <Legend />
-            {Object.keys(parsedExpenseData[0] || {})
-              .filter(key => key !== 'name' && (!numberKey || key === numberKey))
-              .map((key, index) => (
+            {chartKeys.map((key, index) => (
                 <Bar
                   key={key}
                   dataKey={key}

@@ -9,6 +9,13 @@ import { useInfoMsg } from "@/app/components/infoMsgHandler";
 
 type ContentAlign = "left" | "center" | "right";
 
+// Exact stroke colors - single source of truth for every border state
+const STROKE = {
+  light: "#E5E5E5",
+  dark: "#484848",
+  invalid: "#EF4444",
+} as const;
+
 interface DatePickerProps {
   readOnly?: boolean;
   disabled?: boolean;
@@ -342,6 +349,9 @@ export const DatePicker: React.FC<DatePickerProps> = ({
 
   const isDark = theme === "dark" || theme === "dark-hc";
 
+  const getBorderColor = () =>
+    validationState === "invalid" ? STROKE.invalid : isDark ? STROKE.dark : STROKE.light;
+
   const buildCalendarDays = () => {
     const { year, month } = viewDate;
     const firstDay = new Date(year, month, 1).getDay();
@@ -422,29 +432,28 @@ export const DatePicker: React.FC<DatePickerProps> = ({
         aria-label={label || "Choose date"}
         className={`
           relative flex-1 min-h-0 flex items-center
-          border-2 px-2 sm:px-3
+          border px-2 sm:px-3
           cursor-pointer
-          focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-1
+          focus:outline-none
           ${disabled ? "opacity-50 cursor-not-allowed" : readOnly ? "cursor-default" : "cursor-pointer"}
-          ${validationState === "invalid" ? "border-red-500" : isDark ? "border-gray-600" : "border-gray-300"}
           ${isDark ? "bg-gray-800 text-white" : "bg-white text-gray-900"}
           ${fillContainer ? "w-full h-full" : ""}
           ${getContentAlignClasses()}
           transition-colors
           ${className}
         `}
-        style={{ borderRadius: "var(--border-radius)", overflow: "hidden" }}
+        style={{ borderRadius: "var(--border-radius)", overflow: "hidden", borderColor: getBorderColor() }}
         onMouseEnter={() => {
-          if (!disabled && !readOnly && validationState !== "invalid") setBorderColor(branding.hoverColor);
+          if (!disabled && !readOnly && validationState !== "invalid" && document.activeElement !== wrapperRef.current) setBorderColor(branding.hoverColor);
         }}
         onMouseLeave={() => {
-          if (!disabled && !readOnly && validationState !== "invalid") setBorderColor("");
+          if (!disabled && !readOnly && validationState !== "invalid" && document.activeElement !== wrapperRef.current) setBorderColor(getBorderColor());
         }}
         onFocus={() => {
           if (!disabled && !readOnly && validationState !== "invalid") setBorderColor(branding.selectionColor);
         }}
         onBlur={() => {
-          if (!disabled && !readOnly && validationState !== "invalid") setBorderColor("");
+          if (!disabled && !readOnly && validationState !== "invalid") setBorderColor(getBorderColor());
         }}
       >
         <span className={`pointer-events-none select-none flex-1 text-xs sm:text-sm truncate ${!dateValue ? (isDark ? "text-gray-500" : "text-gray-400") : ""}`}>

@@ -4,7 +4,7 @@ import React, { useState, useEffect, useMemo } from "react";
 import { useGlobal } from "@/context/GlobalContext";
 import { Icon } from "./Icon";
 import { getBorderRadiusClass } from "@/app/utils/branding";
-import { BiSort } from "react-icons/bi";
+import { BiSort, BiSortUp, BiSortDown } from "react-icons/bi";
 import { twMerge } from "tailwind-merge";
 import { useTheme } from "@/hooks/useTheme";
 import { Pagination } from "./Pagination";
@@ -338,9 +338,13 @@ export const Table: React.FC<TableProps> = ({
 };
   const convertToformat=(data:any)=>{
     const isISODate = typeof data === 'string' && /^\d{4}-\d{2}-\d{2}(T|$)/.test(data);
+
     if(isISODate)
       return formatDateDisplay(data.split("T")[0])
 
+    if(typeof data == 'boolean')
+      return data.toString()
+      
     return data
   }
 
@@ -544,10 +548,10 @@ export const Table: React.FC<TableProps> = ({
                 >
                   <div className={`component-header-text flex items-center gap-2 whitespace-nowrap ${column.align === 'right' ? 'justify-end' : column.align === 'center' ? 'justify-center' : ''}`}>
                     {column.name}
-                    {tableSorting && sortColumn === column.id && (
-                      <BiSort
-                        size={14}
-                      />
+                    {tableSorting && (
+                      sortColumn === column.id
+                        ? (sortDirection === "asc" ? <BiSortUp size={14} /> : <BiSortDown size={14} />)
+                        : <BiSort size={14} className="opacity-40" />
                     )}
                   </div>
                 </th>
@@ -569,10 +573,10 @@ export const Table: React.FC<TableProps> = ({
                 >
                   <div className={`component-header-text flex items-center gap-2 whitespace-nowrap ${column.align === 'right' ? 'justify-end' : column.align === 'center' ? 'justify-center' : ''}`}>
                     {column.name}
-                    {tableSorting && sortColumn === column.id && (
-                      <BiSort
-                        size={14}
-                      />
+                    {tableSorting && (
+                      sortColumn === column.id
+                        ? (sortDirection === "asc" ? <BiSortUp size={14} /> : <BiSortDown size={14} />)
+                        : <BiSort size={14} className="opacity-40" />
                     )}
                   </div>
                 </th>

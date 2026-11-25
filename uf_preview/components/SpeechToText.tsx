@@ -101,8 +101,8 @@ export function SpeechToTextInput(props: SpeechToTextInputProps) {
         disabled={restProps.disabled}
         placeholder={placeholder}
         contentAlign={restProps.contentAlign}
-        className={`w-full rounded-full border border-gray-200 bg-white  text-gray-600 shadow-md outline-none transition-all duration-200 placeholder:text-gray-400 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-400/20 focus:ring-opacity-50 dark:bg-gray-800 dark:text-gray-100 dark:placeholder:text-gray-500 dark:focus:border-blue-400 dark:focus:ring-blue-400/20 dark:focus:ring-opacity-50 ${className}`}
-        view='clear'
+        className={`w-full rounded-full bg-white text-gray-600 outline-none transition-all duration-200 placeholder:text-gray-400 focus:outline-none dark:bg-gray-800 dark:text-gray-100 dark:placeholder:text-gray-500 ${className}`}
+        view='normal'
         rightContent={
           <div className='justify-end top-1/2 items-center gap-2'>
             <button

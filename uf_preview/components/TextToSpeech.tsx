@@ -5,6 +5,14 @@ import { HeaderPosition, TooltipProps as TooltipPropsType } from '@/types/global
 import { useGlobal } from '@/context/GlobalContext';
 import { CommonHeaderAndTooltip } from './CommonHeaderAndTooltip';
 import {  Branding } from "@/types/global";
+
+// Exact stroke colors - single source of truth for every border state
+const STROKE = {
+  light: '#E5E5E5',
+  dark: '#484848',
+} as const
+
+const getDefaultStroke = (isDark: boolean) => (isDark ? STROKE.dark : STROKE.light)
 interface TextAreaWithEndContentProps {
   value?: string;
   rows?: number;
@@ -18,14 +26,6 @@ interface TextAreaWithEndContentProps {
 }
 
 function TextAreaWithEndContent({ endContent, placeholder, branding, isDark, ...props }: TextAreaWithEndContentProps & { branding: Branding; isDark: boolean }) {
-  // Helper to convert hex to rgba
-  const hexToRgba = (hex: string, alpha: number) => {
-    const r = parseInt(hex?.slice(1, 3), 16);
-    const g = parseInt(hex?.slice(3, 5), 16);
-    const b = parseInt(hex?.slice(5, 7), 16);
-    return `rgba(${r}, ${g}, ${b}, ${alpha})`;
-  };
-
   // Extract non-DOM props to avoid React warnings
   const {
     className,
@@ -49,8 +49,8 @@ function TextAreaWithEndContent({ endContent, placeholder, branding, isDark, ...
           w-full
           h-full
           p-2
-          border-2
-          ${isDark ? 'border-gray-600 bg-gray-800 text-white' : 'border-gray-300 bg-white text-gray-900'}
+          border
+          ${isDark ? 'bg-gray-800 text-white' : 'bg-white text-gray-900'}
           resize-vertical
           focus:outline-none
           transition-all duration-200
@@ -58,14 +58,15 @@ function TextAreaWithEndContent({ endContent, placeholder, branding, isDark, ...
         `}
         style={{
           ...domProps.style,
+          borderColor: getDefaultStroke(isDark),
           borderRadius: 'var(--border-radius)',
         }}
         onFocus={(e) => {
           e.currentTarget.style.borderColor = branding.selectionColor;
-          e.currentTarget.style.boxShadow = `0 0 0 3px ${hexToRgba(branding.selectionColor, 0.2)}`;
+          e.currentTarget.style.boxShadow = 'none';
         }}
         onBlur={(e) => {
-          e.currentTarget.style.borderColor = isDark ? '#4B5563' : '#D1D5DB';
+          e.currentTarget.style.borderColor = getDefaultStroke(isDark);
           e.currentTarget.style.boxShadow = 'none';
           domProps.onBlur?.(e);
         }}
@@ -76,7 +77,7 @@ function TextAreaWithEndContent({ endContent, placeholder, branding, isDark, ...
         }}
         onMouseLeave={(e) => {
           if (!domProps.disabled && document.activeElement !== e.currentTarget) {
-            e.currentTarget.style.borderColor = isDark ? '#4B5563' : '#D1D5DB';
+            e.currentTarget.style.borderColor = getDefaultStroke(isDark);
           }
         }}
       />

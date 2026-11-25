@@ -1,0 +1,20 @@
+# Web/host overlay that mounts this plugin by absolute path. Loaded via:
+#   pnpm dsh web --patch ./plugin/humantoai/src/cordis.yml
+#
+# apiKey is a live credential -- replace the placeholder below with your own
+# key before loading this overlay. Never commit a real key here.
+#
+# model: "openrouter/free" is a router that may pick a tiny model, which cannot
+# produce reliable output. Pin a specific, stronger model here for dependable results.
+- insert:
+    - id: humantoai
+      name: 'D:/deepseekgitcode/deepseek-harness/plugin/humantoai/src/main.ts'
+      config:
+        apiUrl: 'https://openrouter.ai/api/v1'
+        apiKey: 'jjjjjjjjjjjjjjjjjjjjjj'
+        model: 'openrouter/free'
+        temperature: 0
+        timeoutMs: 120000
+        maxTokens: 4096
+        maxAttempts: 3
+        maxRepairAttempts: 2

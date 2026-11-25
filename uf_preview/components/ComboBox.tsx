@@ -10,6 +10,14 @@ import { useInfoMsg } from "@/app/components/infoMsgHandler";
 
 type ContentAlign = "left" | "center" | "right";
 
+// Exact stroke colors - single source of truth for every border state
+const STROKE = {
+  light: "#E5E5E5",
+  dark: "#484848",
+  invalid: "#EF4444",
+  valid: "#10B981",
+} as const;
+
 interface ComboboxProps {
   value: string | string[];
   onChange: (value: Record<string, string> | string[]) => void;
@@ -83,7 +91,7 @@ export const Combobox: React.FC<ComboboxProps> = ({
   const [isLoading, setIsLoading] = useState(false);
   const [loadTick, setLoadTick] = useState(0);
   const [highlightedIndex, setHighlightedIndex] = useState<number>(-1);
-  const buttonRef = useRef<HTMLButtonElement | null>(null);
+  const buttonRef = useRef<HTMLInputElement | null>(null);
   const highlightedItemRef = useRef<HTMLDivElement | null>(null);
   // Mousedown fires just before focus, so a click sets this flag right
   // before handleTriggerFocus would otherwise run -- lets that handler
@@ -99,6 +107,15 @@ export const Combobox: React.FC<ComboboxProps> = ({
     setHighlightedIndex(-1);
   }, [search]);
   useEffect(() => {
+    scrollTopRef.current = 0;
+    if (!isOpen && search && !isStatic) {
+      setSearch("");
+      noMorePagesRef.current = false;
+      pendingSearchRef.current = null;
+      setCurrentPage(undefined);
+    }
+  }, [isOpen]);
+  useEffect(() => {
     if (highlightedItemRef.current) {
       highlightedItemRef.current.scrollIntoView({ block: "nearest" });
     }
@@ -113,6 +130,7 @@ export const Combobox: React.FC<ComboboxProps> = ({
   const listDivRef = useRef<HTMLDivElement>(null);
   const loadPreLengthRef = useRef<number | undefined>(undefined);
   const noMorePagesRef = useRef(false);
+  const pendingSearchRef = useRef<string | null>(null);
 
   const dynamicOptions = dynamicData.map((row) => ({
     label: String(row[toDisplay ?? toSave] ?? ""),
@@ -136,7 +154,11 @@ export const Combobox: React.FC<ComboboxProps> = ({
 
   const loadPage = (page: number, searchValue: string = search, fromWhere: "onScroll" | "onSearch" = "onScroll") => {
     if (!page || page < 1 || !pageCount || pageCount < 1) return;
-    if (!getPaginationData || loadingRef.current) return;
+    if (!getPaginationData) return;
+    if (loadingRef.current) {
+      if (fromWhere === "onSearch") pendingSearchRef.current = searchValue;
+      return;
+    }
     const lenBefore = dynamicData.length;
     loadingRef.current = true;
     setIsLoading(true);
@@ -144,8 +166,15 @@ export const Combobox: React.FC<ComboboxProps> = ({
       loadingRef.current = false;
       setIsLoading(false);
       setCurrentPage(page);
-      loadPreLengthRef.current = lenBefore;
+      const replacesList = fromWhere === "onSearch" || page <= 1;
+      loadPreLengthRef.current = replacesList ? undefined : lenBefore;
+      if (replacesList) noMorePagesRef.current = false;
       setLoadTick((t) => t + 1);
+      if (pendingSearchRef.current !== null) {
+        const next = pendingSearchRef.current;
+        pendingSearchRef.current = null;
+        loadPage(1, next, "onSearch");
+      }
     });
   };
 
@@ -281,7 +310,6 @@ export const Combobox: React.FC<ComboboxProps> = ({
       e.deltaY > 0 &&
       !loadingRef.current &&
       !noMorePagesRef.current &&
-      el.scrollHeight > el.clientHeight &&
       el.scrollHeight - el.scrollTop <= el.clientHeight + 20
     ) {
       loadPage((currentPage || 1) + 1);
@@ -356,11 +384,12 @@ export const Combobox: React.FC<ComboboxProps> = ({
     }
   };
 
+  const defaultStroke = isDark ? STROKE.dark : STROKE.light;
+
   const getBorderColor = () => {
-    if (validationState === "invalid") return "border-red-500";
-    if (validationState === "valid") return "border-green-500";
-    if (isOpen) return "";
-    return isDark ? "border-gray-600" : "border-gray-300";
+    if (validationState === "invalid") return STROKE.invalid;
+    if (validationState === "valid") return STROKE.valid;
+    return defaultStroke;
   };
 
   const getContentAlignClass = () => {
@@ -407,45 +436,57 @@ export const Combobox: React.FC<ComboboxProps> = ({
       className={`relative flex ${getContentAlignClass()} w-full h-full ${className}`}
       tabIndex={-1}
     >
-      <button
-        ref={buttonRef}
-        type="button"
-        onClick={handleOpen}
-        onKeyDown={handleKeyDown}
-        onMouseDown={() => { pointerInteractionRef.current = true; }}
-        onFocus={handleTriggerFocus}
-        disabled={disabled}
-        className={`
-          w-full px-4 py-2 border-2 flex items-center justify-between
-          ${getBorderColor()}
-          ${isDark ? "bg-gray-800 text-white" : "bg-white text-black"}
-          ${disabled ? "opacity-50 cursor-not-allowed" : "cursor-pointer"}
-          transition-colors focus:outline-none
-        `}
-        style={{
-          borderRadius: "var(--border-radius)",
-          borderColor: validationState === "none" && isOpen ? branding.selectionColor : undefined,
-        }}
-        onMouseEnter={(e) => {
-          if (!disabled && validationState === "none" && !isOpen)
-            e.currentTarget.style.borderColor = branding.hoverColor;
-        }}
-        onMouseLeave={(e) => {
-          if (!disabled && validationState === "none" && !isOpen)
-            e.currentTarget.style.borderColor = "";
-        }}
-      >
-        <span className={`w-4/5 truncate ${getTextAlignClass()} ${(isArray ? selectedArray.length === 0 : !value) ? (isDark ? "text-gray-500" : "text-gray-400") : ""}`}>
-          {isArray
-            ? selectedArray.length > 0 ? `${selectedArray.length} selected` : placeholder
-            : (value as string) || placeholder}
-        </span>
-        <div className="flex items-center gap-1">
+      <div className="relative w-full h-full">
+        <input
+          ref={buttonRef}
+          type="text"
+          readOnly
+          role="combobox"
+          aria-haspopup="listbox"
+          aria-expanded={isOpen}
+          value={isArray ? (selectedArray.length > 0 ? `${selectedArray.length} selected` : "") : ((value as string) || "")}
+          placeholder={placeholder}
+          disabled={disabled}
+          onClick={handleOpen}
+          onKeyDown={handleKeyDown}
+          onMouseDown={() => { pointerInteractionRef.current = true; }}
+          onFocus={handleTriggerFocus}
+          className={`
+            w-full h-full px-4 py-2
+            ${(isArray ? selectedArray.length > 0 : !!value) && !disabled ? "pr-16" : "pr-10"}
+            border ${getTextAlignClass()}
+            ${isDark ? "bg-gray-800 text-white placeholder-gray-500" : "bg-white text-black placeholder-gray-400"}
+            ${disabled ? "opacity-50 cursor-not-allowed" : "cursor-pointer"}
+            transition-colors focus:outline-none
+            ${className}
+          `}
+          style={{
+            borderRadius: "var(--border-radius)",
+            borderColor: validationState === "none" && isOpen ? branding.selectionColor : getBorderColor(),
+          }}
+          onMouseEnter={(e) => {
+            if (!disabled && validationState === "none" && !isOpen)
+              e.currentTarget.style.borderColor = branding.hoverColor;
+          }}
+          onMouseLeave={(e) => {
+            if (!disabled && validationState === "none" && !isOpen)
+              e.currentTarget.style.borderColor = getBorderColor();
+          }}
+        />
+        <div className="absolute right-3 top-1/2 -translate-y-1/2 flex items-center gap-1">
           {(isArray ? selectedArray.length > 0 : !!value) && !disabled && (
-            <span
+            <button
+              type="button"
               onMouseDown={(e) => e.stopPropagation()}
               onClick={(e) => {
                 e.stopPropagation();
+                if (search) {
+                  // Clear the search text and force a fresh, unfiltered first page on next open.
+                  setSearch("");
+                  noMorePagesRef.current = false;
+                  scrollTopRef.current = 0;
+                  setCurrentPage(undefined);
+                }
                 if (isArray) {
                   setSelectedArray([]);
                   onChange([]);
@@ -454,21 +495,36 @@ export const Combobox: React.FC<ComboboxProps> = ({
                 }
                 onBlur?.("")
               }}
-              className={`p-0.5 rounded transition-colors cursor-pointer ${isDark ? "hover:bg-gray-600" : "hover:bg-gray-200"}`}
+              className={`p-1 rounded transition-colors cursor-pointer ${isDark ? "hover:bg-gray-600" : "hover:bg-gray-200"}`}
               style={{ borderRadius: "var(--border-radius)" }}
             >
               <Icon data="IoIosClose" fillContainer={false} />
-            </span>
+            </button>
           )}
-          <Icon data={isOpen ? "IoIosArrowUp" : "IoIosArrowDown"} fillContainer={false} />
+          <button
+            type="button"
+            onClick={() => !disabled && handleOpen()}
+            disabled={disabled}
+            className="p-1 cursor-pointer"
+          >
+            <Icon data={isOpen ? "IoIosArrowUp" : "IoIosArrowDown"} fillContainer={false} />
+          </button>
         </div>
-      </button>
+      </div>
 
       {mounted && isOpen && createPortal(
         <div
           ref={panelRef}
-          className={`overflow-y-auto border-2 shadow-lg ${isDark ? "bg-gray-800 border-gray-600" : "bg-white border-gray-300"}`}
-          style={panelStyle}
+          className={`overflow-y-auto border shadow-lg ${isDark ? "bg-gray-800" : "bg-white"}`}
+          style={{
+            borderColor: defaultStroke,
+            maxHeight: panelStyle.maxHeight ?? 240,
+            // Keep the wheel inside the list: without this the leftover delta at
+            // the top/bottom edge chains up to the page and scrolls the screen
+            // behind the open panel.
+            overscrollBehavior: "contain",
+            ...panelStyle,
+          }}
           onMouseDown={(e) => e.stopPropagation()}
           onScroll={handleListScroll}
           onWheel={handleListWheel}
@@ -483,6 +539,7 @@ export const Combobox: React.FC<ComboboxProps> = ({
                 setSearch(val);
                 if (!isStatic) {
                   noMorePagesRef.current = false;
+                  scrollTopRef.current = 0;
                   setCurrentPage(undefined);
                   loadPage(1, val, "onSearch");
                 }
@@ -490,8 +547,8 @@ export const Combobox: React.FC<ComboboxProps> = ({
               onMouseDown={(e) => e.stopPropagation()}
               onKeyDown={handleKeyDown}
               placeholder="Search..."
-              className={`w-full px-3 py-1 border focus:outline-none  ${isDark ? "bg-gray-700 text-white border-gray-500 placeholder-gray-400" : "bg-white text-black border-gray-300 placeholder-gray-400"}`}
-              style={{ borderRadius: "var(--border-radius)" }}
+              className={`w-full px-4 py-2 border focus:outline-none  ${isDark ? "bg-gray-700 text-white placeholder-gray-400" : "bg-white text-black placeholder-gray-400"} ${className}`}
+              style={{ borderRadius: "var(--border-radius)", borderColor: defaultStroke }}
             />
           </div>
           {options.map((option, idx) => {
@@ -505,7 +562,7 @@ export const Combobox: React.FC<ComboboxProps> = ({
                   isSelected
                     ? "text-white"
                     : isDark ? "text-gray-200 hover:[background-color:var(--hover-color)]" : "text-gray-700 hover:[background-color:var(--hover-color)]"
-                }`}
+                } ${className}`}
                 style={{
                   backgroundColor: isSelected
                     ? branding.selectionColor

@@ -84,6 +84,7 @@ interface TextProps {
   style?: React.CSSProperties
   fillContainer?: boolean
   contentAlign?: contentAlign
+  isRequired?: boolean
 }
 
 export const Text: React.FC<TextProps> = ({
@@ -102,7 +103,8 @@ export const Text: React.FC<TextProps> = ({
   className = '',
   style,
   fillContainer = true,
-  contentAlign = 'center'
+  contentAlign = 'center',
+  isRequired = false
 }) => {
   const { theme, direction } = useGlobal()
 
@@ -199,46 +201,67 @@ export const Text: React.FC<TextProps> = ({
   const displayContent = content || children
 
   const renderContent = (): React.ReactNode => {
+    const renderRequiredMark = (size?: number): React.ReactNode => {
+      if (!isRequired) return null
+      return (
+        <span style={{ color: '#EF4444', fontSize: size ? `${size}px` : 'inherit', lineHeight: 'inherit' }}>*</span>
+      )
+    }
+
+    const renderValue = (value: React.ReactNode): React.ReactNode => {
+      if (!isRequired) return value
+      return (
+        <>
+          {value}
+          {renderRequiredMark()}
+        </>
+      )
+    }
+
     if (iconDisplay === 'Icon only' && icon) {
       return (
-        <Icon
-          fillContainer={false}
-          data={icon}
-          size={iconSize}
-          className={`flex items-center justify-center ${className}`}
-        />
+        <>
+          <Icon
+            fillContainer={false}
+            data={icon}
+            size={iconSize}
+            className={`flex items-center justify-center ${className}`}
+          />
+          {renderRequiredMark(iconSize)}
+        </>
       )
     }
 
 if (iconDisplay === 'Start with Icon' && icon) {
   return (
-    <span className="inline-flex items-center gap-1 leading-none">
+    <span className="inline-flex items-center gap-1 leading-none" style={{ fontSize: 'inherit' }}>
       <Icon
         fillContainer={false}
         data={icon}
         size={iconSize}
         className="flex-shrink-0"
       />
-      <span className="leading-none">{displayContent}</span>
+      <span className="leading-none" style={{ fontSize: 'inherit' }}>{renderValue(displayContent)}</span>
     </span>
   )
 }
 
 if (iconDisplay === 'End with Icon' && icon) {
   return (
-    <span className="inline-flex items-center gap-1 leading-none">
-      <span className="leading-none">{displayContent}</span>
+    <span className="inline-flex items-center gap-1 leading-none" style={{ fontSize: 'inherit' }}>
+      <span className="leading-none" style={{ fontSize: 'inherit' }}>{displayContent}</span>
       <Icon
         fillContainer={false}
         data={icon}
         size={iconSize}
         className="flex-shrink-0"
       />
+      {renderRequiredMark()}
     </span>
   )
 }
 
-    return displayContent
+    return renderValue(displayContent)
   }
   const getFillClasses = (): string => {
     if (!fillContainer) return ''

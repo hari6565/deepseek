@@ -117,15 +117,20 @@ export function apply(ctx: Context, config: Config) {
       }],
     },
     async execute(args:any) {
-      let ddd: any = [];
-      if (typeof args.nodeTree == "string") {
-        ddd = JSON.parse(args.nodeTree);
-      } else {
-        ddd = args.nodeTree;
+      // Accept what a chained caller actually passes: the array itself, a JSON string of it,
+      // the whole skeleton_maker/uf_skeleton_new result ({ nodeTree: [...] }), or a bare root node.
+      let basicNodeTreeData: any = typeof args.nodeTree === 'string' ? JSON.parse(args.nodeTree) : args.nodeTree;
+      if (basicNodeTreeData && !Array.isArray(basicNodeTreeData) && typeof basicNodeTreeData === 'object') {
+        basicNodeTreeData = 'nodeTree' in basicNodeTreeData ? basicNodeTreeData.nodeTree : [basicNodeTreeData];
+        if (typeof basicNodeTreeData === 'string') basicNodeTreeData = JSON.parse(basicNodeTreeData);
+        if (basicNodeTreeData && !Array.isArray(basicNodeTreeData) && typeof basicNodeTreeData === 'object') basicNodeTreeData = [basicNodeTreeData];
       }
-      const nodeTree = typeof args.nodeTree === 'string' ? JSON.parse(args.nodeTree) as InputNode[] : args.nodeTree as InputNode[]
+      if(!("nodeTree" in basicNodeTreeData) && basicNodeTreeData?.nodeTree?.lenght==0&&basicNodeTreeData?.nodeTree?.at(0)?.nodeId!='root')
+      {
+        throw "cant make a UF json"
+      }
       const body: GenerateJsonRequest & { artifactName?: string } = {
-        nodeTree:ddd,
+        nodeTree:basicNodeTreeData,
         artifactName: args.artifactName,
       }
       const response = generate(body, config);

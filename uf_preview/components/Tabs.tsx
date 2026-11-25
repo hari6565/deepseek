@@ -17,6 +17,8 @@ interface TabItem {
   title: string;
   icon?: GravityIcon;
   content?: React.ReactNode;
+  /** Mount this tab's content on load and keep it mounted, even while another tab is active. */
+  renderOnLoad?: boolean;
 }
 
 interface TabsProps {
@@ -35,6 +37,7 @@ interface TabsProps {
   onChange?: (id: any) => void;
   className?: string;
   tabHeaders?: TabItem[];
+  additionalHeaderClassName?: string;
 }
 
 export const Tabs: React.FC<TabsProps> = ({
@@ -53,6 +56,7 @@ export const Tabs: React.FC<TabsProps> = ({
   className = "",
   headerClassName = "",
   tabHeaders=[],
+  additionalHeaderClassName = "",
 }) => {
   const { theme, branding } = useGlobal();
   const [activeTab, setActiveTab] = useState(defaultActiveId || items[0]?.id || "");
@@ -71,7 +75,14 @@ export const Tabs: React.FC<TabsProps> = ({
 
   const isDark = theme === "dark" || theme === "dark-hc";
 
-  const activeContent = items.find(item => item.id === currentActiveTab)?.content;
+  // Tabs flagged renderOnLoad are mounted in the DOM as soon as security resolves and
+  // stay mounted while inactive (hidden); every other tab mounts only while it is active.
+  // A renderOnLoad tab the user is not allowed to see is never mounted.
+  const mountedItems = items.filter(
+    (item) =>
+      item.id === currentActiveTab ||
+      (item.renderOnLoad === true && Array.isArray(security) && security.includes(item.id))
+  );
 
   // Helper to convert hex to rgba
   const hexToRgba = (hex: string, alpha: number) => {
@@ -120,6 +131,7 @@ export const Tabs: React.FC<TabsProps> = ({
             p-2
             bg-white
             ${headerAlignment === 'full' ? 'w-full' : 'w-fit'}
+            ${additionalHeaderClassName}
           `}
         >
         {items.map((item) => {
@@ -197,9 +209,22 @@ export const Tabs: React.FC<TabsProps> = ({
         )}
       </div>
 
-      {activeContent && (
+      {mountedItems.length > 0 && (
         <div className={`flex-1 min-h-0 overflow-auto ${direction === "vertical" ? "" : "mt-4"}`}>
-          {activeContent}
+          {mountedItems.map((item) => {
+            const isActive = item.id === currentActiveTab;
+            return (
+              <div
+                key={item.id}
+                role="tabpanel"
+                aria-hidden={!isActive}
+                className={isActive ? "h-full" : undefined}
+                style={isActive ? undefined : { display: "none" }}
+              >
+                {item.content}
+              </div>
+            );
+          })}
         </div>
       )}
     </div>

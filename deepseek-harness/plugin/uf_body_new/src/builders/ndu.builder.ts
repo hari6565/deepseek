@@ -72,6 +72,11 @@ function buildEntry(w: WalkNode, firstColumnSeenFor: Set<string>): Record<string
   // separately and would otherwise miss this (see uf_body's own fix).
   if (node.nodeType === 'label') gridBlock.commonprops = { contentAlign: 'left' }
 
+  // versionTagFor() is undefined for types with no verified "TRL:..." string
+  // (checkbox, datepicker, dropdown, ...). Leave the key OUT in that case, like
+  // NDS does: an `undefined` value makes the whole tool output "not lossless JSON".
+  const version = versionTagFor(node.nodeType, groupType)
+
   return {
     id: node.nodeId,
     parent: parentId,
@@ -82,7 +87,7 @@ function buildEntry(w: WalkNode, firstColumnSeenFor: Set<string>): Record<string
     grid: gridBlock,
     groupType,
     data: buildDataBlock(node, groupType),
-    version: versionTagFor(node.nodeType, groupType),
+    ...(version !== undefined ? { version } : {}),
     t_parentId: parentId,
   }
 }
